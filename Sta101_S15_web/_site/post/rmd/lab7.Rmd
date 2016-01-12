@@ -1,0 +1,77 @@
+```{r setup, include=FALSE}
+# DO NOT ALTER CODE IN THIS CHUNK
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(cache = TRUE)
+library(dplyr)
+library(ggplot2)
+library(mosaic)
+```
+
+**Author:** Enter author name here
+
+**Discussants:** Enter discussant names here. Remember, these are other team members present in lab.
+
+* * *
+
+**Load ACS dataset:**
+```{r}
+load(url("https://stat.duke.edu/~mc301/data/acs.RData"))
+```
+
+**Load inference function:**
+```{r}
+load(url("https://stat.duke.edu/~mc301/R/fun/inference.RData"))
+```
+
+
+## Exercises:
+
+#### Exercise 1: 
+
+
+#### Exercise 2: 
+
+
+#### Exercise 3: 
+
+
+#### Exercise 4: 
+
+
+#### Exercise 5:
+
+
+#### Exercise 6:
+
+
+#### Exercise 7:
+
+
+#### Exercise 8:
+
+* * *
+
+## On your own:
+
+#### 1: 
+
+
+#### 2: 
+
+
+#### 3:
+
+
+#### 4:
+
+
+#### 5: 
+
+
+#### 6: 
+
+
+#### 7: 
+
+
+

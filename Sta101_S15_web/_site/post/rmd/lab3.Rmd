@@ -1,0 +1,50 @@
+```{r setup, include=FALSE}
+# DO NOT ALTER CODE IN THIS CHUNK
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+```
+
+**Author:** Enter author name here
+
+**Discussants:** Enter discussant names here. Remember, these are other team members present in lab.
+
+* * *
+
+**Load Hot Hand files:**
+```{r}
+load(url("https://stat.duke.edu/~mc301/data/hot_hand.RData")) 
+```
+
+## Exercises:
+
+#### Exercise 1: 
+
+
+#### Exercise 2: 
+
+
+#### Exercise 3: 
+
+
+#### Exercise 4: 
+
+
+
+* * *
+
+## On your own:
+
+#### 1: 
+
+
+#### 2: 
+
+
+#### 3: 
+
+
+#### 4: 
+
+
+#### 5:

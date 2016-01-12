@@ -1,0 +1,43 @@
+---
+title: "PROJECT 1 TITLE - replace with meaningful/relevant title"
+author: "TEAM NAME - replace with team name"
+output:
+  html_document:
+    css: https://stat.duke.edu/courses/Fall15/sta101.002/post/projects/project_template.css
+    fig_height: 3
+    fig_width: 5
+    highlight: pygments
+    theme: cerulean
+---
+
+```{r setup, include=FALSE}
+# DO NOT ALTER CODE IN THIS CHUNK
+library(dplyr)
+library(ggplot2)
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(fig.path = 'proj1-figures/', cache.path = 'proj1-cache/', 
+                      fig.align = 'center', fig.show = 'hold', par = TRUE)
+```
+
+### Part 1 - Introduction:
+
+
+
+### Part 2 - Data:
+
+```{r load-data}
+
+```
+
+### Part 3 - Exploratory data analysis:
+
+
+### Part 4 - Inference:
+
+
+### Part 5 - Conclusion: 
+
+
+#### References:
+
+

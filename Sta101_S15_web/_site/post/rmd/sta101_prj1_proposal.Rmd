@@ -1,0 +1,44 @@
+```{r setup, include=FALSE}
+# DO NOT ALTER CODE IN THIS CHUNK
+library(dplyr)
+library(ggplot2)
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(fig.path = 'proj1-proposal-figures/', 
+                      cache.path = 'proj1-proposal-cache/', 
+                      fig.align = 'center', fig.show = 'hold', par = TRUE)
+```
+
+Load data:
+```{r load-data}
+
+```
+
+
+#### 1. What is your dataset? Provide a citation for the dataset and a link to the data source.
+
+
+#### 2. How were the data in your dataset collected?
+
+
+#### 3. What is your research question? (Note: You should phrase your research question in a way that matches up with the scope of inference your dataset allows for.)
+
+
+#### 4. What are the cases in your dataset?  (Remember: case = units of observation or units of experiment) How many cases will be used in your analysis? Note: If you will be subsetting the original dataset in any way, discuss it here and include the necessary R code. For example, if you will only be using data from a particular year, `filter` for cases in that year, etc.
+
+```{r}
+
+```
+
+
+#### 5. What are the variables you will be using in your project? Specifically, what is the response variable and what is the explanatory variable? What types of variables are these?
+
+
+#### 6. What type of study is this,observational or an experiment? Explain how you arrived at your conclusion using information on the sampling and/or experimental design.
+
+
+#### 7. Provide some relevant summary statistics and at least one visualization that speaks to your research question. For example, if you're comparing means across groups provide means, SDs, sample sizes of each group.
+
+```{r}
+
+```
+

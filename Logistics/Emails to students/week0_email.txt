@@ -1,0 +1,50 @@
+# send out after first class session
+
+Subject: To do items for this week
+
+Hi class,
+
+Here are your to do items for this week, we'll talk more about them in class today.
+
+- Download or purchase the textbook:
+    - Download: https://www.openintro.org/stat/textbook.php?stat_book=os
+    - Purchase: http://www.amazon.com/dp/1478217200
+
+- Obtain and register your iClicker2:
+    - Obtain:
+        - Used from past students: https://docs.google.com/spreadsheet/ccc?key=0AkY2lFgS9uiDdE1fMkZUZnp6alJDSG9tYlIwTFJWdnc#gid=0
+        - New: Bookstore or http://www.amazon.com/I-Clicker-2-I-Clicker/dp/1429280476
+    - Register: https://www1.iclicker.com/register-clicker (Student ID = Net ID)
+
+- Complete the pretest (do your best, but don't worry if you don't know the answers, it's meant to be a *pre*test):
+    - Deadline: 11:59pm on Friday, Jan 9
+    - Set aside ~40 minutes for this
+    - Link to pretest: https://apps3.cehd.umn.edu/artist/user/scale_select.html
+    - Access code: ACCESS CODE =  NDN6862JJJ
+
+- Complete the "Getting to know you survey"
+    - Deadline: 11:59pm on Friday, Jan 9
+    - Set aside ~15 minutes for this
+    - Link to survey: Tests & Quizzes https://sakai.duke.edu/portal/site/ba0d1c18-ba55-473f-9d70-b6a1f9559bbe/page/bfd87236-13e3-41ac-88c4-725eb4d2c35d
+
+- Take the performance assessment (PA 0 - on course policies etc., not graded, for practice with the quiz module on Sakai):
+    - Deadline: 11:59pm on Friday, Jan 9
+    - Set aside ~15 minutes for this (though you have 30 minutes to complete it)
+    - Link to PA0: Tests & Quizzes https://sakai.duke.edu/portal/site/ba0d1c18-ba55-473f-9d70-b6a1f9559bbe/page/bfd87236-13e3-41ac-88c4-725eb4d2c35d
+
+- Read the syllabus and let me know if you have any questions
+    - Link to syllabus: https://stat.duke.edu/courses/Spring15/sta101.001/syllabus/
+
+- Watch/Read/Review the resources for Unit 1
+    - Deadline: 1:25pm on Monday, Jan 12
+    - Reviewing the material will take some time so plan ahead.
+    - There is a readiness assessment on Monday (not graded, for practice) covering Unit 1
+    - Make sure to make use of the learning objectives
+    - Link to resources: https://stat.duke.edu/courses/Spring15/sta101.001/resources/
+
+If you have any questions, post on Piazza! Log onto Sakai and then click Piazza in the menubar on the left hand side.
+
+Best,
+Dr. Cetinkaya-Rundel
+
+PS: If you are planning on ordering your materials online I recommend that you do so right away so that they arrive by the time classes begin. Note that Amazon offers free 2-day Prime shipping to students: http://www.amazon.com/gp/student/signup/info.

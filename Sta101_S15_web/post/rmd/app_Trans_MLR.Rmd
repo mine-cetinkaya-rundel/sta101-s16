@@ -1,0 +1,49 @@
+---
+title: "App Ex 7.2: Interpreting models with a transformed response"
+author: "Enter team name here"
+output: 
+  html_document: 
+    highlight: pygments
+---
+
+```{r setup, include=FALSE}
+# DO NOT ALTER CODE IN THIS CHUNK
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+```
+
+* * *
+
+#### 1. Load data, and subset for those who were employed. Before you proceed, confirm that this leaves you with 787 observations.
+
+```{r}
+
+```
+
+#### 2. Suppose we only want to consider the following explanatory variables: `hrs_work`, `race`, `age`, `gender`, `citizen`. Fit the full model using only the explanatory variables listed above, and report its adjusted $R^2$. Remember your response variable is `log(income)`, not `income`. 
+
+```{r}
+
+```
+
+#### 3. Conduct model selection using the backwards adjusted $R^2$ method, and report the adjusted $R^2$ for the final model.
+
+```{r}
+
+```
+
+#### 4. Check diagnostics for your final model using appropriate plots.
+
+```{r}
+
+```
+
+
+#### 5. Interpret the slope for one numerical and one categorical predictor.
+
+```{r}
+
+```
+
+

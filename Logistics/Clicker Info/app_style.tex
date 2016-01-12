@@ -1,0 +1,82 @@
+%%%%%%%%%%%%%%%%
+% Packages
+%%%%%%%%%%%%%%%%
+
+\usepackage[top=1cm,bottom=0.5cm,left=1.5cm,right= 1.5cm]{geometry}
+\usepackage[parfill]{parskip}
+\usepackage{graphicx, fontspec, xcolor,multicol, enumitem, setspace}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+%%%%%%%%%%%%%%%%
+% No page number
+%%%%%%%%%%%%%%%%
+
+\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%
+% User defined colors
+%%%%%%%%%%%%%%%%
+
+% Pantone 2015 Fall colors
+% http://iwork3.us/2015/02/18/pantone-2015-fall-fashion-report/
+% update each semester or year
+
+\xdefinecolor{custom_blue}{rgb}{0, 0.32, 0.48} % FROM SPRING 2016 COLOR PREVIEW
+\xdefinecolor{custom_darkBlue}{rgb}{0.20, 0.20, 0.39} % Reflecting Pond  
+\xdefinecolor{custom_orange}{rgb}{0.96, 0.57, 0.42} % Cadmium Orange
+\xdefinecolor{custom_green}{rgb}{0, 0.47, 0.52} % Biscay Bay
+\xdefinecolor{custom_red}{rgb}{0.58, 0.32, 0.32} % Marsala
+
+\xdefinecolor{custom_lightGray}{rgb}{0.78, 0.80, 0.80} % Glacier Gray
+\xdefinecolor{custom_darkGray}{rgb}{0.35, 0.39, 0.43} % Stormy Weather
+
+%%%%%%%%%%%%%%%%
+% Color text commands
+%%%%%%%%%%%%%%%%
+
+%orange
+\newcommand{\orange}[1]{\textit{\textcolor{custom_orange}{#1}}}
+
+% yellow
+\newcommand{\yellow}[1]{\textit{\textcolor{yellow}{#1}}}
+
+% blue
+\newcommand{\blue}[1]{\textit{\textcolor{blue}{#1}}}
+
+% green
+\newcommand{\green}[1]{\textit{\textcolor{custom_green}{#1}}}
+
+% red
+\newcommand{\red}[1]{\textit{\textcolor{custom_red}{#1}}}
+
+%%%%%%%%%%%%%%%%
+% Coloring titles, links, etc.
+%%%%%%%%%%%%%%%%
+
+\usepackage{titlesec}
+\titleformat{\section}
+{\color{custom_blue}\normalfont\Large\bfseries}
+{\color{custom_blue}\thesection}{1em}{}
+\titleformat{\subsection}
+{\color{custom_blue}\normalfont}
+{\color{custom_blue}\thesubsection}{1em}{}
+
+\newcommand{\ttl}[1]{ \textsc{{\LARGE \textbf{{\color{custom_blue} #1} } }}}
+
+\newcommand{\tl}[1]{ \textsc{{\large \textbf{{\color{custom_blue} #1} } }}}
+
+\usepackage[colorlinks=false,pdfborder={0 0 0},urlcolor= custom_orange,colorlinks=true,linkcolor= custom_orange, citecolor= custom_orange,backref=true]{hyperref}
+
+%%%%%%%%%%%%%%%%
+% Instructions box
+%%%%%%%%%%%%%%%%
+
+\newcommand{\inst}[1]{
+\colorbox{custom_blue!20!white!50}{\parbox{\textwidth}{
+	\vskip10pt
+	\leftskip10pt \rightskip10pt
+	#1
+	\vskip10pt
+}}
+\vskip10pt
+}

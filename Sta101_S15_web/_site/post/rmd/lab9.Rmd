@@ -1,0 +1,62 @@
+```{r setup, include=FALSE}
+# DO NOT ALTER CODE IN THIS CHUNK
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+```
+
+**Author:** Enter author name here
+
+**Discussants:** Enter discussant names here. Remember, these are other team members present in lab.
+
+* * *
+
+**Load MLB11 dataset:**
+```{r}
+load(url("https://stat.duke.edu/~mc301/data/mlb11.RData"))
+```
+
+
+## Exercises:
+
+#### Exercise 1: 
+
+
+#### Exercise 2: 
+
+
+#### Exercise 3: 
+
+
+#### Exercise 4: 
+
+
+#### Exercise 5:
+
+
+#### Exercise 6:
+
+
+#### Exercise 7:
+
+
+#### Exercise 8:
+
+* * *
+
+## On your own:
+
+#### 1: 
+
+
+#### 2: 
+
+
+#### 3:
+
+
+#### 4:
+
+
+#### 5: 
+

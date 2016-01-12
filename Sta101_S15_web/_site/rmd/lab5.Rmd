@@ -1,0 +1,70 @@
+---
+title: "Lab 5 - Foundations for statistical inference - Confidence intervals"
+author: "Enter team name here"
+date: "Enter date here"
+output: 
+  html_document: 
+    highlight: pygments
+---
+
+```{r setup, include=FALSE}
+# DO NOT ALTER CODE IN THIS CHUNK
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(cache = TRUE)
+library(dplyr)
+library(ggplot2)
+library(mosaic)
+```
+
+**Author:** Enter author name here
+
+**Discussants:** Enter discussant names here. Remember, these are other team members present in lab.
+
+* * *
+
+**Load Ames dataset:**
+```{r}
+load(url("https://stat.duke.edu/~mc301/data/ames.RData"))
+```
+
+**Set a seed:**
+```{r}
+set.seed()
+```
+
+
+
+## Exercises:
+
+#### Exercise 1: 
+
+
+#### Exercise 2: 
+
+
+#### Exercise 3: 
+
+
+#### Exercise 4: 
+
+
+#### Exercise 5:
+
+
+#### Exercise 6:
+
+
+#### Exercise 7:
+
+
+* * *
+
+## On your own:
+
+#### 1: 
+
+
+#### 2: 
+
+
+
