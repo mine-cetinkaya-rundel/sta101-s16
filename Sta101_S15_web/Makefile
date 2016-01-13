@@ -1,6 +1,6 @@
 REMOTEUSER ?= mc301
 REMOTEHOST ?= bravo.stat.duke.edu
-REMOTEDIR ?= /web/isds/docs/courses/Fall15/sta101.002
+REMOTEDIR ?= /web/isds/docs/courses/Spring16/sta101.001
 REMOTE ?= $(REMOTEUSER)@$(REMOTEHOST):$(REMOTEDIR)
 
 .PHONY: clean

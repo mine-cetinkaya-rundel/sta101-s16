@@ -140,27 +140,27 @@ title: Schedule
 
 ##### In class / lab
 
+| Feb 25, Thu | [Lab 6: Inference for numerical data](post/labs/inf_for_numerical_data.html) |
 | Feb 29, Mon | [Lesson 4.1: Inference with t](post/slides/u4_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u4_deck1H.pdf) |
 |             | [App Ex 4.1: Comparing means](post/app/app_Compare_means.pdf) |
 |             | **RA 4** in class |
 | Mar 2, Wed  | [Lesson 4.2: Bootstrap intervals](post/slides/u4_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u4_deck2H.pdf) |
 |             | [App Ex 4.2: Bootstrap intervals](post/app/app_Bootstrap_intervals.pdf) |
-| Mar 3, Thur | [Lab 6: Inference for numerical data](post/labs/inf_for_numerical_data.html) |
+| Mar 3, Thur | [Lab 7: (More) inference for numerical data](post/labs/more_inf_for_numerical_data.html) |
 | Mar 7, Mon  | [Lesson 4.3: Power](post/slides/u4_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u4_deck3H.pdf) |
 |             | [App Ex 4.3: Power](post/app/app_Power.pdf) |
 | Mar 9, Wed  | [Lesson 4.4: ANOVA](post/slides/u4_deck4.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u4_deck4H.pdf) |
-| Mar 10, Thu | [Lab 7: (More) inference for numerical data](post/labs/more_inf_for_numerical_data.html) |
+|             | [App Ex 4.4: ANOVA](post/app/app_ANOVA.pdf) |
+| Mar 10, Thu | Lab: Work on project proposal |
 
-
-| Oct 15, Thu | Work on [Project 1](post/projects/project1.html) proposal               |
-|              | [App Ex 4.4: ANOVA](post/app/app_ANOVA.pdf) |
 
 ##### Due dates
 
-* Lab 5: Oct 8, Thu 
-* Lab 6: Oct 15, Thu 
-* [Project 1](post/projects/project1.html) Proposal: Oct 19, Mon
-* [PS 4]({{ site.sakai_ps }}): Oct 23, Fri
+* Lab 5: Feb 25, Thu 
+* Lab 6: Mar 3, Thur
+* Lab 7: Mar 10, Thu  
+* [Project Proposal]() Proposal: Mar 11, Fri at 5pm
+* [PS 4]({{ site.sakai_ps }}): Mar 11, Fri
   * End of chapter exercises from **Chp 5**. Only turn in answers to 
   graded questions, use the back of the book to check your work on the practice questions.
   Must show **all** work to get credit. Click [here]({{ site.sakai_ps }}) to submit the 
@@ -173,9 +173,16 @@ title: Schedule
       + Part 2 – Power: 5.39
       + Part 3 – Comparing three or more means (ANOVA): 5.41, 5.43, 5.45, 5.47, 5.49, 5.51
       + Part 4 – Simulation based inference for means 
-* [PA 4]({{ site.sakai_pa }}): Oct 25, Sun
-  * Take between Oct 21, Wed and Oct 25, Sun. 
+* [PA 4]({{ site.sakai_pa }}): Mar 13, Sun
+  * Take between Mar 9, Wed and Mar 13, Sun. 
   * You have 30 minutes to complete. Only one attempt allowed. Click [here]({{ site.sakai_pa }}) to take the performance assessment.
+
+* * *
+
+### <a name="mt2"></a> :palm_tree::sunny: Spring Break :sunny::tropical_drink: 
+
+* Mar 12, Sat - Mar 20, Sun
+* Prepare for Unit 5
 
 * * *
 
@@ -187,23 +194,19 @@ title: Schedule
 
 ##### In class / lab
 
-| Oct 26, Mon | **RA 5** in class |
+| Mar 21, Mon | **RA 5** in class |
 |             | [Lesson 5.1: Inference for a single proportion](post/slides/u5_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u5_deck1H.pdf) |
-|              | [App Ex 5.1: Inference for a single proportion](post/app/app_Single_prop.pdf) |
-| Oct 28, Wed | [Lesson 5.2: Inference for comparing two proportions](post/slides/u5_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u5_deck2H.pdf)                  |
-|              | [App Ex 5.2: Inference for comparing two proportions](post/app/app_Compare_two_prop.pdf) |
-| Oct 29, Thu | [Lab 8: Inference for categorical data](https://mine.shinyapps.io/inf_for_categorical_data) |
-| Nov 2, Mon  | [Lesson 5.3: Chi-square tests](post/slides/u5_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u5_deck3H.pdf)                  |
-|              | [App Ex 5.3: Chi-square tests](post/app/app_Chisq_tests.pdf) |
-| Nov 4, Wed  | [Lesson 5.4: Review/synthesis](post/slides/u5_deck4.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u5_deck4H.pdf)                  |
-| Nov 5, Thu  | Work on [Project 1](post/projects/project1.html)                     |
+|             | [App Ex 5.1: Inference for a single proportion](post/app/app_Single_prop.pdf)|
+| Mar 23, Wed | [Lesson 5.2: Inference for comparing two proportions](post/slides/u5_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u5_deck2H.pdf) |
+|             | [App Ex 5.2: Inference for comparing two proportions](post/app/app_Compare_two_prop.pdf) |
+| Mar 24, Thu | [Lab 8: Inference for categorical data](https://mine.shinyapps.io/inf_for_categorical_data) |
+| Mar 28, Mon | [Lesson 5.3: Chi-square tests](post/slides/u5_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u5_deck3H.pdf)                  |
+|             | [App Ex 5.3: Chi-square tests](post/app/app_Chisq_tests.pdf) |
 
 ##### Due dates
 
-* Lab 7: Oct 29, Thu
-* Lab 8: Nov 5, Thu
-* [Project 1](post/projects/project1.html): Nov 6, Fri
-* [PS 5]({{ site.sakai_ps }}): Nov 6, Fri
+* Lab 7: Mar 24, Thu
+* [PS 5]({{ site.sakai_ps }}): Apr 1, Fri
   * End of chapter exercises from **Chp 6**. Only turn in answers to 
   graded questions, use the back of the book to check your work on the practice questions.
   Must show **all** work to get credit. Click [here]({{ site.sakai_ps }}) to submit the 
@@ -215,13 +218,13 @@ title: Schedule
     + Part 2 – Comparing two proportions: 6.23, 6.25, 6.27, 6.29, 6.31, 6.33, 6.35
     + Part 3 – Inference for proportions via simulation: 6.51, 6.53, 6.55
     + Part 4 – Comparing three or more proportions (Chi-square): 6.39, 6.41, 6.43, 6.45, 6.47
-* [PA 5]({{ site.sakai_pa }}): Nov 7, Sat (Note day change to allow for reviewing answers before the midterm)
-  * Take between Nov 4, Wed and Nov 7, Sat. 
+* [PA 5]({{ site.sakai_pa }}): Mar 28, Tue (Note day change to allow for reviewing answers before the midterm)
+  * Take between Mar 23, Wed and Mar 28, Tue. 
   * You have 30 minutes to complete. Only one attempt allowed. Click [here]({{ site.sakai_pa }}) to take the performance assessment.
 
 * * *
 
-### <a name="mt2"></a> Midterm 2 - Nov 9, Mon (in class)
+### <a name="mt2"></a> Midterm 2 - Mar 30, Wed (in class)
 
 * Covers Units 4 and 5 + fundamentals from Units 1 - 3
 * Sample Midterm 2: [handout](https://sakai.duke.edu/access/content/group/22299c5a-2e30-49a7-b46d-289ae3e0d739/Sample_MT2.pdf) + [solutions](https://sakai.duke.edu/access/content/group/22299c5a-2e30-49a7-b46d-289ae3e0d739/Sample_MT2_Key.pdf)
@@ -236,17 +239,18 @@ title: Schedule
 
 ##### In class / lab
 
-| Nov 11, Wed | **RA 6** in class |
+| Mar 31, Thu | [Lab 9: Introduction to linear regression](post/labs/simple_regression.html) |
+| Apr 4, Mon  | **RA 6** in class |
 |             | [Lesson 6.1: Introduction to regression](post/slides/u6_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u6_deck1H.pdf)     |
-|              | [App Ex 6.1: Linear models](post/app/app_Lin_mod.pdf) |
-| Nov 12, Thu | [Lab 9: Introduction to linear regression](post/labs/simple_regression.html) |
-| Nov 16, Mon | [Lesson 6.2: Outliers and inference for regression](post/slides/u6_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u6_deck2H.pdf)                     |
-|              | [App Ex 6.2: Linear regression](post/app/app_Lin_reg.pdf) |
+|             | [App Ex 6.1: Linear models](post/app/app_Lin_mod.pdf) |
+| Apr 6, Wed  | [Lesson 6.2: Outliers and inference for regression](post/slides/u6_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u6_deck2H.pdf)                     |
+|             | [App Ex 6.2: Linear regression](post/app/app_Lin_reg.pdf) |
 
 
 ##### Due dates
 
-* [PS 6]({{ site.sakai_ps }}): Nov 20, Fri
+* Lab 8: Mar 31, Thu 
+* [PS 6]({{ site.sakai_ps }}): Apr 8, Fri
   * End of chapter exercises from **Chp 7**. Only turn in answers to 
   graded questions, use the back of the book to check your work on the practice questions.
   Must show **all** work to get credit. Click [here]({{ site.sakai_ps }}) to submit the 
@@ -257,8 +261,8 @@ title: Schedule
     + Part 1 – Relationship between two numerical variables: 7.1, 7.3, 7.7, 7.9, 7.11, 7.13, 7.15
     + Part 2 – Linear regression with a single predictor: 7.17, 7.19, 7.25, 7.27, 7.29, 7.31, 7.33
     + Part 3 – Inference for linear regression: 7.25, 7.37, 7.39, 7.41, 7.43
-* [PA 6]({{ site.sakai_pa }}): Nov 22, Sun
-  * Take between Nov 16, Mon and Nov 22, Sun. 
+* [PA 6]({{ site.sakai_pa }}): Apr 10, Sun
+  * Take between Apr 6, Wed and Apr 10, Sun. 
   * You have 30 minutes to complete. Only one attempt allowed. Click [here]({{ site.sakai_pa }}) to take the performance assessment.
 
 * * *
@@ -271,21 +275,24 @@ title: Schedule
 
 ##### In class / lab
 
-| Nov 18, Wed | **RA 7** in class |
+
+| Apr 7, Thu  | [Lab 10: Multiple linear regression](post/labs/multiple_regression.html)   |
+| Apr 11, Mon | **RA 7** in class |
 |             | [Lesson 7.1: Introduction to multiple linear regression ](post/slides/u7_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u7_deck1H.pdf) |
-| Nov 19, Thu | [Lab 10: Multiple linear regression](post/labs/multiple_regression.html)   |
-| Nov 23, Mon | [Lesson 7.2: Model selection & diagnostics for MLR](post/slides/u7_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u7_deck2H.pdf)                 |
-|              | [App Ex 7.1: Multiple linear regression](post/app/app_MLR.pdf) |
-| Nov 25, Wed | *Thanksgiving break - no class*      |
-| Nov 26, Thu | *Thanksgiving break - no lab*        |
-| Nov 30, Mon | [Lesson 7.3: Transformations and case study](post/slides/u7_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u7_deck3H.pdf)                 |
-|              | [App Ex 7.2: Interpreting models with a transformed response](post/app/app_Trans_MLR.pdf) |
+| Apr 13, Wed | [Lesson 7.2: Model selection & diagnostics for MLR](post/slides/u7_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u7_deck2H.pdf)                 |
+|             | [App Ex 7.1: Multiple linear regression](post/app/app_MLR.pdf) |
+| Apr 14, Thu | Work on project |
+| Apr 18, Mon | [Lesson 7.3: Transformations and case study](post/slides/u7_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u7_deck3H.pdf)                 |
+|             | [App Ex 7.2: Interpreting models with a transformed response](post/app/app_Trans_MLR.pdf) |
+| Apr 20, Wed | [Lesson 7.4]() |
+| Apr 21, Thu | Lab: Poster session
 
 ##### Due dates
 
-* Lab 8: Nov 19, Thu
-* Lab 10: Nov 30, Mon (by class, 10:05am)
-* [PS 7]({{ site.sakai_ps }}): Dec 4, Fri
+* Lab 9: Apr 7, Thu
+* Lab 10: Apr 14, Thu
+* Project due: Apr 21, Thu in lab
+* [PS 7]({{ site.sakai_ps }}): Apr 24, Sun
   * End of chapter exercises from **Chp 8**. Only turn in answers to 
   graded questions, use the back of the book to check your work on the practice questions.
   Must show **all** work to get credit. Click [here]({{ site.sakai_ps }}) to submit the 
@@ -296,22 +303,22 @@ title: Schedule
     + Part 2 – Inference for MLR: 8.5
     + Part 3 – Model selection: 8.7, 8.9, 8.11
     + Part 4 – Model diagnostics: 8.13
-* [PA 7]({{ site.sakai_pa }}): Dec 6, Sun
-  * Take between Nov 30, Mon and Dec 6, Sun. 
+* [PA 7]({{ site.sakai_pa }}): Apr 24, Sun
+  * Take between Apr 20, Mon and Apr 24, Sun. 
   * You have 30 minutes to complete. Only one attempt allowed. Click [here]({{ site.sakai_pa }}) to take the performance assessment.
 
 * * *
 
 ### <a name="wrapup"></a> Wrap up
 
-##### In class / lab
+##### In class
 
-| Dec 2, Wed | [Review / synthesis](post/slides/u8_final_review.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u8_final_reviewH.pdf)                 |
-| Dec 3, Thu | [Project 2](post/projects/project2.html) poster session (@ The Edge Workshop Room) |
+| Apr 25, Mon | [Case study]() |
+| Apr 27, Wed | [Review / synthesis]() |
 
 * * *
 
-### <a name="final"></a> Final Exam - Dec 10, Thu (2-5pm)
+### <a name="final"></a> Final Exam - May 5, Thu (7-10pm)
 
 * Cumulative, covers Units 1 - 7
 * Practice problems for Final: [handout](https://sakai.duke.edu/access/content/group/22299c5a-2e30-49a7-b46d-289ae3e0d739/FR.pdf) + [solutions](https://sakai.duke.edu/access/content/group/22299c5a-2e30-49a7-b46d-289ae3e0d739/FR_Key.pdf)

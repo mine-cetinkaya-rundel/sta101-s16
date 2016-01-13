@@ -12,10 +12,10 @@ title: Links
 * [Learning objectives]({{ site.learn_obj }}/learning): For viewing the learning objectives on the Duke Coursera page (NetID login required)
     * [Answers to Test Yourself questions](https://drive.google.com/?ddrp=1#folders/0B0Y2lFgS9uiDNWhyQjRTei1GbjA): Crowd-sourced answers to Test Yourself questions from the learning objectives. Feel free to add / edit.
 * [OpenIntro Statistics]({{ site.openintro }}): Textbook
+* [Class recordings]({{ site.class_recordings }}): Recordings of class sessions in Love Auditorium
 * Probability calculations:
     * [Probability tables](https://www.openintro.org/download.php?file=os2_prob_tables&referrer=/stat/textbook.php)
     * [Distribution calculator applet](https://gallery.shinyapps.io/dist_calc/)
-* [R commands](https://stat.duke.edu/~mc301/R/Rcommands.html): List of R commands commonly used in this course
 * [Teams & lab authors]({{ site.teams }})
 
 
