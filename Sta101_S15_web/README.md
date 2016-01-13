@@ -25,4 +25,4 @@ Update dates for classes and exams (this file will be updated more later)
 * Each semester change the theme color, often with one of Pantone's colors 
 for that season.
 * Color goes in the following file: noita/foundation/css/foundation.min.css. 
-* Spring 2016: #3ec0c1.
+* Spring 2016: #034f84 (Snorkel Blue).
