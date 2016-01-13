@@ -289,7 +289,7 @@ title: Schedule
 
 * Lab 9: Apr 7, Thu
 * Lab 10: Apr 14, Thu
-* Project due: Apr 21, Thu in lab
+* Project poster session: Apr 21, Thu in lab
 * [PS 7]({{ site.sakai_ps }}): Apr 24, Sun
   * End of chapter exercises from **Chp 8**. Only turn in answers to 
   graded questions, use the back of the book to check your work on the practice questions.
