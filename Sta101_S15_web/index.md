@@ -157,7 +157,7 @@ title: Schedule
 
 * Lab 5: Feb 25, Thu 
 * Lab 6: Mar 3, Thur
-* [Project Proposal]() Proposal: Mar 4, Fri at 5pm
+* [Project Proposal](): Mar 4, Fri at 5pm
 * [PS 4]({{ site.sakai_ps }}): Mar 11, Fri
   * End of chapter exercises from **Chp 5**. Only turn in answers to 
   graded questions, use the back of the book to check your work on the practice questions.
