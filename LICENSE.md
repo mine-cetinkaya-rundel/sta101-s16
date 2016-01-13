@@ -1,0 +1,2 @@
+![Creative Commons License](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
+[Data Analysis and Statistical Inference (Duke University) course notes](https://github.com/mine-cetinkaya-rundel/sta101_f15) by [Mine Cetinkaya-Rundel](https://stat.duke.edu/~mc301) is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
