@@ -5,15 +5,17 @@ title: Course Information
 
 ### Teaching team:
 
-|------------+---------------------+---------------------|
+|------------+------------------------+-----------------------------------------|
 |Professor   | [Dr. Çetinkaya-Rundel](http://stat.duke.edu/~mc301) | [mine@stat.duke.edu](mailto:mine@stat.duke.edu)
-|:-----------|:--------------------|:-------------------|
-|**TAs**     | Erika Ball          | [erika.ball@duke.edu](mailto:erika.ball@duke.edu) |
-|            | David Clancy        | [djc37@duke.edu](mailto:djc37@duke.edu) |
-|            | Reuben McCreanor    | [reuben.mccreanor@duke.edu](mailto:reuben.mccreanor@duke.edu) |
-|            | Anne Driscoll       | [anne.driscoll@duke.edu](mailto:anne.driscoll@duke.edu) |
-|            | Megan Robertson     | [megan.robertson@duke.edu](mailto:megan.robertson@duke.edu) |
-|------------+---------------------+--------------------|
+|:-----------|:-----------------------|:----------------------------------------|
+|**TAs**     | David Clancy (head TA) | [djc37@duke.edu](mailto:djc37@duke.edu) |
+|            | Lindsay Berry          | [lrb38@stat.duke.edu](mailto:lrb38@stat.duke.edu) |
+|            | Patrick Cardel         | [patrick.cardel@duke.edu](mailto:patrick.cardel@duke.edu) |
+|            | Anthony Hung           | [anthony.hung@duke.edu](mailto:anthony.hung@duke.edu) |
+|            | Eidan Jacob            | [eidan.jacob@duke.edu](mailto:eidan.jacob@duke.edu) |
+|            | John Pura              | [john.pura@duke.edu](mailto:john.pura@duke.edu) |
+|            | Sarah Zimmerman        | [sarah.zimmermann@duke.edu](mailto:sarah.zimmermann@duke.edu) |
+|------------+------------------------+-----------------------------------------|
 
 * * *
 
@@ -31,43 +33,53 @@ If you would like to purchase a used clicker from a former student, see the list
 * * *
 
 ### Class meetings:
-* Lectures: Mondays and Wednesdays, 1:25pm - 2:40pm, LSRC ROOM NO
-* Labs: Thursdays, Old Chem 101
-    * 8:30am - 9:45am - TA: TBA
-    * 10:05am - 11:20am - TA: TBA
-    * 11:45am - 1:00pm - TA: TBA
-    * 1:25pm - 2:40pm - TA: TBA
-    * 3:05pm - 4:20pm - TA: TBA
-    * 4:40pm - 5:55pm - TA: TBA
+* Lectures: Mondays and Wednesdays, 1:25pm - 2:40pm, LSRC ROOM B 101
+* Labs:
+    * 8:30am - 9:45am - Link Classroom 3 - TA: David Clancy
+    * 10:05am - 11:20am - Link Classroom 3 - TA: David Clancy
+    * 11:45am - 1:00pm - Link Classroom 4 - TA: Lindsay Berry
+    * 1:25pm - 2:40pm - Link Classroom 3 - TA: Lindsay Berry
+    * 3:05pm - 4:20pm - Link Classroom 4 - TA: John Pura
+    * 4:40pm - 5:55pm - Link Classroom 4 - TA: John Pura
 
 * * *
 
 ### <a name="exams"></a>Exams:
 
-* Midterm 1: DATE, in class
-* Midterm 2: DATE, in class
-* Final: DATE, TIME
+* Midterm 1: Feb 24, Wed, in class
+* Midterm 2: Mar 30, Wed, in class
+* Final: May 5, Thu - 7-10pm
 
 * * *
 
 ### <a name="oh"></a>Office Hours:
 * Professor Cetinkaya-Rundel:
-    * Day / time: Tuesdays and Thursdays 4:30pm - 6pm or by appointment
-    * Location: Old Chemistry 213
+    * Discussion section: Tuesdays, 4 - 5:30pm, Soc Sci 139
+    * Office hours: Thursdays, 10:30am - 12pm, Old Chem 213 (my office)
 * Teaching Assistants:
 
-|---------------------+---------------------+--------------------|
-| TA                  | Day / time          | Location           |
-|:--------------------|:--------------------|:-------------------|
-| TBA                 | TBA                 | TBA                |
-
+|---------------------+----------------------------------+---------------|
+| TA                  | Day / time                       | Location      |
+|:--------------------|:---------------------------------|:--------------|
+|Sarah Zimmerman      | Sun 11am - 1pm                   | Old Chem 211A |
+|David Clancy         | Sun 7:30pm - 9:30pm              | Old Chem 025  |
+|Drew Jordan          | Mon 4:30pm - 5:30pm + 7pm - 8pm  | Old Chem 211A |
+|Anthony Hung         | Mon 6pm - 8pm                    | Old Chem 025  |
+|Andrew Wong          | Mon 7:30pm - 9:30pm              | Old Chem 025  |
+|Anne Driscoll        | Tue 9:30am - 11:30am             | Old Chem 211A |
+|Katherine Ahn        | Tue 11am - 1pm                   | Old Chem 211A |
+|Andy Cooper          | Tue 2pm - 4pm                    | Old Chem 211A |
+|Patrick Cardel       | Thu 12pm - 2pm                   | Old Chem 211A |
+|John Pura            | Thu 2pm - 3pm + 6pm - 7pm        | Old Chem 211A |
+|Lindsay Berry        | Thu 3pm - 5pm                    | Old Chem 211A |
+|Eidan Jacob          | Fri 9:30am - 11:30am             | Old Chem 211A |
 
 * * *
 
 ### Holidays:
 
-* DAY, DATE - Martin Luther King, Jr. Day
-* DAY, DATE - Spring Break
+* Jan 18, Mon - Martin Luther King, Jr. Day
+* Mar 12, Sat - Mar 20, Sun - Spring Break
 
 * * *
 
