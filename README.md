@@ -1,4 +1,4 @@
-# sta101_f15
+# Sta 101 - S16
 
 Course materials for Sta 101 - Spring 2016 semester at Duke University.
 
