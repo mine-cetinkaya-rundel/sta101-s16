@@ -1,0 +1,400 @@
+% -*- TeX-engine: xetex; eval: (auto-fill-mode 0); eval: (visual-line-mode 1); -*-
+% Compile with XeLaTeX
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% Option 1: Slides: (comment for handouts)   %
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[slidestop,compress,mathserif,12pt,t,professionalfonts,xcolor=table]{beamer}
+
+% solution stuff
+\newcommand{\solnMult}[1]{
+\only<1>{#1}
+\only<2->{\red{\textbf{#1}}}
+}
+\newcommand{\soln}[1]{\textit{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Option 2: Handouts, without solutions (post before class)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
+
+% % handout layout
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+
+% % solution stuff
+% \newcommand{\solnMult}[1]{#1}
+% \newcommand{\soln}[1]{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Option 3: Handouts, with solutions (may post after class if need be)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
+
+% % handout layout
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+
+% % solution stuff
+% \newcommand{\solnMult}[1]{\red{\textbf{#1}}}
+% \newcommand{\soln}[1]{\textit{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Option 4: Notes Only
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% % See http://tex.stackexchange.com/questions/114219/add-notes-to-latex-beamer
+% \documentclass[10pt,containsverbatim,xcolor=xelatex,dvipsnames,table,notes=only]{beamer}
+
+% % handout layout
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{2 on 1}[letterpaper, landscape, border shrink=5mm]
+
+% % solution stuff
+% \newcommand{\solnMult}[1]{#1}
+% \newcommand{\soln}[1]{}
+
+%%%%%%%%%%
+% Load style file, defaults  %
+%%%%%%%%%%
+
+\input{../../lec_style.tex}
+\input{../../definitions_default.tex}
+% ALT ALT
+% \input{../../definitions_custom.tex}
+
+%%%%%%%%%%%
+% Cover slide info    %
+%%%%%%%%%%%
+
+\title{Unit 1: Introduction to data}
+\subtitle{1. Data Collection +\\Observational studies \& experiments}
+\author{Sta 101 - Fall 2015}
+\author{\CourseName}
+\date{}
+\institute{\InstituteName}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin document and set Helvetica Neue font   %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\fontspec[Ligatures=TeX]{Helvetica Neue Light}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Title Page
+
+\begin{frame}[plain]
+
+\titlepage
+
+\vfill
+
+{\scriptsize \webLink{\PersonalSite}{Dr. \LastName{}} \hfill Slides posted at  \webURL{\CourseSite}}
+
+\addtocounter{framenumber}{-1} 
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Main ideas}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Use a sample to make inferences about the population}
+\label{mi1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{1. Use a sample to make inferences about the population}
+
+\begin{itemize}[<+->]
+\item Ultimate goal: make inferences about populations
+\item Caveat: populations are difficult or impossible to access
+\item Solution: use a sample from that population, and use \hl{statistics} from that 
+sample to make inferences about the unknown population \hl{parameters}
+\item The better (more \hl{representative}) sample we have, the more reliable our 
+estimates and more accurate our inferences will be
+\end{itemize}
+
+\pause
+
+\disc{Suppose we want to know how many offspring female lemurs have, on average.
+It's not feasible to obtain offspring data from on all female lemurs, so we use 
+data from the Duke Lemur Center. We use the sample mean from these data as an 
+estimate for the unknown population mean. Can you see any limitations to using data 
+from the Duke Lemur Center to make inferences about all lemurs?}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Sampling is natural}
+
+\begin{center}
+\includegraphics[width=0.3\textwidth]{figures/soup}
+\end{center}
+
+\begin{itemize}
+
+\item When you taste a spoonful of soup and decide the spoonful you tasted isn't salty 
+enough, that's \hl{exploratory analysis}
+
+\item If you generalize and conclude that your entire soup needs salt, that's an \hl{
+inference}
+
+\item For your inference to be valid, the spoonful you tasted (the sample) needs to be 
+\hl{representative} of the entire pot (the population)
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Ideally use a simple random sample, stratify to control for a variable, and cluster to make sampling easier} 
+\label{mi2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{2. Ideally use a simple random sample, stratify to control for a variable, 
+and cluster to make sampling easier}
+
+\pause
+
+\twocol{0.505}{0.51}{
+\hl{Simple random:} \\
+{\small Drawing names from a hat}
+\includegraphics[width=\textwidth]{figures/sampling_simple} \\
+\pause
+\hl{Stratified:} {\small homogenous strata} \\
+{\small Stratify to control for SES} \\
+\includegraphics[width=\textwidth]{figures/sampling_stratified} 
+}
+{
+\pause
+\hl{Cluster:} {\small heterogenous clusters} \\
+{\small Sample all chosen clusters}
+\includegraphics[width=\textwidth]{figures/sampling_cluster} \\
+\pause
+\hl{Multistage:} \\
+{\small Random sample in chosen clusters}
+\includegraphics[width=\textwidth]{figures/sampling_multistage}
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\clicker{A city council has requested a household survey be conducted in a suburban 
+area of their city. The area is broken into many distinct and unique neighborhoods, 
+some including large homes, some with only apartments, and others a diverse mixture of 
+housing structures. Which approach would likely be the \emph{least} effective?}
+
+\begin{enumerate}[(a)]
+\item Simple random sampling
+\item Stratified sampling, where each stratum is a neighborhood
+\item \solnMult{Cluster sampling, where each cluster is a neighborhood}
+\end{enumerate}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Sampling schemes can suffer from a variety of biases}
+\label{mi3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{3. Sampling schemes can suffer from a variety of biases}
+
+\begin{itemize}[<+->]
+
+\item \hl{Non-response:} If only a small fraction of the randomly sampled people choose 
+to respond to a survey, the sample may no longer be representative of the population
+
+\item \hl{Voluntary response:} Occurs when the sample consists of people who volunteer 
+to respond because they have strong opinions on the issue since such a sample will also 
+not be representative of the population
+
+\item \hl{Convenience sample:} Individuals who are easily accessible are more likely to 
+be included in the sample
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[shrink]
+
+{\small
+\clicker{A school district is considering whether it will no longer allow high school 
+students to park at school after two recent accidents where students were severely 
+injured. As a first step, they survey parents by mail, asking them whether or not the 
+parents would object to this policy change. Of 6,000 surveys that go out, 1,200 are 
+returned. Of these 1,200 surveys that were completed, 960 agreed with the policy change 
+and 240 disagreed. Which of the following statements are true?}
+
+\begin{enumerate}[I.]
+\item Some of the mailings may have never reached the parents.
+\item Overall, the school district has strong support from parents to move forward with 
+the policy approval.
+\item It is possible that majority of the parents of high school students disagree with 
+the policy change.
+\item The survey results are unlikely to be biased because all parents were mailed a 
+survey. 
+\end{enumerate}
+
+\begin{multicols}{5}
+\begin{enumerate}[(a)]
+\item Only I
+\item I and II
+\item \solnMult{I and III}
+\item III and IV
+\item Only IV
+\end{enumerate}
+\end{multicols}
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Experiments use random assignment to treatment groups, observational studies do not}
+\label{mi4}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{}
+
+\disc{What type of study is this? What is the scope of inference (causality / generalizability)?}
+
+\begin{center}
+\includegraphics[width=0.9\textwidth]{figures/facebook_study}
+\end{center}
+
+\ct{\webURL{http://www.nytimes.com/2014/06/30/technology/facebook-tinkers-with-users-emotions-in-news-feed-experiment-stirring-outcry.html}}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{4. Experiments use random assignment to treatment groups, observational studies do not}
+
+{\small
+\disc{A study that surveyed a random sample of otherwise healthy adults found that people are more likely to get muscle cramps when they're stressed. The study also noted that people drink more coffee and sleep less when they're stressed. What type of study is this?}
+
+\soln{\onslide<2->{Observational}}
+
+\disc{What is the conclusion of the study?}
+
+\soln{\onslide<3->{There is an \hl{association} between increased stress \& muscle cramps.}}
+
+\disc{Can this study be used to conclude a causal relationship between increased stress and muscle cramps?}
+
+\soln{\onslide<4->{Muscle cramps might also be due to increased caffeine consumption or sleeping less -- these are potential \hl{confounding} variables.}}
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Four principles of experimental design: randomize, control, block, replicate}
+\label{mi5}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{5. Four principles of experimental design:\\ randomize, control, block, 
+replicate}
+
+\begin{itemize}
+\item We would like to design an experiment to investigate if increased stress causes 
+muscle cramps:
+
+\pause
+
+\begin{itemize}
+\item Treatment: increased stress
+\item Control: no or baseline stress
+\end{itemize}
+
+\pause
+
+\item It is suspected that the effect of stress might be different on younger and older 
+people: \hl{block} for age.
+
+\end{itemize}
+
+\pause
+
+\disc{Why is this important? Can you think of other variables to block for?}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Random sampling helps generalizability, random assignment helps causality}
+\label{mi6}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{6. Random sampling helps generalizability,\\ random assignment helps 
+causality}
+
+\begin{center}
+\includegraphics[width=\textwidth]{figures/random_sample_assignment}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Summary}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Summary of main ideas}
+
+\vfill
+
+\begin{enumerate}
+
+\item \nameref{mi1}
+
+\item \nameref{mi2}
+
+\item \nameref{mi3}
+
+\item \nameref{mi4}
+
+\item \nameref{mi5}
+
+\item \nameref{mi6}
+
+\end{enumerate}
+
+\vfill
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

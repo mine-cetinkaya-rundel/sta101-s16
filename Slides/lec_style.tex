@@ -1,0 +1,378 @@
+%%%%%%%%%%%%%%%%
+% Themes
+%%%%%%%%%%%%%%%%
+
+% See http://deic.uab.es/~iblanes/beamer_gallery/ for mor options
+
+% Style theme
+\usetheme{Pittsburgh}
+
+% Color theme
+\usecolortheme{seahorse}
+
+% Helvetica Neue Light for most text
+\usepackage{fontspec}
+\setsansfont{Helvetica Neue Light}
+
+%%%%%%%%%%%%%%%%
+% Packages
+%%%%%%%%%%%%%%%%
+
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{amsmath}  	% this permits text in eqnarray among other benefits
+\usepackage{url}		% produces hyperlinks
+\usepackage[english]{babel}
+\usepackage{colortbl}	% allows for color usage in tables
+\usepackage{multirow}	% allows for rows that span multiple rows in tables
+\usepackage{color}		% this package has a variety of color options
+\usepackage{pgf}
+\usepackage{calc}
+\usepackage{ulem}
+\usepackage{multicol}
+\usepackage{textcomp}
+\usepackage{listings}
+\usepackage{changepage}
+\usepackage{tikz}
+\usetikzlibrary{trees}		% for probability trees
+\usepackage{fancyvrb}	% for colored code chunks
+\usepackage{nameref}
+
+%%%%%%%%%%%%%%%%
+% Remove navigation symbols
+%%%%%%%%%%%%%%%%
+
+\beamertemplatenavigationsymbolsempty
+\hypersetup{pdfpagemode=UseNone} % don't show bookmarks on initial view
+
+%%%%%%%%%%%%%%%%
+% User defined colors
+%%%%%%%%%%%%%%%%
+
+% Pantone 2016 Spring colors
+% https://atelierbram.github.io/c-tiles16/colorscheming/pantone-spring-2016-colortable.html
+% update each semester or year
+
+\xdefinecolor{custom_blue}{rgb}{0.01, 0.31, 0.52} % Snorkel Blue
+\xdefinecolor{custom_darkBlue}{rgb}{0.20, 0.20, 0.39} % Reflecting Pond  
+\xdefinecolor{custom_orange}{rgb}{0.96, 0.57, 0.42} % Cadmium Orange
+\xdefinecolor{custom_green}{rgb}{0, 0.47, 0.52} % Biscay Bay
+\xdefinecolor{custom_red}{rgb}{0.58, 0.32, 0.32} % Marsala
+
+\xdefinecolor{custom_lightGray}{rgb}{0.78, 0.80, 0.80} % Glacier Gray
+\xdefinecolor{custom_darkGray}{rgb}{0.35, 0.39, 0.43} % Stormy Weather
+
+%%%%%%%%%%%%%%%%
+% Template colors
+%%%%%%%%%%%%%%%%
+
+\setbeamercolor*{palette primary}{fg=white,bg= custom_blue}
+\setbeamercolor*{palette secondary}{fg=black,bg= custom_blue!80!black}
+\setbeamercolor*{palette tertiary}{fg=white,bg= custom_blue!80!black!80}
+\setbeamercolor*{palette quaternary}{fg=white,bg= custom_blue}
+
+\setbeamercolor{structure}{fg= custom_blue}
+\setbeamercolor{frametitle}{bg= custom_blue!90}
+\setbeamertemplate{blocks}[shadow=false]
+\setbeamersize{text margin left=2em,text margin right=2em}
+
+%%%%%%%%%%%%%%%%
+% Styling fonts, bullets, etc.
+%%%%%%%%%%%%%%%%
+
+% title slide
+\setbeamerfont{title}{size=\large,series=\bfseries}
+\setbeamerfont{subtitle}{size=\large,series=\mdseries}
+%\setbeamerfont{institute}{size=\large,series=\mdseries}
+
+% color of alerted text
+\setbeamercolor{alerted text}{fg=custom_orange}
+
+% styling of itemize bullets
+\setbeamercolor{item}{fg=custom_blue}
+\setbeamertemplate{itemize item}{{{\small$\blacktriangleright$}}}
+\setbeamercolor{subitem}{fg=custom_blue}
+\setbeamertemplate{itemize subitem}{{\textendash}}
+\setbeamerfont{itemize/enumerate subbody}{size=\footnotesize}
+\setbeamerfont{itemize/enumerate subitem}{size=\footnotesize}
+
+% styling of enumerate bullets
+\setbeamertemplate{enumerate item}{\insertenumlabel.}
+\setbeamerfont{enumerate item}{family={\fontspec{Helvetica Neue}}}
+\setbeamerfont{enumerate subitem}{family={\fontspec{Helvetica Neue}}}
+\setbeamerfont{enumerate subsubitem}{family={\fontspec{Helvetica Neue}}}
+
+% make frame titles small to make room in the slide
+\setbeamerfont{frametitle}{size=\small} 
+
+% set Helvetica Neue font for frame and section titles
+\setbeamerfont{frametitle}{family={\fontspec{Helvetica Neue}}}
+\setbeamerfont{sectiontitle}{family={\fontspec{Helvetica Neue}}}
+\setbeamerfont{section in toc}{family={\fontspec{Helvetica Neue}}}
+\setbeamerfont{subsection in toc}{family={\fontspec{Helvetica Neue}}, size=\small}
+\setbeamerfont{footline}{family={\fontspec{Helvetica Neue}}}
+\setbeamerfont{subsection in toc}{family={\fontspec{Helvetica Neue}}}
+\setbeamerfont{block title}{family={\fontspec{Helvetica Neue}}}
+
+%%%%%%%%%%%%%%%%
+% New fonts accessed by fontspec package
+%%%%%%%%%%%%%%%%
+
+% Monaco font for code
+\newfontfamily{\monaco}{Monaco}
+
+%%%%%%%%%%%%%%%%
+% Color text commands
+%%%%%%%%%%%%%%%%
+
+%orange
+\newcommand{\orange}[1]{\textit{\textcolor{custom_orange}{#1}}}
+
+% yellow
+\newcommand{\yellow}[1]{\textit{\textcolor{yellow}{#1}}}
+
+% blue
+\newcommand{\blue}[1]{\textit{\textcolor{blue}{#1}}}
+
+% green
+\newcommand{\green}[1]{\textit{\textcolor{custom_green}{#1}}}
+
+% red
+\newcommand{\red}[1]{\textit{\textcolor{custom_red}{#1}}}
+
+% dark gray
+\newcommand{\darkgray}[1]{\textit{\textcolor{custom_darkGray}{#1}}}
+
+% light gray
+\newcommand{\lightgray}[1]{\textit{\textcolor{custom_lightGray}{#1}}}
+
+% pink
+\newcommand{\pink}[1]{\textit{\textcolor{pink}{#1}}}
+
+
+%%%%%%%%%%%%%%%%
+% Custom commands
+%%%%%%%%%%%%%%%%
+
+% empty box for probability tree frame
+\newcommand{\emptybox}[2]{
+	\fbox{ \begin{minipage}{#1} \hfill\vspace{#2} \end{minipage} }
+}
+
+% cancel
+\newcommand{\cancel}[1]{%
+    \tikz[baseline=(tocancel.base)]{
+        \node[inner sep=0pt,outer sep=0pt] (tocancel) {#1};
+        \draw[red, line width=0.5mm] (tocancel.south west) -- (tocancel.north east);
+    }%
+}
+
+% degree
+\newcommand{\degree}{\ensuremath{^\circ}}
+
+% cite
+\newcommand{\ct}[1]{
+\vfill
+{\tiny #1}}
+
+% Note
+\newcommand{\Note}[1]{
+\rule{2.5cm}{0.25pt} \\ \textit{\footnotesize{\textcolor{custom_red}{Note:} \textcolor{custom_darkGray}{#1}}}}
+
+% Remember
+\newcommand{\Remember}[1]{\textit{\scriptsize{\textcolor{custom_red}{Remember:} #1}}}
+
+% links: webURL, webLink
+\newcommand{\webURL}[1]{\urlstyle{same}{\textit{\textcolor{custom_blue}{\url{#1}}}}}
+\newcommand{\webLink}[2]{\href{#1}{\textcolor{custom_blue}{{#2}}}}
+
+% mail
+\newcommand{\mail}[1]{\href{mailto:#1}{\textit{\textcolor{custom_blue}{#1}}}}
+
+% highlighting: hl, hlGr, mathhl
+\newcommand{\hl}[1]{\textit{\textcolor{custom_blue}{#1}}}
+\newcommand{\hlGr}[1]{\textit{\textcolor{custom_green}{#1}}}
+\newcommand{\mathhl}[1]{\textcolor{custom_blue}{\ensuremath{#1}}}
+
+% example
+\newcommand{\ex}[1]{\textcolor{blue}{{{\small (#1)}}}}
+
+% twocol: two columns
+\newenvironment{twocol}[4]{
+\begin{columns}[c]
+\column{#1\textwidth}
+#3
+\column{#2\textwidth}
+#4
+\end{columns}
+}
+
+% threecol: three columns
+\newenvironment{threecol}[6]{
+\begin{columns}[c]
+\column{#1\textwidth}
+#4
+\column{#2\textwidth}
+#5
+\column{#3\textwidth}
+#6
+\end{columns}
+}
+
+% slot (for probability calculations)
+\newenvironment{slot}[2]{
+\begin{array}{c} 
+\underline{#1} \\ 
+#2
+\end{array}
+}
+
+% pr: left and right parentheses
+\newcommand{\pr}[1]{
+\left( #1 \right)
+}
+
+%%%%%%%%%%%%%%%%
+% Custom blocks
+%%%%%%%%%%%%%%%%
+
+% activity: less commonly used
+\newcommand{\activity}[2]{
+\setbeamertemplate{itemize item}{{{\small\textcolor{custom_orange}{$\blacktriangleright$}}}}
+\setbeamercolor{block title}{fg=white, bg=custom_orange}
+\setbeamerfont{block title}{size=\small}
+\setbeamercolor{block body}{fg=black, bg=custom_orange!20!white!80}
+\setbeamerfont{block body}{size=\small}
+\begin{block}{Activity: #1}
+\setlength\abovedisplayskip{0pt}
+#2
+\end{block}
+}
+
+% app: application exercise
+\newcommand{\app}[2]{
+\setbeamercolor{block title}{fg=white,bg=custom_green}
+\setbeamercolor{block body}{fg=black,bg=custom_green!20!white!80}
+\begin{block}{{\small Application exercise: #1}}
+#2
+\end{block}
+}
+
+% disc: discussion question
+\newcommand{\disc}[1]{
+\vspace*{-2ex}
+\setbeamercolor{block body}{bg=custom_blue!25!white!80, fg=custom_blue!55!black!95}
+\begin{block}{\vspace*{-3ex}}
+#1
+\end{block}
+\vspace*{-1ex}
+}
+
+% clicker: clicker question
+\newcommand{\clicker}[1]{
+\setbeamercolor{block title}{bg=custom_blue!80!white!50,fg=custom_blue!30!black!90}
+\setbeamercolor{block body}{bg=custom_blue!20!white!80,fg=custom_blue!30!black!90}
+\begin{block}{\vspace*{-0.2ex}{\footnotesize Clicker question}\vspace*{-0.2ex}}
+#1
+\end{block}
+}
+
+% formula
+\newcommand{\formula}[2]{
+\setbeamercolor{block title}{bg=custom_blue!40!white!60,fg=custom_blue!55!black!95}
+\begin{block}{{\small#1}}
+#2
+\end{block}
+}
+
+% code
+\newcommand{\Rcode}[1]{
+{\monaco {\footnotesize \textcolor{custom_darkBlue}{#1}}}
+}
+
+% output
+\newcommand{\Rout}[1]{
+{\monaco {\footnotesize \textcolor{custom_darkGray}{#1}}}
+}
+
+%%%%%%%%%%%%%%%%
+% Change margin
+%%%%%%%%%%%%%%%%
+
+\newenvironment{changemargin}[2]{%
+\begin{list}{}{%
+\setlength{\topsep}{0pt}%
+\setlength{\leftmargin}{#1}%
+\setlength{\rightmargin}{#2}%
+\setlength{\listparindent}{\parindent}%
+\setlength{\itemindent}{\parindent}%
+\setlength{\parsep}{\parskip}%
+}%
+\item}{\end{list}}
+
+%%%%%%%%%%%%%%%%
+% Footnote
+%%%%%%%%%%%%%%%%
+
+\long\def\symbolfootnote[#1]#2{\begingroup%
+\def\thefootnote{\fnsymbol{footnote}}\footnote[#1]{#2}\endgroup}
+
+%%%%%%%%%%%%%%%%
+% Graphics
+%%%%%%%%%%%%%%%%
+
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+%%%%%%%%%%%%%%%%
+% Slide number
+%%%%%%%%%%%%%%%%
+
+\setbeamertemplate{footline}{%
+    \raisebox{5pt}{\makebox[\paperwidth]{\hfill\makebox[20pt]{\color{gray}
+          \scriptsize\insertframenumber}}}\hspace*{5pt}}
+
+          
+%%%%%%%%%%%%%%%%
+% Remove page numbers
+%%%%%%%%%%%%%%%%
+
+\newcommand{\removepagenumbers}{% 
+  \setbeamertemplate{footline}{}
+}
+
+%%%%%%%%%%%%%%%%
+% TOC slides
+%%%%%%%%%%%%%%%%
+
+\setbeamertemplate{section in toc}{\inserttocsectionnumber.~\inserttocsection}
+\setbeamertemplate{subsection in toc}{$\qquad$\inserttocsubsectionnumber.~\inserttocsubsection \\}
+
+\AtBeginSection[] 
+{ 
+  \addtocounter{framenumber}{-1} 
+  % 
+  {\removepagenumbers 
+  {\small
+    \begin{frame}<beamer> 
+    \frametitle{Outline} 
+    \tableofcontents[currentsection] 
+  \end{frame} 
+  } 
+  }
+} 
+
+\AtBeginSubsection[] 
+{ 
+  \addtocounter{framenumber}{-1} 
+  % 
+  {\removepagenumbers 
+  {\small
+    \begin{frame}<beamer> 
+    \frametitle{Outline} 
+    \tableofcontents[currentsection,currentsubsection] 
+  \end{frame} 
+  } 
+  }
+}

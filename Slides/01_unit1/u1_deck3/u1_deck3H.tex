@@ -1,0 +1,321 @@
+% -*- TeX-engine: xetex; eval: (auto-fill-mode 0); eval: (visual-line-mode 1); -*-
+% Compile with XeLaTeX
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% Option 1: Slides: (comment for handouts) %
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%\documentclass[slidestop,compress,mathserif,12pt,t,professionalfonts,xcolor=table]{beamer}
+%
+%% solution stuff
+%\newcommand{\solnMult}[1]{
+%\only<1>{#1}
+%\only<2->{\red{\textbf{#1}}}
+%}
+%\newcommand{\soln}[1]{\textit{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Option 2: Handouts, without solutions (post before class)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
+
+ % handout layout
+ \usepackage{pgfpages}
+ \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+
+ % solution stuff
+ \newcommand{\solnMult}[1]{#1}
+ \newcommand{\soln}[1]{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Option 3: Handouts, with solutions (may post after class if need be)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
+
+% % handout layout
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+
+% % solution stuff
+% \newcommand{\solnMult}[1]{\red{\textbf{#1}}}
+% \newcommand{\soln}[1]{\textit{#1}}
+
+%%%%%%%%%%
+% Load style file, defaults  %
+%%%%%%%%%%
+
+\input{../../lec_style.tex}
+\input{../../definitions_default.tex}
+% ALT ALT
+% \input{../../definitions_custom.tex}
+
+%%%%%%%%%%%
+% Cover slide info    %
+%%%%%%%%%%%
+
+\title{Unit 1: Introduction to data}
+\subtitle{3. More exploratory data analysis}
+\author{\CourseName}
+\date{}
+\institute{\InstituteName}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin document and set Helvetica Neue font   %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\fontspec[Ligatures=TeX]{Helvetica Neue Light}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Title Page
+
+\begin{frame}[plain]
+
+\titlepage
+
+\vfill
+
+{\scriptsize \webLink{\PersonalSite}{Dr. \LastName{}} \hfill Slides posted at  \webURL{\CourseSite}}
+
+\addtocounter{framenumber}{-1} 
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Housekeeping}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Announcements}
+
+\begin{itemize}
+
+\item 
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Main ideas}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Use segmented bar plots or mosaic plots for visualizing relationships between two categorical variables}
+\label{mi1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{1. Use segmented bar plots for visualizing relationships bet. 2 categorical variables}
+
+\disc{What do the heights of the segments represent? Is there a relationship between
+class year and relationship status? What descriptive statistics can we use to summarize these
+data? Do the widths of the bars represent anything?}
+
+\begin{center}
+\includegraphics[width=0.85\textwidth]{figures/survey/seg_bar_relstat_year.pdf}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{... or use mosaicplots}
+
+\disc{What do the widths of the bars represent? What about the heights of the boxes? 
+Is there a relationship between class year and relationship status? What other tools 
+could we use to summarize these data?}
+
+\begin{center}
+\includegraphics[width=0.9\textwidth]{figures/survey/mosaic_relstatus_class.pdf}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Use side-by-side box plots to visualize relationships between a numerical and categorical variable}
+\label{mi2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]
+\frametitle{2. Use side-by-side box plots to visualize relationships between a numerical and categorical variable}
+
+\disc{How do drinking habits of vegetarian vs. non-vegetarian students compare?}
+
+\begin{center}
+\includegraphics[width=0.9\textwidth]{figures/survey/box_drinks_veg}
+\end{center}
+
+%---Note---%
+\note{
+
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Not all observed differences are statistically significant}
+\label{mi3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{3. Not all observed differences are statistically significant}
+
+\vfill
+
+\disc{What percent of the students sitting in the left side of the classroom have
+Mac computers? What about on the right? Are these numbers exactly the same?
+If not, do you think the difference is real, or due to random chance?}
+
+\vfill
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Be aware of Simpson's paradox}
+\label{mi4}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Race and death-penalty sentences in Florida murder cases}
+
+A 1991 study by Radelet and Pierce on race and death-penalty (DP) sentences gives the following table:
+
+\begin{center}
+\begin{tabular}{l c c c c}
+\hline
+Defendant's race    & DP    & No DP     & Total     & \% DP \\
+\hline
+Caucasian       & 53        & 430   & 483   & \only<2-|handout:0>{\red{11\%}} \\
+African American    & 15        & 176   & 191   & \only<3-|handout:0>{\orange{7.9\%}}  \\ 
+\hline
+Total               & 68        & 606   & 674 
+\end{tabular}
+\end{center}
+
+\only<4->{
+\disc{Who is more likely to get the death penalty?}
+}
+
+\vfill
+
+\ct{Adapted from Subsection 2.3.2 of A. Agresti (2002), Categorical Data Analysis, 2nd ed., and \webURL{http://math.stackexchange.com/questions/83756/examples-of-simpsons-paradox}.}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Another look}
+
+Same data, taking into consideration victim's race:
+
+{\small
+\begin{center}
+\begin{tabular}{l l c c c c}
+\hline
+Victim's race       & Defendant's race  & DP    & No DP     & Total     & \% DP \\
+\hline
+Caucasian       & Caucasian     & 53        & 414   & 467   & \only<2-|handout:0>{\orange{11.3\%}} \\
+Caucasian       & African American  & 11        & 37        & 48        & \only<3-|handout:0>{\red{22.9\%}}  \\ 
+African American    & Caucasian     & 0     & 16        & 16        & \only<4-|handout:0>{\orange{0\%}}  \\ 
+African American    & African American  & 4     & 139   & 143   & \only<5-|handout:0>{\red{2.8\%}}  \\ 
+\hline
+Total               &               & 68        & 606   & 674 
+\end{tabular}
+\end{center}
+}
+
+\only<6->{
+\disc{Who is more likely to get the death penalty?}
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Contradiction?}
+
+\begin{itemize}
+
+\item People of one race are more likely to murder others of the same race, murdering a Caucasian is more likely to result in the death penalty, and there are more Caucasian defendants than African American defendants in the sample.
+
+\pause
+
+\item Controlling for the victim's race reveals more insights into the data, and changes the direction of the relationship between race and death penalty.
+
+\pause
+
+\item This phenomenon is called \hl{Simpson's Paradox}: An association, or a comparison, that holds when we compare two groups can disappear or even be reversed when the original groups are broken down into smaller groups according to some other feature (a confounding/lurking variable).
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Application Exercise}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{}
+
+\vfill
+
+If you finish one, move on to the next.
+
+\app{1.3 Histogram to boxplot}{$\:$\\ See the course website for instructions. \\$\:$}
+
+\app{1.3 Scientific studies in the press}{$\:$\\ See the course website for instructions. \\$\:$}
+
+\vfill
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Summary}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Summary of main ideas}
+
+\vfill
+
+\begin{enumerate}
+
+\item \nameref{mi1}
+
+\item \nameref{mi2}
+
+\item \nameref{mi3}
+
+\item \nameref{mi4}
+
+\end{enumerate}
+
+\vfill
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
