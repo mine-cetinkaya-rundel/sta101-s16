@@ -2,7 +2,7 @@ Sta 101 TA Responsibilities
 ===========================
 
 #### Dr. Çetinkaya-Rundel & Dr. Monod
-#### Fall 2015
+#### Spring 2016
 
 Welcome Sta 101 TAs! We're looking forward to working with you
 this semester.
