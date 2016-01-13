@@ -1,0 +1,123 @@
+---
+title: "Lab 0 - Introduction"
+output:
+  html_document:
+    css: ../lab.css
+    highlight: pygments
+    theme: cerulean
+  pdf_document: default
+---
+
+```{r echo = FALSE}
+# Update these for course
+course_website <- "https://stat.duke.edu/courses/Spring16/sta101.001"
+sakai_site <- "https://sakai.duke.edu/portal/site/255d1889-39d7-433a-96a0-55ba217ae0a7/page/bec8abd8-2e52-4170-bcec-7311857be288"
+sakai_test <- "https://sakai.duke.edu/portal/site/255d1889-39d7-433a-96a0-55ba217ae0a7/page/8251c6d4-9611-4788-b8f4-6b12ba94e97e"
+caos_access_code <- "CUZ1136WZA"
+caos_section <- "Sta 101 - S16  SECTION: 1"
+```
+
+
+### (1) Familiarize yourself with the course website
+
+The course website is at `r course_website`. This is where all course materials
+will be posted.
+
+### (2) Log on to RStudio
+
+You will be using R and RStudio throughout the course both to learn the 
+statistical concepts discussed in the texbook and also to analyze real data 
+and come to informed conclusions.  To straighten out which is which: R is the 
+name of the programming language itself and RStudio is a convenient interface.
+
+The easiest way to access RStudio is to click on the RStudio link on the upper 
+left corner of the course website. Alternatively you can directly go to 
+https://vm-manage.oit.duke.edu/containers.
+
+Then, click on the link that says **Click here to log in to your R-Studio
+environment**, and log on using your NetID and password.
+
+In the next lab you will learn about the fundamental building blocks of R and 
+RStudio, but for now we just want to make sure that you can log on successfully 
+and run *some* code.
+
+The RStudio window should look something like this:
+
+![rinterface](rInterface2015.png)
+
+The panel in the upper right contains your *workspace* as well as a history of 
+the commands that you've previously entered.  Any plots that you generate will 
+show up in the panel in the lower right corner.
+
+The panel on the left is where the action happens.  It's called the *console*.  
+Everytime you launch RStudio, it will have the same text at the top of the 
+console telling you the version of R that you're running.  Below that 
+information is the *prompt*.  As its name suggests, this prompt is really a 
+request, a request for a command.  Initially, interacting with R is all about 
+typing commands and interpreting the output. These commands and their syntax 
+have evolved over decades (literally) and now provide what many users feel is a 
+fairly natural way to access data and organize, describe, and invoke 
+statistical computations.
+
+You can use R as a calculator. To get you started, enter the following command 
+at the R prompt (i.e. right after `>` on the console).  You can either type it 
+in manually or copy and paste it from this document.
+
+```{r}
+2+2
+```
+
+And you can save this result to an object that you can access later
+
+```{r}
+x = 2+2
+```
+
+Try typing `x` in the console to verify that.
+
+You can also see this new object in your environment on the upper right pane. 
+Next time you log on to RStudio the object will still be here.
+
+Throughout the semester you will learn about how to use R to do data analysis, 
+and in the meantime you will be exposed to some programming. In addition, you 
+will learn best practices for saving your code and making sure that your 
+analysis is reproducible.
+
+### (3) Familiarize yourself with Sakai
+
+While all course materials will be distributed via the course website listed 
+above, we will also use Sakai turning in assignments, grades, and forum 
+discussion. Go to [Sakai](`r sakai_site`) and log on (using your NetID and 
+password). If you are enrolled in the course it should be listed among your 
+courses for this semester.
+
+### (4) Sign up for Piazza
+
+While you're on the Sakai page for this course, sign up for Piazza, which is 
+the platform that we will use for online discussion related to this course. 
+Click on the Piazza link on the course site, complete the enrollment, and make 
+sure that you're able to view and post.
+
+### (5) Getting to know you survey
+
+Take the [*Getting to know you*](`r sakai_test`) survey on Sakai.
+
+You can access this on the Tests & Quizzes tab on the Sakai site for this 
+course.
+
+### (6) Pre-test
+
+Go to https://apps3.cehd.umn.edu/artist/user/scale_select.html and use the 
+following information to take the pre-test:
+
+```
+ACCESS CODE:  `r caos_access_code`
+COURSE: `r caos_section`
+```
+
+Use your **Net ID** as the student ID.
+
+Try your best, but don't worry about it if the questions are unfamiliar to you. 
+This information will only be used to place you in teams. Plus, those who 
+complete the pre- and the post-test (available at the end of the semester) will 
+receive extra credit on the final exam.
