@@ -128,7 +128,7 @@ title: Schedule
 ### <a name="mt1"></a> Midterm 1 - Feb 24, Wed (in class)
 
 * Covers Units 1 - 3
-* Sample Midterm 1: [handout](https://sakai.duke.edu/access/content/group/22299c5a-2e30-49a7-b46d-289ae3e0d739/Sample_MT1.pdf) + [solutions](https://sakai.duke.edu/access/content/group/22299c5a-2e30-49a7-b46d-289ae3e0d739/Sample_MT1_Key.pdf)
+* Sample Midterm 1: [handout](https://sakai.duke.edu/access/content/group/255d1889-39d7-433a-96a0-55ba217ae0a7/Sample_MT1.pdf) + [solutions](https://sakai.duke.edu/access/content/group/255d1889-39d7-433a-96a0-55ba217ae0a7/Sample_MT1_Key.pdf)
 
 * * *
 
@@ -227,7 +227,7 @@ title: Schedule
 ### <a name="mt2"></a> Midterm 2 - Mar 30, Wed (in class)
 
 * Covers Units 4 and 5 + fundamentals from Units 1 - 3
-* Sample Midterm 2: [handout](https://sakai.duke.edu/access/content/group/22299c5a-2e30-49a7-b46d-289ae3e0d739/Sample_MT2.pdf) + [solutions](https://sakai.duke.edu/access/content/group/22299c5a-2e30-49a7-b46d-289ae3e0d739/Sample_MT2_Key.pdf)
+* Sample Midterm 2: [handout](https://sakai.duke.edu/access/content/group/255d1889-39d7-433a-96a0-55ba217ae0a7/Sample_MT2.pdf) + [solutions](https://sakai.duke.edu/access/content/group/255d1889-39d7-433a-96a0-55ba217ae0a7/Sample_MT2_Key.pdf)
 
 * * *
 
@@ -321,4 +321,4 @@ title: Schedule
 ### <a name="final"></a> Final Exam - May 5, Thu (7-10pm)
 
 * Cumulative, covers Units 1 - 7
-* Practice problems for Final: [handout](https://sakai.duke.edu/access/content/group/22299c5a-2e30-49a7-b46d-289ae3e0d739/FR.pdf) + [solutions](https://sakai.duke.edu/access/content/group/22299c5a-2e30-49a7-b46d-289ae3e0d739/FR_Key.pdf)
+* Practice problems for Final: [handout](https://sakai.duke.edu/access/content/group/255d1889-39d7-433a-96a0-55ba217ae0a7/FR.pdf) + [solutions](https://sakai.duke.edu/access/content/group/255d1889-39d7-433a-96a0-55ba217ae0a7/FR_Key.pdf)
