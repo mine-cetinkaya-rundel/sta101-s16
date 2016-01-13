@@ -1,0 +1,515 @@
+% -*- TeX-engine: xetex; eval: (auto-fill-mode 0); eval: (visual-line-mode 1); -*-
+% Compile with XeLaTeX
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% Option 1: Slides: (comment for handouts)   %
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%\documentclass[slidestop,compress,mathserif,12pt,t,professionalfonts,xcolor=table]{beamer}
+%
+%% solution stuff
+%\newcommand{\solnMult}[1]{
+%\only<1>{#1}
+%\only<2->{\red{\textbf{#1}}}
+%}
+%\newcommand{\soln}[1]{\textit{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Option 2: Handouts, without solutions (post before class)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
+
+ % handout layout
+ \usepackage{pgfpages}
+ \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+
+ % solution stuff
+ \newcommand{\solnMult}[1]{#1}
+ \newcommand{\soln}[1]{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Option 3: Handouts, with solutions (may post after class if need be)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
+
+% % handout layout
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+
+% % solution stuff
+% \newcommand{\solnMult}[1]{\red{\textbf{#1}}}
+% \newcommand{\soln}[1]{\textit{#1}}
+
+%%%%%%%%%%
+% Load style file, defaults  %
+%%%%%%%%%%
+
+\input{../lec_style.tex}
+\input{../definitions_default.tex}
+% ALT ALT
+% \input{../definitions_custom.tex}
+
+%%%%%%%%%%%
+% Cover slide info    %
+%%%%%%%%%%%
+
+\title{Data Analysis and Statistical Inference}
+\subtitle{Introduction}
+\author{\CourseName}
+\date{}
+\institute{\InstituteName}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin document and set Helvetica Neue font   %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\fontspec[Ligatures=TeX]{Helvetica Neue Light}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Title Page
+
+\begin{frame}[plain]
+
+\titlepage
+
+\vfill
+
+{\scriptsize \webLink{\PersonalSite}{Dr. \LastName{}} \hfill Slides posted at  \webURL{\CourseSite}}
+
+\addtocounter{framenumber}{-1} 
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{General info}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Teaching team}
+
+\begin{itemize}
+
+\item Professor: Dr. \FirstName{} \LastName{} - \mail{\Email{}}
+
+\item TAs:
+\begin{itemize}
+\item David Clancy (Head TA)
+\item Lindsay Berry
+\item Patrick Cardel
+\item Anthony Hung
+\item Eidan Jacob
+\item John Pura
+\item Sarah Zimmerman
+\end{itemize}
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Required materials}
+
+\begin{itemize}
+
+\item OpenIntro Statistics, 3rd Edition: \webURL{http://openintro.org/os}
+
+\item i$>$clicker2 - See Google Doc for a list of students selling used clickers 
+(link emailed)
+
+\item (optional) Calculator (just something that can do square roots)
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Webpage}
+
+\vfill
+
+\centering
+{\Large 
+\webURL{\CourseSite} 
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Course structure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[shrink]
+\frametitle{Learning units and course outline}
+
+\begin{itemize}
+
+\item Pictures and summaries of data
+\begin{itemize}
+\item \hl{Unit 1 - Intro to data:} Observational studies \& non-causal inference, 
+principles of experimental design \& causal inference, exploratory data analysis, 
+introduction to simulation-based statistical inference.
+\end{itemize}
+
+\item Mathematics behind statistics
+\begin{itemize}
+\item \hl{Unit 2 - Probability \& distributions:} Basics of probability and chance 
+processes, Bayesian perspective in statistical inference, the normal and binomial 
+distributions.
+\end{itemize}
+
+\item Statistical inference
+\begin{itemize}
+\item \hl{Unit 3 - Framework for inference:} CLT, sampling distributions, and 
+introduction to theoretical inference.
+\item Midterm 1
+\item \hl{Unit 4 - Statistical inference for numerical variables}
+\item \hl{Unit 5 - Statistical inference for categorical variables}
+\item Midterm 2
+\end{itemize}
+
+\item Modeling
+\begin{itemize}
+\item \hl{Unit 6 - Simple linear regression:} Bivariate correlation and causality, 
+introduction to modeling.
+\item \hl{Unit 7 - Multiple linear regression:} More advanced modeling with multiple 
+predictors.
+\item Final Exam
+\end{itemize}
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Course structure}
+
+\begin{itemize}[<alert@+>]
+\item Set of learning objectives and required and suggested readings, videos, etc. for 
+each unit.
+\item Prior to beginning the unit, watch the videos and/or complete the readings and 
+familiarize yourselves with the learning objectives.
+\item Begin a new unit with a readiness assessment: individual, then team.
+\item Class time: split between lecture, discussion/application, and lab.
+\item Complement your learning with problem sets.
+\item Wrap up a unit with a performance assessment.
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Teams}
+
+\begin{itemize}
+\item Highly functional teams of learners based on survey and pre-test.
+
+\item Team members first point of contact.
+
+\item Application exercises, labs, team readiness assessments, project.
+
+\item Study together, but anything that is not explicitly a team assignment must be 
+your own work.
+
+\item Peer evaluations to ensure that all team members contribute to the success of 
+the group and to address any potential issues early on.
+\begin{itemize}
+\item If you feel that there are issues within your team, you are encouraged to 
+discuss it with your team members and to bring it to my or your TA's attention ASAP (
+don't wait till things get worse).
+\end{itemize}
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Clickers}
+
+\red{Objective:} Two-way communication and instant feedback.
+
+\begin{itemize}
+\item Readiness assessments (graded for accuracy)
+
+\item Questions throughout lecture (graded for participation)
+\begin{itemize}
+\item Get credit for the day you by responding to at least 75\% of the questions.
+\item Up to three unexcused late arrivals or absences.
+\end{itemize}
+
+\item Register your clicker at \webURL{https://www1.iclicker.com/register-clicker} 
+(Student ID = Net ID)
+\begin{itemize}
+\item If you bought a used clicker, the registration process might ask for a payment. 
+You don't need to pay, you'll be able to register in class.
+\end{itemize}
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Project}
+
+\red{Objective:} Give you independent applied research experience using real data and 
+statistical methods.
+
+\begin{itemize}
+
+\item Proposal: due mid-semester
+
+\item Poster session: last lab of semester
+
+\item Complete in teams, along with peer evaluations to track contribution of each member
+
+\item Must complete the project and score at least 30\% of the points on each 
+project in order to pass this class
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Exams}
+
+\begin{center}
+\rowcolors{1}{}{custom_lightGray}
+\renewcommand\arraystretch{1.25}
+{\footnotesize
+\begin{tabular}{ r | l }
+Midterm 1								& \ExamADate \\    
+Midterm 2 							& \ExamBDate \\    
+Final 								 & \FinalDate   
+\end{tabular}
+}
+\end{center}
+
+\begin{itemize}
+
+\item Exam dates cannot be changed, no make-up exams will be given
+
+\item If you cannot take the exams on these dates you should drop this class
+
+\item Calculator + cheat sheet allowed
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Support}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Email \& Piazza}
+
+\begin{itemize}
+
+\item I will regularly send announcements by email, so make sure to check your email  
+daily.
+
+\item All content related (non-personal) questions should be posted on Piazza.
+
+\item Before posting a new question please make sure to check if your question has 
+already been answered, and answer others' questions.
+
+\item Use informative titles for your posts.
+
+\item It is more efficient to answer most statistical questions ``in person" so make 
+use of OH.
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[shrink]
+\frametitle{Office Hours}
+
+\begin{itemize}
+\item Prof:
+\begin{itemize}
+\item Discussion section: Tuesdays, 4 - 5:30pm, Soc Sci 139
+\item Office hours: Thursdays, 10:30am - 12pm, Old Chem 213 (my office)
+\end{itemize}
+\item TAs: 
+\end{itemize}
+{\small
+\rowcolors{1}{}{custom_lightGray}
+\begin{tabular}{l | l | l}
+TA				& Day / time						& Location \\
+\hline
+Sarah Zimmerman	& Sun 11am - 1pm					& Old Chem 211A \\
+David Clancy		& Sun 7:30pm - 9:30pm				& Old Chem 025 \\
+Drew Jordan		& Mon 4:30pm - 5:30pm + 7pm - 8pm	& Old Chem 211A \\
+Anthony Hung		& Mon 6pm - 8pm					& Old Chem 025 \\
+Andrew Wong		& Mon 7:30pm - 9:30pm				& Old Chem 025 \\ 
+Anne Driscoll		& Tue 9:30am - 11:30am				& Old Chem 211A \\
+Katherine Ahn		& Tue 11am - 1pm					& Old Chem 211A \\
+Andy Cooper		& Tue 2pm - 4pm					& Old Chem 211A \\
+Patrick Cardel 		& Thu 12pm - 2pm					& Old Chem 211A \\
+John Pura			& Thu 2pm - 3pm + 6pm - 7pm			& Old Chem 211A \\
+Lindsay Berry		& Thu 3pm - 5pm					& Old Chem 211A \\
+Eidan Jacob		& Fri 9:30am - 11:30am				& Old Chem 211A
+\end{tabular}
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Students with disabilities}
+
+Students with disabilities who believe they may need accommodations in this class are 
+encouraged to contact the 
+\webLink{http://www.access.duke.edu/students/requesting/index.php}{Student Disability 
+Access Office} at (919) 668-1267 as soon as possible to better ensure that such 
+accommodations can be made.
+
+\vfill
+
+\ct{\webURL{http://www.access.duke.edu/students/requesting/index.php}}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Academic Dishonesty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Academic Dishonesty}
+
+Any form of academic dishonesty will result in an immediate 0 on the given assignment 
+and will be reported to the Office of Student Conduct. Additional penalties may also 
+be assessed if deemed appropriate. If you have any questions about whether something 
+is or is not allowed, ask me beforehand.
+
+Some examples:
+
+\begin{itemize}
+
+\item Use of disallowed materials (including any form of communication with classmates 
+or accessing the web) during exams and readiness assessments
+
+\item Plagiarism of any kind
+
+\item Use of outside answer keys or solution manuals for the homework
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Tips for success}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Tips for success}
+
+{\footnotesize
+\begin{itemize}[<alert@+>]
+\item Complete the reading before a new unit begins, and then review again after the 
+unit is over.
+\item Be an active participant during lectures and labs.
+\item Ask questions - during class or office hours, or by email. Ask me, your TAs, and 
+your classmates.
+\item Do the problem sets - start early and make sure you attempt and understand all 
+questions.
+\item Take each PA and complete practice quizzes (on Coursera) for each unit, and
+review the feedback for questions you miss.
+\item Start your project early and and allow adequate time to complete them.
+\item Give yourself plenty of time time to prepare a good cheat sheet for exams. This 
+requires going through the material and taking the time to review the concepts that 
+you're not comfortable with.
+\item Do not procrastinate - don't let a unit go by with unanswered questions as it 
+will just make the following unit's material even more difficult to follow. 
+\end{itemize}
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{To do}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{To do}
+
+\begin{itemize}
+
+\item Download or purchase the textbook
+\begin{itemize}
+\item Download: \webURL{http://openintro.org/os}
+\item Purchase: \webURL{http://openintro.org/os/amazon}
+\end{itemize}
+
+\item Obtain and register your clicker
+\begin{itemize}
+\item \webURL{https://www1.iclicker.com/register-clicker} (Student ID = Net ID) 
+\item Note: If you have a used clicker this site might ask you to pay, you don't have to
+you'll get a chance to register it in class
+\end{itemize}
+
+\item Read the syllabus and let me know if you have any questions
+
+\item Watch/Read/Review the resources for Unit 1
+\begin{itemize}
+\item RA 1 on Wednesday -- not graded (for practice)
+\end{itemize}
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{RA 0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\vfill
+
+Syllabus quiz (10 minutes). \\
+
+You can refer to the syllabus at \webURL{\CourseSite}.
+
+\vfill
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
