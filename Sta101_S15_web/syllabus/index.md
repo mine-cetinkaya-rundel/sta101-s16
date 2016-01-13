@@ -122,7 +122,9 @@ All assignments will be time stamped and late work will be penalized based on th
 
 The objective of the labs is to give you hands on experience with data analysis using modern statistical software. The labs will also provide you with tools that you will need to complete the project successfully. We will use a statistical analysis package called RStudio, which is a front end for the R statistical language.
 
-In class your TAs will give a brief overview of the lab and learning goals, and guide you through some of the exercises. You will start working on the lab during the class session, but note that the labs are designed to take more than just the class time, so you will meet up with your team at a later time to finish the lab before the due date (which will be the following lab session). In order to get credit for a lab report, you must be in the lab session on the day that lab is introduced.
+In class your TAs will give a brief overview of the lab and learning goals, and guide you through some of the exercises. You will start working on the lab during the class session, but note that the labs are designed to take more than just the class time, so you will meet up with your team at a later time to finish the lab before the due date (which will be the following lab session). 
+
+With each lab you will also be asked to note team members' attendance in lab session and percentage contribution. Team members who fail to attend a lab section (for any reason) but who still contribute to the week's lab report will lose 20 pts on the lab. Team members who both don't attend lab and also do not contribute to that week's lab report will not be eligible for any points on that lab.
 
 **Submission instructions:** Always submit the Rmd and the HTML files for your lab. One submission per team.
 
@@ -152,7 +154,7 @@ The objective of the project is to give you independent applied research experie
 
 Note that each student **must complete the project and score at least 30% of total possible points on each project in order to pass this class**.
 
-Team members who fail to fulfill their contribution to the project will be deducted points.
+Team members will provide feedback on percentage contribution to the final product, and grades for each student will be determined based on the quality of the product and their contribution to the work. If everyone contributes equally, all members will get full credit. Team members who do not contribute sufficiently will be deducted points.
 
 * * *
 
