@@ -1,0 +1,132 @@
+\documentclass[12pt]{article}
+\input{../../app_style.tex}
+
+%%%%%%%%%%%
+% App Ex number    %
+%%%%%%%%%%%
+
+% DON'T FORGET TO UPDATE
+
+\newcommand{\appno}[1]
+{1.1}
+
+%%%%%%%%%%%%%%
+% Turn on/off solutions       %
+%%%%%%%%%%%%%%
+
+% Off
+\newcommand{\soln}[2]{$\:$\\ \vspace{#1}}{}
+
+%% On
+%\newcommand{\soln}[2]{\textit{\textcolor{custom_red}{#2}}}{}
+
+%%%%%%%%%%%%%%%%
+% Document
+%%%%%%%%%%%%%%%%
+
+\begin{document}
+\fontspec[Ligatures=TeX]{Helvetica Neue Light}
+
+Dr. \c{C}etinkaya-Rundel \hfill Sta 101: Data Analysis and Statistical Inference \\
+Duke University - Department of Statistical Science \hfill \\
+
+\ttl{Application exercise \appno{}: \\
+Distributions of numerical variables}
+
+\inst{Write your responses on a piece of paper. WRITE LEGIBLY! Only one submission per team is required. One team will be randomly selected and their responses will be discussed and graded.}
+
+\tl{Shapes of distributions}
+
+\begin{enumerate}
+
+\item Below are two histograms. One corresponds to the age at which a sample of people applied for marriage licenses; the other corresponds to the last digit of a sample of social security numbers. Which graph is which, and why?
+
+\begin{multicols}{2}
+
+\begin{enumerate}
+
+\item $\:$ \\
+\includegraphics[height=1in]{figures/last_digit_SSN}
+
+\item $\:$ \\
+\includegraphics[height=1in]{figures/age_mar_lic}
+
+\end{enumerate}
+
+\end{multicols}
+
+\soln{-1cm}{(a) SSN, no pattern expected so uniform (b) age at first marriage, more people get married earlier}
+
+%
+
+\item Match the following variables with the histograms and bar graphs given below. These data represent Sta 101 students at Duke. [\textit{Hint: Think about how each variable should behave.}]
+
+\begin{multicols}{2}
+\begin{enumerate}
+\item the height of students
+\item gender breakdown of students
+\item the time it took students to get to their first class of the day
+\item the number of hours of sleep students received last night
+\item whether or not students live off campus
+\item the number of piercings students have
+\end{enumerate}
+\end{multicols}
+
+\begin{multicols}{3}
+
+\begin{enumerate}
+
+\item[(1)] $\:$ \\
+\includegraphics[height=1.2in]{figures/gender}
+
+\item[(2)] $\:$ \\
+\includegraphics[height=1.2in]{figures/height}
+
+\item[(3)] $\:$ \\
+\includegraphics[height=1.2in]{figures/sleep}
+
+\item[(4)] $\:$ \\
+\includegraphics[height=1.2in]{figures/off_campus}
+
+\item[(5)] $\:$ \\
+\includegraphics[height=1.2in]{figures/piercings}
+
+\item[(6)] $\:$ \\
+\includegraphics[height=1.2in]{figures/time_to_class}
+
+\end{enumerate}
+
+\end{multicols}
+
+\soln{1mm}{(1) gender, (2) height, (3) sleep, (4) off campus, (5) piercings, (6) time to class}
+
+%
+
+\item Come up with a concise way (1-2 sentences) to teach someone how to determine the expected distribution of any variable.
+
+\end{enumerate}
+
+\soln{2cm}{Pay attention to natural boundaries. If skewed, think about whether lower or higher values are more likely.}
+
+%
+
+\tl{Variability}
+
+\begin{enumerate}[resume]
+
+\item[4.] Order histograms A, B, and C from least to most variable. Explain your reasoning.
+
+\includegraphics[width=0.9\textwidth]{figures/histogramsVarOrderABC}
+
+\soln{2cm}{A - least, C - medium, B - most}
+
+\item[5.] Between histograms D and E, which exhibits more variability? Explain your reasoning.
+
+\includegraphics[width=0.9\textwidth]{figures/histogramsVarOrderDE}
+
+\soln{2cm}{E more variable, more observations away from mean}
+
+\end{enumerate}
+
+
+\end{document}

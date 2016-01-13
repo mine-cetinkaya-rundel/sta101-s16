@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\input{../../app_style.tex}
+
+%%%%%%%%%%%
+% App Ex number    %
+%%%%%%%%%%%
+
+% DON'T FORGET TO UPDATE
+
+\newcommand{\appno}[1]
+{1.4}
+
+%%%%%%%%%%%%%%
+% Turn on/off solutions       %
+%%%%%%%%%%%%%%
+
+% Off
+\newcommand{\soln}[2]{$\:$\\ \vspace{#1}}{}
+
+%%% On
+%\newcommand{\soln}[2]{\textit{\textcolor{custom_red}{#2}}}{}
+
+%%%%%%%%%%%%%%%%
+% Document
+%%%%%%%%%%%%%%%%
+
+\begin{document}
+\fontspec[Ligatures=TeX]{Helvetica Neue Light}
+
+Dr. \c{C}etinkaya-Rundel \hfill Sta 101: Data Analysis and Statistical Inference \\
+Duke University - Department of Statistical Science \hfill \\
+
+\ttl{Application exercise \appno{}: \\
+Randomization testing}
+
+\inst{$\:$ \\
+Team name: \rule{10cm}{0.5pt} \\
+$\:$ \\
+Lab section: $\qquad$ 8:30 $\qquad$ 10:05 $\qquad$ 11:45 $\qquad$ 1:25 $\qquad$ 3:05 \\
+$\:$ \\
+Write your responses in the spaces provided below. WRITE LEGIBLY and SHOW ALL WORK! 
+Only one submission per team is required. One team will be randomly selected and their 
+responses will be discussed and graded. Concise and coherent are best!}
+
+Student-to-faculty ratio data collected from random samples of public and private four-year colleges:
+
+\begin{minipage}[c]{0.4\textwidth}
+\begin{center}
+\begin{tabular}{lrrr}
+  \hline
+type & mean & SD & n \\ 
+  \hline
+private & 13.84 & 7.28 &  85 \\ 
+  public & 17.60 & 4.57 &  57 \\ 
+   \hline
+\end{tabular}
+\end{center}
+\end{minipage}
+\begin{minipage}[c]{0.6\textwidth}
+\begin{center}
+\includegraphics[width=0.8\textwidth]{ratio/ratio_box.pdf}
+\end{center}
+\end{minipage}
+
+
+\begin{enumerate}
+
+\item We would like to test if there is a \emph{difference} between the average student-to-faculty ratio between public and private four-year colleges using a randomization test. What are the hypotheses?
+
+\soln{0.5cm}{$H_0: \mu_{public} = \mu_{private}$; $H_0: \mu_{public} \ne \mu_{private}$}
+
+\item Fill in the blanks below for the appropriate set up for this test:
+
+\begin{doublespace}
+We write the student-to-faculty ratio of each public and private college in this sample on a total of \rule{2cm}{0.5pt} index cards. Then, we shuffle these cards and split them into two groups: one group of size \rule{2cm}{0.5pt} representing public colleges, and another group of size \rule{2cm}{0.5pt} representing private colleges. We calculate the difference between the average student-to-faculty ratios in the public and private colleges ($\bar{x}_{public} - \bar{x}_{private}$) and record this value. We repeat this many times to build a randomization distribution, which should be centered at \rule{2cm}{0.5pt} . Lastly, we calculate the p-value as the proportion of simulations where the simulated differences in means are \rule{5cm}{0.5pt}.
+\end{doublespace}
+
+\soln{0cm}{142, 57, 85, 0, -4 or less or 4 or more}
+
+\item The dot plot below is created using 100 simulations. What is the p-value?
+
+\begin{center}
+\includegraphics[width=0.8\textwidth]{ratio/rand_dist_dot.pdf}
+\end{center}
+
+\soln{0.2cm}{Since only one observation is below -4 or above 4, p-value = 1 / 100 = 0.01.}
+
+\item Based on the p-value, do these data provide convincing evidence to suggest that the student-to-faculty ratio in public four-year colleges is different than that of private four-year colleges.
+
+\soln{1cm}{Yes, p-value is small (less than 0.05), hence we reject the null hypothesis. The data provide convincing evidence that the average student-to-faculty ratio is different for private and public colleges.}
+
+\end{enumerate}
+
+\end{document}
