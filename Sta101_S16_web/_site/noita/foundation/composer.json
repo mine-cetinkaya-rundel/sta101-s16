@@ -1,0 +1,40 @@
+{
+    "name": "components/foundation",
+    "description": "The most advanced responsive front-end framework in the world.",
+    "type": "component",
+    "keywords": [
+        "foundation",
+        "css"
+    ],
+    "homepage": "http://foundation.zurb.com/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ZURB, Inc."
+        }
+    ],
+    "require": {
+        "components/modernizr": "*",
+        "components/normalize.css": "*",
+        "components/jquery": "*"
+    },
+    "extra": {
+        "component": {
+            "scripts": [
+                "js/foundation.min.js"
+            ],
+            "styles": [
+                "css/foundation.min.css"
+            ],
+            "files": [
+                "js/**",
+                "css/**",
+                "scss/**"
+            ],
+            "shim": {
+                "exports": "window.Foundation",
+                "deps": ["jquery", "modernizr"]
+            }
+        }
+    }
+}

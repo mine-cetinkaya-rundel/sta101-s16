@@ -1,0 +1,49 @@
+markdown: kramdown
+exclude:
+  - LICENSE
+  - Makefile
+  - README
+markdown_ext: "md"
+
+layouts: ./_noita
+baseurl: /courses/Spring16/sta101.001
+sakai: https://sakai.duke.edu/portal/site/255d1889-39d7-433a-96a0-55ba217ae0a7
+piazza: https://sakai.duke.edu/portal/site/255d1889-39d7-433a-96a0-55ba217ae0a7/page/db414f05-f8ad-4d4a-8460-134553b4e5f2
+sakai_ps: https://sakai.duke.edu/portal/site/255d1889-39d7-433a-96a0-55ba217ae0a7/page/6fb4acfb-7971-49e2-bd11-f86ed2e16f59
+sakai_pa: https://sakai.duke.edu/portal/site/255d1889-39d7-433a-96a0-55ba217ae0a7/page/8251c6d4-9611-4788-b8f4-6b12ba94e97e
+videos: https://duke.coursera.org/duke-statistics-001/lecture
+learn_obj: https://duke.coursera.org/duke-statistics-001/wiki
+openintro: https://www.openintro.org/os
+teams: 
+class_recordings: http://trinity.capture.duke.edu/Panopto/Pages/Sessions/List.aspx?folderID=8813e302-361a-419f-a40b-16a5e3825c2e
+
+gems:
+  - jemoji
+
+noita:
+  name: Sta 101 - Data Analysis and Statistical Inference (Spring 2016)
+  description: Sta 101 at Duke - taught by Dr. Cetinkaya-Rundel
+  author:
+    name: Mine Cetinkaya-Rundel
+    url: http://stat.duke.edu/~mc301
+    absolute: true
+  lang: en
+  topbar:
+    toggle: Menu
+    right:
+      - name: Schedule
+        url: /
+      - name: Info
+        url: /info/
+      - name: Syllabus
+        url: /syllabus/
+      - name: Sakai
+        url: https://sakai.duke.edu/portal/site/255d1889-39d7-433a-96a0-55ba217ae0a7
+        absolute: true
+      - name: RStudio
+        url: https://vm-manage.oit.duke.edu/containers
+        absolute: true
+      - name: Links
+        url: /links/
+      - name: FAQ
+        url: /faq/
