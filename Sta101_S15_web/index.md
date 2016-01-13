@@ -146,20 +146,18 @@ title: Schedule
 |             | **RA 4** in class |
 | Mar 2, Wed  | [Lesson 4.2: Bootstrap intervals](post/slides/u4_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u4_deck2H.pdf) |
 |             | [App Ex 4.2: Bootstrap intervals](post/app/app_Bootstrap_intervals.pdf) |
-| Mar 3, Thur | [Lab 7: (More) inference for numerical data](post/labs/more_inf_for_numerical_data.html) |
+| Mar 3, Thur | Lab: Work on project proposal |
 | Mar 7, Mon  | [Lesson 4.3: Power](post/slides/u4_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u4_deck3H.pdf) |
 |             | [App Ex 4.3: Power](post/app/app_Power.pdf) |
 | Mar 9, Wed  | [Lesson 4.4: ANOVA](post/slides/u4_deck4.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u4_deck4H.pdf) |
 |             | [App Ex 4.4: ANOVA](post/app/app_ANOVA.pdf) |
-| Mar 10, Thu | Lab: Work on project proposal |
-
+| Mar 10, Thu | [Lab 7: (More) inference for numerical data](post/labs/more_inf_for_numerical_data.html) |
 
 ##### Due dates
 
 * Lab 5: Feb 25, Thu 
 * Lab 6: Mar 3, Thur
-* Lab 7: Mar 10, Thu  
-* [Project Proposal]() Proposal: Mar 11, Fri at 5pm
+* [Project Proposal]() Proposal: Mar 4, Fri at 5pm
 * [PS 4]({{ site.sakai_ps }}): Mar 11, Fri
   * End of chapter exercises from **Chp 5**. Only turn in answers to 
   graded questions, use the back of the book to check your work on the practice questions.
