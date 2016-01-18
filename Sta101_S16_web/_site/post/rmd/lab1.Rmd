@@ -1,13 +1,3 @@
----
-title: "Lab 1 - Intro to R and RStudio"
-author: "Team name"
-date: "Date of lab session"
-output: 
-  html_document: 
-    highlight: pygments
-    theme: spacelab
----
-
 ```{r setup, include=FALSE}
 # DO NOT ALTER CODE IN THIS CHUNK
 knitr::opts_chunk$set(echo = TRUE)
