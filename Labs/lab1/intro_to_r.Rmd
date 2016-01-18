@@ -56,8 +56,7 @@ reproducibility of your analysis and results. To help get you started we are
 providing a template for you. Use the following code to download this template:
 
 ```{r load-template}
-download.file("http://stat.duke.edu/courses/Spring16/sta101.002/rmd/lab1.Rmd", 
-              destfile = "lab1.Rmd")
+download.file("http://stat.duke.edu/courses/Spring16/sta101.002/rmd/lab1.Rmd", destfile = "lab1.Rmd")
 ```
 
 You will see a new file called `lab1.Rmd` in the Files tab on the pane in the 
@@ -126,7 +125,7 @@ Arbuthnot's data in a kind of spreadsheet or table called a *data frame*.
 
 You can see the dimensions of this data frame by typing:
 
-```{r dim-data, eval=TRUE}
+```{r dim-data}
 dim(arbuthnot)
 ```
 
@@ -135,7 +134,7 @@ columns (we'll get to what the `[1]` means in a bit), just as it says next to
 the object in your workspace. You can see the names of these columns (or 
 variables) by typing:
 
-```{r names-data, eval=TRUE}
+```{r names-data}
 names(arbuthnot)
 ```
 
@@ -374,7 +373,7 @@ The data are stored in a data frame called `present`.
     in a descenting order with another function: `descr` (for descending order).
     Sample code provided below.
     
-```{r eval=FALSE}
+```{r}
 present %>%
   arrange(desc(total))
 ```

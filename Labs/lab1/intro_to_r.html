@@ -103,8 +103,7 @@ img {
 <div id="creating-a-reproducible-lab-report" class="section level2">
 <h2>Creating a reproducible lab report</h2>
 <p>We will be using a markdown language, R Markdown, to type up the lab report. This allows you to complete your lab entirely in RStudio as well as ensuring reproducibility of your analysis and results. To help get you started we are providing a template for you. Use the following code to download this template:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">download.file</span>(<span class="st">&quot;http://stat.duke.edu/courses/Spring16/sta101.002/rmd/lab1.Rmd&quot;</span>, 
-              <span class="dt">destfile =</span> <span class="st">&quot;lab1.Rmd&quot;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">download.file</span>(<span class="st">&quot;http://stat.duke.edu/courses/Spring16/sta101.002/rmd/lab1.Rmd&quot;</span>, <span class="dt">destfile =</span> <span class="st">&quot;lab1.Rmd&quot;</span>)</code></pre></div>
 <p>You will see a new file called <code>lab1.Rmd</code> in the Files tab on the pane in the bottom right corner of your RStudio window. We will refer to this as your “R markdown file” or “your report”. Click on the file name to open the file. All you need to do to complete the lab is to type up your <strong>brief</strong> answers and the R code (when necessary) in the spaces provided in the document. Earlier in the lab spaces are provided for you to enter R code chunks. Later in the lab you’ll need to figure out whether code is needed to answer a particular question, and if so a new chunk can be inserted by clicking on the <em>Insert Chunk</em> button (dropdown menu under <em>Chunks</em> on the upper right corner of your markdown document).</p>
 <p>Before you keep going type your team name, the name of the team member who is the “author” for the day, and the “discussants”, who are the other team members present in lab today. Then click on <em>Knit HTML</em> and you’ll see your document in a new pop-up window.</p>
 </div>
@@ -121,10 +120,8 @@ img {
 <p>Note that the row numbers in the first column are not part of Arbuthnot’s data. R adds them as part of its printout to help you make visual comparisons. You can think of them as the index that you see on the left side of a spreadsheet. In fact, the comparison to a spreadsheet will generally be helpful. R has stored Arbuthnot’s data in a kind of spreadsheet or table called a <em>data frame</em>.</p>
 <p>You can see the dimensions of this data frame by typing:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dim</span>(arbuthnot)</code></pre></div>
-<pre><code>## [1] 82  3</code></pre>
 <p>This command should output <code>[1] 82 3</code>, indicating that there are 82 rows and 3 columns (we’ll get to what the <code>[1]</code> means in a bit), just as it says next to the object in your workspace. You can see the names of these columns (or variables) by typing:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">names</span>(arbuthnot)</code></pre></div>
-<pre><code>## [1] &quot;year&quot;  &quot;boys&quot;  &quot;girls&quot;</code></pre>
 <p>You should see that the data frame contains the columns <code>year</code>, <code>boys</code>, and <code>girls</code>. At this point, you might notice that many of the commands in R look a lot like functions from math class; that is, invoking R commands means supplying a function with some number of arguments. The <code>dim</code> and <code>names</code> commands, for example, each took a single argument, the name of a data frame.</p>
 </div>
 <div id="some-exploration" class="section level2">
