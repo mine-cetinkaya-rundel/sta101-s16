@@ -56,7 +56,7 @@ reproducibility of your analysis and results. To help get you started we are
 providing a template for you. Use the following code to download this template:
 
 ```{r load-template}
-download.file("http://stat.duke.edu/courses/Spring16/sta101.002/rmd/lab1.Rmd", destfile = "lab1.Rmd")
+download.file("http://stat.duke.edu/courses/Spring16/sta101.001/rmd/lab1.Rmd", destfile = "lab1.Rmd")
 ```
 
 You will see a new file called `lab1.Rmd` in the Files tab on the pane in the 
