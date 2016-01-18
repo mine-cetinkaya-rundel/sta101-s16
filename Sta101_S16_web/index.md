@@ -216,8 +216,8 @@ title: Schedule
     + Part 2 – Comparing two proportions: 6.23, 6.25, 6.27, 6.29, 6.31, 6.33, 6.35
     + Part 3 – Inference for proportions via simulation: 6.51, 6.53, 6.55
     + Part 4 – Comparing three or more proportions (Chi-square): 6.39, 6.41, 6.43, 6.45, 6.47
-* [PA 5]({{ site.sakai_pa }}): Mar 28, Tue (Note day change to allow for reviewing answers before the midterm)
-  * Take between Mar 23, Wed and Mar 28, Tue. 
+* [PA 5]({{ site.sakai_pa }}): Mar 29, Tue (Note day change to allow for reviewing answers before the midterm)
+  * Take between Mar 23, Wed and Mar 29, Tue. 
   * You have 30 minutes to complete. Only one attempt allowed. Click [here]({{ site.sakai_pa }}) to take the performance assessment.
 
 * * *
