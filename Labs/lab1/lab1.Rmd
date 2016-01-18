@@ -1,0 +1,87 @@
+---
+title: "Lab 1 - Intro to R and RStudio"
+author: "Team name"
+date: ""
+output: 
+  html_document: 
+    highlight: pygments
+    theme: spacelab
+---
+
+```{r setup, include=FALSE}
+# DO NOT ALTER CODE IN THIS CHUNK
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+```
+
+* * *
+
+## Lab report
+
+**Load Arbuthnot data**
+```{r}
+load(url("https://stat.duke.edu/~mc301/data/arbuthnot.RData"))
+```
+
+#### Exercise 1: 
+
+```{r}
+# code for Exercise 1 is already entered below as an example
+arbuthnot$girls
+```
+
+#### Exercise 2:
+
+[Enter your response for Exercise 2 here.]
+
+```{r}
+# enter your code for Exercise 2 here
+```
+
+#### Exercise 3:
+
+```{r}
+# enter your code for Exercise 3 here
+```
+
+* * *
+
+### On your own:
+
+**Load present day data**
+```{r}
+load(url("https://stat.duke.edu/~mc301/data/present.RData"))
+```
+
+#### 1:
+
+
+
+#### 2:
+
+
+
+#### 3:
+
+
+
+#### 4:
+
+
+
+* * *
+
+## Teamwork report
+
+For each team member, write their name, whether they attended the lab session, 
+whether they were the author for this week, and their contribution to the lab 
+report (as a percentage). The percentages should add up to 100.
+
+| Team member             | Attendance | Author   | Contribution % |
+|:------------------------|:----------:|:--------:|---------------:|
+| Name of member 1        | Yes / No   | Yes / No | 25%            |
+| Name of member 2        | Yes / No   | Yes / No | 25%            |
+| Name of member 3        | Yes / No   | Yes / No | 25%            |
+| Name of member 4        | Yes / No   | Yes / No | 25%            |
+| Total                   |            |          | 100%           |
