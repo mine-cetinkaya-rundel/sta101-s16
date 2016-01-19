@@ -13,11 +13,11 @@ Missing: Sarah + Andrew Wong
 - Upcoming lab presentations:
     - Lab 2 - David
     - Lab 3 - Andrew
-    - Lab 4 - ?
+    - Lab 4 - Katherine
     - Lab 5 - John
-    - Lab 6 - ?
-    - Lab 7 - Lindsay
-    - Lab 8 - ?
+    - Lab 6 - Anthony
+    - Lab 7 - Lindsey
+    - Lab 8 - Patrick
     - Lab 9 - Drew
     - Lab 10 - Anne
 
