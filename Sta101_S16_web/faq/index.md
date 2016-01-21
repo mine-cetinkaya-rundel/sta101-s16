@@ -29,13 +29,15 @@ If you have a question about something in the textbook that looks like it might 
 9. [How can I create a new variable based on values in an existing variable in my dataset?](#r9)
 10. [How can I resize my plots in RMarkdown?](#r10)
 
-### General:
+### Course logistics:
 
 1. [Will tables be provided with the exams, or should we incorporate them into our cheat sheets?](#g1)
 2. [Can the cheat sheets be typed?](#g2)
 3. [I forgot my clicker today, can I write my responses on a piece of paper and get credit?](#g3)
 4. [I have a class on East Campus before this class and I might be late to class. Will this affect my grade?](#g4)
 5. [Is the final cumulative?](#g5)
+6. [Do I need to both read the textbook and watch the videos to study for RAs?](#g6)
+7. [Do I need to review course slides prior to each class?](#g7)
 
 
 * * *
@@ -393,3 +395,21 @@ Yes and no. If there is a readiness assessment that day and you walk in late, yo
 <a name="g5">5. Is the final cumulative?
 
 Yes. But it will be weighed more heavily towards material you haven't yet been tested on.
+
+* * *
+
+<a name="g6">6. Do I need to both read the textbook and watch the videos to study for RAs?
+
+Not necessarily. I recommend watching the videos and using the learning objectives as a checklist as you do so. For any concepts that are not clear from the videos, refer to the textbook. However if you're not a video person, and prefer to read the textbook, you can do that as well (along with the learning objectives). The information covered is the same.
+
+* * *
+
+<a name="g7">7. Do I need to review course slides prior to each class?
+
+No, they are posted before class in case you want to print them out. You do not need to review them prior to class.
+
+
+
+
+
+

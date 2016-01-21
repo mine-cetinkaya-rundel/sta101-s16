@@ -44,6 +44,7 @@ title: Schedule
   * You have 30 minutes to complete. Only one attempt allowed. Click [here]({{ site.sakai_pa }}) to take the performance assessment.
 
 * * *
+* * *
 
 ### <a name="unit2"></a> Unit 2 - Probability and distributions
 
