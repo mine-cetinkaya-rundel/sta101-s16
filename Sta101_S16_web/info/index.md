@@ -64,7 +64,7 @@ If you would like to purchase a used clicker from a former student, see the list
 |Sarah Zimmerman      | Mon 11am - 1pm                   | Old Chem 211A |
 |David Clancy         | Sun 7:30pm - 9:30pm              | Old Chem 025  |
 |Drew Jordan          | Mon 4:30pm - 5:30pm + 7pm - 8pm  | Old Chem 211A |
-|Anthony Hung         | Mon 6pm - 8pm                    | Old Chem 025  |
+|Anthony Hung         | Tue 6pm - 8pm                    | Old Chem 025  |
 |Andrew Wong          | Mon 7:30pm - 9:30pm              | Old Chem 025  |
 |Anne Driscoll        | Tue 9:30am - 11:30am             | Old Chem 211A |
 |Katherine Ahn        | Tue 11am - 1pm                   | Old Chem 211A |
