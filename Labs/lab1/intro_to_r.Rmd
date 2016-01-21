@@ -74,6 +74,34 @@ Before you keep going type your team name, the name of the team member who is th
 present in lab today. Then click on *Knit HTML* and you'll see your document in a 
 new pop-up window.
 
+## R Packages
+
+R is an open-source programming language, meaning that users can contribute
+packages that make our lives easier, and we can use them for free. For this lab,
+and many others in the future, we will use the following R packages:
+
+- `dplyr`: for data wrangling
+- `ggplot2`: for data visualization
+
+These packages have already been installed for you, however you will still
+need to load them in your working environment. To do so, type the following 
+in the console:
+
+```{r}
+library(dplyr)
+library(ggplot2)
+```
+
+Note that these two lines of code also appear on top of your R Markdown
+document. We need to load the packages both in the console and
+in your R Markdown environment since these two environments work independently
+of each other.
+
+Going forward you will be asked to load any relevant packages at the beginning
+of each lab, and the code for loading these packages will also be included
+on top of your R Markdown document as well.
+
+
 ## The Data: Dr. Arbuthnot's Baptism Records
 
 To get you started, run the following command from your markdown file.
