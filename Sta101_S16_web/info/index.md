@@ -65,12 +65,12 @@ If you would like to purchase a used clicker from a former student, see the list
 |David Clancy         | Sun 7:30pm - 9:30pm              | Old Chem 025  |
 |Drew Jordan          | Mon 4:30pm - 5:30pm + 7pm - 8pm  | Old Chem 211A |
 |Anthony Hung         | Mon 6pm - 8pm                    | Old Chem 025  |
-|Andrew Wong*         | Mon 7:30pm - 9:30pm              | Old Chem 025  |
+|Andrew Wong          | Mon 7:30pm - 9:30pm              | Old Chem 025  |
 |Anne Driscoll        | Tue 9:30am - 11:30am             | Old Chem 211A |
 |Katherine Ahn        | Tue 11am - 1pm                   | Old Chem 211A |
 |Andy Cooper          | Tue 2pm - 4pm                    | Old Chem 211A |
-|Patrick Cardel       | Wed 6:30pm - 8:30pm              | Old Chem 211A |
-|John Pura            | Tu 1pm - 2pm + 6pm - 7pm         | Old Chem 211A |
+|Patrick Cardel       | Wed 6:30pm - 8:30pm              | Old Chem 025  |
+|John Pura            | Tu 1pm - 2pm + Th 6pm - 7pm      | Old Chem 211A |
 |Lindsay Berry        | Thu 3pm - 5pm                    | Old Chem 211A |
 |Eidan Jacob          | Fri 9:30am - 11:30am             | Old Chem 211A |
 
