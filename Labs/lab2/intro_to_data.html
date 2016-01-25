@@ -96,8 +96,7 @@ img {
 
 <div id="template">
 <p><strong>Your reproducible lab report: </strong> Before you get started, download the R Markdown template for this lab. Remember all of your code and answers go in this document:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">download</span>(<span class="st">&quot;http://stat.duke.edu/courses/Spring16/sta101.001/rmd/lab2.Rmd&quot;</span>, 
-         <span class="dt">destfile =</span> <span class="st">&quot;lab2.Rmd&quot;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">download.file</span>(<span class="st">&quot;http://stat.duke.edu/courses/Spring16/sta101.001/rmd/lab2.Rmd&quot;</span>, <span class="dt">destfile =</span> <span class="st">&quot;lab2.Rmd&quot;</span>)</code></pre></div>
 </div>
 <p>Some define statistics as the field that focuses on turning information into knowledge. The first step in that process is to summarize and describe the raw information - the data. In this lab we explore flights, specifically a random sample of 32735 domestic flights that departed from the three New York City airport in 2013. We will generate simple graphical and numerical summaries of data on these flights and explore delay times. As this is a large data set, along the way you’ll also learn the indispensable skills of data processing and subsetting.</p>
 <div id="boxedtext">
