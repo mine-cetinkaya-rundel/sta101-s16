@@ -25,8 +25,8 @@ download.file("http://stat.duke.edu/courses/Spring16/sta101.001/rmd/lab2.Rmd", d
 Some define statistics as the field that focuses on turning information into
 knowledge. The first step in that process is to summarize and describe the raw
 information - the data. In this lab we explore flights, specifically a random
-sample of `r nrow(nycflights)` domestic flights that departed from the three New 
-York City airport in 2013. We will generate simple graphical and numerical 
+sample of `r nrow(nycflights)` domestic flights that departed from the three major 
+New York City airport in 2013. We will generate simple graphical and numerical 
 summaries of data on these flights and explore delay times. As this is a large 
 data set, along the way you'll also learn the indispensable skills of data 
 processing and subsetting.
@@ -110,7 +110,7 @@ some questions we might want to answer with these data:
 - We might want to find out how delayed flights headed to a particular 
 destination tend to be. 
 - We might want to evaluate how departure delays vary over months. 
-- Or we might want to determine which of the three NYC airports has a better 
+- Or we might want to determine which of the three major NYC airports has a better 
 on time percentage for departing flights.
 
 ### R Packages
@@ -123,6 +123,8 @@ packages:
 library(ggplot2)
 library(dplyr)
 ```
+
+Note that these two lines are also included in your R Markdown template.
 
 ### Seven verbs
 
@@ -227,6 +229,18 @@ single numerical variable are as follows:
 - `max`
 </div>
 
+We can also filter based on multiple criteria. Suppose we are interested in
+flights headed to San Francisco (SFO) in February:
+
+```{r}
+sfo_feb_flights <- nycflights %>%
+  filter(dest == "SFO", month == 2)
+```
+
+Note that we can separate the conditions using commas if we want flights that
+are both headed to SFO **and** in February. If we are interested in either
+flights headed to SFO **or** in February we can use the `|` instead of the comma.
+
 1.  Create a new data frame that includes flights headed to SFO in February, 
     and save this data frame as `sfo_feb_flights`. How many flights 
     meet these criteria? 
@@ -295,7 +309,7 @@ this variable as categorical, what R calls a **factor**, variable with
 ### On time departure rate for NYC airports
 
 Suppose you will be flying out of NYC and want to know which of the 
-three airports has the best on time departure rate of departing flights. 
+three major NYC airports has the best on time departure rate of departing flights. 
 Suppose also that for you a flight that is delayed for less than 5 minutes is 
 basically "on time". You consider any flight delayed for 5 minutes of more to be 
 "delayed".
