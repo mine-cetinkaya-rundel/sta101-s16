@@ -1,0 +1,459 @@
+% -*- TeX-engine: xetex; eval: (auto-fill-mode 0); eval: (visual-line-mode 1); -*-
+% Compile with XeLaTeX
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% Option 1: Slides: (comment for handouts)   %
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%\documentclass[slidestop,compress,mathserif,12pt,t,professionalfonts,xcolor=table]{beamer}
+%
+%% solution stuff
+%\newcommand{\solnMult}[1]{
+%\only<1>{#1}
+%\only<2->{\red{\textbf{#1}}}
+%}
+%\newcommand{\soln}[1]{\textit{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Option 2: Handouts, without solutions (post before class)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
+
+ % handout layout
+ \usepackage{pgfpages}
+ \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+
+ % solution stuff
+ \newcommand{\solnMult}[1]{#1}
+ \newcommand{\soln}[1]{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Option 3: Handouts, with solutions (may post after class if need be)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
+
+% % handout layout
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+
+% % solution stuff
+% \newcommand{\solnMult}[1]{\red{\textbf{#1}}}
+% \newcommand{\soln}[1]{\textit{#1}}
+
+%%%%%%%%%%
+% Load style file, defaults  %
+%%%%%%%%%%
+
+\input{../../lec_style.tex}
+\input{../../definitions_default.tex}
+% ALT ALT
+% \input{../../definitions_custom.tex}
+
+%%%%%%%%%%%
+% Cover slide info    %
+%%%%%%%%%%%
+
+\title{Unit 2: Probability and distributions}
+\subtitle{2. Bayes' theorem and Bayesian inference}
+\author{\CourseName}
+\date{}
+\institute{\InstituteName}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin document and set Helvetica Neue font   %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\fontspec[Ligatures=TeX]{Helvetica Neue Light}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Title Page
+
+\begin{frame}[plain]
+
+\titlepage
+
+\vfill
+
+{\scriptsize \webLink{\PersonalSite}{Dr. \LastName{}} \hfill Slides posted at  \webURL{\CourseSite}}
+
+\addtocounter{framenumber}{-1} 
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Housekeeping}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Announcements}
+
+\begin{itemize}
+
+\item If you received an email from me about your clicker registration being
+missing and you still have not given me your info on the Google doc, please do that ASAP!
+
+\item PS 2 is posted
+
+\item Start reviewing Unit 3 materials
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Main ideas}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Probability trees are useful for conditional probability calculations}
+\label{mi1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{1. Probability trees are useful for conditional probability calculations}
+
+\begin{itemize}
+
+\item Probability trees are useful for organizing information in conditional probability calculations
+
+\item They're especially useful in cases where you know P(A $|$ B), along with some other information, and you're asked for P(B $|$ A)
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Bayesian inference: start with a prior, collect data, calculate posterior, make a decision or iterate}
+\label{mi2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{2. Bayesian inference: start with a prior, collect data, calculate posterior, make a decision or iterate}
+
+\begin{itemize}[<+->]
+
+\item In Bayesian inference, probabilities are at times interpreted as \textbf{degrees of belief}.
+
+\item You start with a set of \textbf{prior beliefs} (or prior probabilities).
+
+\item You observe some data.
+
+\item Based on that data, you update your beliefs.  
+
+\item These new beleifs are called \textbf{posterior beliefs} (or posterior probabilities), because they are \textbf{post}-data.
+
+\item You can iterate this process.
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Dice game}
+
+We'll play a game to demonstrate this approach:
+
+\begin{itemize}
+
+\item Two dice: 6-sided and 12-sided
+\begin{itemize}
+\item I keep one die on the left and one die on the right
+\end{itemize}
+
+\pause
+
+\item The ``good die'' is the 12-sided die.
+
+\pause
+
+\item Ultimate goal: come to a class consensus about whether the die on the left or the die on the right is the ``good die''
+
+\pause
+
+\item We will start with priors, collect data, and calculate posteriors, and make a decision or iterate until we're ready to make a decision
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Prior probabilities}
+
+\begin{itemize}
+
+\item At each roll I tell you whether you won or not (win = $\ge 4$)
+\begin{itemize}
+\item P(win $\mid$ 6-sided die) = 0.5 $\rightarrow$ bad die
+\item P(win $\mid$ 12-sided die) = 0.75 $\rightarrow$ good die
+\end{itemize}
+
+\pause
+
+\item The two competing claims are
+\begin{itemize}
+\item[] $H_1$: Good die is on left 
+\item[] $H_2$: Good die is on right 
+\end{itemize}
+
+\pause
+
+\item Since initially you have no idea which is true, you can assign equal \hl{prior probabilities} to the hypotheses
+\begin{itemize}
+\item[] P($H_1$ is true) = 0.5 
+\item[] P($H_2$ is true) = 0.5 
+\end{itemize}
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Rules of the game}
+
+\begin{itemize}
+
+\item You won't know which die I'm holding in which hand, left (L) or right (R). {\footnotesize left = YOUR left}
+
+\pause
+
+\item You pick die (L or R), I roll it, and I tell you if you win or not, where winning is getting a number $\ge$ 4. If you win, you get a piece of candy. If you lose, I get to keep the candy.
+
+\pause
+
+\item We'll play this multiple times with different contestants.
+
+\pause
+
+\item I will not swap the sides the dice are on at any point.
+
+\pause
+
+\item You get to pick how long you want play, but there are costs associated with playing longer.
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Hypotheses and decisions}
+
+\begin{center}
+\renewcommand\arraystretch{1.25}
+\begin{tabular}{l | c | c | }
+  			&\multicolumn{2}{c|}{\hl{Truth}} \\
+\cline{2-3}
+\hl{Decision}		& {\small L good, R bad}		& {L bad, R good} \\
+\hline
+Pick L		& \hlGr{You get candy!}			& \red{You lose all the candy :(} \\
+\hline
+Pick R		& \red{You lose all the candy :(}	& \hlGr{You get candy!} \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.75cm}
+
+\hl{Sampling isn't free!} \\
+At each trial you risk losing pieces of candy if you lose (the die comes up $<$ 4). Too many trials means you won't have much candy left. And if we spend too much class time and we may not get through all the material.
+	
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Data and decision making}
+
+\begin{center}
+\renewcommand\arraystretch{1.25}
+\begin{tabular}{l | c | c}
+		& Choice (L or R)	& Result (win or loss) \\
+\hline
+Roll 1	& 				& 				\\
+\hline
+Roll 2	& 				& 				\\
+\hline
+Roll 3	& 				& 				\\
+\hline
+Roll 4	& 				& 				\\
+\hline
+Roll 5	& 				& 				\\
+\hline
+Roll 6	& 				& 				\\
+\hline
+Roll 7	& 				& 				\\
+\hline
+...		& 				& 				\\
+\end{tabular}
+\end{center}
+
+\disc{What is your decision? How did you make this decision?}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Posterior probability}
+
+\begin{itemize}
+
+\item \hl{Posterior probability} is the probability of the hypothesis given the observed data: P(hypothesis $|$ data)
+
+\pause
+
+\item Using Bayes' theorem
+\begin{eqnarray*}
+P(hypothesis \mid data) &=& \frac{P(hypothesis~and~data)}{P(data)} \\
+\pause
+&=& \frac{P(data~|~hypothesis) \times P(hypothesis)}{P(data)}
+\end{eqnarray*}
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{}
+
+
+\disc{Calculate the posterior probability for the hypothesis chosen in the first roll, and discuss how this might influence your decision for the next roll.}
+% ALT ALT
+% \disc{Calculate the posterior probability after flipping the coin once.}
+
+% Set the overall layout of the tree
+\tikzstyle{level 1}=[level distance=3.5cm, sibling distance=3.5cm]
+\tikzstyle{level 2}=[level distance=3.5cm, sibling distance=1.5cm]
+
+% Define styles for bags
+\tikzstyle{bag} = [text width=4em, text centered]
+\tikzstyle{end} = [minimum width=3pt, inner sep=0pt]
+
+% Draw picture
+\hspace{-1.5cm}
+\begin{tikzpicture}[grow=right]
+\node[bag] {}
+    child {
+        node[bag] {\emptybox{0.5cm}{0.25cm}      }  
+            child {
+                node[end, label=right:
+                    {\emptybox{0.5cm}{0.25cm}      }] {}
+                edge from parent
+            }
+            child {
+                node[end, label=right:
+                    {\emptybox{0.5cm}{0.25cm}      }] {}
+                edge from parent
+            }
+            edge from parent
+    }
+    child {
+        node[bag] {\emptybox{0.5cm}{0.25cm}      }        
+            child {
+                node[end, label=right:
+                    {\emptybox{0.5cm}{0.25cm}      }] {}
+                edge from parent
+            }
+            child {
+                node[end, label=right:
+                    {\emptybox{0.5cm}{0.25cm}      }] {}
+                edge from parent
+            }
+            edge from parent
+    };
+\end{tikzpicture}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Posterior probability and p-value do not mean the same thing}
+\label{mi3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{3. Posterior probability and p-value do not mean the same thing}
+
+\begin{itemize}
+
+\item $\hl{p-value}:$ P(observed or more extreme outcome $|$ null hypothesis is true)
+\begin{itemize}
+\item This is more like P(data $|$ hyp) than P(hyp $|$ data).
+\end{itemize}
+
+\item $\hl{posterior}:$ P(hypothesis $|$ data)
+
+\item Bayesian approach avoids the counter-intuitive Frequentist p-value for decision making, and more advanced Bayesian techniques offer flexibility not present in Frequentist models
+
+\item \hl{Watch out!} \\
+\begin{itemize}
+\item $\hl{Bayes}$: A good prior helps, a bad prior hurts, but the prior matters less the more data you have.
+\item $\hl{p-value}$: {It is really easy to mess up p-values}: \webLink{https://sakai.duke.edu/access/content/group/8d786209-ab9d-4d66-9a00-e138eaadd9c9/Articles/goodman-2008.pdf}{Goodman, 2008}
+
+\end{itemize}
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{}
+
+\vfill
+
+\app{2.2 Bayesian inference for drug testing}{$\:$\\ See the \webLink{\CourseSite}{course website} for instructions. \\$\:$}
+
+\vfill
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Summary}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Summary of main ideas}
+
+\vfill
+
+\begin{enumerate}
+
+\item \nameref{mi1}
+
+\item \nameref{mi2}
+
+\item \nameref{mi3}
+
+\end{enumerate}
+
+\vfill
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

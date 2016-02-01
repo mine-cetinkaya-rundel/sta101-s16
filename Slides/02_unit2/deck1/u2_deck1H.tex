@@ -1,0 +1,303 @@
+% -*- TeX-engine: xetex; eval: (auto-fill-mode 0); eval: (visual-line-mode 1); -*-
+% Compile with XeLaTeX
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% Option 1: Slides: (comment for handouts)   %
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%\documentclass[slidestop,compress,mathserif,12pt,t,professionalfonts,xcolor=table]{beamer}
+%
+%% solution stuff
+%\newcommand{\solnMult}[1]{
+%\only<1>{#1}
+%\only<2->{\red{\textbf{#1}}}
+%}
+%\newcommand{\soln}[1]{\textit{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Option 2: Handouts, without solutions (post before class)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
+
+ % handout layout
+ \usepackage{pgfpages}
+ \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+
+ % solution stuff
+ \newcommand{\solnMult}[1]{#1}
+ \newcommand{\soln}[1]{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Option 3: Handouts, with solutions (may post after class if need be)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
+
+% % handout layout
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+
+% % solution stuff
+% \newcommand{\solnMult}[1]{\red{\textbf{#1}}}
+% \newcommand{\soln}[1]{\textit{#1}}
+
+%%%%%%%%%%
+% Load style file, defaults  %
+%%%%%%%%%%
+
+\input{../../lec_style.tex}
+\input{../../definitions_default.tex}
+% ALT ALT
+% \input{../../definitions_custom.tex}
+
+%%%%%%%%%%%
+% Cover slide info    %
+%%%%%%%%%%%
+
+\title{Unit 2: Probability and distributions}
+\subtitle{1. Probability and conditional probability}
+\author{\CourseName}
+\date{}
+\institute{\InstituteName}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin document and set Helvetica Neue font   %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\fontspec[Ligatures=TeX]{Helvetica Neue Light}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Title Page
+
+\begin{frame}[plain]
+
+\titlepage
+
+\vfill
+
+{\scriptsize \webLink{\PersonalSite}{Dr. \LastName{}} \hfill Slides posted at  \webURL{\CourseSite}}
+
+\addtocounter{framenumber}{-1} 
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Housekeeping}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Announcements}
+
+\begin{itemize}
+
+\item Piazza -- enroll and use regularly (post questions, answer others, read answers)
+
+\item Get started on PS 2
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Readiness assessment}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Readiness assessment}
+
+\begin{itemize}
+
+\item 15 minutes individual -- turn your clicker over when you're done
+
+\item 10 minutes team -- put your team name on the front of the scratch 
+off sheet + Lab time + note if anyone from your team is missing
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Main ideas}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Disjoint and independent do not mean the same thing}
+\label{mi1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{1. Disjoint and independent do not mean the same thing}
+
+\begin{itemize}
+
+\item \hl{Disjoint (mutually exclusive) events} cannot happen at the same time
+\begin{itemize}
+\item A voter cannot register as a Democrat and a Republican at the same time
+\item But they might be a Republican and a Moderate at the same time -- 
+\hl{non-disjoint events}
+\item For disjoint A and B: $P(A~and~B) = 0$
+\end{itemize}
+
+\pause
+
+\item If A and B are \hl{independent events}, having information on A does 
+not tell us anything about B (and vice versa)
+\begin{itemize}
+\item If A and B are independent: 
+\begin{itemize}
+\item $P(A~|~B) = P(A)$
+\item $P(A~and~B) = P(A) \times P(B)$
+\end{itemize}
+\end{itemize}
+
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Application of the addition rule depends on disjointness of events}
+\label{mi2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{2. Application of the addition rule depends on disjointness of events}
+
+\begin{itemize}
+
+\item \hl{General addition rule:} P(A or B) = P(A) + P(B) - P(A and B)
+
+\item A or B = either A or B or both
+
+\end{itemize}
+
+\vspace{0.5cm}
+
+\pause
+
+\twocol{0.5}{0.5}{
+\textbf{disjoint events:} \\
+P(A or B) \\
+= P(A) + P(B) - P(A and B) \\
+= 0.4 + 0.3 - 0 = 0.7
+\begin{center}
+\includegraphics[width = 0.9\textwidth]{figures/venn/venn_disjoint.pdf}
+\end{center}
+}
+{
+\pause
+\textbf{non-disjoint events:} \\
+P(A or B) \\
+= P(A) + P(B) - P(A and B) \\
+= 0.4 + 0.3 - 0.02 = 0.68
+\begin{center}
+\includegraphics[width = 0.9\textwidth]{figures/venn/venn_non_disjoint.pdf}
+\end{center}
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Bayes' theorem works for all types of events}
+\label{mi3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{3. Bayes' theorem works for all types of events}
+
+\begin{itemize}
+
+\item \hl{Bayes' theorem:} $P(A~|~B) = \frac{P(A~and~B)}{P(B)}$
+
+\pause
+
+\item ... can be rewritten as: $P(A~and~B) = P(A~|~B) \times P(B)$
+
+\end{itemize}
+
+\pause
+
+\vspace{0.5cm}
+
+\twocol{0.5}{0.5}{
+\textbf{disjoint events:}
+
+\begin{itemize}
+\item We know P(A $|$ B) = 0, since if B happened A could not have happened
+\pause
+\item P(A and B) \\
+= P(A $|$ B) $\times$ P(B) \\
+\pause
+= \red{0} $\times$ P(B) = 0
+\end{itemize}
+}
+{
+\pause
+
+\textbf{independent events:}
+
+\begin{itemize}
+\item We know P(A $|$ B) = P(A), since knowing B doesn't tell us anything about A
+\pause
+\item P(A and B) \\
+= P(A $|$ B) $\times$ P(B) \\
+\pause
+= \red{P(A)} $\times$ P(B)
+\end{itemize}
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{}
+
+\vfill
+
+\app{2.1 Probability and conditional probability}{$\:$\\ See the course website for instructions. \\$\:$}
+
+\vfill
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Summary}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Summary of main ideas}
+
+\vfill
+
+\begin{enumerate}
+
+\item \nameref{mi1}
+
+\item \nameref{mi2}
+
+\item \nameref{mi3}
+
+\end{enumerate}
+
+\vfill
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
