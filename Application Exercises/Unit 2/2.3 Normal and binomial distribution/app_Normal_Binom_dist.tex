@@ -1,0 +1,136 @@
+\documentclass[12pt]{article}
+\input{../../app_style.tex}
+
+%%%%%%%%%%%
+% App Ex number    %
+%%%%%%%%%%%
+
+% DON'T FORGET TO UPDATE
+
+\newcommand{\appno}[1]
+{2.3}
+
+%%%%%%%%%%%%%%
+% Turn on/off solutions       %
+%%%%%%%%%%%%%%
+
+% Off
+\newcommand{\soln}[2]{$\:$\\ \vspace{#1}}{}
+
+%%% On
+%\newcommand{\soln}[2]{\textit{\textcolor{custom_red}{#2}}}{}
+
+%%%%%%%%%%%%%%%%
+% Document
+%%%%%%%%%%%%%%%%
+
+\begin{document}
+\fontspec[Ligatures=TeX]{Helvetica Neue Light}
+
+Dr. \c{C}etinkaya-Rundel \hfill Sta 101: Data Analysis and Statistical Inference \\
+Duke University - Department of Statistical Science \hfill \\
+
+\ttl{Application exercise \appno{}: \\
+Hourly rates of manufacturing workers}
+
+\inst{$\:$ \\
+Team name: \rule{10cm}{0.5pt} \\
+$\:$ \\
+Lab section: $\qquad$ 8:30 $\qquad$ 10:05 $\qquad$ 11:45 $\qquad$ 1:25 $\qquad$ 3:05 $\qquad$ 4:40 \\
+$\:$ \\
+Write your responses in the spaces provided below. WRITE LEGIBLY and SHOW ALL WORK! 
+Only one submission per team is required. One team will be randomly selected and their 
+responses will be discussed and graded. Concise and coherent are best!}
+
+In this activity we'll work with data on average hourly wage for manufacturing workers, in the United States as well as in 
+North Carolina. The data come from the The 2012 Statistical Abstract. Assume that the distributions of the manufacturing 
+wage rates, nationwide and in North Carolina, can be approximated by a normal distribution. \\
+
+{\footnotesize Source: Source: U.S. Bureau of Labor Statistics, Current Employment Statistics, ``State and Metro Area 
+Employment, Hours, and Earnings (SAE), March, 2010, \url{http://www.bls.gov/sae/\#data.htm} and \url{http://www.census.gov/compendia/statab/2012/tables/12s1016.pdf}.} \\
+
+\textbf{Part 1:}
+Government data indicates that the average hourly wage for manufacturing workers in the United States is \$18.61, 
+with a standard deviation of \$1.35. 
+\begin{enumerate}
+
+\item What percent of manufacturing workers make more than \$20/hour?
+
+\soln{3.5cm}{
+Given: $X_{US} \sim N(\mu = 18.61, \sigma = 1.35)$
+\[ P(X > 20) = P\left( Z > \frac{20 - 18.61}{1.35} \right) = P(Z > 1.02) = 0.154 \rightarrow 15.4\% \]
+}
+
+\item What percent of manufacturing workers make between \$18 - \$20/hour? \\
+
+\soln{3.5cm}{
+\[ P(X_{US} > 18) = P\left( Z > \frac{18 - 18.61}{1.35} \right) = P(Z > -0.45) = 0.674 \]
+\[ P(18 < X_{US} < 20) = 0.674 - 0.154 = 0.52 \rightarrow 52\% \]
+}
+
+\end{enumerate}
+
+\pagebreak
+
+\textbf{Part 2:}
+Government data also indicates that the average hourly wage for manufacturing workers in North Carolina is \$15.85. 
+
+\begin{enumerate}
+
+\item[3.] An unemployed worker did a job search in North Carolina, and found that 15\% of the manufacturing jobs paid 
+more than \$17 per hour. What is the standard deviation of the distribution of hourly wage for manufacturing workers in 
+North Carolina?
+
+\soln{4cm}{
+Given: $\mu = 15.85$, $P(X_{NC} > 17) = 0.15$ \\
+This corresponds to a Z score of 1.04 since $P(Z > 1.04) = 0.15$ 
+\[ 1.04 = \frac{17 - 15.85}{\sigma} \rightarrow \sigma = \frac{17 - 15.85}{1.04} = 1.11 \]
+}
+
+\item[4.] Suppose that a worker applies for a manufacturing job in North Carolina, and receives the good news that she 
+got the job and that her pay will be at least \$16.50 per hour. She would really like to be able to make at least \$17 per 
+hour. What is the probability that she will get what she wants? Assume that the company she will be working for is a 
+run-of-the-mill manufacturing company in NC, i.e. the distribution of the hourly wages at this company reflects the state 
+distribution. \textit{Hint:} This is a conditional probability. \\
+
+\soln{6cm}{
+Given: $X_{NC} \sim N(\mu = 15.85, \sigma = 1.11)$
+\begin{align*}
+P(X_{NC} > 17 ~|~ X_{NC} > 16.50) &= \frac{P(X_{NC} > 17 ~and~ X_{NC} > 16.50)}{P(X_{NC} > 16.50)} = \frac{P(X_{NC} > 17)}{P(X_{NC} > 16.50)} \\
+&= \frac{0.15}{P\left( Z > \frac{16.50 - 15.85}{1.11} \right)} = \frac{0.15}{P(Z > 0.59)} = \frac{0.15}{0.28} = 0.53
+\end{align*}
+}
+
+\end{enumerate}
+
+\pagebreak
+
+\textbf{Part 3:}
+Government data also indicates that the average hourly wage for manufacturing workers in New York is \$18.39, with a 
+standard deviation of \$1.5. 
+
+\begin{enumerate}
+
+\item[5.] Who is doing better within their state: a NC manufacturing worker who makes \$17/hr or a NY manufacturing 
+worker who makes \$19/hr?
+
+\soln{4cm}{
+\begin{itemize}
+\item Given: $X_{NY} \sim N(\mu = 18.39, \sigma = 1.5) \rightarrow X_{NY} = \$19 \rightarrow Z = \frac{19 - 18.39}{1.5} = 0.41$
+\item Given: $X_{NC} \sim N(\mu = 15.85, \sigma = 1.11) \rightarrow X_{NC} = \$17 \rightarrow Z = 1.04$
+\end{itemize}
+NC manufacturing worker doing better since has a higher Z score.
+}
+
+\item[6.] If 34\% of NY manufacturing workers make more than \$19/hr, what is the probability that in a random sample of 100 NY manufacturing workers less than 30\% make more than \$19/hr.
+
+\soln{2cm}{
+$p = 0.34$, $n = 100$ \\
+S/F: checks \\
+$\mu = 0.34 \times 100 = 34$ and $\sigma = \sqrt{100 \times 0.34 \times 0.66} = 4.74$ \\
+$P \left( K < 30 \right) = P \left( Z < \frac{30 - 34}{4.74} \right) = P(Z < -0.84) = 0.2$
+}
+
+\end{enumerate}
+
+\end{document}

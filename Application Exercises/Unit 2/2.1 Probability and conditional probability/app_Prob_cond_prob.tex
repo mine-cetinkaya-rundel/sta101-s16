@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+\input{../../app_style.tex}
+
+%%%%%%%%%%%
+% App Ex number    %
+%%%%%%%%%%%
+
+% DON'T FORGET TO UPDATE
+
+\newcommand{\appno}[1]
+{2.1}
+
+%%%%%%%%%%%%%%
+% Turn on/off solutions       %
+%%%%%%%%%%%%%%
+
+% Off
+\newcommand{\soln}[2]{$\:$\\ \vspace{#1}}{}
+
+%%% On
+%\newcommand{\soln}[2]{\textit{\textcolor{custom_red}{#2}}}{}
+
+%%%%%%%%%%%%%%%%
+% Document
+%%%%%%%%%%%%%%%%
+
+\begin{document}
+\fontspec[Ligatures=TeX]{Helvetica Neue Light}
+
+Dr. \c{C}etinkaya-Rundel \hfill Sta 101: Data Analysis and Statistical Inference \\
+Duke University - Department of Statistical Science \hfill \\
+
+\ttl{Application exercise \appno{}: \\
+Voting probabilities of college students}
+
+\inst{$\:$ \\
+Team name: \rule{10cm}{0.5pt} \\
+$\:$ \\
+Lab section: $\qquad$ 8:30 $\qquad$ 10:05 $\qquad$ 11:45 $\qquad$ 1:25 $\qquad$ 3:05 $\qquad$ 4:40 \\
+$\:$ \\
+Write your responses in the spaces provided below. WRITE LEGIBLY and SHOW ALL WORK! 
+Only one submission per team is required. One team will be randomly selected and their 
+responses will be discussed and graded. Concise and coherent are best!}
+
+The following table shows the distribution of class year and whether or not students 
+voted in the last presidential election for 176 Sta 101 students. \\
+
+\begin{center}
+\begin{tabular}{rrrr|r}
+  \hline
+ & no, eligible but didn't & no, not eligible & yes & total \\ 
+  \hline
+first-year & 3 & 38 & 3 & 44 \\ 
+  sophomore & 10 & 40 & 14 & 64 \\ 
+  junior & 7 & 6 & 41 & 54 \\ 
+  senior & 4 & 1 & 9 & 14 \\ 
+  \hline
+  total & 24 & 85 & 67 & 176 \\ 
+   \hline
+\end{tabular}
+\end{center}
+
+Answer the following questions based on these data. Make sure to show all your work. \\
+
+\begin{enumerate}
+
+\item  What is the probability that a randomly chosen student has voted in the last 
+presidential election?
+
+\soln{2cm}{P(voted) = 67 / 176 = 0.38}
+
+\item What is the probability that a randomly chosen student is a junior \underline{and} 
+has voted in the last presidential election?
+
+\soln{2cm}{P(junior and voted) = 41 / 176 = 0.23}
+
+\item What is the probability that a randomly chosen student  has voted in the last presidential 
+election \underline{given that} s/he is a junior?
+
+\soln{2cm}{P(voted~$|$~junior) = 41 / 54 = 0.76}
+
+\item Categorize the three probabilities you calculated above as marginal, conditional, 
+or joint.
+
+\soln{2cm}{1. marginal, 2. joint, 3. conditional}
+
+\item What is the probability that a randomly chosen student is a junior \underline{or} 
+has voted in the last presidential election?
+
+\soln{2cm}{P(junior or voted) = (67 + 54 - 41) / 176 =  0.45}
+
+\item What percent of students are junior \underline{or} have voted in the last 
+presidential election?
+
+\soln{1cm}{Same as above, 45\%.}
+
+\item What is the probability that a randomly chosen student has voted in the last presidential 
+election \underline{given that} s/he is a first-year? What about sophomore, and senior?
+
+\soln{2cm}{P(voted~$|$~first-year) = 3 / 44 = 0.07 \\
+P(voted~$|$~sophomore) = 14 / 64 = 0.22 \\
+P(voted~$|$~senior) = 9 / 14 = 0.64}
+
+\item Do these data suggest an association between class year and whether or not 
+students have voted in the last presidential election? Explain your reasoning in one or 
+two sentences.
+
+\soln{2cm}{Yes, it does. Likelihood of voting varies by class year.}
+
+\end{enumerate}
+
+\end{document}
