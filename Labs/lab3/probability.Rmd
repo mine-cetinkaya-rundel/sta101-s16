@@ -8,7 +8,7 @@ output:
 ---
 
 ```{r global_options, include=FALSE}
-knitr::opts_chunk$set(eval = FALSE)
+knitr::opts_chunk$set(eval = TRUE)
 library(dplyr)
 library(ggplot2)
 ```
@@ -90,13 +90,7 @@ his nine shot attempts in the first quarter:
 
 \[ \textrm{H M | M | H H M | M | M | M} \]
 
-To verify this use the following command:
-
-```{r first9}
-kobe_basket %>%
-  filter(game == 1, quarter == 1) %>%
-  select(shot)
-```
+You can verify this by viewing the first 8 rows of the data in the data viewer.
 
 Within the nine shot attempts, there are six streaks, which are separated by a 
 "|" above. Their lengths are one, zero, two, zero, zero, zero (in order of 
