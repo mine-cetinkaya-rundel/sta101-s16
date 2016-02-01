@@ -3,47 +3,8 @@ layout: page
 title: Schedule
 ---
 
-### <a name="unit1"></a> Unit 1 - Introduction to data 
+| Jump to: | &nbsp;&nbsp;&nbsp; [Unit 1]({{ site.baseurl }}/#unit1) &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; [Unit 2]({{ site.baseurl }}/#unit2) &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; [Unit 3]({{ site.baseurl }}/#unit3) &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; [Unit 4]({{ site.baseurl }}/#unit4) &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; [Unit 5]({{ site.baseurl }}/#unit5) &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; [Unit 6]({{ site.baseurl }}/#unit6) &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; [Unit 7]({{ site.baseurl }}/#unit7) &nbsp;&nbsp;&nbsp; |
 
-##### Resources
-
-| Videos: [Videos for Unit 1]({{ site.videos }}) | Learning objectives: [LO 1]({{ site.learn_obj }}/view?page=Unit_1_Learning_Objectives) | Textbook: [Chp 1]({{ site.openintro}}) |
-
-##### Class / lab
-
-| Jan 13, Wed  | [Introduction to Sta 101](post/slides/deck0.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/deck0H.pdf)  |
-|              | [Lesson 1.1: Data Collection, observational studies & experiments](post/slides/u1_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u1_deck1H.pdf) |
-| Jan 14, Thu  | [Lab 0: Introduction](post/labs/lab0.html) |
-| Jan 18, Mon  | *Martin Luther King, Jr. day - no class* |
-| Jan 20, Wed  | **RA 1** in class (not graded) |
-|              | [Lesson 1.2: Exploratory data analysis](post/slides/u1_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u1_deck2H.pdf) |
-|              | [App Ex 1.1: Distributions of numerical variables](post/app/app_Dist_num_var.pdf) |
-| Jan 21, Thu  | [Lab 1: Intro to R and RStudio](post/labs/intro_to_r.html) |
-| Jan 25, Mon  | [Lesson 1.3: More exploratory data analysis](post/slides/u1_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u1_deck3H.pdf) |
-|              | [App Ex 1.2: Histogram to boxplot](post/app/app_Hist_to_box.pdf) |
-|              | [App Ex 1.3: Scientific studies in the press](post/app/app_Scientific_studies_press.pdf) |
-| Jan 27, Wed  | [Lesson 1.4: Introduction to statistical inference](post/slides/u1_deck4.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u1_deck4H.pdf)|
-|              | [App Ex 1.4: Randomization testing](post/app/app_Rand_test.pdf)
-| Jan 28, Thu  | [Lab 2: Introduction to data](post/labs/intro_to_data.html)          |
-
-##### Due dates
-
-* Lab 1: Jan 28, Thu, in lab
-* [PS 1]({{ site.sakai_ps }}): Jan 29, Fri, at 11:55pm
-  * End of chapter exercises from **Chp 1**. Only turn in answers to graded questions,
-  use the back of the book to check your work on the practice questions. Must show 
-  **all** work to get credit. Click [here]({{ site.sakai_ps }}) to submit the problem set.
-  * **Graded questions:** 1.2, 1.6, 1.12, 1.20, 1.32, 1.34, 1.44, 1.52, 1.56, 
-  1.60, 1.64, 1.66, 1.68, 1.70 (see [errata](https://docs.google.com/spreadsheets/d/12GQ8HE-h-4N3Uh8SgvhhDd4hEMUN-T8gX5uszM1tWs8/edit))
-  * Practice questions: 
-      + Part 1 – Designing studies: 1.1, 1.3, 1.11, 1.13, 1.17, 1.19, 1.25, 1.27, 1.31
-      + Part 2 – Exploratory data analysis: 1.39, 1.41, 1.45, 1.49, 1.51, 1.55, 1.59, 1.63, 1.65
-      + Part 3 – Introduction to inference via simulation: 1.67, 1.69
-* [PA 1]({{ site.sakai_pa }}): Jan 31, Sun, at midnight
-  * Take between Jan 27, Wed and Jan 31, Sun. 
-  * You have 30 minutes to complete. Only one attempt allowed. Click [here]({{ site.sakai_pa }}) to take the performance assessment.
-
-* * *
 * * *
 
 ### <a name="unit2"></a> Unit 2 - Probability and distributions
@@ -61,7 +22,7 @@ title: Schedule
 |             | [App Ex 2.2: Bayesian drug testing](post/app/app_Bayes_inf.pdf) |
 | Feb 4, Thu  | [Lab 3: Probability](post/labs/probability.html)         |
 | Feb 8, Mon  | [Lesson 2.3: Normal and binomial distribution](post/slides/u2_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u2_deck3H.pdf)               |
-|             | [App Ex 2.3: Normal and binomial distribution](post/app/app_Normal_dist.pdf) |
+|             | [App Ex 2.3: Hourly rates of manufacturing workers](post/app/app_Normal_Binom_dist.pdf) |
 
 ##### Due dates
 
@@ -73,7 +34,7 @@ title: Schedule
   problem set.
   * **Graded questions:** 
       + Chp 2: 2.2, 2.8, 2.18, 2.20, 2.22, 2.26
-      + Chp 3: 3.4, 3.6, 3.12, 3.18, 3.26, 3.28, 3.30, 3.36
+      + Chp 3: 3.4, 3.6, 3.12, 3.18, 3.26, 3.30, 3.36
   * Practice questions: 
       + Part 1 – Defining probability: 2.1, 2.3, 2.5, 2.7, 2.13
       + Part 2 – Conditional probability: 2.15, 2.19, 2.21, 2.23
@@ -321,3 +282,46 @@ title: Schedule
 
 * Cumulative, covers Units 1 - 7
 * Practice problems for Final: [handout](https://sakai.duke.edu/access/content/group/255d1889-39d7-433a-96a0-55ba217ae0a7/FR.pdf) + [solutions](https://sakai.duke.edu/access/content/group/255d1889-39d7-433a-96a0-55ba217ae0a7/FR_Key.pdf)
+
+* * *
+* * *
+
+### <a name="unit1"></a> Unit 1 - Introduction to data 
+
+##### Resources
+
+| Videos: [Videos for Unit 1]({{ site.videos }}) | Learning objectives: [LO 1]({{ site.learn_obj }}/view?page=Unit_1_Learning_Objectives) | Textbook: [Chp 1]({{ site.openintro}}) |
+
+##### Class / lab
+
+| Jan 13, Wed  | [Introduction to Sta 101](post/slides/deck0.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/deck0H.pdf)  |
+|              | [Lesson 1.1: Data Collection, observational studies & experiments](post/slides/u1_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u1_deck1H.pdf) |
+| Jan 14, Thu  | [Lab 0: Introduction](post/labs/lab0.html) |
+| Jan 18, Mon  | *Martin Luther King, Jr. day - no class* |
+| Jan 20, Wed  | **RA 1** in class (not graded) |
+|              | [Lesson 1.2: Exploratory data analysis](post/slides/u1_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u1_deck2H.pdf) |
+|              | [App Ex 1.1: Distributions of numerical variables](post/app/app_Dist_num_var.pdf) |
+| Jan 21, Thu  | [Lab 1: Intro to R and RStudio](post/labs/intro_to_r.html) |
+| Jan 25, Mon  | [Lesson 1.3: More exploratory data analysis](post/slides/u1_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u1_deck3H.pdf) |
+|              | [App Ex 1.2: Histogram to boxplot](post/app/app_Hist_to_box.pdf) |
+|              | [App Ex 1.3: Scientific studies in the press](post/app/app_Scientific_studies_press.pdf) |
+| Jan 27, Wed  | [Lesson 1.4: Introduction to statistical inference](post/slides/u1_deck4.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u1_deck4H.pdf)|
+|              | [App Ex 1.4: Randomization testing](post/app/app_Rand_test.pdf)
+| Jan 28, Thu  | [Lab 2: Introduction to data](post/labs/intro_to_data.html)          |
+
+##### Due dates
+
+* Lab 1: Jan 28, Thu, in lab
+* [PS 1]({{ site.sakai_ps }}): Jan 29, Fri, at 11:55pm
+  * End of chapter exercises from **Chp 1**. Only turn in answers to graded questions,
+  use the back of the book to check your work on the practice questions. Must show 
+  **all** work to get credit. Click [here]({{ site.sakai_ps }}) to submit the problem set.
+  * **Graded questions:** 1.2, 1.6, 1.12, 1.20, 1.32, 1.34, 1.44, 1.52, 1.56, 
+  1.60, 1.64, 1.66, 1.68, 1.70 (see [errata](https://docs.google.com/spreadsheets/d/12GQ8HE-h-4N3Uh8SgvhhDd4hEMUN-T8gX5uszM1tWs8/edit))
+  * Practice questions: 
+      + Part 1 – Designing studies: 1.1, 1.3, 1.11, 1.13, 1.17, 1.19, 1.25, 1.27, 1.31
+      + Part 2 – Exploratory data analysis: 1.39, 1.41, 1.45, 1.49, 1.51, 1.55, 1.59, 1.63, 1.65
+      + Part 3 – Introduction to inference via simulation: 1.67, 1.69
+* [PA 1]({{ site.sakai_pa }}): Jan 31, Sun, at midnight
+  * Take between Jan 27, Wed and Jan 31, Sun. 
+  * You have 30 minutes to complete. Only one attempt allowed. Click [here]({{ site.sakai_pa }}) to take the performance assessment.
