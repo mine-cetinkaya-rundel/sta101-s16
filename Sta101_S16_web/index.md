@@ -16,8 +16,9 @@ title: Schedule
 ##### In class / lab
 
 | Feb 1, Mon  | **RA 2** in class |
-|             | [Lesson 2.1: Probability and conditional probability](post/slides/u2_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u2_deck1H.pdf) |
+|             | [Lesson 2.1: Probability and conditional probability](post/slides/u2_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u2_deck1H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=f930900f-d116-4e1c-b4af-c4ede2ac0b36) |
 |             | [App Ex 2.1: Voting probabilities of college students](post/app/app_Prob_cond_prob.pdf) |
+| Feb 2, Tue  | DS: Probability &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](https://youtu.be/C1foKxsmRw8) |
 | Feb 3, Wed  | [Lesson 2.2: Bayes' theorem and Bayesian inference](post/slides/u2_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u2_deck2H.pdf)               |
 |             | [App Ex 2.2: Bayesian drug testing](post/app/app_Bayes_inf.pdf) |
 | Feb 4, Thu  | [Lab 3: Probability](post/labs/probability.html)         |
@@ -294,18 +295,18 @@ title: Schedule
 
 ##### Class / lab
 
-| Jan 13, Wed  | [Introduction to Sta 101](post/slides/deck0.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/deck0H.pdf)  |
-|              | [Lesson 1.1: Data Collection, observational studies & experiments](post/slides/u1_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u1_deck1H.pdf) |
+| Jan 13, Wed  | [Introduction to Sta 101](post/slides/deck0.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/deck0H.pdf)   |
+|              | [Lesson 1.1: Data Collection, observational studies & experiments](post/slides/u1_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u1_deck1H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=2ee7e787-dacb-4728-8dbf-2b7514d242dc) |
 | Jan 14, Thu  | [Lab 0: Introduction](post/labs/lab0.html) |
 | Jan 18, Mon  | *Martin Luther King, Jr. day - no class* |
 | Jan 20, Wed  | **RA 1** in class (not graded) |
 |              | [Lesson 1.2: Exploratory data analysis](post/slides/u1_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u1_deck2H.pdf) |
 |              | [App Ex 1.1: Distributions of numerical variables](post/app/app_Dist_num_var.pdf) |
 | Jan 21, Thu  | [Lab 1: Intro to R and RStudio](post/labs/intro_to_r.html) |
-| Jan 25, Mon  | [Lesson 1.3: More exploratory data analysis](post/slides/u1_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u1_deck3H.pdf) |
+| Jan 25, Mon  | [Lesson 1.3: More exploratory data analysis](post/slides/u1_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u1_deck3H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=931a9f91-75fb-4701-a638-84b37197211d) |
 |              | [App Ex 1.2: Histogram to boxplot](post/app/app_Hist_to_box.pdf) |
 |              | [App Ex 1.3: Scientific studies in the press](post/app/app_Scientific_studies_press.pdf) |
-| Jan 27, Wed  | [Lesson 1.4: Introduction to statistical inference](post/slides/u1_deck4.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u1_deck4H.pdf)|
+| Jan 27, Wed  | [Lesson 1.4: Introduction to statistical inference](post/slides/u1_deck4.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u1_deck4H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=9b0ba402-71d1-4d80-b0f7-bfd7a2112447)|
 |              | [App Ex 1.4: Randomization testing](post/app/app_Rand_test.pdf)
 | Jan 28, Thu  | [Lab 2: Introduction to data](post/labs/intro_to_data.html)          |
 
