@@ -19,7 +19,7 @@ title: Schedule
 |             | [Lesson 2.1: Probability and conditional probability](post/slides/u2_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u2_deck1H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=f930900f-d116-4e1c-b4af-c4ede2ac0b36) |
 |             | [App Ex 2.1: Voting probabilities of college students](post/app/app_Prob_cond_prob.pdf) |
 | Feb 2, Tue  | DS: Probability &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](https://youtu.be/C1foKxsmRw8) |
-| Feb 3, Wed  | [Lesson 2.2: Bayes' theorem and Bayesian inference](post/slides/u2_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u2_deck2H.pdf)               |
+| Feb 3, Wed  | [Lesson 2.2: Bayes' theorem and Bayesian inference](post/slides/u2_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u2_deck2H.pdf)  &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=951f890a-3669-442d-b0ce-b16a8acf601e) |
 |             | [App Ex 2.2: Bayesian drug testing](post/app/app_Bayes_inf.pdf) |
 | Feb 4, Thu  | [Lab 3: Probability](post/labs/probability.html)         |
 | Feb 8, Mon  | [Lesson 2.3: Normal and binomial distribution](post/slides/u2_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u2_deck3H.pdf)               |
@@ -57,7 +57,7 @@ title: Schedule
 
 | Feb 10, Wed | **RA 3** in class |
 |             | [Lesson 3.1: Variability in estimates and CLT](post/slides/u3_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u3_deck1H.pdf) |
-| Feb 11, Wed | [Lab 4: Sampling distributions](post/labs/sampling_distributions.html) |
+| Feb 11, Thu | [Lab 4: Sampling distributions](post/labs/sampling_distributions.html) |
 | Feb 15, Mon | [Lesson 3.2: Confidence intervals](post/slides/u3_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u3_deck2H.pdf)|
 |             | [App Ex 3.1: Relaxing after work](post/app/app_Relaxing_after_work.pdf) |
 | Feb 17, Wed | [Lesson 3.3: Hypothesis tests](post/slides/u3_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u3_deck3H.pdf)|
