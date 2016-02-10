@@ -7,46 +7,6 @@ title: Schedule
 
 * * *
 
-### <a name="unit2"></a> Unit 2 - Probability and distributions
-
-##### Resources
-
-| Videos: [Videos for Unit 2]({{ site.videos }}) |  Learning objectives: [LO 2]({{ site.learn_obj }}/view?page=Unit_2_Learning_Objectives) | Textbook: [Chp 2 - Sec 2.1, 2.2 + Chp 3 - Sec 3.1, 3.2, 3.4]({{ site.openintro}}) |
-
-##### In class / lab
-
-| Feb 1, Mon  | **RA 2** in class |
-|             | [Lesson 2.1: Probability and conditional probability](post/slides/u2_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u2_deck1H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=f930900f-d116-4e1c-b4af-c4ede2ac0b36) |
-|             | [App Ex 2.1: Voting probabilities of college students](post/app/app_Prob_cond_prob.pdf) |
-| Feb 2, Tue  | DS: Probability &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](https://youtu.be/C1foKxsmRw8) |
-| Feb 3, Wed  | [Lesson 2.2: Bayes' theorem and Bayesian inference](post/slides/u2_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u2_deck2H.pdf)  &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=951f890a-3669-442d-b0ce-b16a8acf601e) |
-|             | [App Ex 2.2: Bayesian drug testing](post/app/app_Bayes_inf.pdf) |
-| Feb 4, Thu  | [Lab 3: Probability](post/labs/probability.html)         |
-| Feb 8, Mon  | [Lesson 2.3: Normal and binomial distribution](post/slides/u2_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u2_deck3H.pdf)               |
-|             | [App Ex 2.3: Hourly rates of manufacturing workers](post/app/app_Normal_Binom_dist.pdf) |
-
-##### Due dates
-
-* Lab 2: Feb 4, Thu, in lab
-* [PS 2]({{ site.sakai_ps }}): Feb 12, Fri, at 11:55pm
-  * End of chapter exercises from **Chp 2** and **Chp 3**. Only turn in answers to 
-  graded questions, use the back of the book to check your work on the practice questions.
-  Must show **all** work to get credit. Click [here]({{ site.sakai_ps }}) to submit the 
-  problem set.
-  * **Graded questions:** 
-      + Chp 2: 2.2, 2.8, 2.18, 2.20, 2.22, 2.26
-      + Chp 3: 3.4, 3.6, 3.12, 3.18, 3.26, 3.30, 3.36
-  * Practice questions: 
-      + Part 1 – Defining probability: 2.1, 2.3, 2.5, 2.7, 2.13
-      + Part 2 – Conditional probability: 2.15, 2.19, 2.21, 2.23
-      + Part 3 – Normal distribution: 3.3, 3.5, 3.9, 3.11, 3.17
-      + Part 4 – Binomial distribution: 3.25, 3.27, 3.29, 3.33
-* [PA 2]({{ site.sakai_pa }}): Feb 14, Sun, at midnight
-  * Take between Feb 10, Wed and Feb 14, Sun. 
-  * You have 30 minutes to complete. Only one attempt allowed. Click [here]({{ site.sakai_pa }}) to take the performance assessment.
-
-* * *
-
 ### <a name="unit3"></a> Unit 3 - Foundations for inference
 
 ##### Resources
@@ -325,4 +285,44 @@ title: Schedule
       + Part 3 – Introduction to inference via simulation: 1.67, 1.69
 * [PA 1]({{ site.sakai_pa }}): Jan 31, Sun, at midnight
   * Take between Jan 27, Wed and Jan 31, Sun. 
+  * You have 30 minutes to complete. Only one attempt allowed. Click [here]({{ site.sakai_pa }}) to take the performance assessment.
+
+* * *
+
+### <a name="unit2"></a> Unit 2 - Probability and distributions
+
+##### Resources
+
+| Videos: [Videos for Unit 2]({{ site.videos }}) |  Learning objectives: [LO 2]({{ site.learn_obj }}/view?page=Unit_2_Learning_Objectives) | Textbook: [Chp 2 - Sec 2.1, 2.2 + Chp 3 - Sec 3.1, 3.2, 3.4]({{ site.openintro}}) |
+
+##### In class / lab
+
+| Feb 1, Mon  | **RA 2** in class |
+|             | [Lesson 2.1: Probability and conditional probability](post/slides/u2_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u2_deck1H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=f930900f-d116-4e1c-b4af-c4ede2ac0b36) |
+|             | [App Ex 2.1: Voting probabilities of college students](post/app/app_Prob_cond_prob.pdf) |
+| Feb 2, Tue  | DS: Probability &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](https://youtu.be/C1foKxsmRw8) |
+| Feb 3, Wed  | [Lesson 2.2: Bayes' theorem and Bayesian inference](post/slides/u2_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u2_deck2H.pdf)  &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=951f890a-3669-442d-b0ce-b16a8acf601e) |
+|             | [App Ex 2.2: Bayesian drug testing](post/app/app_Bayes_inf.pdf) |
+| Feb 4, Thu  | [Lab 3: Probability](post/labs/probability.html)         |
+| Feb 8, Mon  | [Lesson 2.3: Normal and binomial distribution](post/slides/u2_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u2_deck3H.pdf)               |
+|             | [App Ex 2.3: Hourly rates of manufacturing workers](post/app/app_Normal_Binom_dist.pdf) |
+
+##### Due dates
+
+* Lab 2: Feb 4, Thu, in lab
+* [PS 2]({{ site.sakai_ps }}): Feb 12, Fri, at 11:55pm
+  * End of chapter exercises from **Chp 2** and **Chp 3**. Only turn in answers to 
+  graded questions, use the back of the book to check your work on the practice questions.
+  Must show **all** work to get credit. Click [here]({{ site.sakai_ps }}) to submit the 
+  problem set.
+  * **Graded questions:** 
+      + Chp 2: 2.2, 2.8, 2.18, 2.20, 2.22, 2.26
+      + Chp 3: 3.4, 3.6, 3.12, 3.18, 3.26, 3.30, 3.36
+  * Practice questions: 
+      + Part 1 – Defining probability: 2.1, 2.3, 2.5, 2.7, 2.13
+      + Part 2 – Conditional probability: 2.15, 2.19, 2.21, 2.23
+      + Part 3 – Normal distribution: 3.3, 3.5, 3.9, 3.11, 3.17
+      + Part 4 – Binomial distribution: 3.25, 3.27, 3.29, 3.33
+* [PA 2]({{ site.sakai_pa }}): Feb 14, Sun, at midnight
+  * Take between Feb 10, Wed and Feb 14, Sun. 
   * You have 30 minutes to complete. Only one attempt allowed. Click [here]({{ site.sakai_pa }}) to take the performance assessment.

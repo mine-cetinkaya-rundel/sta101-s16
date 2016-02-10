@@ -3,6 +3,7 @@
 knitr::opts_chunk$set(echo = TRUE)
 library(dplyr)
 library(ggplot2)
+library(mosaic)
 ```
 
 * * *
@@ -11,7 +12,7 @@ library(ggplot2)
 
 #### Load data:
 ```{r}
-load(url("https://stat.duke.edu/~mc301/data/hot_hand.RData"))
+load(url("https://stat.duke.edu/~mc301/data/ames.RData"))
 ```
 
 ## Exercises:
