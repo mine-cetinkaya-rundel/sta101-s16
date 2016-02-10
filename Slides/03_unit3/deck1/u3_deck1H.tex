@@ -98,6 +98,8 @@
 
 \item My Thursday OH moved to 1-2:30pm on Sunday
 
+\item If I asked to meet with your team, and you have not yet signed up for a time slot, please come to my Sunday office hours
+
 \end{itemize}
 
 \end{frame}
@@ -130,17 +132,7 @@
 
 \end{itemize}
 
-% ALT ALT
-% \pause
-
 \disc{Suppose we randomly sample 1,000 adults from each state in the US. Would you expect the sample means of their ages to be the same, somewhat different, or very different?}
-
-%---Note---%
-\note{
-
-Pop parameter: what is the average GPA at Duke?
-
-}
 
 \end{frame}
 
@@ -159,11 +151,6 @@ If we randomly select observations from this data set, which values are most lik
 \begin{center}
 \includegraphics[width=0.6\textwidth]{figures/no_drinks_drunk/hist_no_drinks_drunk_pop} 
 \end{center}
-
-%---Note---%
-\note{
-
-}
 
 \end{frame}
 
@@ -200,11 +187,6 @@ If we randomly select observations from this data set, which values are most lik
 
 \end{itemize}
 
-%---Note---%
-\note{
-
-}
-
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -231,17 +213,6 @@ If we randomly select observations from this data set, which values are most lik
 \item Calculate the sample mean, round it to 2 decimal places, and submit it using your clicker. Submit once per sample!
 
 \end{enumerate}
-
-%---Note---%
-\note{
-
-Take a sample from population.
-
-Do activity: use clicker and report answer to two decimal places.
-
-(5 minutes?)
-
-}
 
 \end{frame}
 
@@ -275,7 +246,6 @@ Next let's look at the population data for the number of Duke basketball games a
 \end{center}
 
 
-
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -297,15 +267,7 @@ Sampling distribution, n = 10:
 \soln{\only<3->{Smaller, sample means will vary less than individual observations.}}
 }
 
-%---Note---%
-\note{
-
-What measure of spread is useful?  Range.
-
-}
-
 \end{frame}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -324,15 +286,7 @@ Sampling distribution, n = 30:
 \soln{\only<2->{Shape is more symmetric, center is about the same, spread is smaller.}}
 }
 
-%---Note---%
-\note{
-
-
-
-}
-
 \end{frame}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -346,7 +300,6 @@ Sampling distribution, n = 70:
 \end{center}
 
 \end{frame}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -362,15 +315,6 @@ Sampling distribution, n = 70:
 \item cannot tell from the information given
 \end{enumerate}
 
-%---Note---%
-\note{
-
-Could elimintate this?
-
-Make sure to go back to multiple choice.
-
-}
-
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -383,15 +327,10 @@ Make sure to go back to multiple choice.
 \begin{frame}
 \frametitle{2. CLT describes the shape, center, and spread of sampling distributions}
 
-
-The distribution of the sample means is well approximated by a normal model:
+\emph{Under the right conditions}, the distribution of the sample means is well
+approximated by a normal distribution:
 \[ \bar{x} \sim N \pr{ mean = \mu, SE = \frac{\sigma}{\sqrt{n}} } \]
-If $\sigma$ is unknown, use $s$.
-% ALT ALT
-% \emph{Under the right conditions}, the distribution of the sample means is well
-% approximated by a normal distribution:
-% \[ \bar{x} \sim N \pr{ mean = \mu, SE = \frac{\sigma}{\sqrt{n}} } \]
-% A cheat: If $\sigma$ is unknown, use $s$.
+A cheat: If $\sigma$ is unknown, use $s$.
 
 \pause
 
@@ -404,23 +343,6 @@ If $\sigma$ is unknown, use $s$.
 \item As the sample size increases we would expect samples to yield more consistent sample means, hence the variability among the sample means would be lower.
 
 \end{itemize}
-% ALT ALT
-% \begin{itemize}
-
-% \item As sample size increases, spread of sampling distribution decreases:
-% \[
-% SE = \frac{\sigma}{\sqrt{n}}.
-% \]
-
-% \end{itemize}
-
-%---Note---%
-\note{
-
-Emphasize standard error is standard deviation of statistics.  And that it
-depends on $n$.  So as you get more samples, your error should decrease.
-
-}
 
 \end{frame}
 
@@ -447,38 +369,17 @@ This is difficult to verify, but is more likely if
 
 \pause
 
-\item \hlGr{Sample size/skew:} Either the population distribution is normal \\
-or\\
-$n > 30$ and the population distribution is not extremely skewed (the more skewed the distribution, the higher $n$ necessary for the CLT to apply).\\
-$\:$ \\
+\item \hlGr{Sample size/skew:} Either 
+
+\begin{itemize}
+\item the population distribution is normal or
+\item $n > 30$ and the population dist.\ is not extremely skewed, or
+\item $n >> 30$ (approx.\ gets better as $n$ increases).
+\end{itemize}
+
 This is also difficult to verify for the population, but we can check it using the sample data, and assume that the sample mirrors the population.
-% ALT ALT
-% \item \hlGr{Sample size/skew:} Either 
-
-% \begin{enumerate}
-% \item the population distribution is normal or
-
-% \item $n > 30$ and the population dist.\ is not extremely skewed, or
-
-% \item $n >> 30$ (approx.\ gets better as $n$ increases).
-% \end{enumerate}
-
-% This is also difficult to verify for the population, but we can check it using the sample data, and assume that the sample mirrors the population.
-
-% END ALT
 
 \end{enumerate}
-
-%---Note---%
-\note{
-
-When can you use CLT?
-
-6500 students at Duke.  Try to use that to motivate 10\% rule.
-
-How sould you actually verify this?
-
-}
 
 \end{frame}
 
@@ -500,7 +401,7 @@ Amongst other things, the central limit theorem is useful for
 \begin{frame}
 \frametitle{}
 
-\clicker{Which of the below visualizations is \emph{not} appropriate for checking the shape of the distribution of the sample, and hence the population?}
+\clicker{Which of the below visualizations is \emph{not} appropriate for checking the shape of the sample distribution of a numerical variable, and hence the population?}
 
 \begin{enumerate}[(a)]
 \item histogram
@@ -508,13 +409,6 @@ Amongst other things, the central limit theorem is useful for
 \item normal probability plot
 \item \solnMult{mosaicplot}
 \end{enumerate}
-
-%---Note---%
-\note{
-
-What do we use a mosaic plot for?  What type of data do we use a mosaic plot for?
-
-}
 
 \end{frame}
 
