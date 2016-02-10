@@ -14,10 +14,12 @@ Your boss has just acquired data about how much audiences and critics
 like movies as well as numerous other variables about the movies.
 
 She is interested in learning what attributes make a movie popular. 
-She is also interested in learning something new about movies.
+She is also interested in learning something new about movies. She wants 
+your team to figure it all out.  
 
-She wants your team to figure it all out.  The data can be loaded 
-directly in RStudio using the following command:
+[add EDA, inference, and modeling prediction which we'll see later on]
+
+The data can be loaded directly in RStudio using the following command:
 
 ```{r, eval=FALSE}
 load(url("https://stat.duke.edu/~mc301/data/movies.Rdata"))
@@ -79,6 +81,8 @@ actress who won a best actor or actress Oscar
 ## Stage 1: Proposal (25 points)
 
 ### Content
+
+[read the rest of the document]
 
 Your proposal should contain the following:
 
