@@ -1,6 +1,7 @@
 ```{r setup, include=FALSE}
 # DO NOT ALTER CODE IN THIS CHUNK
 knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(cache = TRUE)
 library(dplyr)
 library(ggplot2)
 library(mosaic)
@@ -11,9 +12,15 @@ library(mosaic)
 ## Lab report
 
 #### Load data:
-```{r}
+```{r load-data}
 load(url("https://stat.duke.edu/~mc301/data/ames.RData"))
 ```
+
+#### Set a seed:
+```{r set-seed}
+
+```
+
 
 ## Exercises:
 
@@ -34,9 +41,6 @@ load(url("https://stat.duke.edu/~mc301/data/ames.RData"))
 #### Exercise 3: 
 
 
-```{r ex3}
-
-```
 
 
 #### Exercise 4: 
@@ -60,6 +64,8 @@ load(url("https://stat.duke.edu/~mc301/data/ames.RData"))
 ```
 
 #### Exercise 7: 
+
+
 
 * * *
 
@@ -89,9 +95,7 @@ load(url("https://stat.duke.edu/~mc301/data/ames.RData"))
 
 #### 4: 
 
-```{r oyo4}
 
-```
 
 
 * * *
