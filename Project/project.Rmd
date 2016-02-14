@@ -137,7 +137,7 @@ R code, output, and plots will be automatically included in your write up.
 Download the template for the proposal:
 
 ```{r tidy=FALSE, eval=FALSE}
-download("http://stat.duke.edu/courses/Spring16/sta101.001/rmd/sta101_proposal.Rmd", destfile = "sta101_proposal.Rmd")
+download.file("http://stat.duke.edu/courses/Spring16/sta101.001/rmd/sta101_proposal.Rmd", destfile = "sta101_proposal.Rmd")
 ```
 
 Your proposal should not exceed 5 pages (view a print preview to determined 
@@ -205,7 +205,7 @@ poster should be organized and submitted in an R Markdown document.
 Download the template for the project:
 
 ```{r tidy=FALSE, eval=FALSE}
-download("http://stat.duke.edu/courses/Spring16/sta101.001/rmd/sta101_project.Rmd", destfile = "sta101_project.Rmd")
+download.file("http://stat.duke.edu/courses/Spring16/sta101.001/rmd/sta101_project.Rmd", destfile = "sta101_project.Rmd")
 ```
 
 There is no length limit for this document.
