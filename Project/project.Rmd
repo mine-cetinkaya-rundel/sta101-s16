@@ -15,9 +15,11 @@ like movies as well as numerous other variables about the movies.
 
 She is interested in learning what attributes make a movie popular. 
 She is also interested in learning something new about movies. She wants 
-your team to figure it all out.  
+your team to figure it all out. 
 
-[add EDA, inference, and modeling prediction which we'll see later on]
+As part of this project you will complete exploratory data analysis (EDA), 
+inference, modeling, and prediction. You have been introduced to some of 
+these concepts already, and you will learn about the others later in the course.
 
 The data can be loaded directly in RStudio using the following command:
 
@@ -29,60 +31,74 @@ load(url("https://stat.duke.edu/~mc301/data/movies.Rdata"))
 
 ## Data
 
-The data set is comprised of 456 movies randomly sampled between 1974
-and 2014.
+The data set is comprised of 651 randomly sampled movies produced and 
+released before 2016.
 
-Some of these variables won't make sense to include in any model, and it's 
-up to you to decide which ones might not make sense to include. You should 
-also be careful about collinearity, some of these variables are dependent 
-on each other.
+Some of these variables are only there for informational purposes and do
+not make any sense to include in a statistical analysis. It is up to you
+to decide which variables are meaningful and which should be omitted. For
+example information in the the `actor1` through `actor5` variables was used 
+to determine whether the movie casts an actor or actress who won a best 
+actor or actress Oscar.
+
+You might also choose to omit certain observations or restructure some of
+the variables to make them suitable for answering your research questions.
+
+When you are fitting a model you should also be careful about collinearity, 
+as some of these variables may be dependent on each other.
 
 ### Codebook
 
-- `title`: Title of movie
-- `audience_score`: Audience score on Rotten Tomatoes (response variable)
-- `type`: Type of movie (Documentary, Feature Film, TV Movie)
-- `genre`: Genre of movie (Action & Adventure, Comedy, Documentary, Drama, 
-Horror, Mystery & Suspense, Other)
-- `runtime`: Runtime of movie (in minutes)
-- `year`: Year the movie is released
-- `mpaa_rating`: MPAA rating of the movie (G, PG, PG-13, R, Unrated)
-- `studio`: Studio that produced the movie
-- `imdb_num_votes`: Number of votes on IMDB
-- `critics_score`: Critics score on Rotten Tomatoes
-- `critics_rating`: Categorical variable for critics rating on Rotten 
-Tomatoes (Certified Fresh, Fresh, Rotten)
-- `best_pic_nom`: Whether or not the movie was nominated for a best picture 
-Oscar (no, yes)
-- `best_pic_win`: Whether or not the movie won a best picture Oscar (no, yes)
-- `best_actor_win`: Whether or not one of the main actors in the movie ever 
-won an Oscar (no, yes) -- note that this is not necessarily whether the actor 
-won an Oscar for their role in the given movie
-- `best_actress win`: Whether or not one of the main actresses in the movie 
-ever won an Oscar (no, yes) -- not that this is not necessarily whether the 
-actresses won an Oscar for their role in the given movie
-- `best_dir_win`: Whether or not the director of the movie ever won an Oscar 
-(no, yes) -- not that this is not necessarily whether the director won an 
-Oscar for the given movie
-- `top200_box`: Whether or not the movie is in the Top 200 Box Office list on 
-BoxOfficeMojo (no, yes)
-- `audience_rating`: Categorical variable for audience rating on Rotten 
-Tomatoes (Spilled, Upright)
-- `director`: Director of the movie
-- `actor1-actor5`: List of first 5 main actors in the movie (abridged cast), 
-this information was used to determine whether the movie casts an actor or 
-actress who won a best actor or actress Oscar
-- `imdb_url`: Link to IMDB page for the movie
-- `rt_url`: Link to Rotten Tomatoes page for the movie
-- `imdb_id`: IMDB ID of the movie
+1. `title`: Title of movie
+1. `title_type`: Type of movie (Documentary, Feature Film, TV Movie)
+1. `genre`: Genre of movie (Action & Adventure, Comedy, Documentary, Drama, 1. Horror, Mystery & Suspense, Other)
+1. `runtime`: Runtime of movie (in minutes)
+1. `mpaa_rating`: MPAA rating of the movie (G, PG, PG-13, R, Unrated)
+1. `studio`: Studio that produced the movie
+1. `thtr_rel_year`: Year the movie is released in theaters
+1. `thtr_rel_month`: Month the movie is released in theaters
+1. `thtr_rel_day`: Day of the month the movie is released in theaters
+1. `dvd_rel_year`: Year the movie is released on DVD
+1. `dvd_rel_month`: Month the movie is released on DVD
+1. `dvd_rel_day`: Day of the month the movie is released on DVD
+1. `imdb_rating`: Rating on IMDB
+1. `imdb_num_votes`: Number of votes on IMDB
+1. `critics_rating`: Categorical variable for critics rating on Rotten Tomatoes 1. (Certified Fresh, Fresh, Rotten)
+1. `critics_score`: Critics score on Rotten Tomatoes
+1. `audience_rating`: Categorical variable for audience rating on Rotten Tomatoes 1. (Spilled, Upright)
+1. `audience_score`: Audience score on Rotten Tomatoes (response variable)
+1. `best_pic_nom`: Whether or not the movie was nominated for a best picture 1. Oscar (no, yes)
+1. `best_pic_win`: Whether or not the movie won a best picture Oscar (no, yes)
+1. `best_actor_win`: Whether or not one of the main actors in the movie ever won an Oscar (no, yes) -- note that this is not necessarily whether the actor won an Oscar for their role in the given movie
+1. `best_actress win`: Whether or not one of the main actresses in the movie ever won an Oscar (no, yes) -- not that this is not necessarily whether the actresses won an Oscar for their role in the given movie
+1. `best_dir_win`: Whether or not the director of the movie ever won an Oscar (no, yes) -- not that this is not necessarily whether the director won an Oscar for the given movie
+1. `top200_box`: Whether or not the movie is in the Top 200 Box Office list on BoxOfficeMojo (no, yes)
+1. `director`: Director of the movie
+1. `actor1`: First main actor/actress in the abridged cast of the movie
+1. `actor2`: Second main actor/actress in the abridged cast of the movie
+1. `actor3`: Third main actor/actress in the abridged cast of the movie
+1. `actor4`: Fourth main actor/actress in the abridged cast of the movie
+1. `actor5`: Fifth main actor/actress in the abridged cast of the movie
+1. `imdb_url`: Link to IMDB page for the movie
+1. `rt_url`: Link to Rotten Tomatoes page for the movie
 
 * * *
 
-## Stage 1: Proposal (25 points)
+## Stages of the project
 
-### Content
+You will complete this project in two stages:
 
-[read the rest of the document]
+1. Stage 1: Proposal (25 points)
+2. Stage 2: Poster and presentation (75 points)
+
+The remainder of this document outlines the requirements and expectations for
+both stages of the project. You should read the entire document before getting
+started. The requirements and expectations for Stage 1 will only make sense in 
+context of those for Stage 2.
+
+### Stage 1: Proposal (25 points)
+
+#### Content
 
 Your proposal should contain the following:
 
@@ -113,7 +129,7 @@ together as a team. Note that during the poster session each member needs to
 be able to answer questions about all aspects of the work, regardless of 
 whether they took the lead on that section or not.
 
-### Format & length
+#### Format & length
 
 Your proposal should be written using the R Markdown template, so that all 
 R code, output, and plots will be automatically included in your write up. 
@@ -127,7 +143,7 @@ download("http://stat.duke.edu/courses/Spring16/sta101.001/rmd/sta101_proposal.R
 Your proposal should not exceed 5 pages (view a print preview to determined 
 length).
 
-### Grading
+#### Grading
 
 Your proposal will be graded out of 25 points (as outlined above), and will 
 make up 25% of your overall project score.
@@ -142,9 +158,9 @@ length)
 
 * * *
 
-## Stage 2: Poster session (75 points)
+### Stage 2: Poster and presentation (75 points)
 
-### Poster content
+#### Content
 
 1. **Introduction:** Outline your main research question(s).
 
@@ -177,7 +193,7 @@ length)
    study (either due to data collection or methodology) and include ideas 
    for possible future research.
 
-### Format & length
+#### Poster format & length
 
 **Poster:** We suggest using a tri-fold poster. You can organize it however 
 you like. You do not need to get your poster professionally printed. You 
@@ -194,16 +210,26 @@ download("http://stat.duke.edu/courses/Spring16/sta101.001/rmd/sta101_project.Rm
 
 There is no length limit for this document.
 
-### Grading
+#### Presentation format & length
 
-Your poster and accompanying code will be graded out of 75 points, and will
-make up 75% of your overall project score.
+You will give a four minute presentation of your work. Each team member 
+must speak during this presentation. The time limit is firm, you will be 
+asked to stop at the end of four minutes. This is not a lot of time, therefore
+you must decide carefully what you will highlight during your presentation 
+and practice to make sure you can fit everything you want to say in the time 
+limit.
+
+#### Grading
+
+Your poster (and accompanying code) and presentation will be graded out of 
+75 points, and will make up 75% of your overall project score.
 
 Grading of the project will take into account:
 
 - Correctness: Are the procedures and explanations correct?
 - Presentation: What was the quality of the presentation and poster?
 - Content/Critical thought: Did your think carefully about the problem?
+- Tidyness: Is your code organized well?
 
 Your team scores will be based on the following components:
 
@@ -237,6 +263,12 @@ on team peer evaluation data to determine each student's indivudual grade.
 You will be asked to fill out a survey where you rate the contribution of 
 each team member. Filling out the survey is a prerequisite for receiving a 
 project score. 
+
+All team members must be present at the poster session. Failure to do so will
+result in a 0 on the project for the absent team member.
+
+Note that each student must complete the project and score at least 30% of 
+total possible points on the project in order to pass this class.
 
 * * *
 

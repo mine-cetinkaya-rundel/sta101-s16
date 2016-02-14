@@ -96,48 +96,68 @@ img {
 
 <p>You and your teammates work for Paramount Pictures.</p>
 <p>Your boss has just acquired data about how much audiences and critics like movies as well as numerous other variables about the movies.</p>
-<p>She is interested in learning what attributes make a movie popular. She is also interested in learning something new about movies.</p>
-<p>She wants your team to figure it all out. The data can be loaded directly in RStudio using the following command:</p>
+<p>She is interested in learning what attributes make a movie popular. She is also interested in learning something new about movies. She wants your team to figure it all out.</p>
+<p>As part of this project you will complete exploratory data analysis (EDA), inference, modeling, and prediction. You have been introduced to some of these concepts already, and you will learn about the others later in the course.</p>
+<p>The data can be loaded directly in RStudio using the following command:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">load</span>(<span class="kw">url</span>(<span class="st">&quot;https://stat.duke.edu/~mc301/data/movies.Rdata&quot;</span>))</code></pre></div>
 <hr />
 <div id="data" class="section level2">
 <h2>Data</h2>
-<p>The data set is comprised of 456 movies randomly sampled between 1974 and 2014.</p>
-<p>Some of these variables won’t make sense to include in any model, and it’s up to you to decide which ones might not make sense to include. You should also be careful about collinearity, some of these variables are dependent on each other.</p>
+<p>The data set is comprised of 651 randomly sampled movies produced and released before 2016.</p>
+<p>Some of these variables are only there for informational purposes and do not make any sense to include in a statistical analysis. It is up to you to decide which variables are meaningful and which should be omitted. For example information in the the <code>actor1</code> through <code>actor5</code> variables was used to determine whether the movie casts an actor or actress who won a best actor or actress Oscar.</p>
+<p>You might also choose to omit certain observations or restructure some of the variables to make them suitable for answering your research questions.</p>
+<p>When you are fitting a model you should also be careful about collinearity, as some of these variables may be dependent on each other.</p>
 <div id="codebook" class="section level3">
 <h3>Codebook</h3>
-<ul>
+<ol style="list-style-type: decimal">
 <li><code>title</code>: Title of movie</li>
-<li><code>audience_score</code>: Audience score on Rotten Tomatoes (response variable)</li>
-<li><code>type</code>: Type of movie (Documentary, Feature Film, TV Movie)</li>
-<li><code>genre</code>: Genre of movie (Action &amp; Adventure, Comedy, Documentary, Drama, Horror, Mystery &amp; Suspense, Other)</li>
+<li><code>title_type</code>: Type of movie (Documentary, Feature Film, TV Movie)</li>
+<li><code>genre</code>: Genre of movie (Action &amp; Adventure, Comedy, Documentary, Drama, 1. Horror, Mystery &amp; Suspense, Other)</li>
 <li><code>runtime</code>: Runtime of movie (in minutes)</li>
-<li><code>year</code>: Year the movie is released</li>
 <li><code>mpaa_rating</code>: MPAA rating of the movie (G, PG, PG-13, R, Unrated)</li>
 <li><code>studio</code>: Studio that produced the movie</li>
+<li><code>thtr_rel_year</code>: Year the movie is released in theaters</li>
+<li><code>thtr_rel_month</code>: Month the movie is released in theaters</li>
+<li><code>thtr_rel_day</code>: Day of the month the movie is released in theaters</li>
+<li><code>dvd_rel_year</code>: Year the movie is released on DVD</li>
+<li><code>dvd_rel_month</code>: Month the movie is released on DVD</li>
+<li><code>dvd_rel_day</code>: Day of the month the movie is released on DVD</li>
+<li><code>imdb_rating</code>: Rating on IMDB</li>
 <li><code>imdb_num_votes</code>: Number of votes on IMDB</li>
+<li><code>critics_rating</code>: Categorical variable for critics rating on Rotten Tomatoes 1. (Certified Fresh, Fresh, Rotten)</li>
 <li><code>critics_score</code>: Critics score on Rotten Tomatoes</li>
-<li><code>critics_rating</code>: Categorical variable for critics rating on Rotten Tomatoes (Certified Fresh, Fresh, Rotten)</li>
-<li><code>best_pic_nom</code>: Whether or not the movie was nominated for a best picture Oscar (no, yes)</li>
+<li><code>audience_rating</code>: Categorical variable for audience rating on Rotten Tomatoes 1. (Spilled, Upright)</li>
+<li><code>audience_score</code>: Audience score on Rotten Tomatoes (response variable)</li>
+<li><code>best_pic_nom</code>: Whether or not the movie was nominated for a best picture 1. Oscar (no, yes)</li>
 <li><code>best_pic_win</code>: Whether or not the movie won a best picture Oscar (no, yes)</li>
 <li><code>best_actor_win</code>: Whether or not one of the main actors in the movie ever won an Oscar (no, yes) – note that this is not necessarily whether the actor won an Oscar for their role in the given movie</li>
 <li><code>best_actress win</code>: Whether or not one of the main actresses in the movie ever won an Oscar (no, yes) – not that this is not necessarily whether the actresses won an Oscar for their role in the given movie</li>
 <li><code>best_dir_win</code>: Whether or not the director of the movie ever won an Oscar (no, yes) – not that this is not necessarily whether the director won an Oscar for the given movie</li>
 <li><code>top200_box</code>: Whether or not the movie is in the Top 200 Box Office list on BoxOfficeMojo (no, yes)</li>
-<li><code>audience_rating</code>: Categorical variable for audience rating on Rotten Tomatoes (Spilled, Upright)</li>
 <li><code>director</code>: Director of the movie</li>
-<li><code>actor1-actor5</code>: List of first 5 main actors in the movie (abridged cast), this information was used to determine whether the movie casts an actor or actress who won a best actor or actress Oscar</li>
+<li><code>actor1</code>: First main actor/actress in the abridged cast of the movie</li>
+<li><code>actor2</code>: Second main actor/actress in the abridged cast of the movie</li>
+<li><code>actor3</code>: Third main actor/actress in the abridged cast of the movie</li>
+<li><code>actor4</code>: Fourth main actor/actress in the abridged cast of the movie</li>
+<li><code>actor5</code>: Fifth main actor/actress in the abridged cast of the movie</li>
 <li><code>imdb_url</code>: Link to IMDB page for the movie</li>
 <li><code>rt_url</code>: Link to Rotten Tomatoes page for the movie</li>
-<li><code>imdb_id</code>: IMDB ID of the movie</li>
-</ul>
+</ol>
 <hr />
 </div>
 </div>
-<div id="stage-1-proposal-25-points" class="section level2">
-<h2>Stage 1: Proposal (25 points)</h2>
-<div id="content" class="section level3">
-<h3>Content</h3>
+<div id="stages-of-the-project" class="section level2">
+<h2>Stages of the project</h2>
+<p>You will complete this project in two stages:</p>
+<ol style="list-style-type: decimal">
+<li>Stage 1: Proposal (25 points)</li>
+<li>Stage 2: Poster and presentation (75 points)</li>
+</ol>
+<p>The remainder of this document outlines the requirements and expectations for both stages of the project. You should read the entire document before getting started. The requirements and expectations for Stage 1 will only make sense in context of those for Stage 2.</p>
+<div id="stage-1-proposal-25-points" class="section level3">
+<h3>Stage 1: Proposal (25 points)</h3>
+<div id="content" class="section level4">
+<h4>Content</h4>
 <p>Your proposal should contain the following:</p>
 <ol style="list-style-type: decimal">
 <li><p><strong>Data</strong>: (2 points) Describe how the observations in the sample are collected, and the implications of this data collection method on the scope of inference (generalizability / causality).</p></li>
@@ -147,15 +167,15 @@ img {
 <li><p><strong>Teamwork</strong>: (4 points) Describe in detail how you will divvy up the work between team members and what aspects of the project you will complete together as a team. Note that during the poster session each member needs to be able to answer questions about all aspects of the work, regardless of whether they took the lead on that section or not.</p></li>
 </ol>
 </div>
-<div id="format-length" class="section level3">
-<h3>Format &amp; length</h3>
+<div id="format-length" class="section level4">
+<h4>Format &amp; length</h4>
 <p>Your proposal should be written using the R Markdown template, so that all R code, output, and plots will be automatically included in your write up.</p>
 <p>Download the template for the proposal:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">download</span>(<span class="st">&quot;http://stat.duke.edu/courses/Spring16/sta101.001/rmd/sta101_proposal.Rmd&quot;</span>, <span class="dt">destfile =</span> <span class="st">&quot;sta101_proposal.Rmd&quot;</span>)</code></pre></div>
 <p>Your proposal should not exceed 5 pages (view a print preview to determined length).</p>
 </div>
-<div id="grading" class="section level3">
-<h3>Grading</h3>
+<div id="grading" class="section level4">
+<h4>Grading</h4>
 <p>Your proposal will be graded out of 25 points (as outlined above), and will make up 25% of your overall project score.</p>
 <p>The following will result in deductions:</p>
 <ul>
@@ -166,10 +186,10 @@ img {
 <hr />
 </div>
 </div>
-<div id="stage-2-poster-session-75-points" class="section level2">
-<h2>Stage 2: Poster session (75 points)</h2>
-<div id="poster-content" class="section level3">
-<h3>Poster content</h3>
+<div id="stage-2-poster-and-presentation-75-points" class="section level3">
+<h3>Stage 2: Poster and presentation (75 points)</h3>
+<div id="content-1" class="section level4">
+<h4>Content</h4>
 <ol style="list-style-type: decimal">
 <li><p><strong>Introduction:</strong> Outline your main research question(s).</p></li>
 <li><p><strong>EDA:</strong> Do some exploratory data analysis to tell an “interesting” story about movies. Instead of limiting yourself to relationships between just two variables, broaden the scope of your analysis and employ creative approaches that evaluate relationships between two variables while controlling for another.</p></li>
@@ -180,22 +200,27 @@ img {
 <li><p><strong>Conclusion:</strong> A brief summary of your findings from the previous sections <strong>without</strong> repeating your statements from earlier as well as a discussion of what you have learned about the data and your research question(s). You should also discuss any shortcomings of your current study (either due to data collection or methodology) and include ideas for possible future research.</p></li>
 </ol>
 </div>
-<div id="format-length-1" class="section level3">
-<h3>Format &amp; length</h3>
+<div id="poster-format-length" class="section level4">
+<h4>Poster format &amp; length</h4>
 <p><strong>Poster:</strong> We suggest using a tri-fold poster. You can organize it however you like. You do not need to get your poster professionally printed. You can see sample posters from previous years at your professor’s office.</p>
 <p><strong>R Markdown:</strong> All code used to generate the statistics and plots on your poster should be organized and submitted in an R Markdown document.</p>
 <p>Download the template for the project:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">download</span>(<span class="st">&quot;http://stat.duke.edu/courses/Spring16/sta101.001/rmd/sta101_project.Rmd&quot;</span>, <span class="dt">destfile =</span> <span class="st">&quot;sta101_project.Rmd&quot;</span>)</code></pre></div>
 <p>There is no length limit for this document.</p>
 </div>
-<div id="grading-1" class="section level3">
-<h3>Grading</h3>
-<p>Your poster and accompanying code will be graded out of 75 points, and will make up 75% of your overall project score.</p>
+<div id="presentation-format-length" class="section level4">
+<h4>Presentation format &amp; length</h4>
+<p>You will give a four minute presentation of your work. Each team member must speak during this presentation. The time limit is firm, you will be asked to stop at the end of four minutes. This is not a lot of time, therefore you must decide carefully what you will highlight during your presentation and practice to make sure you can fit everything you want to say in the time limit.</p>
+</div>
+<div id="grading-1" class="section level4">
+<h4>Grading</h4>
+<p>Your poster (and accompanying code) and presentation will be graded out of 75 points, and will make up 75% of your overall project score.</p>
 <p>Grading of the project will take into account:</p>
 <ul>
 <li>Correctness: Are the procedures and explanations correct?</li>
 <li>Presentation: What was the quality of the presentation and poster?</li>
 <li>Content/Critical thought: Did your think carefully about the problem?</li>
+<li>Tidyness: Is your code organized well?</li>
 </ul>
 <p>Your team scores will be based on the following components:</p>
 <ul>
@@ -205,6 +230,7 @@ img {
 <li>10 points - classmates’ evaluation</li>
 </ul>
 <hr />
+</div>
 </div>
 </div>
 <div id="submission" class="section level2">
@@ -220,6 +246,8 @@ img {
 <div id="teamwork-and-grading" class="section level2">
 <h2>Teamwork and grading</h2>
 <p>Team scores for both the proposal and the poster will be adjusted based on team peer evaluation data to determine each student’s indivudual grade. You will be asked to fill out a survey where you rate the contribution of each team member. Filling out the survey is a prerequisite for receiving a project score.</p>
+<p>All team members must be present at the poster session. Failure to do so will result in a 0 on the project for the absent team member.</p>
+<p>Note that each student must complete the project and score at least 30% of total possible points on the project in order to pass this class.</p>
 <hr />
 </div>
 <div id="honor-code" class="section level2">

@@ -88,7 +88,7 @@ for(i in 1:nrow(d)){
     d$title_rt[i] = file$title
     d$year_rt[i] = file$year
     d$genre_rt[i] = ifelse((length(file$genres) == 0), NA, file$genres[1])
-    d$mpaa_rating[i] = file$mpaa_rating
+    d$mpaa_rating_rt[i] = file$mpaa_rating
     d$runtime_rt[i] = file$runtime
     d$the_rel_date_rt[i] = ifelse((length(file$release_dates$theater) == 0), NA, file$release_dates$theater[1])
     d$dvd_rel_date_rt[i] = ifelse((length(file$release_dates$dvd) == 0), NA, file$release_dates$dvd[1])
@@ -119,7 +119,6 @@ write.csv(d, file = "d_imdb_rt_match.csv", row.names = FALSE)
 # load --------------------------------------------------------------
 
 d <- read.csv("d_imdb_rt_match.csv", stringsAsFactors = FALSE)
-
 
 # remove rows where there is no audience or critic score ------------
 
@@ -244,51 +243,101 @@ for(i in 1:nrow(d)){
 
 # parse theater release date ----------------------------------------
 
+d$thtr_rel_year_rt <- year(d$the_rel_date_rt)
+d$thtr_rel_month_rt <- month(d$the_rel_date_rt)
+d$thtr_rel_day_rt <- day(d$the_rel_date_rt)
 
+# year check
+
+year_check2 <- d %>%
+  mutate(year_diff = as.numeric(year_imdb) - thtr_rel_year_rt) %>%
+  filter(year_diff != 0) %>%
+  arrange(desc(abs(year_diff))) %>%
+  select(title_rt, year_imdb, thtr_rel_year_rt, year_diff)
+  
+# filter out the few movies where there is a large difference in year
+# for the rest keep thtr_rel_year_rt
+
+d <- d %>%
+  mutate(year_diff = abs(as.numeric(year_imdb) - thtr_rel_year_rt)) %>%
+  filter(year_diff < 3)
 
 # parse dvd release date --------------------------------------------
 
+d$dvd_rel_year_rt <- year(d$dvd_rel_date_rt)
+d$dvd_rel_month_rt <- month(d$dvd_rel_date_rt)
+d$dvd_rel_day_rt <- day(d$dvd_rel_date_rt)
 
+# relevel genre ----------------------------------------------------
+
+sort(table(d$genre_rt))
+
+genre_list <- c("Drama", "Comedy", "Action & Adventure", "Mystery & Suspense",
+               "Documentary", "Horror", "Art House & International", 
+               "Musical & Performing Arts", "Science Fiction & Fantasy", "Animation")
+
+d <- d %>%
+  mutate(genre_rt = ifelse(genre_rt %in% genre_list, genre_rt, "Other"))
+
+sort(table(d$genre))
+
+# remove Mini-Series and Video --------------------------------------
+
+sort(table(d$title_type_imdb))
+
+type_list <- c("TV Movie", "Documentary", "Feature Film")
+
+d <- d %>%
+  filter(title_type_imdb %in% type_list)
+
+sort(table(d$title_type_imdb))
 
 # final dataset -----------------------------------------------------
 
-cols_to_keep = c("title_rt", "title_type_rt", "genre_rt", 
-                 "runtime_imdb", "year_imdb", "mpaa_rating_rt", "studio_rt", 
-                 "num_votes_imdb", "critics_score_rt", "critics_rating_rt", 
-                 "audience_score_rt", "audience_rating_rt", 
-                 "best_pic_nom", "best_pic_win", "best_actor_win" , 
-                 "best_actress_win", "best_dir_win", 
-                 "top200_box", "director_rt", 
-                 "actor1", "actor2", "actor3", "actor4", "actor5" ,
-                 "url_rt", "url_imdb", "id_imdb")
+d_fin <- d %>%
+  select(title_rt, title_type_imdb, genre_rt, runtime_imdb, mpaa_rating_rt, studio_rt, 
+         thtr_rel_year_rt, thtr_rel_month_rt, thtr_rel_day_rt,
+         dvd_rel_year_rt, dvd_rel_month_rt, dvd_rel_day_rt,
+         imdb_rating_imdb, num_votes_imdb, 
+         critics_rating_rt, critics_score_rt,
+         audience_rating_rt, audience_score_rt,
+         best_pic_nom, best_pic_win, best_actor_win, best_actress_win, best_dir_win,
+         top200_box,
+         director_rt, actor1_rt, actor2_rt, actor3_rt, actor4_rt, actor5_rt,
+         url_imdb, url_rt) %>%
+  rename(imdb_num_votes_imdb = num_votes_imdb) %>%
+  rename(imdb_url = url_imdb) %>%
+  rename(rt_url = url_rt)
 
-d_fin = subset(d, select = cols_to_keep)
+names(d_fin) <- str_replace(names(d_fin), "_rt", "")
+names(d_fin) <- str_replace(names(d_fin), "_imdb", "")
 
-names(d_fin) = c("title", "audience_score", "type", "genre", "runtime",
-                 "year", "mpaa_rating", "studio", "imdb_num_votes", "critics_score", "critics_rating", 
-                 "best_pic_nom", "best_pic_win", "best_actor_win" , "best_actress_win",
-                 "best_dir_win", "top200_box", "audience_rating", "director",
-                 "actor1", "actor2", "actor3", "actor4", "actor5" ,
-                 "imdb_url", "rt_url", "imdb_id")
+# set variable classes ----------------------------------------------
 
 d_fin$title = as.character(d_fin$title)
-d_fin$audience_score = as.numeric(d_fin$audience_score)
-d_fin$type = as.factor(d_fin$type)
+d_fin$title_type = as.factor(d_fin$title_type)
 d_fin$genre = as.factor(d_fin$genre)
 d_fin$runtime = as.numeric(d_fin$runtime)
-d_fin$year = as.numeric(d_fin$year)
 d_fin$mpaa_rating = as.factor(d_fin$mpaa_rating)
 d_fin$studio = as.factor(d$studio)
-d_fin$imdb_num_votes = as.numeric(d_fin$imdb_num_votes)
-d_fin$critics_score = as.numeric(d_fin$critics_score)
+d_fin$thtr_rel_year = as.numeric(d$thtr_rel_year)
+d_fin$thtr_rel_month = as.numeric(d$thtr_rel_month)
+d_fin$thtr_rel_day = as.numeric(d$thtr_rel_day)
+d_fin$dvd_rel_year = as.numeric(d$dvd_rel_year)
+d_fin$dvd_rel_month = as.numeric(d$dvd_rel_month)
+d_fin$dvd_rel_day = as.numeric(d$dvd_rel_day)
+d_fin$imdb_rating = as.numeric(d$imdb_rating)
+d_fin$imdb_num_votes = as.numeric(d$imdb_num_votes)
 d_fin$critics_rating = as.factor(d_fin$critics_rating)
+d_fin$critics_score = as.numeric(d$critics_score)
+d_fin$audience_rating = as.factor(d_fin$audience_rating)
+d_fin$audience_score = as.numeric(d$audience_score)
 d_fin$best_pic_nom = as.factor(d_fin$best_pic_nom)
 d_fin$best_pic_win = as.factor(d_fin$best_pic_win)
 d_fin$best_actor_win = as.factor(d_fin$best_actor_win)
 d_fin$best_actress_win = as.factor(d_fin$best_actress_win)
 d_fin$best_dir_win = as.factor(d_fin$best_dir_win)
 d_fin$top200_box = as.factor(d_fin$top200_box)
-d_fin$audience_rating = as.factor(d_fin$audience_rating)
 d_fin$director = as.character(d_fin$director)
 d_fin$actor1 = as.character(d_fin$actor1)
 d_fin$actor2 = as.character(d_fin$actor2)
@@ -297,30 +346,13 @@ d_fin$actor4 = as.character(d_fin$actor4)
 d_fin$actor5 = as.character(d_fin$actor5)
 d_fin$rt_url = as.character(d_fin$rt_url)
 d_fin$imdb_url = as.character(d_fin$imdb_url)
-d_fin$rt_url = as.character(d_fin$rt_url)
-d_fin$imdb_id = as.character(d_fin$imdb_id)
 
-d_fin$genre2 = "Other"
-d_fin$genre2[d_fin$genre == "Drama"] = "Drama"
-d_fin$genre2[d_fin$genre == "Action & Adventure"] = "Action & Adventure"
-d_fin$genre2[d_fin$genre == "Comedy"] = "Comedy"
-d_fin$genre2[d_fin$genre == "Mystery & Suspense"] = "Mystery & Suspense"
-d_fin$genre2[d_fin$genre == "Horror"] = "Horror"
-d_fin$genre2[d_fin$genre == "Documentary"] = "Documentary"
-d_fin$genre2[d_fin$genre == "Art House & International"] = "Art House & International"
-d_fin$genre2[d_fin$genre == "Science Fiction & Fantasy"] = "Science Fiction & Fantasy"
+# final save --------------------------------------------------------
 
-d_fin2 = d_fin
-d_fin2$genre = as.factor(d_fin$genre2)
-dim(d_fin2)
-d_fin2 = d_fin2[,-dim(d_fin2)]
-
-# final save
-movies = d_fin2
+movies <- d_fin
 save(movies, file = "movies.Rdata")
 
-# model
-m = lm(audience_score ~ critics_score + critics_rating + type + genre + runtime + year + mpaa_rating + imdb_num_votes + best_pic_nom + best_pic_win + best_actor_win + best_actress_win + best_dir_win + top200_box, data = movies)
-step(m)
+# check -------------------------------------------------------------
 
 load("movies.Rdata")
+str(movies)
