@@ -349,7 +349,8 @@ d_fin$imdb_url = as.character(d_fin$imdb_url)
 
 # final save --------------------------------------------------------
 
-movies <- d_fin
+movies <- d_fin %>%
+  tbl_df()
 save(movies, file = "movies.Rdata")
 
 # check -------------------------------------------------------------

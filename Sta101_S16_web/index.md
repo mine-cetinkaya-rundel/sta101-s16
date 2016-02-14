@@ -80,7 +80,7 @@ title: Schedule
 
 * Lab 5: Feb 25, Thu 
 * Lab 6: Mar 3, Thur
-* [Project Proposal](): Mar 4, Fri at 5pm
+* [Project Proposal](post/project/project.html): Mar 4, Fri at 5pm
 * [PS 4]({{ site.sakai_ps }}): Mar 11, Fri
   * End of chapter exercises from **Chp 5**. Only turn in answers to 
   graded questions, use the back of the book to check your work on the practice questions.
@@ -212,7 +212,7 @@ title: Schedule
 
 * Lab 9: Apr 7, Thu
 * Lab 10: Apr 14, Thu
-* Project poster session: Apr 21, Thu in lab
+* [Project poster session](post/project/project.html): Apr 21, Thu in lab
 * [PS 7]({{ site.sakai_ps }}): Apr 24, Sun
   * End of chapter exercises from **Chp 8**. Only turn in answers to 
   graded questions, use the back of the book to check your work on the practice questions.
