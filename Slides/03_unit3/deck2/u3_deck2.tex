@@ -1,0 +1,291 @@
+% -*- TeX-engine: xetex; eval: (auto-fill-mode 0); eval: (visual-line-mode 1); -*-
+% Compile with XeLaTeX
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% Option 1: Slides: (comment for handouts)   %
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[slidestop,compress,mathserif,12pt,t,professionalfonts,xcolor=table]{beamer}
+
+% solution stuff
+\newcommand{\solnMult}[1]{
+\only<1>{#1}
+\only<2->{\red{\textbf{#1}}}
+}
+\newcommand{\soln}[1]{\textit{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Option 2: Handouts, without solutions (post before class)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
+
+% % handout layout
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+
+% % solution stuff
+% \newcommand{\solnMult}[1]{#1}
+% \newcommand{\soln}[1]{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Option 3: Handouts, with solutions (may post after class if need be)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
+
+% % handout layout
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+
+% % solution stuff
+% \newcommand{\solnMult}[1]{\red{\textbf{#1}}}
+% \newcommand{\soln}[1]{\textit{#1}}
+
+%%%%%%%%%%
+% Load style file, defaults  %
+%%%%%%%%%%
+
+\input{../../lec_style.tex}
+\input{../../definitions_default.tex}
+% ALT ALT
+% \input{../../definitions_custom.tex}
+
+%%%%%%%%%%%
+% Cover slide info    %
+%%%%%%%%%%%
+
+\title{Unit 3: Foundations for inference}
+\subtitle{2. Confidence intervals}
+\author{\CourseName}
+\date{}
+\institute{\InstituteName}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin document and set Helvetica Neue font   %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\fontspec[Ligatures=TeX]{Helvetica Neue Light}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Title Page
+
+\begin{frame}[plain]
+
+\titlepage
+
+\vfill
+
+{\scriptsize \webLink{\PersonalSite}{Dr. \LastName{}} \hfill Slides posted at  \webURL{\CourseSite}}
+
+\addtocounter{framenumber}{-1} 
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Housekeeping}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Announcements}
+
+\begin{itemize}
+
+\item Tips for project: be mindful of the two big deadlines, read over the assignment and start asking questions,
+don't save the work till the last night -- this is not a project you can complete by pulling an all nighter
+
+\item Peer eval feedback:
+\begin{itemize}
+\item Lateness / absence, mental presence, communication, commitment
+\item Tips: Move seats around in class and lab, give your best, and don't assume the worst
+\item Instructions: Give scores that reflect your verbal comments
+\end{itemize}
+
+\item Discussion section tomorrow: CLT, CIs, HTs
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Main ideas}
+
+\subsection{Statistical inference methods based on the CLT depend on the same conditions as the CLT}
+\label{mi1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{1. Statistical inference methods based on the CLT depend on the same conditions as the CLT}
+
+Always check these in context of the data and the research question!
+
+\begin{enumerate}
+
+\item \hlGr{Independence:} Sampled observations must be independent. \\
+* This is difficult to verify, but is more likely if
+\begin{itemize}
+\item random sampling/assignment is used, and,
+\item if sampling without replacement, $n$ $<$ 10\% of the population.
+\end{itemize}
+
+\item \hlGr{Sample size/skew:} Either the population distribution is normal or $n > 30$ and the population distribution is not extremely skewed (the more skewed the distribution, the higher $n$ necessary for the CLT to apply).\\
+* This is also difficult to verify for the population, but we can check it using the sample data, and assume that the sample mirrors the population.
+
+\end{enumerate}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Use confidence intervals to estimate population parameters}
+\label{mi2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{2. Use confidence intervals to estimate population parameters}
+
+\vfill
+
+\[ CI: point~estimate \pm margin~of~error \]
+$\:$ \\
+
+\pause
+
+If the parameter of interest is the population mean, and the point estimate is the sample mean,
+\[ \bar{x} \pm Z^\star \frac{s}{\sqrt{n}} \]
+
+\vfill
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Critical value depends on the confidence level}
+\label{mi3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{3. Critical value depends on the confidence level}
+
+\clicker{What is the critical value ($Z^\star$) for a confidence interval at the 91\% confidence level?}
+
+\twocol{0.4}{0.6}{
+\begin{enumerate}[(a)]
+\item $Z^\star = 1.34$
+\item $Z^\star = 1.65$
+\item \solnMult{$Z^\star = 1.70$}
+\item $Z^\star = 1.96$
+\item $Z^\star = 2.33$
+\end{enumerate}
+}
+{
+\pause
+\soln{
+\includegraphics[width=\textwidth]{figures/conf_level/conf_level}
+}
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Common misconceptions about confidence intervals}
+
+\begin{enumerate}
+
+\item \textcolor{gray}{The confidence level of a confidence interval is the
+probability that the true population parameter is in the confidence
+interval you construct for a single sample.} \\
+\textit{The confidence level is equal to the proportion of random samples that result
+in confidence intervals that contain the true pop.\ parameter.} \\
+
+\pause
+
+\item \textcolor{gray}{A narrower confidence interval is always better.}\\
+\textit{This is incorrect since the width is a function of both the confidence level and 
+the standard error.} \\
+
+\pause
+
+\item \textcolor{gray}{A wider interval means less confidence.} \\
+
+\textit{This is incorrect since it is possible to make very precise statements with very 
+little confidence.} \\
+
+\end{enumerate}
+ 
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Calculate the sample size a priori to achieve desired margin of error}
+\label{mi4}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{4. Calculate the sample size a priori to achieve desired margin of error}
+
+\vfill
+
+\[ ME = z^\star \frac{s}{\sqrt{n}} \]
+
+So if we know the desired $ME$, and confidence level (and hence $z^\star$),
+and the sample standard deviation, we can solve for $n$.
+
+\vfill
+ 
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\vfill
+
+\app{3.1 Confidence interval for a single mean}{See course website for details.}
+
+\vfill
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Summary}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Summary of main ideas}
+
+\vfill
+
+\begin{enumerate}
+
+\item \nameref{mi1}
+
+\item \nameref{mi2}
+
+\item \nameref{mi3}
+
+\item \nameref{mi4}
+
+\end{enumerate}
+
+\vfill
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

@@ -1,0 +1,441 @@
+% -*- TeX-engine: xetex; eval: (auto-fill-mode 0); eval: (visual-line-mode 1); -*-
+% Compile with XeLaTeX
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% Option 1: Slides: (comment for handouts)   %
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[slidestop,compress,mathserif,12pt,t,professionalfonts,xcolor=table]{beamer}
+
+% solution stuff
+\newcommand{\solnMult}[1]{
+\only<1>{#1}
+\only<2->{\red{\textbf{#1}}}
+}
+\newcommand{\soln}[1]{\textit{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Option 2: Handouts, without solutions (post before class)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
+
+% % handout layout
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+
+% % solution stuff
+% \newcommand{\solnMult}[1]{#1}
+% \newcommand{\soln}[1]{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Option 3: Handouts, with solutions (may post after class if need be)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
+
+% % handout layout
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+
+% % solution stuff
+% \newcommand{\solnMult}[1]{\red{\textbf{#1}}}
+% \newcommand{\soln}[1]{\textit{#1}}
+
+%%%%%%%%%%
+% Load style file, defaults  %
+%%%%%%%%%%
+
+\input{../../lec_style.tex}
+\input{../../definitions_default.tex}
+% ALT ALT
+% \input{../../definitions_custom.tex}
+
+%%%%%%%%%%%
+% Cover slide info    %
+%%%%%%%%%%%
+
+\title{Unit 3: Foundations for inference}
+\subtitle{3. Hypothesis tests}
+\author{\CourseName}
+\date{}
+\institute{\InstituteName}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin document and set Helvetica Neue font   %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\fontspec[Ligatures=TeX]{Helvetica Neue Light}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Title Page
+
+\begin{frame}[plain]
+
+\titlepage
+
+\vfill
+
+{\scriptsize \webLink{\PersonalSite}{Dr. \LastName{}} \hfill Slides posted at  \webURL{\CourseSite}}
+
+\addtocounter{framenumber}{-1} 
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Housekeeping}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Announcements}
+
+Midterm 1: Feb 24, Wed
+
+\begin{itemize}
+
+\item Preparation
+\begin{itemize}
+\item Come to class with questions on Monday
+\item Sample MT posted on course website
+\end{itemize}
+
+\item Rules
+\begin{itemize}
+\item Bring a calculator + cheat sheet (one sheet, both sides, typed or handwritten, must be prepared by you) + writing utensil
+\item We'll provide tables
+\end{itemize}
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Main ideas}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Use hypothesis tests to make decisions about population parameters}
+\label{mi1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{1. Use hypothesis tests to make decisions about population parameters}
+
+Hypothesis testing framework:
+
+\begin{enumerate}
+
+\item Set the hypotheses.
+
+\item Check assumptions and conditions.
+
+\item Calculate a \hl{test statistic} and a p-value.
+
+\item Make a decision, and interpret it in context of the research question.
+
+\end{enumerate}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Hypothesis testing for a population mean}
+
+\begin{enumerate}
+
+\item Set the hypotheses
+\begin{itemize}
+\item $H_0: \mu = null~value$
+\item $H_A: \mu <$ or $>$ or $\ne null~value$
+\end{itemize}
+
+\pause
+
+\item Check assumptions and conditions
+\begin{itemize}
+\item Independence: random sample/assignment, 10\% condition when sampling without replacement
+\item Sample size / skew: $n \ge 30$ (or larger if sample is skewed), no extreme skew
+\end{itemize}
+
+\pause
+
+\item Calculate a \hl{test statistic} and a p-value (draw a picture!)
+\[ Z = \frac{\bar{x} - \mu}{SE},~where~SE = \frac{s}{\sqrt{n}} \]
+
+\pause
+
+\item Make a decision, and interpret it in context of the research question
+\begin{itemize}
+\item If p-value $< \alpha$, reject $H_0$, data provide evidence for $H_A$
+\item If p-value $> \alpha$, do not reject $H_0$, data do not provide evidence for $H_A$
+\end{itemize}
+
+\end{enumerate}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{}
+
+\vfill
+
+\app{3.2 Hypothesis testing for a single mean}{See course website for details.}
+
+\vfill
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\clicker{Which of the following is the correct interpretation of the p-value
+from App Ex 3.2?}
+
+\begin{enumerate}[(a)]
+\item The probability that average GPA of Duke students has changed since 2001.
+\item The probability that average GPA of Duke students has not changed since 2001.
+\item The probability that average GPA of Duke students has not changed since 2001, 
+if in fact a random sample of 63 Duke students this year have an average GPA of 3.58 
+or higher.
+\item The probability that a random sample of 63 Duke students have an average GPA 
+of 3.58 or higher, if in fact the average GPA has not changed since 2001.
+\item \solnMult{The probability that a random sample of 63 Duke students have an 
+average GPA of 3.58 or higher or 3.16 or lower, if in fact the average GPA has not 
+changed since 2001.}
+\end{enumerate}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Common misconceptions about hypothesis testing}
+
+\begin{enumerate}
+
+\item \textcolor{gray}{P-value is the probability that the null hypothesis is true} \\
+\textit{A p-value is the probability of getting a sample that results in a test statistic 
+as or more extreme than what you actually observed (and in favor of the null hypothesis) 
+if in fact the null hypothesis is correct. It is a conditional probability, conditioned on the 
+null hypothesis being correct.}
+
+\pause
+
+\item  \textcolor{gray}{A high p-value confirms the null hypothesis.}\\
+\textit{A high p-value means the data do not provide convincing evidence for the alternative 
+hypothesis and hence that the null hypothesis can't be rejected.} \\
+$\:$ \\
+
+\pause
+
+\item   \textcolor{gray}{A low p-value confirms the alternative hypothesis.} \\
+\textit{A low p-value means the data provide convincing evidence for the alternative hypothesis, 
+but not necessarily that it is confirmed.} \\
+
+\end{enumerate}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Hypothesis tests and confidence intervals at equivalent significance/confidence levels should agree}
+\label{mi2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{2. Hypothesis tests and confidence intervals at equivalent significance/confidence levels should agree}
+
+\twocol{0.5}{0.5}{
+\begin{center}
+Two sided\\
+~\\
+\includegraphics[width=\textwidth]{figures/sig_conf_equiv/CL95_twosided} \\
+95\% confidence level \\
+is equivalent to \\
+two sided HT with $\alpha = 0.05$
+\end{center}
+}
+{\pause
+\begin{center}
+One sided\\
+~\\
+\includegraphics[width=\textwidth]{figures/sig_conf_equiv/CL95_onesided} \\
+95\% confidence level \\
+is equivalent to \\
+one sided HT with $\alpha = 0.025$
+\end{center}
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{}
+
+\clicker{What is the confidence level for a confidence interval that is equivalent
+to a two-sided hypothesis test at the 1\% significance level? 
+\textit{Hint: Draw a picture and mark the confidence level in the center.}}
+
+\begin{enumerate}[(a)]
+\item 0.80
+\item 0.90
+\item 0.95
+\item 0.98
+\item \solnMult{0.99}
+\end{enumerate}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{}
+
+\clicker{What is the confidence level for a confidence interval that is equivalent
+to a one-sided hypothesis test at the 1\% significance level? 
+\textit{Hint: Draw a picture and mark the confidence level in the center.}}
+
+\begin{enumerate}[(a)]
+\item 0.80
+\item 0.90
+\item 0.95
+\item \solnMult{0.98}
+\item 0.99
+\end{enumerate}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{}
+
+\clicker{A 95\% confidence interval for the average normal body temperature of humans is 
+found to be (98.1 F, 98.4 F). Which of the following is \emph{true}?}
+
+\begin{enumerate}[(a)]
+\item The hypothesis $H_0: \mu = 98.2$ would be rejected at $\alpha = 0.05$ in favor of $H_A: \mu \ne 98.2$.
+\item The hypothesis $H_0: \mu = 98.2$ would be rejected at $\alpha = 0.025$ in favor of $H_A: \mu > 98.2$.
+\item \solnMult{The hypothesis $H_0: \mu = 98$ would be rejected using a 90\% confidence interval.}
+\item \solnMult{The hypothesis $H_0: \mu = 98.2$ would be rejected using a 99\% confidence interval.}
+\end{enumerate}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Results that are statistically significant are not necessarily practically significant}
+\label{mi3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{3. Results that are statistically significant are not necessarily practically significant}
+
+\clicker{All else held equal, will p-value be lower if $n = 100$ or $n = 10,000$?}
+
+\begin{enumerate}[(a)]
+\item $n = 100$
+\item \solnMult{$n = 10,000$}
+\end{enumerate}
+
+\soln{\pause \pause
+Suppose $\bar{x} = 5$, $s = 2$, $H_0: \mu = 4.5$, and $H_A: \mu > 4.5$.\\
+\pause
+{\small
+\begin{eqnarray*}
+Z_{n = 100} &=& \frac{5 - 4.5}{\frac{2}{\sqrt{100}}} \pause = \frac{5 - 4.5}{\frac{2}{10}} = \frac{0.5}{0.2} = 2.5,~~~\text{p-value} = 0.0062 \\
+\pause
+Z_{n = 10000} &=& \frac{5 - 4.5}{\frac{2}{\sqrt{10000}}} \pause = \frac{5 - 4.5}{\frac{2}{100}} = \frac{0.5}{0.02} = 25,~~~\text{p-value} \approx 0
+\end{eqnarray*}
+}
+\pause
+\begin{center}
+As $n$ increases - $SE$ $\downarrow$, $Z$ $\uparrow$, p-value $\downarrow$
+\end{center}
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Hypothesis tests are prone to decision errors}
+\label{mi4}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{4. Hypothesis tests are prone to decision errors}
+
+\begin{center}
+\begin{tabular}{l l | c c}
+\multicolumn{2}{c}{} & \multicolumn{2}{c}{\textbf{Decision}} \\
+& & fail to reject $H_0$ &  reject $H_0$ \\
+  \cline{2-4}
+& $H_0$ true & \onslide<3->{\green{$\checkmark$}} &  \onslide<4->{\red{Type 1 Error, $\alpha$}} \\
+\raisebox{1.5ex}{\textbf{Truth}} & $H_A$ true & \onslide<5->{\red{Type 2 Error, $\beta$}} & \onslide<6->{\green{Power, $1 - \beta$}} \\
+  \cline{2-4}
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item \onslide<4->{A \hl{Type 1 Error} is rejecting the null hypothesis when $H_0$ is true: $\alpha$
+\begin{itemize}
+\item For those cases where $H_0$ is actually true, we do not want to incorrectly reject it more 
+than 5\% of those times
+\item Increasing $\alpha$ increases the Type 1 error rate, hence we prefer to small values of $\alpha$
+\end{itemize}
+}
+
+\item \onslide<5->{A \hl{Type 2 Error} is failing to reject the null hypothesis when $H_A$ is true: $\beta$}
+
+\item \onslide<6->{\hl{Power} is the probability of correctly rejecting $H_0$, and hence the 
+complement of the probability of a Type 2 Error: $1 - \beta$}
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Summary}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Summary of main ideas}
+
+\vfill
+
+\begin{enumerate}
+
+\item \nameref{mi1}
+
+\item \nameref{mi2}
+
+\item \nameref{mi3}
+
+\item \nameref{mi4}
+
+\end{enumerate}
+
+\vfill
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

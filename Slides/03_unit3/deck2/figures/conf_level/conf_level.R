@@ -1,0 +1,10 @@
+library(openintro)
+
+pdf("conf_level.pdf", height = 3.5, width = 5)
+par(mar=c(2,0,0,0), mgp=c(2.7,0.7,0), cex.axis = 1.25)
+normTail(L = -1.7, U = 1.7, col = COL[1], axes = FALSE)
+axis(1, at = c(-3, -1.7, 1.7, 3), label = c(NA,  -1.7, 1.7, NA))
+text(x = 0, y = 0.15, "0.91", cex = 1.5, col = COL[4])
+text(x = -2.3, y = 0.025, "0.045", cex = 1.5, col = COL[4])
+text(x = 2.3, y = 0.025, "0.045", cex = 1.5, col = COL[4])
+dev.off()
