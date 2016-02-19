@@ -87,7 +87,7 @@ normTail <- function (m = 0, s = 1, L = NULL, U = NULL, M = NULL, df = 1000,
 **Your reproducible lab report:** Before you get started, download the R Markdown 
 template for this lab. Remember all of your code and answers go in this document:
 ```{r load-template, eval = FALSE}
-download("http://stat.duke.edu/courses/Fall15/sta101.002/rmd/lab5.Rmd", 
+download("http://stat.duke.edu/courses/Spring16/sta101.001/rmd/lab5.Rmd", 
          destfile = "lab5.Rmd")
 ```
 </div>

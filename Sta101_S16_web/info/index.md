@@ -34,7 +34,7 @@ If you would like to purchase a used clicker from a former student, see the list
 
 ### Class meetings:
 * Lectures: Mondays and Wednesdays, 1:25pm - 2:40pm, LSRC ROOM B 101
-* Labs:
+* Labs: Thursdays
     * 8:30am - 9:45am - Link Classroom 3 - TA: David Clancy
     * 10:05am - 11:20am - Link Classroom 3 - TA: David Clancy
     * 11:45am - 1:00pm - Link Classroom 4 - TA: Lindsay Berry
