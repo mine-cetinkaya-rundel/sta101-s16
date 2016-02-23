@@ -1,0 +1,48 @@
+source("ci_single_mean_sim.R")
+source("ci_single_mean_theo.R")
+source("ci_single_median_sim.R")
+source("ci_single_prop_sim.R")
+source("ci_single_prop_theo.R")
+source("ci_two_mean_sim.R")
+source("ci_two_mean_theo.R")
+source("ci_two_median_sim.R")
+source("ci_two_prop_sim.R")
+source("ci_two_prop_theo.R")
+source("ht_single_mean_sim.R")
+source("ht_single_mean_theo.R")
+source("ht_single_median_sim.R")
+source("ht_two_mean_theo.R")
+source("ht_two_mean_sim.R")
+source("ht_two_prop_theo.R")
+source("ht_many_mean_theo.R")
+source("ht_single_prop_theo.R")
+source("ht_single_prop_sim.R")
+source("ht_two_prop_sim.R")
+source("ht_many_prop_theo.R")
+source("ht_many_prop_sim.R")
+source("ht_two_median_sim.R")
+source("inference.R")
+save(ci_single_mean_sim, 
+     ht_two_mean_sim,
+     ci_single_mean_theo, 
+     ci_single_median_sim, 
+     ci_single_prop_sim, 
+     ci_single_prop_theo, 
+     ci_two_mean_sim, 
+     ci_two_mean_theo, 
+     ci_two_median_sim, 
+     ci_two_prop_sim, 
+     ci_two_prop_theo, 
+     ht_single_mean_sim, 
+     ht_single_mean_theo, 
+     ht_single_median_sim, 
+     ht_two_mean_theo, 
+     ht_two_prop_theo,
+     ht_many_mean_theo,
+     ht_many_prop_theo,
+     ht_single_prop_theo,
+     ht_single_prop_sim,
+     ht_two_prop_sim,
+     ht_two_median_sim,
+     ht_many_prop_sim,
+     inference, file = "inference.RData")
