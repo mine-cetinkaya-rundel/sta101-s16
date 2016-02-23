@@ -23,8 +23,11 @@ title: Schedule
 |             | [App Ex 3.1: Relaxing after work](post/app/app_Relaxing_after_work.pdf) |
 | Feb 18, Thu | [Lab 5: Confidence intervals](post/labs/confidence_intervals.html)   |
 | Feb 21, Sun | 2 - 3:15pm at LSRC B 101 - [MT 1 Review](post/slides/u3_deck4.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u3_deck4H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=3878221c-cf9d-40ea-a824-c3398a3099ee) |
-| Feb 22, Mon | [Lesson 3.3: Hypothesis tests](post/slides/u3_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u3_deck3H.pdf)|
+| Feb 22, Mon | [Lesson 3.3: Hypothesis tests](post/slides/u3_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u3_deck3H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=03ab58cb-4998-4777-84a5-02d3f3eef8a7)|
 |             | [App Ex 3.2: Grade inflation](post/app/app_Grade_inflation.pdf) |
+
+
+
 
 ##### Due dates
 
