@@ -22,7 +22,7 @@ library(mosaic)
 
 #### Load data:
 ```{r load-data}
-load(url("https://stat.duke.edu/~mc301/data/ames.RData"))
+load(url("https://stat.duke.edu/~mc301/data/nc.RData"))
 ```
 
 #### Set a seed:

@@ -17,14 +17,17 @@ title: Schedule
 
 | Feb 10, Wed | **RA 3** in class |
 |             | [Lesson 3.1: Variability in estimates and CLT](post/slides/u3_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u3_deck1H.pdf)   &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=1608d742-c228-4c9c-886a-1b188025b5ab) |
-| Feb 11, Thu | [Lab 4: Sampling distributions](https://mine.shinyapps.io/sampling_distributions/) |
+| Feb 11, Thu | [Lab 4: Sampling distributions](http://smith.stat.duke.edu:3838/mine/sampling_dist_lab/) |
 | Feb 15, Mon | No class - snow day |
+| Feb 16, Tue  | DS 5: Foundations for inference &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](https://youtu.be/__NRvXtPSW4) |
 | Feb 17, Wed | [Lesson 3.2: Confidence intervals](post/slides/u3_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u3_deck2H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=9474ca16-f349-4334-8c02-6be59725d857) |
 |             | [App Ex 3.1: Relaxing after work](post/app/app_Relaxing_after_work.pdf) |
 | Feb 18, Thu | [Lab 5: Confidence intervals](post/labs/confidence_intervals.html)   |
 | Feb 21, Sun | 2 - 3:15pm at LSRC B 101 - [MT 1 Review](post/slides/u3_deck4.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u3_deck4H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=3878221c-cf9d-40ea-a824-c3398a3099ee) |
 | Feb 22, Mon | [Lesson 3.3: Hypothesis tests](post/slides/u3_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u3_deck3H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=03ab58cb-4998-4777-84a5-02d3f3eef8a7)|
 |             | [App Ex 3.2: Grade inflation](post/app/app_Grade_inflation.pdf) |
+| Feb 23, Tue  | DS 6: MT1 Review &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](https://youtu.be/WlfBeOqOjIc) |
+
 
 
 
