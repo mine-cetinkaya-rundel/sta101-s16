@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\input{../../app_style.tex}
+
+%%%%%%%%%%%
+% App Ex number    %
+%%%%%%%%%%%
+
+% DON'T FORGET TO UPDATE
+
+\newcommand{\appno}[1]
+{4.3}
+
+%%%%%%%%%%%%%%
+% Turn on/off solutions       %
+%%%%%%%%%%%%%%
+
+% Off
+\newcommand{\soln}[2]{$\:$\\ \vspace{#1}}{}
+
+% On
+%\newcommand{\soln}[2]{\textit{\textcolor{custom_red}{#2}}}{}
+
+%%%%%%%%%%%%%%%%
+% Document
+%%%%%%%%%%%%%%%%
+
+\begin{document}
+\fontspec[Ligatures=TeX]{Helvetica Neue Light}
+
+Dr. \c{C}etinkaya-Rundel \hfill Sta 101: Data Analysis and Statistical Inference \\
+Duke University - Department of Statistical Science \hfill \\
+
+\ttl{Application exercise \appno{}: \\
+Calculating power}
+
+\inst{$\:$ \\
+Team name: \rule{10cm}{0.5pt} \\
+$\:$ \\
+Lab section: $\qquad$ 8:30 $\qquad$ 10:05 $\qquad$ 11:45 $\qquad$ 1:25 $\qquad$ 3:05$\qquad$ 4:40 \\
+$\:$ \\
+Write your responses in the spaces provided below. WRITE LEGIBLY and SHOW ALL WORK! 
+Only one submission per team is required. One team will be randomly selected and their 
+responses will be discussed and graded. Concise and coherent are best!}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ In a study of the periodical cicada (\textit{Magicicada septendecim}), researchers measured the hind tibia lengths of the shed skins of 110 individuals. Results for males and females are shown in the accompanying table.
+
+\begin{center}
+\includegraphics[width=0.3\textwidth]{7_2_8.pdf}
+\end{center}
+
+We want to test to see if there is a difference between the average tibia length of male and female cicadas.
+Calculate the power of the test to detect a difference 2 $\mu$m. 
+ 
+\soln{7cm}{
+Step 0: 
+$SE = \sqrt{\frac{2.87^2}{60}+\frac{3.52^2}{50}} = 0.62$
+\[ H_0: \mu_1 = \mu_2, \quad H_A: \mu_1 \ne \mu_2, \quad \alpha = 0.05, \quad SE = 0.62, \quad \delta=2, \quad n_1=60, \quad n_2=50 \]
+Step 1: 
+\begin{align*}
+P\left(T > \frac{\bar{x}_1-\bar{x}_2 - 0}{0.62} \text{ or } T < \frac{\bar{x}_1-\bar{x}_2 - 0}{0.62} \right) \leq 0.05 \\
+\frac{(\bar{x}_1-\bar{x}_2) - 0}{0.62} > 2.01 \text{ or } \frac{(\bar{x}_1-\bar{x}_2) - 0}{0.62} < -2.01 \\
+(\bar{x}_1-\bar{x}_2) > 1.246 \text{ or } (\bar{x}_1-\bar{x}_2) < -1.246 
+\end{align*}
+Step 2: Assume $\frac{\bar{x}_1-\bar{x}_2 - \delta}{SE} \sim T_{df=49}$,
+\begin{align*}
+&P(\bar{x}_1-\bar{x}_2 > 1.246 \text{ or } \bar{x}_1-\bar{x}_2 < -1.246) \\
+&= P(T > (1.246-2)/0.62 \text{ or } T < (-1.246-2)/0.62) \\
+&= P(T > -1.216) + P(T < -5.235) = 0.8851 + 0.0000 = 0.8851 
+\end{align*}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

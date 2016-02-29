@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\input{../../app_style.tex}
+
+%%%%%%%%%%%
+% App Ex number    %
+%%%%%%%%%%%
+
+% DON'T FORGET TO UPDATE
+
+\newcommand{\appno}[1]
+{4.2}
+
+%%%%%%%%%%%%%%
+% Turn on/off solutions       %
+%%%%%%%%%%%%%%
+
+% Off
+\newcommand{\soln}[2]{$\:$\\ \vspace{#1}}{}
+
+% On
+%\newcommand{\soln}[2]{\textit{\textcolor{custom_red}{#2}}}{}
+
+%%%%%%%%%%%%%%%%
+% Document
+%%%%%%%%%%%%%%%%
+
+\begin{document}
+\fontspec[Ligatures=TeX]{Helvetica Neue Light}
+
+Dr. \c{C}etinkaya-Rundel \hfill Sta 101: Data Analysis and Statistical Inference \\
+Duke University - Department of Statistical Science \hfill \\
+
+\ttl{Application exercise \appno{}: \\
+Estimating average movie ratings}
+
+\inst{$\:$ \\
+Team name: \rule{10cm}{0.5pt} \\
+$\:$ \\
+Lab section: $\qquad$ 8:30 $\qquad$ 10:05 $\qquad$ 11:45 $\qquad$ 1:25 $\qquad$ 3:05$\qquad$ 4:40 \\
+$\:$ \\
+Write your responses in the spaces provided below. WRITE LEGIBLY and SHOW ALL WORK! 
+Only one submission per team is required. One team will be randomly selected and their 
+responses will be discussed and graded. Concise and coherent are best!}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The following histogram shows the distribution of RottenTomatoes scores of a random sample of 54 comedies. 
+The average score is 52.52 (out of 100).
+
+\begin{center}
+\includegraphics[width = 0.5\textwidth]{figures/comedy_hist}
+\end{center}
+
+The dot plot below shows the distribution of 200 bootstrap means calculated based on this sample. The bootstrap 
+standard error is 1.98.
+
+\begin{center}
+\includegraphics[width = 0.6\textwidth]{figures/comedy_boot_mean_dot}
+\end{center}
+
+\begin{enumerate}
+
+\item Describe in detail how this bootstrap distribution is constructed, outlining each step.
+
+\soln{5cm}{
+\begin{enumerate}
+\item Take a random sample of size 54, with replacement, from the original sample.
+\item Find the mean of this sample, and record it.
+\item Repeat steps 1 and 2 200 times.
+\end{enumerate}
+}
+
+\pagebreak
+
+\item Construct a 95\% bootstrap interval for the average RottenTomatoes score of comedies, using both 
+methods and interpret them.
+
+\soln{5cm}{
+Percentile: Count 5 dots from each end -- roughly (49 - 56.8) \\
+SE: $52.52 \pm 2.01 \times 1.98 \approx (48.5, 56.5)$ \\
+We are 95\% confident that the average RT score of comedies is in these intervals.
+}
+
+\item Describe the differences and similarities between bootstrap and sampling distributions.
+
+\soln{5cm}{
+Similarity: Sample with replacement, sample size equal to original sample size. \\
+Difference: Sampling dist constructed sampling from the pop, boot dist constructed sampling from the sample.
+}
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

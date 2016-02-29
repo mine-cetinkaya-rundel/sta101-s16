@@ -1,0 +1,180 @@
+\documentclass[12pt]{article}
+\input{../../app_style.tex}
+
+%%%%%%%%%%%
+% App Ex number    %
+%%%%%%%%%%%
+
+% DON'T FORGET TO UPDATE
+
+\newcommand{\appno}[1]
+{4.4}
+
+%%%%%%%%%%%%%%
+% Turn on/off solutions       %
+%%%%%%%%%%%%%%
+
+% Off
+\newcommand{\soln}[2]{$\:$\\ \vspace{#1}}{}
+
+% On
+%\newcommand{\soln}[2]{\textit{\textcolor{custom_red}{#2}}}{}
+
+%%%%%%%%%%%%%%%%
+% Document
+%%%%%%%%%%%%%%%%
+
+\begin{document}
+\fontspec[Ligatures=TeX]{Helvetica Neue Light}
+
+Dr. \c{C}etinkaya-Rundel \hfill Sta 101: Data Analysis and Statistical Inference \\
+Duke University - Department of Statistical Science \hfill \\
+
+\ttl{Application exercise \appno{}: \\
+Teacher evaluations}
+
+\inst{$\:$ \\
+Team name: \rule{10cm}{0.5pt} \\
+$\:$ \\
+Lab section: $\qquad$ 8:30 $\qquad$ 10:05 $\qquad$ 11:45 $\qquad$ 1:25 $\qquad$ 3:05$\qquad$ 4:40 \\
+$\:$ \\
+Write your responses in the spaces provided below. WRITE LEGIBLY and SHOW ALL WORK! 
+Only one submission per team is required. One team will be randomly selected and their 
+responses will be discussed and graded. Concise and coherent are best!}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Many college courses conclude by giving students the opportunity to evaluate the course and the instructor 
+anonymously. In this application exercise we evaluate whether the teaching evaluations for instructors vary 
+by their rank: teaching, tenure track, and tenured. Note that the instructors are evaluated on a 1-5 scale (1-low, 5-high). 
+The data come from ``Beauty in the classroom: instructors' pulchritude and putative pedagogical productivity'' 
+(Hamermesh and Parker, 2005) found that instructors who are viewed to be better looking receive higher 
+instructional ratings.
+
+{\scriptsize Daniel S. Hamermesh, Amy Parker, Beauty in the classroom: instructors' pulchritude 
+and putative pedagogical productivity, \textit{Economics of Education Review}, Volume 24, Issue 4, August 2005, 
+Pages 369-376, ISSN 0272-7757, 10.1016/j.econedurev.2004.07.013. \\
+\href{http://www.sciencedirect.com/science/article/pii/S0272775704001165}{http://www.sciencedirect.com/science/article/pii/S0272775704001165}.} 
+
+{\small
+\begin{center}
+\begin{tabular}{l | c | c | c | c | c | c | c | c}
+		& Min. & 1st Qu. & Median  &  Mean & 3rd Qu. &   Max. & Std. Dev. & n \\
+\hline
+teaching	&  3.300 &  3.900  & 4.400&   4.284 &  4.700&   5.000 	& 0.5 & 102 \\
+tenure track	& 2.300 &  3.700 &  4.350  & 4.155 &  4.600  & 4.900 & 0.56 & 108 \\
+tenured 	&   2.400   & 3.800 &  4.200  & 4.139  & 4.600 &  5.000  & 0.55 & 253
+\end{tabular}
+\includegraphics[width=0.5\textwidth]{figures/evals_rank}
+\end{center}
+}
+
+%
+
+\begin{enumerate}
+
+\item What is the response variable in the ANOVA? \_\_\_\_\_\_\_\_\_\_\_\_\_\_ \soln{0cm}{Eval score}
+
+\item What is the explanatory variable in the ANOVA? \_\_\_\_\_\_\_\_\_\_\_\_\_\_ \soln{0cm}{Rank}
+
+\item State the hypotheses for evaluating whether the average evaluation score varies by rank.
+
+\soln{5cm}{
+$H_0$: Average eval score does not vary by rank. \\
+$H_A$: Average eval scores are different for at least one pair of ranks.
+}
+
+\vfill
+
+\pagebreak
+
+\item Check the conditions for evaluating these hypotheses.
+
+\soln{3cm}{
+\begin{enumerate}
+\item Independent observations: We don't know if there is random sampling + each group less than 10\% of its respective population
+\item Normality: Distributions of each group not normal (left skewed) but n is large so not a huge deal
+\item Constant variance: Variability across groups somewhat consistent
+\end{enumerate}
+}
+
+\item Below is a partial ANOVA table. Fill in the blanks. \textit{Hint:} Not all blanks in the table need to be filled, 
+you need to decide which blanks need to be filled.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{l | p{1.5cm} | p{2cm} | p{2cm} | p{2cm} | p{2cm} }
+  \hline
+ 			& Df 		& Sum Sq 	& Mean Sq 	& F 		 & p-value \\ 
+  \hline
+rank 			&  		& 1.59 		&  			& 	 	&  \\ 
+\hline
+Residuals 		& 	 	& 	 		& 	 		& 		&  \\ 
+\hline
+Total			&		& 136.66		&			&		&
+\end{tabular}
+\end{center}
+
+\soln{2cm}
+{
+\begin{itemize}
+\item Df: $df_G = 3 - 1 = 2$, $df_T = (102 + 108 + 253) - 1 = 462$, $df_E = 462 - 2 = 460$ \\
+\item SS: $SS_E = 136.66 - 1.59 = 135.07$ \\
+\item MS: $MS_G = 1.59 / 2 = 0.795$, $MS_E = 135.07 / 460 = 0.29$ \\
+\item F = 0.795 / 0.29 = 2.74 \\
+\item p-value = \texttt{pf(2.74, df1 = 2, df2 = 460, lower.tail = FALSE)} = 0.066
+\end{itemize}
+}
+
+\item Determine the conclusion of the hypothesis test at $\alpha = 0.10$.
+
+\soln{3cm}
+{
+Reject $H_0$. At least one pair of means are different from each other.
+}
+
+\item Explain what the sum of squares associated with rank (also called $SS_{group}$) and sum of squares 
+associated with the residuals (also called $SS_{error}$) and the total sum of squares also called $SS_{total}$) mean. You are not being 
+asked to calculate these numbers, only to explain what they mean in context of the data.
+
+\soln{5cm}
+{
+$SS_G$: Variability between groups \\
+$SS_E$: Variability within groups \\
+$SS_T$: Total variability in evaluation scores
+}
+
+\pagebreak
+
+\item What percent of variability in evaluation scores is explained by the rank of professors?
+
+\soln{3cm}
+{$SS_G / SS_T = 1.59 / 136.66 = 0.0116 \rightarrow 1.16\%$}
+
+\item We want to determine which means are different from each other. What significance level should we use 
+for these tests and why?
+
+\soln{3cm}
+{
+$\alpha^\star = 0.10 / 3 = 0.033$
+}
+
+\item Conduct at least one of these tests (or all, time permitting) and determine which means are different.
+\textit{Hint:} You're doing a post-hoc pairwise tests, how are $SE$ and $df$ defined?
+
+\soln{3cm}
+{Do t tests where variance is MSE and df is $df_E$ for all tests
+$\alpha^\star = 0.05 / 3 = 0.0166$ \\
+Teaching vs. tenure track: \\
+$T_{460} = \frac{(3.3 - 2.3) - 0}{\sqrt{\frac{0.29}{102} + \frac{0.29}{108}}} = 13.44 \rightarrow$ p-value = approx 0 \\
+Teaching vs. tenured: \\
+$T_{460} = \frac{(3.3 - 2.4) - 0}{\sqrt{\frac{0.29}{102} + \frac{0.29}{253}}} = 14.24 \rightarrow$ p-value = approx 0 \\
+Tenure track vs. tenured: \\
+$T_{460} = \frac{(2.3 - 2.4) - 0}{\sqrt{\frac{0.29}{108} + \frac{0.29}{253}}} = -1.61 \rightarrow$ 0.05 $<$ p-value $<$ 0.1 
+}
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
