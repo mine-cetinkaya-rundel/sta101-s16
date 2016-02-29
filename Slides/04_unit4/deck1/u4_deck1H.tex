@@ -1,0 +1,455 @@
+% -*- TeX-engine: xetex; eval: (auto-fill-mode 0); eval: (visual-line-mode 1); -*-
+% Compile with XeLaTeX
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% Option 1: Slides: (comment for handouts)   %
+%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\documentclass[slidestop,compress,mathserif,12pt,t,professionalfonts,xcolor=table]{beamer}
+%
+%% solution stuff
+%\newcommand{\solnMult}[1]{
+%\only<1>{#1}
+%\only<2->{\red{\textbf{#1}}}
+%}
+%\newcommand{\soln}[1]{\textit{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Option 2: Handouts, without solutions (post before class)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
+
+ % handout layout
+ \usepackage{pgfpages}
+ \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+
+ % solution stuff
+ \newcommand{\solnMult}[1]{#1}
+ \newcommand{\soln}[1]{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Option 3: Handouts, with solutions (may post after class if need be)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
+
+% % handout layout
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+
+% % solution stuff
+% \newcommand{\solnMult}[1]{\red{\textbf{#1}}}
+% \newcommand{\soln}[1]{\textit{#1}}
+
+%%%%%%%%%%
+% Load style file, defaults  %
+%%%%%%%%%%
+
+\input{../../lec_style.tex}
+\input{../../definitions_default.tex}
+% ALT ALT
+% \input{../../definitions_custom.tex}
+
+%%%%%%%%%%%
+% Cover slide info    %
+%%%%%%%%%%%
+
+\title{Unit 4: Inference for numerical data}
+\subtitle{1. Inference using the $t$-distribution}
+\author{\CourseName}
+\date{}
+\institute{\InstituteName}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin document and set Helvetica Neue font   %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\fontspec[Ligatures=TeX]{Helvetica Neue Light}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Title Page
+
+\begin{frame}[plain]
+
+\titlepage
+
+\vfill
+
+{\scriptsize \webLink{\PersonalSite}{Dr. \LastName{}} \hfill Slides posted at  \webURL{\CourseSite}}
+
+\addtocounter{framenumber}{-1} 
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Housekeeping}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Announcements}
+
+\begin{itemize}
+
+\item Exams returned at the end of class today
+
+\item MT grades posted on ACES
+
+\item Peer eval due tonight
+
+\item Project proposal due Friday
+\begin{itemize}
+\item Read the project instructions one more time
+\item Work on the proposal before your lab on Thursday
+\item Go to lab with questions
+\end{itemize}
+
+\item MT course feedback due Tuesday night -- anonymous, appreciate feedback
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Main ideas}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{T corrects for uncertainty introduced by plugging in $s$ for $\sigma$}
+\label{mi1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{2. T corrects for uncertainty introduced by plugging in $s$ for $\sigma$}
+
+\begin{itemize}
+
+\item CLT says $\bar{x} \sim N\left(mean = \mu, SE = \frac{\sigma}{\sqrt{n}}\right)$, but, in practice, 
+we use $s$ instead of $\sigma$.
+\begin{itemize}
+\item Plugging in an estimate introduces additional uncertainty.
+\item We make up for this by using a more ``conservative" distribution than the normal distribution.
+\end{itemize}
+
+\pause
+
+\item $t$-distribution also has a bell shape, but its tails are \hl{thicker} than the normal model's
+\begin{itemize}
+\item Observations are more likely to fall beyond two SDs from the mean than under the normal distribution.
+\item Extra thick tails help mitigate the effect of a less reliable estimate for the standard 
+error of the sampling distribution.
+\end{itemize}
+
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.5\textwidth]{figures/tDistCompareToNormalDist/tDistCompareToNormalDist}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{$t$-distribution}
+
+\begin{itemize}
+
+\item Always centered at zero, like the standard normal ($z$) distribution
+
+\pause
+
+\item Has a single parameter, \hl{degrees of freedom} (\mathhl{df}~), that is tied to sample size.
+\begin{itemize}
+\item one sample: $df = n - 1$
+\item two (independent) samples: $df = min(n_1 - 1, n_2 - 1)$
+\end{itemize}
+
+\end{itemize}
+
+\pause
+
+\disc{What happens to shape of the $t$-distribution as $df$ increases?}
+\twocol{0.75}{0.25}{
+\begin{center}
+\includegraphics[width=\textwidth]{figures/tDistConvergeToNormalDist/tDistConvergeToNormalDist}
+\end{center}
+}
+{
+\soln{\pause Approaches normal.}
+\pause
+\disc{Why?}
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{When comparing means of two groups, details depend on paired or independent}
+\label{mi2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Example 1: Zinc in water}
+
+\disc{Trace metals in drinking water affect the flavor and an unusually high concentration can pose a health hazard. Ten pairs of data were taken measuring zinc concentration in bottom water and surface water at 10 randomly sampled locations.}
+
+\twocol{0.5}{0.5}{
+\begin{center}
+{\footnotesize
+\begin{tabular}{l | c | c}
+Location	& bottom	& surface \\
+\hline
+1&0.43&0.415\\
+2&0.266&0.238\\
+3&0.567&0.39\\
+4&0.531&0.41\\
+5&0.707&0.605\\
+6&0.716&0.609\\
+7&0.651&0.632\\
+8&0.589&0.523\\
+9&0.469&0.411\\
+10&0.723&0.612\\
+\end{tabular}
+}
+\end{center}
+}
+{
+\pause
+Water samples collected at the same location, on the surface and in the bottom, cannot be assumed to be independent of each other, hence we need to use a \hl{paired} analysis.
+}
+
+\vfill
+
+\ct{Source: \webURL{https://onlinecourses.science.psu.edu/stat500/node/51}}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Example 2: Gender gap in salaries}
+
+\disc{{\small Since 2005, the American Community Survey\footnote{Aside: Surge of media attention in spring 2012 when the House 
+of Representatives voted to eliminate the survey. Daniel Webster, Republican congressman from Florida: ``in the end this is not a 
+scientific survey. It's a random survey."} polls $\sim$3.5 million households yearly. The following summarizes distribution of salaries of 
+males and females from a random sample of individuals who responded to the 2012 ACS:}}
+
+\begin{center}
+%
+{\footnotesize
+\begin{tabular}{lccc}
+\hline
+			& $\bar{x}$ 	& $s$	& $n$ \\
+\hline
+male			& 55,890		& 68,767.88	& 470 \\
+female		& 29,240		& 32,025.98	& 373 \\
+\hline
+\end{tabular}
+}
+%
+\includegraphics[width=0.8\textwidth]{figures/acs/sal_gen_box}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\vfill
+
+\disc{How are the two examples different from each other? How are they similar to each other?}
+
+\vfill
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Analyzing paired data}
+
+Suppose we want to compare the average zinc concentration levels in the bottom and surface:
+
+\pause
+
+\begin{itemize}
+
+\item Two sets of observations with a special correspondence (not independent): \hl{paired}
+
+\pause
+
+\item Synthesize down to differences in outcomes of each pair of observations, subtract using a consistent order
+
+\end{itemize}
+
+\pause
+
+\vspace{-0.5cm}
+
+\twocol{0.5}{0.5}{
+\begin{center}
+{\scriptsize
+\begin{tabular}{l | c | c | >{\columncolor[gray]{0.8}} c}
+Location	& bottom	& surface & difference\\
+\hline
+1&0.43&0.415&0.015\\
+2&0.266&0.238&0.028\\
+3&0.567&0.39&0.177\\
+4&0.531&0.41&0.121\\
+5&0.707&0.605&0.102\\
+6&0.716&0.609&0.107\\
+7&0.651&0.632&0.019\\
+8&0.589&0.523&0.066\\
+9&0.469&0.411&0.058\\
+10&0.723&0.612&0.111\\
+\end{tabular}
+}
+\end{center}
+}
+{
+\begin{center}
+\includegraphics[width=0.9\textwidth]{figures/zinc/zinc_diff_hist}
+\end{center}
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Parameter and point estimate for paired data}
+
+For comparing average zinc concentration levels in the bottom and surface when the data are paired:
+
+\pause
+
+\begin{itemize}
+
+\item \hl{Parameter of interest:} Average difference between the bottom and surface zinc measurements of \red{all} drinking water.
+\[ \mu_{diff} \]
+
+$\:$ \\
+
+\pause
+
+\item \hl{Point estimate:} Average difference between the bottom and surface zinc measurements of drinking water from the \red{sampled} locations.
+\[ \bar{x}_{diff} \]
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Parameter and point estimate for independent data}
+
+For comparing average salaries in two independent groups
+
+\pause
+
+\begin{itemize}
+
+\item \hl{Parameter of interest:} Average difference between the average salaries of \red{all} males and females in the US.
+\[ \mu_m - \mu_f \]
+
+$\:$ \\
+
+\pause
+
+\item \hl{Point estimate:} Average difference between the average salaries of \red{sampled} males and females in the US.
+\[ \bar{x}_m - \bar{x}_f \]
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Standard errors}
+
+\begin{itemize}
+
+\item Dependent (paired) groups (e.g. pre/post weights of subjects in a weight loss study, twin studies, etc.)
+\[ SE_{\bar{x}_{diff}} = \frac{s_{diff}}{\sqrt{n_{diff}}} \]
+
+\item Independent groups (e.g. grades of students across two sections)
+\[ SE_{\bar{x}_1 - \bar{x}_2} = \sqrt{ \frac{s_1^2}{n_1} + \frac{s_2^2}{n_2} } \]
+
+\item For the same data, $SE_{paired} < SE_{independent}$, so be careful about calling data paired
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{All other details of the inferential framework is the same...}
+\label{mi3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{3. All other details of the inferential framework is the same...}
+
+\[ HT: test~statistic = \frac{point~estimate - null}{SE} \]
+
+\pause
+
+\[ CI: point~estimate \pm critical~value \times SE \]
+
+\pause
+
+$\:$ \\
+
+\threecol{0.25}{0.375}{0.375}
+{
+\hl{One mean:} \\
+{\small $df = n - 1$} \\
+$\:$ \\
+\textbf{HT:} \\
+$H_0: \mu = \mu_0$ \\
+$T_{df} = \frac{\bar{x} - \mu}{\frac{s}{\sqrt{n}}}$ \\
+$\:$ \\
+\textbf{CI:} \\
+$\bar{x} \pm t^\star_{df} \frac{s}{\sqrt{n}}$
+}
+{\pause
+\hl{Paired means:} \\
+{\small $df = n_{diff} - 1$}
+$\:$ \\$\:$ \\
+\textbf{HT:} \\
+$H_0: \mu_{diff} = 0$ \\
+$T_{df} = \frac{\bar{x}_{diff} -0}{\frac{s_{diff}}{\sqrt{n_{diff}}}}$ \\
+$\:$ \\
+\textbf{CI:} \\
+$\bar{x}_{diff} \pm t^\star_{df} \frac{s_{diff}}{\sqrt{n_{diff}}}$
+}
+{\pause
+\hl{Independent means:} \\
+{\small $df = min(n_1 - 1, n_2 - 1)$}
+$\:$ \\$\:$ \\
+\textbf{HT:} \\
+$H_0: \mu_1 - \mu_2 = 0$ \\
+$T_{df} = \frac{\bar{x}_1 - \bar{x}_2}{\sqrt{ \frac{s_1^2}{n_1} + \frac{s_2^2}{n_2} }}$ \\
+$\:$ \\
+\textbf{CI:} \\
+$\bar{x}_1 - \bar{x}_2 \pm t^\star_{df} \sqrt{ \frac{s_1^2}{n_1} + \frac{s_2^2}{n_2} }$
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

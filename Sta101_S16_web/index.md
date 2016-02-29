@@ -7,61 +7,6 @@ title: Schedule
 
 * * *
 
-### <a name="unit3"></a> Unit 3 - Foundations for inference
-
-##### Resources
-
-| Videos: [Videos for Unit 3]({{ site.videos }}) |  Learning objectives: [LO 3]({{ site.learn_obj }}/view?page=Unit_3_Learning_Objectives) | Textbook: [Chp 4]({{ site.openintro}}) |
-
-##### In class / lab
-
-| Feb 10, Wed | **RA 3** in class |
-|             | [Lesson 3.1: Variability in estimates and CLT](post/slides/u3_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u3_deck1H.pdf)   &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=1608d742-c228-4c9c-886a-1b188025b5ab) |
-| Feb 11, Thu | [Lab 4: Sampling distributions](http://smith.stat.duke.edu:3838/mine/sampling_dist_lab/) |
-| Feb 15, Mon | No class - snow day |
-| Feb 16, Tue  | DS 5: Foundations for inference &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](https://youtu.be/__NRvXtPSW4) |
-| Feb 17, Wed | [Lesson 3.2: Confidence intervals](post/slides/u3_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u3_deck2H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=9474ca16-f349-4334-8c02-6be59725d857) |
-|             | [App Ex 3.1: Relaxing after work](post/app/app_Relaxing_after_work.pdf) |
-| Feb 18, Thu | [Lab 5: Confidence intervals](post/labs/confidence_intervals.html)   |
-| Feb 21, Sun | 2 - 3:15pm at LSRC B 101 - [MT 1 Review](post/slides/u3_deck4.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u3_deck4H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=3878221c-cf9d-40ea-a824-c3398a3099ee) |
-| Feb 22, Mon | [Lesson 3.3: Hypothesis tests](post/slides/u3_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u3_deck3H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=03ab58cb-4998-4777-84a5-02d3f3eef8a7)|
-|             | [App Ex 3.2: Grade inflation](post/app/app_Grade_inflation.pdf) |
-| Feb 23, Tue  | DS 6: MT1 Review &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](https://youtu.be/WlfBeOqOjIc) |
-
-
-
-
-
-##### Due dates
-
-* Lab 3: Feb 11, Thu, in lab
-* Lab 4: Feb 18, Thu 
-* [PS 3]({{ site.sakai_ps }}): Feb 19, Fri, at 11:55pm
-  * End of chapter exercises from **Chp 4**. Only turn in answers to 
-  graded questions, use the back of the book to check your work on the practice questions.
-  Must show **all** work to get credit. Click [here]({{ site.sakai_ps }}) to submit the 
-  problem set.
-  * **Graded questions:** 4.2, 4.8, 4.10, 4.12, 4.16, 4.20, 4.24,
-  4.28, 4.30, 4.32, 4.36, 4.38, 4.44, 4.48
-  * Practice questions: 
-      + Part 1 – Variability in estimates and the Central Limit Theorem: 4.1, 4.3, 4.5, 4.33, 4. 35, 4.37, 4.41
-      + Part 2 – Confidence intervals: 4.9, 4.11, 4.13, 4.15
-      + Part 3 – Hypothesis tests: 4.17, 4.19, 4.23, 4.25, 4.27
-      + Part 4 – Inference for other estimators: 4.43, 4.45
-      + Part 5 - Decision errors, significance, and confidence: 4.29, 4.31, 4.47
-* [PA 3]({{ site.sakai_pa }}): Feb 21, Sun, at midnight
-  * Take between Feb 17, Wed and Feb 21, Sun. 
-  * You have 30 minutes to complete. Only one attempt allowed. Click [here]({{ site.sakai_pa }}) to take the performance assessment.
-
-* * *
-
-### <a name="mt1"></a> Midterm 1 - Feb 24, Wed (in class)
-
-* Covers Units 1 - 3
-* Sample Midterm 1: [handout](https://sakai.duke.edu/access/content/group/255d1889-39d7-433a-96a0-55ba217ae0a7/Sample_MT1.pdf) + [solutions](https://sakai.duke.edu/access/content/group/255d1889-39d7-433a-96a0-55ba217ae0a7/Sample_MT1_Key.pdf)
-
-* * *
-
 ### <a name="unit4"></a> Unit 4 - Inference for numerical variables
 
 ##### Resources
@@ -334,3 +279,58 @@ title: Schedule
 * [PA 2]({{ site.sakai_pa }}): Feb 14, Sun, at midnight
   * Take between Feb 10, Wed and Feb 14, Sun. 
   * You have 30 minutes to complete. Only one attempt allowed. Click [here]({{ site.sakai_pa }}) to take the performance assessment.
+
+  * * *
+
+### <a name="unit3"></a> Unit 3 - Foundations for inference
+
+##### Resources
+
+| Videos: [Videos for Unit 3]({{ site.videos }}) |  Learning objectives: [LO 3]({{ site.learn_obj }}/view?page=Unit_3_Learning_Objectives) | Textbook: [Chp 4]({{ site.openintro}}) |
+
+##### In class / lab
+
+| Feb 10, Wed | **RA 3** in class |
+|             | [Lesson 3.1: Variability in estimates and CLT](post/slides/u3_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u3_deck1H.pdf)   &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=1608d742-c228-4c9c-886a-1b188025b5ab) |
+| Feb 11, Thu | [Lab 4: Sampling distributions](http://smith.stat.duke.edu:3838/mine/sampling_dist_lab/) |
+| Feb 15, Mon | No class - snow day |
+| Feb 16, Tue  | DS 5: Foundations for inference &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](https://youtu.be/__NRvXtPSW4) |
+| Feb 17, Wed | [Lesson 3.2: Confidence intervals](post/slides/u3_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u3_deck2H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=9474ca16-f349-4334-8c02-6be59725d857) |
+|             | [App Ex 3.1: Relaxing after work](post/app/app_Relaxing_after_work.pdf) |
+| Feb 18, Thu | [Lab 5: Confidence intervals](post/labs/confidence_intervals.html)   |
+| Feb 21, Sun | 2 - 3:15pm at LSRC B 101 - [MT 1 Review](post/slides/u3_deck4.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u3_deck4H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=3878221c-cf9d-40ea-a824-c3398a3099ee) |
+| Feb 22, Mon | [Lesson 3.3: Hypothesis tests](post/slides/u3_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u3_deck3H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=03ab58cb-4998-4777-84a5-02d3f3eef8a7)|
+|             | [App Ex 3.2: Grade inflation](post/app/app_Grade_inflation.pdf) |
+| Feb 23, Tue  | DS 6: MT1 Review &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](https://youtu.be/WlfBeOqOjIc) |
+
+
+
+
+
+##### Due dates
+
+* Lab 3: Feb 11, Thu, in lab
+* Lab 4: Feb 18, Thu 
+* [PS 3]({{ site.sakai_ps }}): Feb 19, Fri, at 11:55pm
+  * End of chapter exercises from **Chp 4**. Only turn in answers to 
+  graded questions, use the back of the book to check your work on the practice questions.
+  Must show **all** work to get credit. Click [here]({{ site.sakai_ps }}) to submit the 
+  problem set.
+  * **Graded questions:** 4.2, 4.8, 4.10, 4.12, 4.16, 4.20, 4.24,
+  4.28, 4.30, 4.32, 4.36, 4.38, 4.44, 4.48
+  * Practice questions: 
+      + Part 1 – Variability in estimates and the Central Limit Theorem: 4.1, 4.3, 4.5, 4.33, 4. 35, 4.37, 4.41
+      + Part 2 – Confidence intervals: 4.9, 4.11, 4.13, 4.15
+      + Part 3 – Hypothesis tests: 4.17, 4.19, 4.23, 4.25, 4.27
+      + Part 4 – Inference for other estimators: 4.43, 4.45
+      + Part 5 - Decision errors, significance, and confidence: 4.29, 4.31, 4.47
+* [PA 3]({{ site.sakai_pa }}): Feb 21, Sun, at midnight
+  * Take between Feb 17, Wed and Feb 21, Sun. 
+  * You have 30 minutes to complete. Only one attempt allowed. Click [here]({{ site.sakai_pa }}) to take the performance assessment.
+
+* * *
+
+### <a name="mt1"></a> Midterm 1 - Feb 24, Wed (in class)
+
+* Covers Units 1 - 3
+* Sample Midterm 1: [handout](https://sakai.duke.edu/access/content/group/255d1889-39d7-433a-96a0-55ba217ae0a7/Sample_MT1.pdf) + [solutions](https://sakai.duke.edu/access/content/group/255d1889-39d7-433a-96a0-55ba217ae0a7/Sample_MT1_Key.pdf)

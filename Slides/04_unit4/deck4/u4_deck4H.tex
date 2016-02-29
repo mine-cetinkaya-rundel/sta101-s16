@@ -1,0 +1,388 @@
+% -*- TeX-engine: xetex; eval: (auto-fill-mode 0); eval: (visual-line-mode 1); -*-
+% Compile with XeLaTeX
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% Option 1: Slides: (comment for handouts)   %
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%\documentclass[slidestop,compress,mathserif,12pt,t,professionalfonts,xcolor=table]{beamer}
+
+% solution stuff
+%\newcommand{\solnMult}[1]{
+%\only<1>{#1}
+%\only<2->{\red{\textbf{#1}}}
+%}
+%\newcommand{\soln}[1]{\textit{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Option 2: Handouts, without solutions (post before class)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
+
+ % handout layout
+ \usepackage{pgfpages}
+ \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+
+% % solution stuff
+ \newcommand{\solnMult}[1]{#1}
+ \newcommand{\soln}[1]{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Option 3: Handouts, with solutions (may post after class if need be)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
+
+% % handout layout
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+
+% % solution stuff
+% \newcommand{\solnMult}[1]{\red{\textbf{#1}}}
+% \newcommand{\soln}[1]{\textit{#1}}
+
+%%%%%%%%%%
+% Load style file, defaults  %
+%%%%%%%%%%
+
+\input{../../lec_style.tex}
+\input{../../definitions_default.tex}
+% ALT ALT
+% \input{../../definitions_custom.tex}
+
+%%%%%%%%%%%
+% Cover slide info    %
+%%%%%%%%%%%
+
+\title{Unit 4: Inference for numerical data}
+\subtitle{4. ANOVA}
+\author{\CourseName}
+\date{}
+\institute{\InstituteName}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin document and set Helvetica Neue font   %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\fontspec[Ligatures=TeX]{Helvetica Neue Light}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Title Page
+
+\begin{frame}[plain]
+
+\titlepage
+
+\vfill
+
+{\scriptsize \webLink{\PersonalSite}{Dr. \LastName{}} \hfill Slides posted at  \webURL{\CourseSite}}
+
+\addtocounter{framenumber}{-1} 
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Housekeeping}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Announcements}
+
+\begin{itemize}
+
+\item PS 4 due Friday
+
+\item PA 4 due Sunday
+
+\item RA 5 Monday after Spring Break
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Main ideas}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Comparing many means requires care}
+\label{mi1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{}
+
+\begin{center}
+\textcolor{custom_red}{\Large NEWS FLASH!} \\
+$\:$ $\:$
+\textcolor{custom_red}{Jelly beans rumored to cause acne!!!}
+\end{center}
+
+\pause
+
+\disc{How would you check this rumor? Imagine that doctors can assign an ``acne
+score" to patients on a 0-100 scale.
+\begin{itemize}
+\item What would your research question be?
+\item How would you conduct your study?
+\item What statistical test would you use?
+\end{itemize}
+}
+
+\pause
+
+\soln{
+$\:$ \\
+Use an independent samples t-test:
+\begin{align*}
+H_0&: \mu_{\textmd{jelly beans}} - \mu_{\textmd{placebo}} = 0 \\
+H_A&: \mu_{\textmd{jelly beans}} - \mu_{\textmd{placebo}} \ne 0 \\
+\end{align*}
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{}
+
+\vfill
+  
+\begin{center}
+\webURL{http://imgs.xkcd.com/comics/significant.png}
+\end{center}
+
+\vfill
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{}
+  
+\clicker{Suppose $\alpha = 0.05$. What is the probability of making a Type 1 error
+and rejecting a null hypothesis like 
+\[ H_0: \mu_{\textmd{purple jelly bean}} - \mu_{\textmd{placebo}} = 0 \]
+when it is actually true?}
+
+\begin{enumerate}[(a)]
+\item 1\%
+\item \solnMult{5\%}
+\item 36\%
+\item 64\%
+\item 95\%
+\end{enumerate}
+ 
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{}
+  
+\clicker{Suppose we want to test 20 different colors of jelly beans versus a placebo
+with hypotheses like
+{\small
+\begin{align*}
+H_0&: \mu_{\textmd{purple jelly bean}} - \mu_{\textmd{placebo}} = 0 \\
+H_0&: \mu_{\textmd{brown jelly bean}} - \mu_{\textmd{placebo}} = 0 \\
+H_0&: \mu_{\textmd{peach jelly bean}} - \mu_{\textmd{placebo}} = 0 \\
+...&
+\end{align*}
+}
+and we use $\alpha = 0.05$ for each of these tests. What is the probability of making
+at least one Type 1 error in these 20 independent tests?}
+
+\begin{enumerate}[(a)]
+\item 1\%
+\item 5\%
+\item 36\%
+\item \solnMult{64\%} \onslide<2>{\soln{\red{$\rightarrow~1 - (1 - 0.05)^{20}$}}}
+\item 95\%
+\end{enumerate}
+ 
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{ANOVA tests for \emph{some} difference in means of many different groups}
+\label{mi2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+  \frametitle{ANOVA tests for \emph{some} difference in means of many different groups}
+
+Null hypothesis:
+\[
+H_0: \mu_{\textmd{placebo}} = \mu_{\textmd{purple}} = \mu_{\textmd{brown}} =
+\ldots = \mu_{\textmd{peach}} = \mu_{\textmd{orange}} .
+\]
+
+\clicker{Which of the following is a correct statement of the alternative hypothesis?}
+
+\begin{enumerate}[(a)]
+\item For any two groups, including the placebo group, no two group means are the same.
+\item For any two groups, not including the placebo group, no two group means are the same.
+\item Amongst the jelly bean groups, there are at least two groups that have different group means from each other.
+\item \solnMult{Amongst all groups, there are at least two groups that have different group means from each other.}
+\end{enumerate}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{ANOVA compares between group variation to within group variation}
+\label{mi3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+  \frametitle{ANOVA compares between group variation to within group variation}
+
+\centering
+\(
+\sum {\color{blue} \mid}^2 \Big/ \sum {\color{green} \mid}^2
+\)
+
+  \includegraphics[scale=0.6]{figures/anova-middle-ground-jelly-bean.png}
+
+\end{frame}
+
+%-------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Relatively large WITHIN group variation: little apparent difference}
+
+\centering
+\(
+\sum {\color{blue} \mid}^2 \Big/ \sum {\color{green} \mid}^2
+\)
+
+    \includegraphics[scale=0.6]{Figures/anova-lots-of-within-group-jelly-bean.png}
+
+\end{frame}
+
+%-------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Relatively large BETWEEN group variation: there may be a difference}
+
+\centering
+\(
+\sum {\color{blue} \mid}^2 \Big/ \sum {\color{green} \mid}^2
+\)
+    
+    \includegraphics[scale=0.6]{Figures/anova-lots-of-between-group-jelly-bean.png}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+  \frametitle{}
+
+For historical reasons, we use a modification of this ratio called the $F$-statistic:
+\[
+F = \frac{\sum {\color{blue} \mid}^2 \; \; / \; \; (k - 1)}{\sum {\color{green} \mid}^2 \; \; / \; \; (n - k)}
+\hspace{12pt} = \hspace{12pt} \frac{MSG}{MSE}
+\]
+
+$k$: \# of groups; $n$: \# of obs.
+
+\pause
+
+\begin{center}
+\small
+\begin{tabular}{lllrrr}
+  \hline
+  & Df  & Sum Sq & Mean Sq & F value & Pr($>$F) \\ 
+  \hline
+  Between groups & k-1 & $\sum {\color{blue}\mid}^2$  & MSG & $F_{obs}$ & $p_{obs}$ \\ 
+  Within groups & n-k & $\sum {\color{green}\mid}^2$ & MSE &		 &  \\ 
+   \hline
+Total			& n-1 & $\sum ({\color{blue}\mid} + {\color{green}\mid})^2$    &                &                &
+\end{tabular}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{To identify which means are different, use t-tests and the Bonferroni correction}
+\label{mi4}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{To identify which means are different, use t-tests and the Bonferroni correction}
+
+\begin{itemize}
+
+\item If the ANOVA yields a significant results, next natural question is: ``Which means are different?"
+
+\item Use t-tests comparing each pair of means to each other, 
+\begin{itemize}
+\item with a common variance ($MSE$ from the ANOVA table) instead of each group's variances in the 
+calculation of the standard error,
+\item and with a common degrees of freedom ($df_E$ from the ANOVA table)
+\end{itemize}
+
+\item Compare resulting p-values to a modified significance level
+\[ \alpha^\star = \frac{\alpha}{K} \]
+where $K$ is the total number of pairwise tests
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\vfill
+
+\app{4.4 ANOVA}{See the course webpage for details.}
+
+\vfill
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Summary}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Summary of main ideas}
+
+\vfill
+
+\begin{enumerate}
+
+\item \nameref{mi1}
+
+\item \nameref{mi2}
+
+\item \nameref{mi3}
+
+\item \nameref{mi4}
+
+\end{enumerate}
+
+\vfill
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
