@@ -19,6 +19,7 @@ title: Schedule
 | Feb 29, Mon | [Lesson 4.1: Inference with t](post/slides/u4_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u4_deck1H.pdf) |
 |             | [App Ex 4.1: Comparing means](post/app/app_Compare_means.pdf) |
 |             | **RA 4** in class |
+| Mar 1, Tue  | DS 7: t inference &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](hhttps://youtu.be/qqMZdg8dE0c) |
 | Mar 2, Wed  | [Lesson 4.2: Bootstrap intervals](post/slides/u4_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u4_deck2H.pdf) |
 |             | [App Ex 4.2: Bootstrap intervals](post/app/app_Bootstrap_intervals.pdf) |
 | Mar 3, Thur | Lab: Work on project proposal |

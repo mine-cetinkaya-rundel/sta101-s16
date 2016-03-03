@@ -1,0 +1,33 @@
+```{r setup, include=FALSE}
+# DO NOT ALTER CODE IN THIS CHUNK
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+```
+
+* * *
+
+### Data
+
+* * *
+
+### Research questions
+
+1.
+
+2.
+
+3.
+
+* * *
+
+### Exploratory data analysis
+
+* * *
+
+### Timeline
+
+* * *
+
+### Teamwork
+
