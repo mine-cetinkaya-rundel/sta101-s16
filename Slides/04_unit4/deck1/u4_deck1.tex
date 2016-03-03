@@ -8,11 +8,11 @@
 \documentclass[slidestop,compress,mathserif,12pt,t,professionalfonts,xcolor=table]{beamer}
 
 % solution stuff
-%\newcommand{\solnMult}[1]{
-%\only<1>{#1}
-%\only<2->{\red{\textbf{#1}}}
-%}
-%\newcommand{\soln}[1]{\textit{#1}}
+\newcommand{\solnMult}[1]{
+\only<1>{#1}
+\only<2->{\red{\textbf{#1}}}
+}
+\newcommand{\soln}[1]{\textit{#1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Option 2: Handouts, without solutions (post before class)    %
@@ -25,8 +25,8 @@
 % \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
 
 % % solution stuff
- \newcommand{\solnMult}[1]{#1}
- \newcommand{\soln}[1]{}
+ %\newcommand{\solnMult}[1]{#1}
+ %\newcommand{\soln}[1]{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Option 3: Handouts, with solutions (may post after class if need be)    %
