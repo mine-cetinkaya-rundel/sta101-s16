@@ -1,0 +1,67 @@
+---
+title: "Project: Rotten or fresh?"
+output:
+  html_document:
+    css: project.css
+    highlight: pygments
+    theme: cerulean
+  pdf_document: default
+---
+
+### Stage 1: Proposal (25 points)
+
+
+#### 1. Data (2 points)
+
+- 1 pt for correct reasoning for generabizability -- Answer should be yes due to random sampling, students might discuss any reservations, those should be well justified
+
+- 1 pt for correct reasoning for causality -- Answer should be yes due to no random assignment
+
+#### 2. Research questions (6 points)
+
+- 2 pts for each research question (x 3)
+    + Should be phrased in a non-causal way (1 pt)
+    + Should be well defined / not vague (1 pt)
+    
+#### 3. EDA (9 points)
+
+- 3 pts for plots
+    + Plots should address the research questions (1 pt)
+    + Plots should be constructed correctly (1 pt)
+    + Plots should be formatted well -- size not too large, not too small, etc. (1 pt)
+
+- 3 pts for summary statistics
+    + Summary statistics should address the research questions (1 pt)
+    + Summary statistics should be calculated correctly (1 pt)
+    + Summary statistics should be formatted well -- not taking up pages and pages, etc. (1 pt)
+    
+- 3 pts for narrative
+    + Each plot and/or R output should be accompanied by a narrative (1 pt)
+    + Narrative should interpret the visuals / R output correctly (2 pts)
+    
+#### 4. Timeline (4 points) 
+
+Use your discretion, instructions are included below:
+
+Sketch out a timeline for the work you will do to 
+complete this project. Be as detailed and precise as possible. And be 
+realistic -- discuss course schedules, travel plans, etc.
+
+#### 5. Teamwork: (4 points) 
+
+Use your discretion, instructions are included below:
+
+Describe in detail how you will divvy up the work 
+between team members and what aspects of the project you will complete 
+together as a team. Note that during the poster session each member needs to 
+be able to answer questions about all aspects of the work, regardless of 
+whether they took the lead on that section or not.
+
+#### Deductions
+
+- Late: -1 points for each day late
+- Reproducibility issues, requiring to make changes to the R Markdown file 
+to knit the document: -3 points
+- Each page over limit: -2 points per page (view print preview to confirm 
+length, apply penalty only for text going over limit, not graphs/code)
+- Lack of organization: up to -5 points
