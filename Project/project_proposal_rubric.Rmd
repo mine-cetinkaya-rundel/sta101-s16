@@ -15,7 +15,7 @@ output:
 
 - 1 pt for correct reasoning for generabizability -- Answer should be yes due to random sampling, students might discuss any reservations, those should be well justified
 
-- 1 pt for correct reasoning for causality -- Answer should be yes due to no random assignment
+- 1 pt for correct reasoning for causality -- Answer should be no due to no random assignment
 
 #### 2. Research questions (6 points)
 
