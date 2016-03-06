@@ -1,0 +1,200 @@
+---
+title: 'Inference for numerical data'
+output:
+  html_document:
+    css: ../lab.css
+    highlight: pygments
+    theme: cerulean
+  pdf_document: default
+---
+
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(eval = FALSE)
+library(dplyr)
+library(ggplot2)
+```
+
+<div id="template">
+**Your reproducible lab report:** Before you get started, download the R Markdown 
+template for this lab. Remember all of your code and answers go in this document:
+```{r load-template, eval = FALSE}
+download("http://stat.duke.edu/courses/Spring16/sta101.001/rmd/lab7.Rmd", destfile = "lab7.Rmd")
+```
+</div>
+
+## American salaries
+
+Since 2005, the American Community Survey polls ~$3.5 million households yearly. We will work 
+with a randon sample of 2000 observations from the 2012 ACS. You have already worked with this 
+dataset once, as part of your application exercise. In this lab you get a chance to work with 
+it a little more extensively.
+
+```{r load-data}
+load(url("https://stat.duke.edu/~mc301/data/acs.RData"))
+```
+
+Below is the *codebook* for this dataset:
+
+* `income`: Yearly income (wages and salaries)
+* `employment`: Employment status, not in labor force, unemployed, or employed
+* `hrs_work`: Weekly hours worked
+* `race`: Race, White, Black, Asian, or other
+* `age`: Age
+* `gender`: gender, male or female
+* `citizens`: Whether respondent is a US citizen or not
+* `time_to_work`: Travel time to work
+* `lang`: Language spoken at home, English or other
+* `married`: Whether respondent is married or not
+* `edu`: Education level, hs or lower, college, or grad
+* `disability`: Whether respondent is disabled or not
+* `birth_qrtr`: Quarter in which respondent is born, jan thru mar, apr thru jun, jul thru sep, or oct thru dec
+
+Note that this dataset contains some people who are not in the labor force or not employed. 
+First, let's subset the dataset for those who are employed. We will call this new dataset 
+`acs_emp`, short for "employed". Remember that we use the `filter` function for subsetting
+the data based on attributes stored in a variable.
+
+```{r subset-employed}
+acs_emp <- acs %>%
+  filter(employment == "employed")
+```
+
+1.  What percent of the original sample (`acs`) are employed?
+
+Next let's take a look at the income distribution by gender. The first step would be to
+create a visualization:
+
+```{r gender-income-viz}
+qplot(y = income, x = gender, data = acs_emp, geom = "boxplot")
+```
+
+We can also obtain summary statistics such as means and standard deviations and sample sizes.
+
+```{r gender-income-summary}
+acs_emp %>%
+  group_by(gender) %>%
+  summarise(xbar = mean(income), s = sd(income), n = n())
+```
+
+1.  At a first glance how do the average incomes of males and females compare? Make sure
+    to include the visualization and the summary statistics in your answer, and discuss/
+    interpret them.
+
+Before you proceed, make sure to load the `inference` function. You might have this function
+already loaded in your console's enviromment from last time, but not that in order to create a 
+fully reproducible lab report you need to load it in your markdown document as well.
+
+```{r load-inference}
+load(url("https://stat.duke.edu/~mc301/R/fun/inference.RData"))
+```
+    
+1.  Construct a 95% confidence interval for the difference between the average incomes of 
+    males and females using the `inference` function, and interpret this
+    interval. 
+    
+1.  Based on this interval is there a statistically significant difference between the 
+    averege incomes of men and women? Why, or why not?
+    
+1.  What is the significance level for the equivalent hypthesis test that evaluates whether 
+    there is a significant difference between average incomes of men and women.
+
+1.  Conduct this hypothesis test using the `inference` function, and interpret your results 
+    in context of the data and the research question. Do your results from the
+    confidence interval and the hypothesis test agree?
+
+### Confounding variables
+
+There is a clear difference between the average salaries of men and women, but could some,
+or all, of this difference be attributed to a variable other than gender? Remember that we 
+call such variables confounding variables. We will evaluate whether `hrs_work` is a 
+confounder for the relationship between gender and income. But before we do that, let's
+first convert the `hrs_work` variable to a categorical variable (with levels `"full time"`
+or `"part time"`) so that we can use methods we have learned so far in the course to run
+the analysis. (Later in the course we will learn how to work with numerical explanatory
+variables in a regression model setting.)
+
+### Recoding variables
+
+We want to create a new variable, say `emp_type`, with levels `"full time"` or `"part time"` 
+depending on whether the employee works 40 hours or more per week or less than 40 hours,
+respectively. Remember, we create a new variable with the mutate function.
+
+```{r}
+acs_emp <- acs_emp %>%
+  mutate(emp_type = ifelse(hrs_work >= 40, "full time", "part time"))
+```
+
+The `ifelse()` function has three arguments: a logical test, return values for TRUE elements
+of test, and return values for FALSE elements of test. In this case, `emp_type` will be coded 
+as `"full time"` for observations where `hrs_work` is greater than or equal to 40, and as 
+`"part time"` otherwise.
+
+To find out what percent of the sample is full vs. part time, we turn to summary statistics:
+
+```{r}
+acs_emp %>%
+  group_by(emp_type) %>%
+  summarise(time_prop = n() / nrow(acs_emp))
+```
+
+Here we first grouped the data by the new `emp_type` variable, and then we calculated 
+proportions of full and part time employees by first counting how many there are in each group 
+(`n()`) and then dividing this number by the total number of rows of the dataset.
+
+1.  Create a bar plot of the distribution of the `emp_type` variable, and also include the
+    summary statistics you calculated above in your answer. What percent of the sample
+    are full time and what percent are part time employees?
+
+1.  Are females more heavily represented among full time employees or part time employees?
+    Answer this question using summary statistics (code provided below) and a visualization.
+
+```{r}
+acs_emp %>%
+  group_by(emp_type, gender) %>%
+  summarise(n())
+```
+
+* * *
+
+## On your own
+<div class="oyo">
+
+-   Create two subsets of the `acs_emp` dataset: one for full time employees and one 
+    for part time employees. No interpretation is needed for this question, 
+    just the code is sufficient.
+  
+-   Use a hypothesis test to evaluate whether there is a difference in average 
+    incomes of **full time** male and female employees. If the difference is 
+    significant, also include a confidence interval (at the equivalent confidence 
+    level) estimating the magnitude of the average income difference.
+    
+-   Use a hypothesis test to evaluate whether there is a difference in average incomes
+    of **part time** male and female employees. If the difference is significant,
+    also include a confidence interval (at the equivalent confidence level) estimating
+    the magnitude of the average income difference.
+    
+-   What do your findings from these hypothesis test suggest about whether or not working
+    full or part time might be a confounding variable in the relationship between
+    gender and income?
+    
+-   What type of a test would we use to compare the average salaries across the various 
+    race / ethnicity groups in this dataset? Explain your reasoning.
+
+-   Conduct this hypothesis test using the `inference` function. Note that the response variable 
+    is `income` and the explanatory variable is `race`. You will need to figure out the remaining
+    arguments for the function. Use a trial-and-error approach, and let the errors inform you as
+    to what else needs to be specified, and how. (Note: Use the dataset containing records from
+    all employes participants: `acs_emp`) Write your hypotheses, and interpret your conclusion in
+    context of the data and the research question. Note that the `inference` function by default
+    uses a significance level of 0.05 for the ANOVA, and will run pairwise t-tests and report
+    p-values for them if the ANOVA is significant. (Note also that you can change the significance
+    level by setting `sig_level` equal to some other value.)
+
+-   Pick **another** numerical variable from the dataset to be your response variable, and 
+    also pick a categorical explanatory variable (can be one we used before). Conduct the
+    appropriate hypothesis test, using the `inference` function, to compare means of the
+    response variable across levels of the explanatory variable. Make sure to state your 
+    research question, and interpret your conclusion in context of the dataset. Note that you
+    can use the complete `acs` dataset, the subsetted `acs_emp` dataset, or another subset 
+    that you create.
+</div>
