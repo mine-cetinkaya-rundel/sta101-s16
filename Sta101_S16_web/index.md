@@ -25,6 +25,7 @@ title: Schedule
 | Mar 3, Thur | Lab: Work on project proposal |
 | Mar 7, Mon  | [Lesson 4.3: Power](post/slides/u4_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u4_deck3H.pdf) |
 |             | [App Ex 4.3: Power](post/app/app_Power.pdf) |
+| Mar 8, Tue  | DS 8: DS 8: Paired vs. independent groups + Power  &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](https://youtu.be/8P-vPKxPbvg) |
 | Mar 9, Wed  | [Lesson 4.4: ANOVA](post/slides/u4_deck4.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u4_deck4H.pdf) |
 |             | [App Ex 4.4: ANOVA](post/app/app_ANOVA.pdf) |
 | Mar 10, Thu | [Lab 7: (More) inference for numerical data](post/labs/more_inf_for_numerical_data.html) |
