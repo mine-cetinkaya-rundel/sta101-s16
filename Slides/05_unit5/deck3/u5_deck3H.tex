@@ -1,0 +1,393 @@
+% -*- TeX-engine: xetex; eval: (auto-fill-mode 0); eval: (visual-line-mode 1); -*-
+% Compile with XeLaTeX
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% Option 1: Slides: (comment for handouts)   %
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%\documentclass[slidestop,compress,mathserif,12pt,t,professionalfonts,xcolor=table]{beamer}
+
+%% solution stuff
+%\newcommand{\solnMult}[1]{
+%\only<1>{#1}
+%\only<2->{\red{\textbf{#1}}}
+%}
+%\newcommand{\soln}[1]{\textit{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Option 2: Handouts, without solutions (post before class)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
+
+ % handout layout
+ \usepackage{pgfpages}
+ \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+
+% % solution stuff
+ \newcommand{\solnMult}[1]{#1}
+ \newcommand{\soln}[1]{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Option 3: Handouts, with solutions (may post after class if need be)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
+
+% % handout layout
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+
+% % solution stuff
+% \newcommand{\solnMult}[1]{\red{\textbf{#1}}}
+% \newcommand{\soln}[1]{\textit{#1}}
+
+%%%%%%%%%%
+% Load style file, defaults  %
+%%%%%%%%%%
+
+\input{../../lec_style.tex}
+\input{../../definitions_default.tex}
+% ALT ALT
+% \input{../../definitions_custom.tex}
+
+%%%%%%%%%%%
+% Cover slide info    %
+%%%%%%%%%%%
+
+\title{Unit 5: Inference for categorical data}
+\subtitle{3. Chi-square testing}
+\author{\CourseName}
+\date{}
+\institute{\InstituteName}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin document and set Helvetica Neue font   %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\fontspec[Ligatures=TeX]{Helvetica Neue Light}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Title Page
+
+\begin{frame}[plain]
+
+\titlepage
+
+\vfill
+
+{\scriptsize \webLink{\PersonalSite}{Dr. \LastName{}} \hfill Slides posted at  \webURL{\CourseSite}}
+
+\addtocounter{framenumber}{-1} 
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Housekeeping}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Announcements}
+
+\begin{itemize}
+
+\item MT 2 on Wednesday
+\begin{itemize}
+\item Bring a calculator + cheat sheet + writing utensil
+\item Tables will be provided
+\end{itemize}
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Main ideas}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Categorical data: 2 levels $\rightarrow$ Z, $>$2 levels $\rightarrow$ $\chi^2$ square}
+\label{mi1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Inference for categorical data}
+
+\textbf{If sample size related conditions are met:}
+
+\pause
+
+\begin{itemize}
+
+\item Categorical data with 2 levels $\rightarrow$ Z
+
+\pause
+
+\begin{itemize}
+\item one variable: Z HT  / CI for a single proportion
+\item two variables: Z HT  / CI  comparing two proportions
+\end{itemize} 
+
+\pause
+
+\item Categorical data with more than 2 levels $\rightarrow$ $\chi^2$
+
+\pause
+
+\begin{itemize}
+\item one variable: \hl{$\chi^2$ test of goodness of fit}, no CI
+\item two variables: \hl{$\chi^2$ test of independence}, no CI
+\end{itemize} 
+
+\end{itemize}
+
+\pause
+$\:$ \\
+
+\textbf{If sample size related conditions are not met:} \pause Simulation based inference (randomization for HT / bootstrapping for CI, when appropriate)
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\clicker{In the basic Powerball game players select 5 numbers from a set of 59 white balls. We have historical data from lottery outcomes such that we are able to calculate how many times each of the 59 white balls were picked. We want to find out if each number is equally likely to be drawn. Which test is most appropriate?}
+
+\begin{enumerate}[(a)]
+\item Z test for a single proportion
+\item Z test for comparing two proportions
+\item \solnMult{$\chi^2$ test of goodness of fit}
+\item $\chi^2$ test of independence
+\end{enumerate}
+
+\pause
+$\:$ \\
+
+\soln{\only<2|handout:0>{\red{ $H_0:$ Each outcome is equally likely, $p_1 = p_2 = \cdots = p_{50} = 1/59$ }}}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\clicker{A Gallup poll asked whether or not respondents identify as Tea Party Republican (yes / no) and whether or not they are motivated to vote in the upcoming midterm election (yes / no). We want to find out whether being a Tea Party Republican is associated with motivation to vote. Which test is most appropriate?}
+
+\begin{enumerate}[(a)]
+\item Z test for a single proportion
+\item \solnMult{Z test for comparing two proportions}
+\item $\chi^2$ test of goodness of fit
+\item $\chi^2$ test of independence
+\end{enumerate}
+
+\pause
+$\:$ \\
+
+\soln{\only<2|handout:0>{\red{ $H_0: p_{TPR} = p_{Other}$, where $p =$ probability of being motivated to vote }}}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\clicker{Suppose the Gallup poll instead asked about 
+\begin{itemize}
+\item party affiliation (Tea Party Republican, Other Republican, and Non-Republican), and 
+\item motivation to vote (extremely unmotivated, very unmotivated, unmotivated, motivated, very motivated, extremely motivated) 
+\end{itemize} 
+We want to find out whether party affiliation is associated with motivation to vote. Which test is most appropriate?}
+
+\begin{enumerate}[(a)]
+\item Z test for a single proportion
+\item Z test for comparing two proportions
+\item $\chi^2$ test of goodness of fit
+\item \solnMult{$\chi^2$ test of independence}
+\end{enumerate}
+
+\pause
+$\:$ \\
+
+\soln{\only<2|handout:0>{\red{ $H_0:$ Party affiliation and motivation to vote are independent }}}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{The $\chi^2$ statistic is always positive and right skewed}
+\label{mi2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{The $\chi^2$ statistic}
+
+\hl{$\chi^2$ statistic:} When dealing with counts and investigating how far the observed counts are from the expected counts, we use a new test statistic called the \hl{chi-square ($\chi^2$) statistic}:
+\[\chi^2 = \sum_{i = 1}^k \frac{(O - E)^2}{E} \qquad \text{where $k$ = total number of cells} \]
+
+\textbf{Important points:}
+\begin{itemize}
+\item Use \textbf{counts} (not \textbf{proportions}) in the calculation of the text statistic, even though we're truly interested in the proportions for inference
+\item Expected counts are calculated assuming the null hypothesis is true
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{The $\chi^2$ distribution}
+
+The $\chi^2$ distribution has just one parameter, \hl{degrees of freedom (df)}, which influences the shape, center, and spread of the distribution.
+\begin{itemize}
+\item For $\chi^2$ GOF test: $df = k - 1$ \\
+\item For $\chi^2$ independence test: $df = (R-1) \times (C-1)$ 
+\end{itemize}
+
+\pause
+
+\begin{center}
+\includegraphics[width=0.8\textwidth]{figures/chiSquareDistributionWithInceasingDF/chiSquareDistributionWithInceasingDF}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]
+\frametitle{Finding areas under the chi-square curve}
+
+p-value = tail area under the chi-square distribution (as usual)
+
+\pause
+
+\begin{itemize}
+
+\item Using the applet: \webURL{https://gallery.shinyapps.io/dist_calc/}
+
+\pause
+
+\item Using R: \texttt{pchisq()}
+
+\pause
+
+\item Using the table: works a lot like the $t$ table, but only provides upper tail values.
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.3\textwidth]{figures/above5Point1WithDF5/above5Point1WithDF5}
+\end{center}
+
+{\scriptsize
+\begin{center}
+\begin{tabular}{r | rrrr | rrrr |}
+  \hline
+Upper tail & 0.3 & 0.2 & 0.1 & 0.05 & 0.02 & 0.01 & 0.005 & 0.001 \\ 
+  \hline
+df \hfill 1 &  1.07 &  1.64 &  2.71 &  3.84 &  5.41 &  6.63 &  7.88 &  10.83 \\ 
+  2 &  2.41 &  3.22 &  4.61 &  5.99 &  7.82 &  9.21 &  10.60 &  13.82 \\ 
+  3 &  3.66 &  4.64 &  6.25 &  7.81 &  9.84 &  11.34 &  12.84 &  16.27 \\ 
+  4 &  4.88 &  5.99 &  7.78 &  9.49 &  11.67 &  13.28 &  14.86 &  18.47 \\ 
+  5 &  6.06 &  7.29 &  9.24 &  11.07 &  13.39 &  15.09 &  16.75 &  20.52 \\ 
+  \hline
+  6 &  7.23 &  8.56 &  10.64 &  12.59 &  15.03 &  16.81 &  18.55 &  22.46 \\ 
+  $\cdots$ &   &   &   &   &   &   &   &   \\ 
+\end{tabular}
+\end{center}
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{At least 5 expected successes for $\chi^2$ testing}
+\label{mi3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Conditions for $\chi^2$ testing}
+
+\begin{enumerate}
+
+\item \hlGr{Independence:} In addition to what we previously discussed for independence, each case that contributes a count to the table must be independent of all the other cases in the table.
+
+\item \hlGr{Sample size / distribution:} Each cell must have at least 5 \red{expected} cases.
+
+\end{enumerate}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\clicker{Suppose a poll asked the following questions:
+\begin{itemize}
+\item How would you identify your socio-economic status: low, middle, high?
+\item What type of pet did you have growing up, select all that apply: cat, dog, fish, bird, rodent, none of the above?
+\end{itemize}
+What test is most appropriate for evaluating the relationship between these two variables?}
+
+\begin{enumerate}[(a)]
+\item Z test for a single proportion
+\item Z test for comparing two proportions
+\item $\chi^2$ test of goodness of fit
+\item $\chi^2$ test of independence
+\item \solnMult{none of the above}
+\end{enumerate}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Application exercises}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\vfill
+
+\app{5.3 Chi-square tests}{See course website for details.}
+
+\vfill
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Summary}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Summary of main ideas}
+
+\vfill
+
+\begin{enumerate}
+
+\item \nameref{mi1}
+
+\item \nameref{mi2}
+
+\item \nameref{mi3}
+
+\end{enumerate}
+
+\vfill
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

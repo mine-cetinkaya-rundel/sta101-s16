@@ -1,0 +1,449 @@
+% -*- TeX-engine: xetex; eval: (auto-fill-mode 0); eval: (visual-line-mode 1); -*-
+% Compile with XeLaTeX
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% Option 1: Slides: (comment for handouts)   %
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[slidestop,compress,mathserif,12pt,t,professionalfonts,xcolor=table]{beamer}
+
+% solution stuff
+\newcommand{\solnMult}[1]{
+\only<1>{#1}
+\only<2->{\red{\textbf{#1}}}
+}
+\newcommand{\soln}[1]{\textit{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Option 2: Handouts, without solutions (post before class)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
+%
+% % handout layout
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+%
+%% % solution stuff
+% \newcommand{\solnMult}[1]{#1}
+% \newcommand{\soln}[1]{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Option 3: Handouts, with solutions (may post after class if need be)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
+
+% % handout layout
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+
+% % solution stuff
+% \newcommand{\solnMult}[1]{\red{\textbf{#1}}}
+% \newcommand{\soln}[1]{\textit{#1}}
+
+%%%%%%%%%%
+% Load style file, defaults  %
+%%%%%%%%%%
+
+\input{../../lec_style.tex}
+\input{../../definitions_default.tex}
+% ALT ALT
+% \input{../../definitions_custom.tex}
+
+%%%%%%%%%%%
+% Cover slide info    %
+%%%%%%%%%%%
+
+\title{Unit 5: Inference for categorical data}
+\subtitle{1. Inference for a single proportion}
+\author{\CourseName}
+\date{}
+\institute{\InstituteName}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin document and set Helvetica Neue font   %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\fontspec[Ligatures=TeX]{Helvetica Neue Light}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Title Page
+
+\begin{frame}[plain]
+
+\titlepage
+
+\vfill
+
+{\scriptsize \webLink{\PersonalSite}{Dr. \LastName{}} \hfill Slides posted at  \webURL{\CourseSite}}
+
+\addtocounter{framenumber}{-1} 
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Housekeeping}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Announcements}
+
+\begin{itemize}
+
+\item PS 5 due April 1 (after the midterm) but I strongly recommend that you work on it and ask questions before.
+
+\item PA 5 is due Mar 29 (so you can review it before the midterm). It will be available on Mar 23 but will contain material on chi-square testing which we will cover on Mar 28, so you can decide when you want to take it.
+
+\item Sunday, Mar 27, 2-3pm at Old Chem 116.
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Main ideas}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{The CLT also describes the distribution of $\hat{p}$}
+\label{mi2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Distribution of $\hat{p}$}
+
+\hl{Central limit theorem for proportions:} Sample proportions will be nearly normally distributed with 
+mean equal to the population mean, $p$, and standard error equal to $\sqrt{\frac{p~(1-p)}{n}}$.
+\[ \hat{p} \sim N \pr{ mean = p, SE = \sqrt{\frac{p~(1-p)}{n}} } \]
+
+Conditions:
+\begin{itemize}
+\item Independence: Random sample/assignment + 10\% rule
+\item At least 10 successes and failures
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{}
+
+\clicker{Suppose $p = 0.05$. What shape does the distribution of $\hat{p}$ have in random samples of $n = 100$.}
+
+\begin{enumerate}[(a)]
+\item unimodal and symmetric (nearly normal)
+\item bimodal and symmetric
+\item \solnMult{right skewed}
+\item left skewed
+\end{enumerate}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{}
+
+\clicker{Suppose $p = 0.5$. What shape does the distribution of $\hat{p}$ have in random samples of $n = 100$.}
+
+\begin{enumerate}[(a)]
+\item \solnMult{unimodal and symmetric (nearly normal)}
+\item bimodal and symmetric
+\item right skewed
+\item left skewed
+\end{enumerate}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{CI vs. HT determines observed vs. expected counts / proportions}
+\label{mi3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{CI vs. HT determines observed vs. expected counts / proportions}
+
+Remember, when doing a HT always assume $H_0$ is true!
+\pause
+
+\begin{itemize}
+
+\item \textbf{S-F:} Number of successes and failures for checking the success-failure condition for the 
+nearly normal distribution of $\hat{p}$:
+\pause
+\begin{itemize}
+\item CI: use observed proportion $\rightarrow$ $n\hat{p} \ge 10$ and $n(1 - \hat{p}) \ge 10$
+\pause
+\item HT: use null value of the proportion $\rightarrow$ $np_0 \ge 10$ and $n(1 - p_0) \ge 10$
+\end{itemize}
+
+\pause
+
+\item \textbf{SE:} Proportion of success for calculating the standard error of $\hat{p}$: 
+\[ SE = \sqrt{\frac{p(1-p)}{n}} \]
+\pause
+\vspace{-0.5cm}
+\begin{itemize}
+\item CI: use observed proportion $\rightarrow$ $SE = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$
+\pause
+\item HT: use null value of the proportion $\rightarrow$ $SE = \sqrt{\frac{p_0(1-p_0)}{n}}$
+\end{itemize}
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Only use CLT based methods if the sample size is large enough for a nearly normal sampling distribution}
+\label{mi4}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Simulation vs. theoretical inference}
+
+\begin{itemize}
+
+\item If the S-F condition is met, can do theoretical inference: Z test, Z interval
+
+\item If the S-F condition is not met, must use simulation based methods: randomization test, bootstrap interval
+
+\end{itemize}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Applications}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Single population proportion, large sample}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\vfill
+
+\app{App Ex 5.1}{See course website for details.}
+
+\vfill
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Single population proportion, small sample}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\clicker{Are you vegetarian or vegan?}
+
+\begin{enumerate}[(a)]
+\item Yes, I am vegetarian or vegan
+\item No, I am neither vegetarian nor vegan
+\end{enumerate}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\clicker{A variety of studies suggest that 8\% of college students are vegetarian or vegan. Assuming that this 
+class is a representative sample of Duke students, which of the following are the correct set of hypotheses 
+for testing if the proportion of Duke students who are vegetarian is different than the proportion of 
+vegetarian college students at large.}
+
+\begin{enumerate}[(a)]
+\item \solnMult{$H_0: p = 0.08$; $H_A: p \ne 0.08$}
+\item $H_0: p = 0.08$; $H_A: p < 0.08$
+\item $H_0: \hat{p} = 0.08$; $H_A: \hat{p} \ne 0.08$
+\item $H_0: \hat{p}_{Duke} = \hat{p}_{all~college}$; $H_A: \hat{p}_{Duke} \ne \hat{p}_{all~college}$
+\item $H_0: p_{Duke} = p_{all~college}$; $H_A: p_{Duke} \ne p_{all~college}$
+\end{enumerate}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Simulate by hand}
+
+\disc{Describe a simulation scheme for this hypothesis test.}
+
+\pause
+
+\begin{itemize}
+\item 100 chips in a bag: 8 green (veg), 92 white (non veg).
+\pause
+\item Sample randomly $n$ times from the bag, with replacement ($n$ = observed sample size)
+\pause
+\item Calculate $\hat{p}$, the proportion of greens (successes) in the random sample of size $n$, 
+record this value.
+\pause
+\item Repeat many times.
+\pause
+\item Calculate the proportion of simulations where $\hat{p}$ is at least as different from 0.08 
+as the observed sample proportion.
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]
+\frametitle{HT in R}
+
+{\scriptsize
+\begin{Verbatim}[frame=single, formatcom=\color{blue}]
+n_veg = [fill in based on class data]
+n_nonveg = [fill in based on class data]
+
+sta101 = data.frame(veg = c(rep("yes", n_veg), rep("no", n_nonveg)))
+
+inference(y = veg, data = sta101, success = "yes", 
+          statistic = "proportion", type = "ht", 
+          null = 0.08, alternative = "twosided", 
+          method = "simulation")
+\end{Verbatim}
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Bootstrap interval for a single proportion}
+
+\vfill
+
+\disc{How would the simulation scheme change for a bootstrap interval for the proportion of Duke 
+students who are vegetarians?}
+
+\vfill
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]
+\frametitle{CI in R}
+
+{\scriptsize
+\begin{Verbatim}[frame=single, formatcom=\color{blue}]
+inference(y = veg, data = sta101, success = "yes", 
+          statistic = "proportion", type = "ci", 
+          method = "simulation", boot_method = "se")
+\end{Verbatim}
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Recap}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Recap on CLT based methods}
+
+\begin{itemize}
+
+\item Calculating the necessary sample size for a CI with a given margin of error:
+\begin{itemize}
+\item If there is a previous study, use $\hat{p}$ from that study
+\item If not, use $\hat{p} = 0.5$:
+\begin{itemize}
+\item if you don't know any better, 50-50 is a good guess
+\item $\hat{p} = 0.5$ gives the most conservative estimate -- highest possible sample size
+\end{itemize}
+\end{itemize}
+
+\pause
+
+\item HT vs. CI for a proportion
+\begin{itemize}
+
+\item Success-failure condition:
+\begin{itemize}
+\item CI: At least 10 \red{observed} successes and failures
+\item HT: At least 10 \red{expected} successes and failures, calculated using the null value
+\end{itemize}
+
+\item Standard error:
+\begin{itemize}
+\item CI: calculate using observed sample proportion: $SE = \sqrt{\frac{p(1-p)}{n}}$
+\item HT: calculate using the null value: $SE = \sqrt{\frac{p_0(1-p_0)}{n}}$
+\end{itemize}
+
+\end{itemize}
+
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Recap on simulation methods}
+
+If the S-F condition is not met
+
+\begin{itemize}
+
+\item HT: Randomization test -- simulate under the assumption that $H_0$ is true, then find the p-value as 
+proportion of simulations where the simulated $\hat{p}$ is at least as extreme as the one observed.
+
+\item CI: Bootstrap interval -- resample with replacement from the original sample, and construct interval 
+using percentile or standard error method.
+
+\end{itemize}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Summary}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Summary of main ideas}
+
+\vfill
+
+\begin{enumerate}
+
+\item \nameref{mi2}
+
+\item \nameref{mi3}
+
+\item \nameref{mi4}
+
+\end{enumerate}
+
+\vfill
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

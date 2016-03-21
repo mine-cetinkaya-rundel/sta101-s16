@@ -1,0 +1,133 @@
+```{r setup, include=FALSE}
+# DO NOT ALTER CODE IN THIS CHUNK
+library(dplyr)
+library(ggplot2)
+```
+
+* * *
+
+## Lab report
+
+#### Load data:
+```{r load-data}
+load(url("https://stat.duke.edu/~mc301/data/atheism.RData"))
+```
+
+#### Load data:
+```{r load-inference}
+load(url("https://stat.duke.edu/~mc301/R/fun/inference.RData"))
+```
+
+
+## Exercises:
+
+#### Exercise 1: 
+
+
+
+#### Exercise 2: 
+
+
+
+#### Exercise 3: 
+
+
+
+#### Exercise 4: 
+
+
+```{r ex4}
+
+```
+
+
+#### Exercise 5: 
+
+
+
+#### Exercise 6:
+
+```{r ex6}
+
+```
+
+#### Exercise 7:
+
+```{r ex7}
+
+```
+
+#### Exercise 8:
+
+```{r ex8}
+
+```
+
+#### Exercise 9:
+
+
+
+#### Exercise 10:
+
+
+
+#### Exercise 11:
+
+
+
+#### Exercise 12:
+
+
+
+
+* * *
+
+## On your own:
+
+#### 1: 
+
+
+```{r oyo1}
+
+```
+
+
+#### 2: 
+
+```{r oyo2}
+
+```
+
+
+#### 3:
+
+```{r oyo 3}
+
+```
+
+
+#### 4:
+
+
+```{r oyo4}
+
+
+```
+
+
+
+## Teamwork report
+
+<!--
+For each team member, write their name, whether they attended the lab session, 
+whether they were the author for this week, and their contribution to the lab 
+report (as a percentage). The percentages should add up to 100.
+-->
+
+| Team member             | Attendance | Author   | Contribution % |
+|:------------------------|:----------:|:--------:|---------------:|
+| Name of member 1        | Yes / No   | Yes / No | 25%            |
+| Name of member 2        | Yes / No   | Yes / No | 25%            |
+| Name of member 3        | Yes / No   | Yes / No | 25%            |
+| Name of member 4        | Yes / No   | Yes / No | 25%            |
+| Total                   |            |          | 100%           |

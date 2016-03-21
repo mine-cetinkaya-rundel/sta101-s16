@@ -5,61 +5,6 @@ title: Schedule
 
 | Jump to: | &nbsp;&nbsp;&nbsp; [Unit 1]({{ site.baseurl }}/#unit1) &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; [Unit 2]({{ site.baseurl }}/#unit2) &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; [Unit 3]({{ site.baseurl }}/#unit3) &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; [Unit 4]({{ site.baseurl }}/#unit4) &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; [Unit 5]({{ site.baseurl }}/#unit5) &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; [Unit 6]({{ site.baseurl }}/#unit6) &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; [Unit 7]({{ site.baseurl }}/#unit7) &nbsp;&nbsp;&nbsp; |
 
-* * *
-
-### <a name="unit4"></a> Unit 4 - Inference for numerical variables
-
-##### Resources
-
-| Videos: [Videos for Unit 4]({{ site.videos }}) |  Learning objectives: [LO 4]({{ site.learn_obj }}/view?page=Unit_4_Learning_Objectives) | Textbook: [Chp 5]({{ site.openintro}}) |
-
-##### In class / lab
-
-| Feb 25, Thu | [Lab 6: Inference for numerical data](post/labs/inf_for_numerical_data.html) |
-| Feb 29, Mon | [Lesson 4.1: Inference with t](post/slides/u4_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u4_deck1H.pdf) |
-|             | [App Ex 4.1: Comparing means](post/app/app_Compare_means.pdf) |
-|             | **RA 4** in class |
-| Mar 1, Tue  | DS 7: t inference &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](hhttps://youtu.be/qqMZdg8dE0c) |
-| Mar 2, Wed  | [Lesson 4.2: Bootstrap intervals](post/slides/u4_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u4_deck2H.pdf) |
-|             | [App Ex 4.2: Bootstrap intervals](post/app/app_Bootstrap_intervals.pdf) |
-| Mar 3, Thur | Lab: Work on project proposal |
-| Mar 7, Mon  | [Lesson 4.3: Power](post/slides/u4_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u4_deck3H.pdf) |
-|             | [App Ex 4.3: Power](post/app/app_Power.pdf) |
-| Mar 8, Tue  | DS 8: DS 8: Paired vs. independent groups + Power  &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](https://youtu.be/8P-vPKxPbvg) |
-| Mar 9, Wed  | [Lesson 4.4: ANOVA](post/slides/u4_deck4.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u4_deck4H.pdf) |
-|             | [App Ex 4.4: ANOVA](post/app/app_ANOVA.pdf) |
-| Mar 10, Thu | [Lab 7: (More) inference for numerical data](post/labs/more_inf_for_numerical_data.html) |
-
-##### Due dates
-
-* Lab 5: Feb 25, Thu 
-* Lab 6: Mar 3, Thur
-* [Project Proposal](post/project/project.html): Mar 4, Fri at 5pm
-* [PS 4]({{ site.sakai_ps }}): Mar 11, Fri
-  * End of chapter exercises from **Chp 5**. Only turn in answers to 
-  graded questions, use the back of the book to check your work on the practice questions.
-  Must show **all** work to get credit. Click [here]({{ site.sakai_ps }}) to submit the 
-  problem set.
-  * **Graded questions:** Chp 5: 5.4, 5.6, 5.12, 5.16, 5.20, 5.28, 5.30, 5.34, 5.36, 
-  5.38, 5.44, 5.46, 5.48, 5.50
-  * Practice questions: 
-      + Part 1 – t-inference: 5.1, 5.3, 5.5, 5.13, 5.17, 5.19, 5.21, 5.23, 
-      5.27, 5.31, 5.35, 5.37
-      + Part 2 – Power: 5.39
-      + Part 3 – Comparing three or more means (ANOVA): 5.41, 5.43, 5.45, 5.47, 5.49, 5.51
-      + Part 4 – Simulation based inference for means 
-* [PA 4]({{ site.sakai_pa }}): Mar 13, Sun
-  * Take between Mar 9, Wed and Mar 13, Sun. 
-  * You have 30 minutes to complete. Only one attempt allowed. Click [here]({{ site.sakai_pa }}) to take the performance assessment.
-
-* * *
-
-### <a name="mt2"></a> :palm_tree::sunny: Spring Break :sunny::tropical_drink: 
-
-* Mar 12, Sat - Mar 20, Sun
-* Prepare for Unit 5
-
-* * *
 
 ### <a name="unit5"></a> Unit 5 - Inference for categorical variables
 
@@ -336,3 +281,59 @@ title: Schedule
 
 * Covers Units 1 - 3
 * Sample Midterm 1: [handout](https://sakai.duke.edu/access/content/group/255d1889-39d7-433a-96a0-55ba217ae0a7/Sample_MT1.pdf) + [solutions](https://sakai.duke.edu/access/content/group/255d1889-39d7-433a-96a0-55ba217ae0a7/Sample_MT1_Key.pdf)
+
+* * *
+
+### <a name="unit4"></a> Unit 4 - Inference for numerical variables
+
+##### Resources
+
+| Videos: [Videos for Unit 4]({{ site.videos }}) |  Learning objectives: [LO 4]({{ site.learn_obj }}/view?page=Unit_4_Learning_Objectives) | Textbook: [Chp 5]({{ site.openintro}}) |
+
+##### In class / lab
+
+| Feb 25, Thu | [Lab 6: Inference for numerical data](post/labs/inf_for_numerical_data.html) |
+| Feb 29, Mon | [Lesson 4.1: Inference with t](post/slides/u4_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u4_deck1H.pdf) |
+|             | [App Ex 4.1: Comparing means](post/app/app_Compare_means.pdf) |
+|             | **RA 4** in class |
+| Mar 1, Tue  | DS 7: t inference &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](hhttps://youtu.be/qqMZdg8dE0c) |
+| Mar 2, Wed  | [Lesson 4.2: Bootstrap intervals](post/slides/u4_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u4_deck2H.pdf) |
+|             | [App Ex 4.2: Bootstrap intervals](post/app/app_Bootstrap_intervals.pdf) |
+| Mar 3, Thur | Lab: Work on project proposal |
+| Mar 7, Mon  | [Lesson 4.3: Power](post/slides/u4_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u4_deck3H.pdf) |
+|             | [App Ex 4.3: Power](post/app/app_Power.pdf) |
+| Mar 8, Tue  | DS 8: DS 8: Paired vs. independent groups + Power  &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](https://youtu.be/8P-vPKxPbvg) |
+| Mar 9, Wed  | [Lesson 4.4: ANOVA](post/slides/u4_deck4.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u4_deck4H.pdf) |
+|             | [App Ex 4.4: ANOVA](post/app/app_ANOVA.pdf) |
+| Mar 10, Thu | [Lab 7: (More) inference for numerical data](post/labs/more_inf_for_numerical_data.html) |
+
+##### Due dates
+
+* Lab 5: Feb 25, Thu 
+* Lab 6: Mar 3, Thur
+* [Project Proposal](post/project/project.html): Mar 4, Fri at 5pm
+* [PS 4]({{ site.sakai_ps }}): Mar 11, Fri
+  * End of chapter exercises from **Chp 5**. Only turn in answers to 
+  graded questions, use the back of the book to check your work on the practice questions.
+  Must show **all** work to get credit. Click [here]({{ site.sakai_ps }}) to submit the 
+  problem set.
+  * **Graded questions:** Chp 5: 5.4, 5.6, 5.12, 5.16, 5.20, 5.28, 5.30, 5.34, 5.36, 
+  5.38, 5.44, 5.46, 5.48, 5.50
+  * Practice questions: 
+      + Part 1 – t-inference: 5.1, 5.3, 5.5, 5.13, 5.17, 5.19, 5.21, 5.23, 
+      5.27, 5.31, 5.35, 5.37
+      + Part 2 – Power: 5.39
+      + Part 3 – Comparing three or more means (ANOVA): 5.41, 5.43, 5.45, 5.47, 5.49, 5.51
+      + Part 4 – Simulation based inference for means 
+* [PA 4]({{ site.sakai_pa }}): Mar 13, Sun
+  * Take between Mar 9, Wed and Mar 13, Sun. 
+  * You have 30 minutes to complete. Only one attempt allowed. Click [here]({{ site.sakai_pa }}) to take the performance assessment.
+
+* * *
+
+### <a name="mt2"></a> :palm_tree::sunny: Spring Break :sunny::tropical_drink: 
+
+* Mar 12, Sat - Mar 20, Sun
+* Prepare for Unit 5
+
+* * *

@@ -1,0 +1,95 @@
+%:
+%:
+\documentclass[12pt]{article}
+\input{../../app_style.tex}
+
+%%%%%%%%%%%
+% App Ex number    %
+%%%%%%%%%%%
+
+% DON'T FORGET TO UPDATE
+
+\newcommand{\appno}[1]
+{5.1}
+
+%%%%%%%%%%%%%%
+% Turn on/off solutions       %
+%%%%%%%%%%%%%%
+%:
+
+% Off
+\newcommand{\soln}[2]{$\:$\\ \vspace{#1}}{}
+
+% On
+%\newcommand{\soln}[2]{\textit{\textcolor{custom_red}{#2}}}{}
+
+%%%%%%%%%%%%%%%%
+% Document
+%%%%%%%%%%%%%%%%
+
+\begin{document}
+\fontspec[Ligatures=TeX]{Helvetica Neue Light}
+
+Dr. \c{C}etinkaya-Rundel \hfill Sta 101: Data Analysis and Statistical Inference \\
+Duke University - Department of Statistical Science \hfill \\
+
+\ttl{Application exercise \appno{}: \\
+Obama's Supreme Court nominee}
+
+\inst{$\:$ \\
+Team name: \rule{10cm}{0.5pt} \\
+$\:$ \\
+Lab section: $\qquad$ 8:30 $\qquad$ 10:05 $\qquad$ 11:45 $\qquad$ 1:25 $\qquad$ 3:05$\qquad$ 4:40 \\
+$\:$ \\
+Write your responses in the spaces provided below. WRITE LEGIBLY and SHOW ALL WORK! 
+Only one submission per team is required. One team will be randomly selected and their 
+responses will be discussed and graded. Concise and coherent are best!}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+On a Washington Post-ABC News national poll conducted March 3-6, 2016, 63\% of 1,000 randomly sampled American adults said they think the Senate should hold hearings on Obama's Supreme Court nominee.
+
+Source: {\footnotesize \url{http://wpo.st/-TZN1}}
+
+%
+
+Don't forget to check the conditions when completing the following tasks.
+
+\begin{enumerate}
+
+\item You are asked to write a newspaper article about the percentage of Americans who thinks the Senate should hold hearings on Obama's Supreme Court nominee. You, obviously, shouldn't just report the point estimate from the survey, but instead 
+also provide a margin of error around it. Report the findings in one sentence at the 95\% confidence level.
+
+\soln{5cm}{
+Conditions: (1) Independence: SRS + 1000 < 10\% of all americans, therefore whether or not one participant in the sample
+thinks the Senate should hold hearings on Obama's Supreme Court nominee is independent of another. \\
+(2) S: $1000 \times 0.63 = 630$ and F: $1000 \times 0.37 = 370$, both greater than 10. \\
+Therefore we can assume that the sampling distribution of Americans who say they have seen or been in the presence
+of a ghost in samples of size 2,003 is nearly normal.\\
+$SE = \sqrt{ \frac{ 0.63 \times 0.37 }{ 1000 } } = 0.0153$ \\
+$0.63 \pm 1.96 \times 0.0153 = 0.63 \pm 0.03 = (0.60, 0.66)$ \\
+We are 95\% confident that 60\% to 63\% think the Senate should hold hearings on Obama's Supreme Court nominee.}
+
+\pagebreak
+
+\item The newspaper article stated the following:
+
+\textit{The Post-ABC poll was conducted March 3-6 among a random national sample of 1,000 adults, including interviews on landline and cellular phones. The margin of sampling error for overall results is plus or minus 3.5 percentage points.}
+
+There is one piece of information missing in this statement for you to be able to confirm it. What is this information? 
+
+\soln{2cm}{
+The confidence level is not given. It is clearly not 95\%.
+}
+
+\item Suppose you work for the Washington Post-ABC News polling agency and you are given the task to conduct this poll again in a way such that it yields an estimate with a margin of error of at most 2.2\%. How many people, at a minimum, should this new poll be conducted on?
+
+\soln{5cm}{
+$0.022 \ge 1.96 \sqrt{\frac{0.63 \times 0.37}{n}} \rightarrow n \ge 1850.159$, At least 1851.
+}
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

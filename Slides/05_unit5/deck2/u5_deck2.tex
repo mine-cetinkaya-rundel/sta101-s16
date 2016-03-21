@@ -1,0 +1,397 @@
+% -*- TeX-engine: xetex; eval: (auto-fill-mode 0); eval: (visual-line-mode 1); -*-
+% Compile with XeLaTeX
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% Option 1: Slides: (comment for handouts)   %
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[slidestop,compress,mathserif,12pt,t,professionalfonts,xcolor=table]{beamer}
+
+%% solution stuff
+%\newcommand{\solnMult}[1]{
+%\only<1>{#1}
+%\only<2->{\red{\textbf{#1}}}
+%}
+%\newcommand{\soln}[1]{\textit{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Option 2: Handouts, without solutions (post before class)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
+
+% % handout layout
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+
+% % solution stuff
+ \newcommand{\solnMult}[1]{#1}
+ \newcommand{\soln}[1]{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Option 3: Handouts, with solutions (may post after class if need be)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
+
+% % handout layout
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+
+% % solution stuff
+% \newcommand{\solnMult}[1]{\red{\textbf{#1}}}
+% \newcommand{\soln}[1]{\textit{#1}}
+
+%%%%%%%%%%
+% Load style file, defaults  %
+%%%%%%%%%%
+
+\input{../../lec_style.tex}
+\input{../../definitions_default.tex}
+% ALT ALT
+% \input{../../definitions_custom.tex}
+
+%%%%%%%%%%%
+% Cover slide info    %
+%%%%%%%%%%%
+
+\title{Unit 5: Inference for categorical data}
+\subtitle{2. Inference for comparing two proportions}
+\author{\CourseName}
+\date{}
+\institute{\InstituteName}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin document and set Helvetica Neue font   %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\fontspec[Ligatures=TeX]{Helvetica Neue Light}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Title Page
+
+\begin{frame}[plain]
+
+\titlepage
+
+\vfill
+
+{\scriptsize \webLink{\PersonalSite}{Dr. \LastName{}} \hfill Slides posted at  \webURL{\CourseSite}}
+
+\addtocounter{framenumber}{-1} 
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Housekeeping}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Announcements}
+
+\begin{itemize}
+
+\item MT 2 review materials posted on the course website 
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Main ideas}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{CLT also describes the distribution of $\hat{p}_1 - \hat{p}_2$}
+\label{mi1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{CLT also describes the distribution of $\hat{p}_1 - \hat{p}_2$}
+
+\[ (\hat{p}_1 - \hat{p}_2) \sim N \pr{ mean = (p_1 - p_2), SE = \sqrt{ \frac{p_1(1-p_1)}{n_1} + \frac{p_2(1-p_2)}{n_2} } } \]
+
+Conditions:
+\begin{itemize}
+\item Independence: Random sample/assignment + 10\% rule
+\item Sample size / skew: At least 10 successes and failures
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{For HT where $H_0: p_1 = p_2$, pool!}
+\label{mi2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{For HT where $H_0: p_1 = p_2$, pool!}
+
+As with working with a single proportion,
+
+\begin{itemize}
+
+\item When doing a HT where $H_0: p_1 = p_2$ (almost always for HT), use expected counts / proportions for S-F condition and calculation of the standard error.
+
+\item Otherwise use observed counts / proportions for S-F condition and calculation of the standard error.
+
+\end{itemize}
+
+\pause 
+
+Expected proportion of success for both groups when $H_0: p_1 = p_2$ is defined as the \hl{pooled proportion}:
+\[ \hat{p}_{pool} = \frac{total~successes}{total~sample~size} = \frac{suc_1 + suc_2}{n_1 + n_2} \]
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{}
+
+\clicker{Suppose in group 1 30 out of 50 observations are successes, and in group 2 20 out of 60 observations are successes. What is the pooled proportion?}
+
+\begin{enumerate}[(a)]
+\item $\frac{30}{50}$
+\item $\frac{20}{60}$
+\item $\frac{30}{50} + \frac{20}{60}$
+\item \solnMult{$\frac{30 + 20}{50 + 60}$}
+\item $\frac{\frac{30}{50} + \frac{20}{60}}{2}$
+\end{enumerate}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{When S-F fails, simulate!}
+\label{mi3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{When S-F fails, simulate!}
+
+\begin{itemize}
+
+\item If the S-F condition is met, can do theoretical inference: Z test, Z interval
+
+\item If the S-F condition is not met, must use simulation based methods: randomization test, bootstrap interval
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Applications}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{On the perils of living dangerously in the slasher horror film}
+
+{\small \textbf{Abstract:} \textit{The slasher horror film has been deplored based on claims that it depicts eroticized 
+violence against predominately female characters as punishment for sexual activities. To test this assertion, a 
+quantitative content analysis was conducted to examine the extent to which gender differences are evident in the 
+association between character survival and engagement in sexual activities. Information pertaining to gender, 
+engagement in sexual activities, and survival was coded for film characters from a simple random sample of 50 
+English-language, North American slasher films released between 1960 and 2009.}}
+
+\vfill
+
+{\scriptsize Welsh, Andrew. \webLink{http://link.springer.com/article/10.1007/s11199-010-9762-x}{``On the perils of living 
+dangerously in the slasher horror film: Gender differences in the association between sexual activity and survival."} 
+Sex Roles 62.11-12 (2010): 762-773.}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Males...}
+
+\disc{Is survival for \textbf{male} characters in slasher films associated with sexual activity?}
+
+\begin{center}
+\includegraphics[width=0.6\textwidth]{figures/slasher/welsh_table3_males} \\
+\pause
+$H_0: p_{sex~present} = p_{sex~absent} \qquad H_A: p_{sex~present} \ne p_{sex~absent}$
+\end{center}
+
+\pause
+
+\begin{enumerate}
+\item Independence: The movies are randomly selected, but the characters are not. Characters
+featured in the same movie may not be independent, but we'll make a simplifying assumption 
+and ignore this potential.
+\item Success-failure: ?
+\end{enumerate}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\clicker{Assuming that the null hypothesis ($H_0: p_{sex~present} = p_{sex~absent}$) is true, which of the following 
+is the pooled proportion of characters who survived?}
+
+\twocol{0.4}{0.6}{
+\begin{enumerate}[(a)]
+\item $\frac{7}{74} = 0.095$
+\item $\frac{28}{189} = 0.148$
+\item $\frac{7}{74 + 189} = 0.027$
+\item \solnMult{$\frac{7 + 28}{74 + 189} = 0.133$}
+\item $\frac{67 + 161}{74 + 189} = 0.867$
+\end{enumerate}
+}
+{
+\includegraphics[width=\textwidth]{figures/slasher/welsh_table3_males}
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\clicker{Assuming that the null hypothesis ($H_0: p_{sex~present} = p_{sex~absent}$) is true, how many males 
+characters involved in sexual activity are expected to survive?}
+
+\twocol{0.5}{0.5}{
+\begin{enumerate}[(a)]
+\item $0.133 \times (28 + 7) = 4.655$
+\item \solnMult{$0.133 \times 74 = 9.842$}
+\item $0.133 \times (74 + 189) = 34.979$ 
+\item $7$
+\item $7 + 28 = 35$
+\end{enumerate}
+}
+{
+\includegraphics[width=\textwidth]{figures/slasher/welsh_table3_males}
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Simulation scheme}
+
+\begin{enumerate}
+
+\item Use 263 index cards, where each card represents a male character in a slasher film in the sample.
+
+\pause
+
+\item Mark 35 of the cards as ``survival" and the remaining 228 as ``death".
+
+\pause
+
+\item Shuffle the cards and split into two groups of size 74 and 189, for sexual activity present and absent,
+respectively.
+
+\pause
+
+\item Calculate the difference between the proportions of ``survival" in the sexual activity present and absent
+groups.
+
+\pause
+
+\item Repeat steps (3) and (4) many times to build a randomization distribution of differences in simulated proportions.
+
+\end{enumerate}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]
+\frametitle{Simulate in R}
+
+\vspace{-0.25cm}
+
+{\tiny
+\begin{Verbatim}[frame=single, formatcom=\color{blue}]
+# read and subset data for males
+slasher <- read.csv("https://stat.duke.edu/~mc301/data/slasher.csv")
+slasher_m <- slasher %>%
+  filter(gender == "male")
+  
+# load inference function
+load(url("https://stat.duke.edu/~mc301/R/fun/inference.RData"))
+
+# run the hypothesis test
+inference(y = outcome, x = sexual_activity, data = slasher_m,
+          success = "survival", statistic = "proportion", 
+          type = "ht", null = 0, alternative = "twosided", 
+          method = "simulation", seed = 66613)
+\end{Verbatim}
+}
+
+\pause
+
+{\tiny
+\begin{Verbatim}[frame=single, formatcom=\color{gray}]
+Response variable: categorical (2 levels), Explanatory variable: categorical (2 levels) 
+n_absent = 189, p_hat_absent = 0.1481
+n_absent = 74, p_hat_absent = 0.0946
+H0: p_absent =  p_absent
+HA: p_absent != p_absent
+p_value = 0.3465
+\end{Verbatim}
+}
+
+\includegraphics[width=0.75\textwidth]{figures/slasher/male_rand}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\vfill
+
+\app{App Ex 5.2}{See course website for details.}
+
+\vfill
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Summary}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Summary of main ideas}
+
+\vfill
+
+\begin{enumerate}
+
+\item \nameref{mi1}
+
+\item \nameref{mi2}
+
+\item \nameref{mi3}
+
+\end{enumerate}
+
+\vfill
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
