@@ -17,7 +17,7 @@ library(ggplot2)
 **Your reproducible lab report:** Before you get started, download the R Markdown 
 template for this lab. Remember all of your code and answers go in this document:
 ```{r load-template, eval = FALSE}
-download("https://stat.duke.edu/courses/Fall16/sta101.001/rmd/lab9.Rmd", destfile = "lab9.Rmd")
+download("https://stat.duke.edu/courses/Spring16/sta101.001/rmd/lab9.Rmd", destfile = "lab9.Rmd")
 ```
 </div>
 
