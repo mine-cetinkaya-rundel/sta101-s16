@@ -17,9 +17,10 @@ title: Schedule
 | Mar 21, Mon | **RA 5** in class |
 |             | [Lesson 5.1: Inference for a single proportion](post/slides/u5_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u5_deck1H.pdf) |
 |             | [App Ex 5.1: Inference for a single proportion](post/app/app_Single_prop.pdf)|
+| Mar 22, Tue  | DS 9: One and two proportions  &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](https://youtu.be/6bgVSkLxm8o) |
 | Mar 23, Wed | [Lesson 5.2: Inference for comparing two proportions](post/slides/u5_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u5_deck2H.pdf) |
 |             | [App Ex 5.2: Inference for comparing two proportions](post/app/app_Compare_two_prop.pdf) |
-| Mar 24, Thu | [Lab 8: Inference for categorical data](https://mine.shinyapps.io/inf_for_categorical_data) |
+| Mar 24, Thu | [Lab 8: Inference for categorical data](http://smith.stat.duke.edu:3838/mine/inf_for_categorical_data_lab/) |
 | Mar 28, Mon | [Lesson 5.3: Chi-square tests](post/slides/u5_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u5_deck3H.pdf)                  |
 |             | [App Ex 5.3: Chi-square tests](post/app/app_Chisq_tests.pdf) |
 
@@ -296,7 +297,7 @@ title: Schedule
 | Feb 29, Mon | [Lesson 4.1: Inference with t](post/slides/u4_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u4_deck1H.pdf) |
 |             | [App Ex 4.1: Comparing means](post/app/app_Compare_means.pdf) |
 |             | **RA 4** in class |
-| Mar 1, Tue  | DS 7: t inference &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](hhttps://youtu.be/qqMZdg8dE0c) |
+| Mar 1, Tue  | DS 7: t inference &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](https://youtu.be/qqMZdg8dE0c) |
 | Mar 2, Wed  | [Lesson 4.2: Bootstrap intervals](post/slides/u4_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u4_deck2H.pdf) |
 |             | [App Ex 4.2: Bootstrap intervals](post/app/app_Bootstrap_intervals.pdf) |
 | Mar 3, Thur | Lab: Work on project proposal |
