@@ -15,13 +15,13 @@ title: Schedule
 ##### In class / lab
 
 | Mar 21, Mon | **RA 5** in class |
-|             | [Lesson 5.1: Inference for a single proportion](post/slides/u5_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u5_deck1H.pdf) |
+|             | [Lesson 5.1: Inference for a single proportion](post/slides/u5_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u5_deck1H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=e59f36b5-8df5-40ba-85ca-da549783c206) |
 |             | [App Ex 5.1: Inference for a single proportion](post/app/app_Single_prop.pdf)|
 | Mar 22, Tue  | DS 9: One and two proportions  &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](https://youtu.be/6bgVSkLxm8o) |
-| Mar 23, Wed | [Lesson 5.2: Inference for comparing two proportions](post/slides/u5_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u5_deck2H.pdf) |
+| Mar 23, Wed | [Lesson 5.2: Inference for comparing two proportions](post/slides/u5_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u5_deck2H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=534da708-68ba-4511-8f0e-ae52714e724f) |
 |             | [App Ex 5.2: Inference for comparing two proportions](post/app/app_Compare_two_prop.pdf) |
 | Mar 24, Thu | [Lab 8: Inference for categorical data](http://smith.stat.duke.edu:3838/mine/inf_for_categorical_data_lab/) |
-| Mar 28, Mon | [Lesson 5.3: Chi-square tests](post/slides/u5_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u5_deck3H.pdf)                  |
+| Mar 28, Mon | [Lesson 5.3: Chi-square tests](post/slides/u5_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u5_deck3H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=c60f7665-efe0-4ba9-8146-5374279fbfd1) |
 |             | [App Ex 5.3: Chi-square tests](post/app/app_Chisq_tests.pdf) |
 
 ##### Due dates
@@ -294,18 +294,18 @@ title: Schedule
 ##### In class / lab
 
 | Feb 25, Thu | [Lab 6: Inference for numerical data](post/labs/inf_for_numerical_data.html) |
-| Feb 29, Mon | [Lesson 4.1: Inference with t](post/slides/u4_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u4_deck1H.pdf) |
+| Feb 29, Mon | [Lesson 4.1: Inference with t](post/slides/u4_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u4_deck1H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=ae8d82f6-0b28-4356-bcec-1b2b337ae5a8) |
 |             | [App Ex 4.1: Comparing means](post/app/app_Compare_means.pdf) |
 |             | **RA 4** in class |
 | Mar 1, Tue  | DS 7: t inference &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](https://youtu.be/qqMZdg8dE0c) |
-| Mar 2, Wed  | [Lesson 4.2: Bootstrap intervals](post/slides/u4_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u4_deck2H.pdf) |
+| Mar 2, Wed  | [Lesson 4.2: Bootstrap intervals](post/slides/u4_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u4_deck2H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=95c70019-0a31-4118-8059-d07a39bfd229) |
 |             | [App Ex 4.2: Bootstrap intervals](post/app/app_Bootstrap_intervals.pdf) |
 | Mar 3, Thur | Lab: Work on project proposal |
-| Mar 7, Mon  | [Lesson 4.3: Power](post/slides/u4_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u4_deck3H.pdf) |
+| Mar 7, Mon  | [Lesson 4.3: Power](post/slides/u4_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u4_deck3H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=326cb840-d24b-4bc8-994b-6dee5dfe1780) |
 |             | [App Ex 4.3: Power](post/app/app_Power.pdf) |
 | Mar 8, Tue  | DS 8: DS 8: Paired vs. independent groups + Power  &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](https://youtu.be/8P-vPKxPbvg) |
-| Mar 9, Wed  | [Lesson 4.4: ANOVA](post/slides/u4_deck4.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u4_deck4H.pdf) |
-|             | [App Ex 4.4: ANOVA](post/app/app_ANOVA.pdf) |
+| Mar 9, Wed  | [Lesson 4.4: ANOVA](post/slides/u4_deck4.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u4_deck4H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=83dcda20-d6c0-431f-9b52-c73e8303460e) |
+|             | [App Ex 4.4: ANOVA](post/app/app_ANOVA.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://youtu.be/oM-Wmf7K_cs)|
 | Mar 10, Thu | [Lab 7: (More) inference for numerical data](post/labs/more_inf_for_numerical_data.html) |
 
 ##### Due dates

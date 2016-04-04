@@ -1,0 +1,87 @@
+%:
+%:
+\documentclass[12pt]{article}
+\input{../../app_style.tex}
+
+%%%%%%%%%%%
+% App Ex number    %
+%%%%%%%%%%%
+
+% DON'T FORGET TO UPDATE
+
+\newcommand{\appno}[1]
+{6.1}
+
+%%%%%%%%%%%%%%
+% Turn on/off solutions       %
+%%%%%%%%%%%%%%
+%:
+
+% Off
+\newcommand{\soln}[2]{$\:$\\ \vspace{#1}}{}
+
+% On
+%\newcommand{\soln}[2]{\textit{\textcolor{custom_red}{#2}}}{}
+
+%%%%%%%%%%%%%%%%
+% Document
+%%%%%%%%%%%%%%%%
+
+\begin{document}
+\fontspec[Ligatures=TeX]{Helvetica Neue Light}
+
+Dr. \c{C}etinkaya-Rundel \hfill Sta 101: Data Analysis and Statistical Inference \\
+Duke University - Department of Statistical Science \hfill \\
+
+\ttl{Application exercise \appno{}: \\
+Murders and poverty}
+
+\inst{$\:$ \\
+Team name: \rule{10cm}{0.5pt} \\
+$\:$ \\
+Lab section: $\qquad$ 8:30 $\qquad$ 10:05 $\qquad$ 11:45 $\qquad$ 1:25 $\qquad$ 3:05$\qquad$ 4:40 \\
+$\:$ \\
+Write your responses in the spaces provided below. WRITE LEGIBLY and SHOW ALL WORK! 
+Only one submission per team is required. One team will be randomly selected and their 
+responses will be discussed and graded. Concise and coherent are best!}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We want to build a model for for predicting annual murders per million from percentage living in poverty in a random sample of 20 metropolitan areas. The scatterplot below shows the relationship between these variables, and the summary table contains all values you will need to construct the linear model.
+
+\begin{multicols}{2}
+\begin{center}
+\includegraphics[width=0.3\textwidth]{murder/annual_murders_per_mil_perc_pov}
+\end{center}
+%
+\begin{tabular}{l r r}
+\hline
+		& annual murders		& \% in poverty \\
+		& / million $(y)$		& $(x)$   \\
+\hline
+mean	& $\bar{y} = 20.57$	& $\bar{x} = 19.72$  \\
+sd		& $s_y = 9.88$		& $s_x = 3.24$ \\
+\hline
+		& correlation		& $R = 0.84$ \\
+\hline
+\end{tabular}
+\end{multicols}
+%
+
+\begin{enumerate}
+
+\item Calculate the slope.
+
+\soln{1cm}{$b_1 = R \times \frac{s_y}{s_x} = 0.84 * \frac{9.88}{3.24} = 2.56$}
+
+\item Calculate the intercept.
+
+\soln{1cm}{$b_0 = \bar{y} - b_1 \times \bar{x} = 20.57 - 2.56 * 19.72 = -29.91$}
+
+\item Write out the linear model.
+
+\soln{1cm}{$\widehat{murder} = -29.91 + 2.56~poverty$}
+
+\end{enumerate}
+
+\end{document}

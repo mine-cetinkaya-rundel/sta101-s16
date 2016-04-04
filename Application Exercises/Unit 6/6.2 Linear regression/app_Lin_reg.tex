@@ -1,0 +1,123 @@
+\documentclass[11pt]{article}
+
+\input{../app_style.tex}
+\usepackage{fancyvrb}	% for colored code chunks
+
+%%%%%%%%%%%
+% App Ex number    %
+%%%%%%%%%%%
+
+% DON'T FORGET TO UPDATE
+
+\newcommand{\appno}[1]
+{6.2}
+
+%%%%%%%%%%%%%%
+% Turn on/off solutions       %
+%%%%%%%%%%%%%%
+
+% Off
+\newcommand{\soln}[2]{$\:$\\ \vspace{#1}}{}
+
+%%% On
+%\newcommand{\soln}[2]{\textit{\textcolor{custom_red}{#2}}}{}
+
+%%%%%%%%%%%%%%%%
+% Document
+%%%%%%%%%%%%%%%%
+
+\begin{document}
+\fontspec[Ligatures=TeX]{Helvetica Neue Light}
+
+Dr. \c{C}etinkaya-Rundel \hfill Sta 101: Data Analysis and Statistical Inference \\
+Duke University - Department of Statistical Science \hfill \\
+
+\ttl{Application exercise \appno{}: \\
+Linear regression}
+
+\inst{$\:$ \\
+Team name: \rule{10cm}{0.5pt} \\
+$\:$ \\
+Lab section: $\qquad$ 8:30 $\qquad$ 10:05 $\qquad$ 11:45 $\qquad$ 1:25 $\qquad$ 3:05 \\
+$\:$ \\
+Write your responses in the spaces provided below. WRITE LEGIBLY and SHOW ALL WORK! 
+Only one submission per team is required. One team will be randomly selected and their 
+responses will be discussed and graded. Concise and coherent are best!}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Driver age and highway sign-reading distance}
+
+In a study of the legibility and visibility of highway signs, a Pennsylvania research firm determined the maximum distance at which 
+each of thirty drivers could read a newly designed sign. The thirty participants in the study ranged in age from 18 to 82 years old. 
+The government agency that funded the research hoped to improve highway safety for older drivers, and wanted to examine the 
+relationship between age and the sign legibility distance.
+
+First, load the dataset and the R Markdown template:
+
+{\scriptsize
+\begin{Verbatim}[frame=single, formatcom=\color{blue}]
+download("https://stat.duke.edu/courses/Fall15/sta101.002/rmd/app_Lin_reg.Rmd", destfile = "app_Lin_reg.Rmd")
+\end{Verbatim}
+}
+
+And make sure the dataset is loaded as well:
+
+{\scriptsize
+\begin{Verbatim}[frame=single, formatcom=\color{blue}]
+vision <- read.csv("https://stat.duke.edu/~mc301/data/vision.csv")
+\end{Verbatim}
+}
+
+If you have questions about the \texttt{R} syntax, refer to the last lab and the slides, or just ask. Upload the R Markdown and HTML 
+files to Sakai under the appropriate assignment. Note that the R Markdown file includes additional information and helper code that 
+will help you.
+
+\textbf{Extremely important:} Note that the R chunks are currently turned off with 
+\texttt{eval = FALSE}, since the code is incomplete (you will be filling in the 
+appropriate code). Once you do, turn on the chunk by setting \texttt{eval = TRUE}.
+
+
+\subsection*{Part 1 - Finish in class}
+
+\begin{enumerate}
+\item Fit a linear model predicting distance at which drivers can read highway signs (in feet) based on age (in years). Save this model 
+as \texttt{mod}, include the regression output in your answer, and write the linear model.
+
+\item Interpret the slope and the intercept in context of the data and the model.
+
+\item Interpret the p-value for the slope in context of the data  and the model.
+
+\item Based on this p-value, does age appear to be a significant predictor of distance at which drivers can read highway signs? Make sure 
+to state the hypotheses and the significance level you are using.
+
+\item Construct a 95\% confidence interval for the slope and interpret it.
+
+\item Predict the maximum distance at which a 30 year old driver can read highway signs, and report this prediction with a 95\%
+prediction interval.
+
+\end{enumerate}
+
+\vfill
+
+\begin{center}
+\textit{See next page for Part 2}
+\end{center}
+
+%
+
+\subsection*{Part 2 - Work on it in class if there is extra time, or on your own after class}
+
+\begin{enumerate}
+
+\item Confirm the values of the slope and the intercept using summary statistics of the data, i.e. means and standard deviations of the 
+variables as well as the correlation between them.  Note that we have provided some of the code for you to calculate these summary statistics, and placed them in a data frame called \texttt{vision\_summ}, you just need to use these values in the next chunk to calculate the slope and the intercept.
+
+\item Confirm the t-score given on the regression output for the slope, i.e. show how it can be calculated using other values from the output.
+
+\item Calculate the $R^2$ using the ANOVA output for this model. Confirm that this value matches the value of $R^2$ reported 
+in the regression output.
+
+\end{enumerate}
+
+\end{document}

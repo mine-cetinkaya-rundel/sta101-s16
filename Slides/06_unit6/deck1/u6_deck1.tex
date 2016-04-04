@@ -1,0 +1,420 @@
+% -*- TeX-engine: xetex; eval: (auto-fill-mode 0); eval: (visual-line-mode 1); -*-
+% Compile with XeLaTeX
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% Option 1: Slides: (comment for handouts)   %
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[slidestop,compress,mathserif,12pt,t,professionalfonts,xcolor=table]{beamer}
+
+% solution stuff
+%\newcommand{\solnMult}[1]{
+%\only<1>{#1}
+%\only<2->{\red{\textbf{#1}}}
+%}
+%\newcommand{\soln}[1]{\textit{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Option 2: Handouts, without solutions (post before class)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
+%
+% % handout layout
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+%
+%% % solution stuff
+ \newcommand{\solnMult}[1]{#1}
+ \newcommand{\soln}[1]{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Option 3: Handouts, with solutions (may post after class if need be)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
+
+% % handout layout
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+
+% % solution stuff
+% \newcommand{\solnMult}[1]{\red{\textbf{#1}}}
+% \newcommand{\soln}[1]{\textit{#1}}
+
+%%%%%%%%%%
+% Load style file, defaults  %
+%%%%%%%%%%
+
+\input{../../lec_style.tex}
+\input{../../definitions_default.tex}
+% ALT ALT
+% \input{../../definitions_custom.tex}
+
+%%%%%%%%%%%
+% Cover slide info    %
+%%%%%%%%%%%
+
+\title{Unit 6: Introduction to linear regression}
+\subtitle{1. Introduction to regression}
+\author{\CourseName}
+\date{}
+\institute{\InstituteName}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin document and set Helvetica Neue font   %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\fontspec[Ligatures=TeX]{Helvetica Neue Light}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Title Page
+
+\begin{frame}[plain]
+
+\titlepage
+
+\vfill
+
+{\scriptsize \webLink{\PersonalSite}{Dr. \LastName{}} \hfill Slides posted at  \webURL{\CourseSite}}
+
+\addtocounter{framenumber}{-1} 
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Housekeeping}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Announcements}
+
+\begin{itemize}
+
+\item 
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Modeling numerical variables}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Modeling numerical variables}
+
+\begin{itemize}
+
+\item So far we have worked with single numerical and categorical variables, and explored relationships between numerical and categorical, and two categorical variables.
+
+\item In this unit we will learn to quantify the relationship between two numerical variables, as well as modeling numerical response variables using a numerical or categorical explanatory variable.
+
+\item In the next unit we'll learn to model numerical variables using many explanatory variables at once.
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Main ideas}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Correlation coefficient describes the strength and direction of the linear association between two numerical variables}
+\label{mi1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Guessing the correlation}
+
+\clicker{Which of the following is the best guess for the correlation between annual murders per million and percentage living in poverty?}
+
+\twocol{0.4}{0.6}
+{
+\begin{enumerate}[(a)]
+\item -1.52
+\item -0.63
+\item -0.12
+\item 0.02
+\item \solnMult{0.84}
+\end{enumerate}
+}
+{
+\begin{center}
+\includegraphics[width=0.8\textwidth]{figures/murder/annual_murders_per_mil_perc_pov}
+\end{center}
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Guessing the correlation}
+
+\clicker{Which of the following is the best guess for the correlation between annual murders per million and population size?}
+
+\twocol{0.4}{0.6}
+{
+\begin{enumerate}[(a)]
+\item -0.97
+\item -0.61
+\item \solnMult{-0.06}
+\item 0.55
+\item 0.97
+\end{enumerate}
+}
+{
+\begin{center}
+\includegraphics[width=0.8\textwidth]{figures/murder/annual_murders_per_mil_population}
+\end{center}
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Assessing the correlation}
+
+\clicker{Which of the following is has the strongest correlation, i.e. correlation coefficient closest to +1 or -1?}
+
+\twocol{0.8}{0.2}
+{
+\begin{center}
+\includegraphics[width=0.75\textwidth]{figures/cor/cor}
+\end{center}
+}
+{
+\soln{\only<2>{\red{
+(b) $\rightarrow$ correlation means \underline{linear} association
+}}}
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Play the game!}
+
+\vfill
+
+Upload a screen shot to Sakai (EC - Correlation Game) by midnight on April 8
+for extra credit PS 6 (1 pt on the problem set).
+
+\webURL{http://guessthecorrelation.com/}
+
+\vfill
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Spurious correlations}
+
+\vfill
+
+Remember: correlation does not always imply causation!
+
+\webURL{http://www.tylervigen.com/}
+
+\vfill
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Least squares line minimizes squared residuals}
+\label{mi2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{(2) Least squares line minimizes squared residuals}
+
+\begin{itemize}
+
+\item Residuals are the leftovers from the model fit, and calculated as the difference between the observed and predicted $y$: $e_i = y_i - \hat{y}_i$
+
+\item The least squares line minimizes squared residuals:
+\begin{itemize}
+\item Population data: $\hat{y} = \beta_0 + \beta_1 x$
+\item Sample data: $\hat{y} = b_0 + b_1 x$
+\end{itemize}
+
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.7\textwidth]{figures/murder/annual_murders_per_mil_perc_pov_res}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Interpreting the least squares line}
+\label{mi3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{(3) Interpreting the last squares line}
+
+\begin{itemize}
+
+\item \hl{Slope:} For each \underline{unit} increase in \underline{$x$}, \underline{$y$} is expected to be\underline{higher/lower} on average by \underline{the slope}.
+\[ b_1 = \frac{s_y}{s_x} R \]
+
+\item \hl{Intercept:} When \underline{$x = 0$}, \underline{$y$} is expected to equal \underline{the intercept}.
+\[ b_0 = \bar{y} - b_1 \bar{x} \]
+\begin{itemize}
+\item The calculation of the intercept uses the fact the a regression line \textbf{always} passes through $(\bar{x},\bar{y})$.
+\end{itemize}
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\vfill
+
+\disc{Why does the regression line \textbf{always} pass through $(\bar{x},\bar{y})$?}
+
+\pause
+
+\begin{itemize}
+
+\item If there is no relationship between $x$ and $y$ ($b_1 = 0$), the best guess for $\hat{y}$ for any value of $x$ is $\bar{y}$.
+
+\item Even when there is a relationship between $x$ and $y$ ($b_1 \ne 0$), the best guess for $\hat{y}$ when $x = \bar{x}$ is still $\bar{y}$.
+
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=\textwidth]{figures/mean/mean}
+\end{center}
+
+\vfill
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{}
+
+\vfill
+
+\app{6.1 Linear model}{See course website for details}
+
+\vfill
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{}
+
+\clicker{What is the interpretation of the slope?}
+
+\soln{\[ \widehat{murders} = -29.91 + 2.56~poverty \]}
+
+\begin{enumerate}[(a)]
+\item Each additional percentage in those living in poverty increases number of annual murders per million by 2.56.
+\item \solnMult{For each percentage increase in those living in poverty, the number of annual murders per million is expected to be higher by 2.56 on average.}
+\item For each percentage increase in those living in poverty, the number of annual murders per million is expected to be lower by 29.91 on average.
+\item For each percentage increase annual murders per million, the percentage of those living in poverty is expected to be higher by 2.56 on average.
+\end{enumerate}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Predict, but don't extrapolate}
+\label{mi4}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{}
+
+\clicker{Suppose you want to predict annual murder count (per million) for a series of districts that were not included in the dataset. For which of the following districts would you be most comfortable with your prediction?}
+
+\twocol{0.4}{0.6}
+{
+A district where \% in poverty =
+\begin{enumerate}[(a)]
+\item 5\%
+\item 15\%
+\item \solnMult{20\%}
+\item 26\%
+\item 40\%
+\end{enumerate}
+}
+{
+\begin{center}
+\includegraphics[width=0.9\textwidth]{figures/murder/annual_murders_per_mil_perc_pov}
+\end{center}
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{A note about the intercept}
+
+Sometimes the intercept might be an extrapolation: useful for adjusting the height of the line, but meaningless in the context of the data.
+
+\begin{center}
+\includegraphics[width=\textwidth]{figures/murder/annual_murders_per_mil_perc_pov_wide}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Summary}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Summary of main ideas}
+
+\vfill
+
+\begin{enumerate}
+
+\item \nameref{mi1}
+
+\item \nameref{mi2}
+
+\item \nameref{mi3}
+
+\item \nameref{mi4}
+
+\end{enumerate}
+
+\vfill
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
