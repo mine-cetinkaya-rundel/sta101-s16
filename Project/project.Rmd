@@ -170,7 +170,8 @@ length)
    employ creative approaches that evaluate relationships between two 
    variables while controlling for another.
    
-3. **Inference:** Come up with a research question that can be answered 
+3. **Inference:** Use one of your research questions (or come up with a new
+   one depending on feedback from the proposal) that can be answered 
    with a hypothesis test or a confidence interval, e.g. "Is there a 
    difference in mean audience scores between genres?" or "What is the 
    average difference in audience scores between movies that do and do 
