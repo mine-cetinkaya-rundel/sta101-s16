@@ -390,6 +390,49 @@ Sometimes the intercept might be an extrapolation: useful for adjusting the heig
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{frame}[fragile]
+\frametitle{Calculating predicted values}
+
+\hl{By hand:} $\widehat{murder} = -29.91 + 2.56~poverty$
+
+The predicted number of murders per million per year for a county with 20\% poverty rate is: 
+
+\pause
+
+\[ \widehat{murder} = -29.91 + 2.56 \times 20 = 21.29 \]
+
+\vfill
+
+\pause
+
+\hl{In R:}
+
+{\scriptsize
+\begin{Verbatim}[frame=single, formatcom=\color{blue}]
+# load data
+murder <- read.csv("https://stat.duke.edu/~mc301/data/murder.csv")
+# fit model
+m_mur_pov <- lm(annual_murders_per_mil ~ perc_pov, data = murder)
+# create new data
+newdata <- data.frame(perc_pov = 20)
+# predict
+predict(m_mur_pov, newdata)
+\end{Verbatim}
+}
+
+\pause
+
+{\scriptsize
+\begin{Verbatim}[frame=single, formatcom=\color{gray}]
+       1 
+21.28663 
+\end{Verbatim}
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Summary}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

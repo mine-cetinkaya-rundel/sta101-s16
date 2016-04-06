@@ -6,8 +6,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 
 %\documentclass[slidestop,compress,mathserif,12pt,t,professionalfonts,xcolor=table]{beamer}
-%
-%% solution stuff
+
+% solution stuff
 %\newcommand{\solnMult}[1]{
 %\only<1>{#1}
 %\only<2->{\red{\textbf{#1}}}
@@ -18,13 +18,13 @@
 % Option 2: Handouts, without solutions (post before class)    %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
+\documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
 
  % handout layout
  \usepackage{pgfpages}
  \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
 
-% % solution stuff
+%% % solution stuff
  \newcommand{\solnMult}[1]{#1}
  \newcommand{\soln}[1]{}
 
@@ -115,94 +115,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Main ideas}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Predict, but don't extrapolate}
-\label{mi1}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-\frametitle{}
-
-\clicker{Suppose you want to predict annual murder count (per million) for a series of districts that were not included in the dataset. 
-For which of the following districts would you be most comfortable with your prediction?}
-
-\twocol{0.4}{0.6}
-{
-A district where \% in poverty =
-\begin{enumerate}[(a)]
-\item 5\%
-\item 15\%
-\item \solnMult{20\%}
-\item 26\%
-\item 40\%
-\end{enumerate}
-}
-{
-\begin{center}
-\includegraphics[width=0.9\textwidth]{figures/murder/annual_murders_per_mil_perc_pov}
-\end{center}
-}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-\frametitle{A note about the intercept}
-
-Sometimes the intercept might be an extrapolation: useful for adjusting the height of the line, but meaningless in the context of the data.
-
-\begin{center}
-\includegraphics[width=\textwidth]{figures/murder/annual_murders_per_mil_perc_pov_wide}
-\end{center}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[fragile]
-\frametitle{Calculating predicted values}
-
-\hl{By hand:} $\widehat{murder} = -29.91 + 2.56~poverty$
-
-The predicted number of murders per million per year for a county with 20\% poverty rate is: 
-
-\pause
-
-\[ \widehat{murder} = -29.91 + 2.56 \times 20 = 21.29 \]
-
-\vfill
-
-\pause
-
-\hl{In R:}
-
-{\scriptsize
-\begin{Verbatim}[frame=single, formatcom=\color{blue}]
-# load data
-murder <- read.csv("https://stat.duke.edu/~mc301/data/murder.csv")
-# fit model
-m_mur_pov <- lm(annual_murders_per_mil ~ perc_pov, data = murder)
-# create new data
-newdata <- data.frame(perc_pov = 20)
-# predict
-predict(m_mur_pov, newdata)
-\end{Verbatim}
-}
-
-\pause
-
-{\scriptsize
-\begin{Verbatim}[frame=single, formatcom=\color{gray}]
-       1 
-21.28663 
-\end{Verbatim}
-}
-
-\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -595,8 +507,6 @@ $\:$ \\
 \vfill
 
 \begin{enumerate}
-
-\item \nameref{mi1}
 
 \item \nameref{mi2}
 
