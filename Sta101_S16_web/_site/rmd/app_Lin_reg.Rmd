@@ -1,0 +1,183 @@
+---
+title: "App Ex 6.2: Driver age and highway sign-reading distance"
+author: "Enter team name here"
+output: 
+  html_document: 
+    highlight: pygments
+---
+
+```{r setup, include=FALSE}
+# DO NOT ALTER CODE IN THIS CHUNK
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+```
+
+* * *
+
+In a study of the legibility and visibility of highway signs, a Pennsylvania 
+research firm determined the maximum distance at which each of thirty 
+drivers could read a newly designed sign. The thirty participants in the study 
+ranged in age from 18 to 82 years old. The government agency that funded the 
+research hoped to improve highway safety for older drivers, and wanted to 
+examine the relationship between age and the sign legibility distance.
+
+The data from this study is in the `vision` dataset. The variables in this
+dataset are `age` (in years), and `distance` (in feet). Load the dataset
+using the following code:
+
+```{r}
+vision <- read.csv("https://stat.duke.edu/~mc301/data/vision.csv")
+```
+
+**Extremely important:** Note that the R chunks are currently turned off with 
+`eval = FALSE`, since the code is incomplete (you will be filling in the 
+appropriate code). Once you do, turn on the chunk by setting `eval = TRUE`.
+
+* * *
+* * *
+
+### Part 1
+
+The goal is to finish this part in class.
+
+##### Exercise 1: Fit a linear model predicting distance at which drivers can read highway signs (in feet) based on age (in years). Save this model as `mod`, include the regression output in your answer, and write the linear model.
+
+```{r fit-model, eval = FALSE}
+mod <- lm(____ ~ ____, data = ____)
+summary(mod)
+```
+
+Linear model: (Replace b0 and b1 with the appropriate values)
+
+$$\widehat{distance} = b0 + b1 \times age$$
+
+* * *
+
+##### Exercise 2: Interpret the slope and the intercept in context of the data and the model.
+
+- Slope: Insert interpretation of the slope here.
+
+- Intercept: Insert interpretation of the intercept here. 
+
+* * *
+
+##### Exercise 3: Interpret the p-value for the slope in context of the data  and the model.
+
+Insert the interpretation of the p-value here.
+
+* * *
+
+##### Exercise 4: Based on this p-value, does age appear to be a significant predictor of distance at which drivers can read highway signs? Make sure to state the hypotheses and the significance level you are using.
+
+$H_0$: Insert the null hypothesis here.
+$H_A$: Insert the alternative hypothesis here.
+
+Conclusion: Insert your conclusion here.
+
+* * *
+
+##### Exercise 5: Construct a 95% confidence interval for the slope and interpret it.
+
+```{r conf-int-slope, eval = FALSE}
+confint(mod, level = 0.95)
+```
+
+Interpretation: Insert the interpretation of the confidence interval here.
+
+* * *
+
+##### Exercise 6: Predict the maximum distance at which a 30 year old driver can read highway signs, and report this prediction with a 95% prediction interval.
+
+```{r predict, eval = FALSE}
+# create new data frame with the new age value
+newdata <- data_frame(____ = _____)
+
+# construct the prediction interval
+predict(mod, newdata, interval = "prediction", level = 0.95)
+```
+
+Interpretation: Insert your interpretation of the interval here.
+
+* * *
+* * *
+
+### Part 2: 
+
+Work on this part if there is extra time in class, or on your own
+after class.
+
+##### Exercise 1: Confirm the values of the slope and the intercept using summary statistics of the data, i.e. means and standard deviations of the variables as well as the correlation between them. Note that we have provided some of the code for you to calculate these summary statistics, and placed them in a data frame called `vision_summ`, you just need to use these values in the next chunk to calculate the slope and the intercept.
+
+```{r calc-summaries, eval = FALSE}
+vision %>%
+  summarise(x_bar = mean(age), y_bar = mean(distance), 
+            s_x = sd(age), s_y = sd(distance),
+            r = cor(age, distance))
+```
+
+```{r calc-slope-int, eval = FALSE}
+# calculate the slope using values from above
+b1 <- ____
+
+# print the slope
+b1
+  
+# calculate the intercept using values from above
+b0 <- ____
+  
+# print the intercept
+b0
+```
+
+Comment on whether the slope and intercept you calculated matches the ones 
+shown in the regression output: Insert your comment here.
+
+* * *
+
+##### Exercise 2: Confirm the t-score given on the regression output for the slope, i.e. show how it can be calculated using other values from the output.
+
+```{r calc-t, eval = FALSE}
+# insert value of the slope
+b1 <- ____
+  
+# insert value of the intercept
+se_b1 <- ____
+  
+# insert the formula for t using b1 and se_b1
+t <- ____
+  
+# print t
+t
+```
+
+Comment on whether the t-score you calculated matches the one shown in the
+regression output: Insert your comment here.
+
+* * *
+
+##### Exercise 3: Calculate the $R^2$ using the ANOVA output for this model. Confirm that this value matches the value of $R^2$ reported in the regression output.
+
+```{r anova-of-model, eval = FALSE}
+anova(mod)
+```
+
+```{r calc-rsq, eval = FALSE}
+# insert the value of the sum of squares of regression
+ss_reg <- ____
+
+# insert the value of the sum of squares of residuals
+ss_res <- ____
+
+# calculate total sum of squares using ss_reg and ss_res
+ss_tot <- ____
+
+# calculate r_sq using values from above
+r_sq <- ____
+  
+# print R-squared
+r_sq
+```
+
+Comment on whether the $R^2$ you calculated matches the one shown in the 
+regression output: Insert your comment here.

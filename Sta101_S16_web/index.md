@@ -5,51 +5,6 @@ title: Schedule
 
 | Jump to: | &nbsp;&nbsp;&nbsp; [Unit 1]({{ site.baseurl }}/#unit1) &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; [Unit 2]({{ site.baseurl }}/#unit2) &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; [Unit 3]({{ site.baseurl }}/#unit3) &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; [Unit 4]({{ site.baseurl }}/#unit4) &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; [Unit 5]({{ site.baseurl }}/#unit5) &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; [Unit 6]({{ site.baseurl }}/#unit6) &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; [Unit 7]({{ site.baseurl }}/#unit7) &nbsp;&nbsp;&nbsp; |
 
-
-### <a name="unit5"></a> Unit 5 - Inference for categorical variables
-
-##### Resources
-
-| Videos: [Videos for Unit 5]({{ site.videos }}) | Learning objectives: [LO 5]({{ site.learn_obj }}/view?page=Unit_5_Learning_Objectives) | Textbook: [Chp 6]({{ site.openintro}}) |
-
-##### In class / lab
-
-| Mar 21, Mon | **RA 5** in class |
-|             | [Lesson 5.1: Inference for a single proportion](post/slides/u5_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u5_deck1H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=e59f36b5-8df5-40ba-85ca-da549783c206) |
-|             | [App Ex 5.1: Inference for a single proportion](post/app/app_Single_prop.pdf)|
-| Mar 22, Tue  | DS 9: One and two proportions  &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](https://youtu.be/6bgVSkLxm8o) |
-| Mar 23, Wed | [Lesson 5.2: Inference for comparing two proportions](post/slides/u5_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u5_deck2H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=534da708-68ba-4511-8f0e-ae52714e724f) |
-|             | [App Ex 5.2: Inference for comparing two proportions](post/app/app_Compare_two_prop.pdf) |
-| Mar 24, Thu | [Lab 8: Inference for categorical data](http://smith.stat.duke.edu:3838/mine/inf_for_categorical_data_lab/) |
-| Mar 28, Mon | [Lesson 5.3: Chi-square tests](post/slides/u5_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u5_deck3H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=c60f7665-efe0-4ba9-8146-5374279fbfd1) |
-|             | [App Ex 5.3: Chi-square tests](post/app/app_Chisq_tests.pdf) |
-
-##### Due dates
-
-* Lab 7: Mar 24, Thu
-* [PS 5]({{ site.sakai_ps }}): Apr 1, Fri
-  * End of chapter exercises from **Chp 6**. Only turn in answers to 
-  graded questions, use the back of the book to check your work on the practice questions.
-  Must show **all** work to get credit. Click [here]({{ site.sakai_ps }}) to submit the 
-  problem set.
-  * **Graded questions:** 6.2, 6.4, 6.8, 6.12, 6.16, 6.20, 6.26, 6.28, 6.30, 6.36, 6.44, 
-  6.48, 6.52, 6.54, 6.56
-  * Practice questions: 
-    + Part 1 – Single proportion: 6.1, 6.3, 6.5, 6.9, 6.11, 6.13, 6.15, 6.19, 6.21
-    + Part 2 – Comparing two proportions: 6.23, 6.25, 6.27, 6.29, 6.31, 6.33, 6.35
-    + Part 3 – Inference for proportions via simulation: 6.51, 6.53, 6.55
-    + Part 4 – Comparing three or more proportions (Chi-square): 6.39, 6.41, 6.43, 6.45, 6.47
-* [PA 5]({{ site.sakai_pa }}): Mar 29, Tue (Note day change to allow for reviewing answers before the midterm)
-  * Take between Mar 23, Wed and Mar 29, Tue. 
-  * You have 30 minutes to complete. Only one attempt allowed. Click [here]({{ site.sakai_pa }}) to take the performance assessment.
-
-* * *
-
-### <a name="mt2"></a> Midterm 2 - Mar 30, Wed (in class)
-
-* Covers Units 4 and 5 + fundamentals from Units 1 - 3
-* Sample Midterm 2: [handout](https://sakai.duke.edu/access/content/group/255d1889-39d7-433a-96a0-55ba217ae0a7/Sample_MT2.pdf) + [solutions](https://sakai.duke.edu/access/content/group/255d1889-39d7-433a-96a0-55ba217ae0a7/Sample_MT2_Key.pdf)
-
 * * *
 
 ### <a name="unit6"></a> Unit 6 - Introduction to linear regression
@@ -62,9 +17,10 @@ title: Schedule
 
 | Mar 31, Thu | [Lab 9: Introduction to linear regression](post/labs/simple_regression.html) |
 | Apr 4, Mon  | **RA 6** in class |
-|             | [Lesson 6.1: Introduction to regression](post/slides/u6_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u6_deck1H.pdf)     |
+|             | [Lesson 6.1: Introduction to regression](post/slides/u6_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u6_deck1H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=25e60f00-8da3-46f7-af1b-9e21640bbd0a) |
 |             | [App Ex 6.1: Linear models](post/app/app_Lin_mod.pdf) |
-| Apr 6, Wed  | [Lesson 6.2: Outliers and inference for regression](post/slides/u6_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u6_deck2H.pdf)                     |
+| Apr 5, Tue  | DS 11: Linear regression &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](https://youtu.be/61V2wBmmbQg) |
+| Apr 6, Wed  | [Lesson 6.2: Outliers and inference for regression](post/slides/u6_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u6_deck2H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>]() |
 |             | [App Ex 6.2: Linear regression](post/app/app_Lin_reg.pdf) |
 
 
@@ -100,11 +56,13 @@ title: Schedule
 | Apr 7, Thu  | [Lab 10: Multiple linear regression](post/labs/multiple_regression.html)   |
 | Apr 11, Mon | **RA 7** in class |
 |             | [Lesson 7.1: Introduction to multiple linear regression ](post/slides/u7_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u7_deck1H.pdf) |
+| Apr 12, Tue | DS 12: Multiple regression &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>]() |
 | Apr 13, Wed | [Lesson 7.2: Model selection & diagnostics for MLR](post/slides/u7_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u7_deck2H.pdf)                 |
 |             | [App Ex 7.1: Multiple linear regression](post/app/app_MLR.pdf) |
 | Apr 14, Thu | Work on project |
 | Apr 18, Mon | [Lesson 7.3: Transformations and case study](post/slides/u7_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u7_deck3H.pdf)                 |
 |             | [App Ex 7.2: Interpreting models with a transformed response](post/app/app_Trans_MLR.pdf) |
+| Apr 19, Tue | DS 13: Project help - In Old Chem 213 |
 | Apr 20, Wed | [Lesson 7.4]() |
 | Apr 21, Thu | Lab: Poster session
 
@@ -135,6 +93,7 @@ title: Schedule
 ##### In class
 
 | Apr 25, Mon | [Case study]() |
+| Apr 26, Tue | No discussion section - Office hours in Old Chem 213 |
 | Apr 27, Wed | [Review / synthesis]() |
 
 * * *
@@ -338,3 +297,49 @@ title: Schedule
 * Prepare for Unit 5
 
 * * *
+
+### <a name="unit5"></a> Unit 5 - Inference for categorical variables
+
+##### Resources
+
+| Videos: [Videos for Unit 5]({{ site.videos }}) | Learning objectives: [LO 5]({{ site.learn_obj }}/view?page=Unit_5_Learning_Objectives) | Textbook: [Chp 6]({{ site.openintro}}) |
+
+##### In class / lab
+
+| Mar 21, Mon | **RA 5** in class |
+|             | [Lesson 5.1: Inference for a single proportion](post/slides/u5_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u5_deck1H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=e59f36b5-8df5-40ba-85ca-da549783c206) |
+|             | [App Ex 5.1: Inference for a single proportion](post/app/app_Single_prop.pdf)|
+| Mar 22, Tue  | DS 9: One and two proportions  &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](https://youtu.be/6bgVSkLxm8o) |
+| Mar 23, Wed | [Lesson 5.2: Inference for comparing two proportions](post/slides/u5_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u5_deck2H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=534da708-68ba-4511-8f0e-ae52714e724f) |
+|             | [App Ex 5.2: Inference for comparing two proportions](post/app/app_Compare_two_prop.pdf) |
+| Mar 24, Thu | [Lab 8: Inference for categorical data](http://smith.stat.duke.edu:3838/mine/inf_for_categorical_data_lab/) |
+| Mar 28, Mon | [Lesson 5.3: Chi-square tests](post/slides/u5_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u5_deck3H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=c60f7665-efe0-4ba9-8146-5374279fbfd1) |
+|             | [App Ex 5.3: Chi-square tests](post/app/app_Chisq_tests.pdf) |
+| Mar 29, Tue | DS 10: MT2 Review  &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](https://youtu.be/GtYuSNvFzjA) |
+
+
+##### Due dates
+
+* Lab 7: Mar 24, Thu
+* [PS 5]({{ site.sakai_ps }}): Apr 1, Fri
+  * End of chapter exercises from **Chp 6**. Only turn in answers to 
+  graded questions, use the back of the book to check your work on the practice questions.
+  Must show **all** work to get credit. Click [here]({{ site.sakai_ps }}) to submit the 
+  problem set.
+  * **Graded questions:** 6.2, 6.4, 6.8, 6.12, 6.16, 6.20, 6.26, 6.28, 6.30, 6.36, 6.44, 
+  6.48, 6.52, 6.54, 6.56
+  * Practice questions: 
+    + Part 1 – Single proportion: 6.1, 6.3, 6.5, 6.9, 6.11, 6.13, 6.15, 6.19, 6.21
+    + Part 2 – Comparing two proportions: 6.23, 6.25, 6.27, 6.29, 6.31, 6.33, 6.35
+    + Part 3 – Inference for proportions via simulation: 6.51, 6.53, 6.55
+    + Part 4 – Comparing three or more proportions (Chi-square): 6.39, 6.41, 6.43, 6.45, 6.47
+* [PA 5]({{ site.sakai_pa }}): Mar 29, Tue (Note day change to allow for reviewing answers before the midterm)
+  * Take between Mar 23, Wed and Mar 29, Tue. 
+  * You have 30 minutes to complete. Only one attempt allowed. Click [here]({{ site.sakai_pa }}) to take the performance assessment.
+
+* * *
+
+### <a name="mt2"></a> Midterm 2 - Mar 30, Wed (in class)
+
+* Covers Units 4 and 5 + fundamentals from Units 1 - 3
+* Sample Midterm 2: [handout](https://sakai.duke.edu/access/content/group/255d1889-39d7-433a-96a0-55ba217ae0a7/Sample_MT2.pdf) + [solutions](https://sakai.duke.edu/access/content/group/255d1889-39d7-433a-96a0-55ba217ae0a7/Sample_MT2_Key.pdf)
