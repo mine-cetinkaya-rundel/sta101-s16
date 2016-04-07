@@ -53,7 +53,7 @@ library(GGally)
 **Your reproducible lab report:** Before you get started, download the R Markdown 
 template for this lab. Remember all of your code and answers go in this document:
 ```{r load-template, eval = FALSE}
-download("https://stat.duke.edu/courses/Spring16/sta101.001/rmd/lab10.Rmd", destfile = "lab10.Rmd")
+download.file("http://stat.duke.edu/courses/Spring16/sta101.001/rmd/lab10.Rmd", destfile = "lab10.Rmd")
 ```
 </div>
 
