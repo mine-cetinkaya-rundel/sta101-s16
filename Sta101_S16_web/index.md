@@ -291,7 +291,7 @@ title: Schedule
 
 * * *
 
-### <a name="mt2"></a> :palm_tree::sunny: Spring Break :sunny::tropical_drink: 
+### <a name="sb"></a> :palm_tree::sunny: Spring Break :sunny::tropical_drink: 
 
 * Mar 12, Sat - Mar 20, Sun
 * Prepare for Unit 5
@@ -343,3 +343,5 @@ title: Schedule
 
 * Covers Units 4 and 5 + fundamentals from Units 1 - 3
 * Sample Midterm 2: [handout](https://sakai.duke.edu/access/content/group/255d1889-39d7-433a-96a0-55ba217ae0a7/Sample_MT2.pdf) + [solutions](https://sakai.duke.edu/access/content/group/255d1889-39d7-433a-96a0-55ba217ae0a7/Sample_MT2_Key.pdf)
+
+* [Grade distribution](https://sakai.duke.edu/access/content/group/255d1889-39d7-433a-96a0-55ba217ae0a7/Screen%20Shot%202016-04-06%20at%2013.00.36.png)
