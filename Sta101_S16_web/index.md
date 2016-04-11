@@ -7,43 +7,6 @@ title: Schedule
 
 * * *
 
-### <a name="unit6"></a> Unit 6 - Introduction to linear regression
-
-##### Resources
-
-| Videos: [Videos for Unit 6]({{ site.videos }}) |  Learning objectives: [LO 6]({{ site.learn_obj }}/view?page=Unit_6_Learning_Objectives) | Textbook: [Chp 7]({{ site.openintro}}) |
-
-##### In class / lab
-
-| Mar 31, Thu | [Lab 9: Introduction to linear regression](post/labs/simple_regression.html) |
-| Apr 4, Mon  | **RA 6** in class |
-|             | [Lesson 6.1: Introduction to regression](post/slides/u6_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u6_deck1H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=25e60f00-8da3-46f7-af1b-9e21640bbd0a) |
-|             | [App Ex 6.1: Linear models](post/app/app_Lin_mod.pdf) |
-| Apr 5, Tue  | DS 11: Linear regression &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](https://youtu.be/61V2wBmmbQg) |
-| Apr 6, Wed  | [Lesson 6.2: Outliers and inference for regression](post/slides/u6_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u6_deck2H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>]() |
-|             | [App Ex 6.2: Linear regression](post/app/app_Lin_reg.pdf) |
-
-
-##### Due dates
-
-* Lab 8: Mar 31, Thu 
-* [PS 6]({{ site.sakai_ps }}): Apr 8, Fri
-  * End of chapter exercises from **Chp 7**. Only turn in answers to 
-  graded questions, use the back of the book to check your work on the practice questions.
-  Must show **all** work to get credit. Click [here]({{ site.sakai_ps }}) to submit the 
-  problem set.
-  * **Graded questions:** 7.2, 7.6, 7.8, 7.10, 7.12, 7.14, 7.16, 7.18, 
-  7.20, 7.26, 7.28, 7.30, 7.34, 7.36, 7.42, 7.44
-  * Practice questions:
-    + Part 1 – Relationship between two numerical variables: 7.1, 7.3, 7.7, 7.9, 7.11, 7.13, 7.15
-    + Part 2 – Linear regression with a single predictor: 7.17, 7.19, 7.25, 7.27, 7.29, 7.31, 7.33
-    + Part 3 – Inference for linear regression: 7.25, 7.37, 7.39, 7.41, 7.43
-* [PA 6]({{ site.sakai_pa }}): Apr 10, Sun
-  * Take between Apr 6, Wed and Apr 10, Sun. 
-  * You have 30 minutes to complete. Only one attempt allowed. Click [here]({{ site.sakai_pa }}) to take the performance assessment.
-
-* * *
-
 ### <a name="unit7"></a> Unit 7 - Multiple linear regression
 
 ##### Resources
@@ -345,3 +308,40 @@ title: Schedule
 * Sample Midterm 2: [handout](https://sakai.duke.edu/access/content/group/255d1889-39d7-433a-96a0-55ba217ae0a7/Sample_MT2.pdf) + [solutions](https://sakai.duke.edu/access/content/group/255d1889-39d7-433a-96a0-55ba217ae0a7/Sample_MT2_Key.pdf)
 
 * [Grade distribution](https://sakai.duke.edu/access/content/group/255d1889-39d7-433a-96a0-55ba217ae0a7/Screen%20Shot%202016-04-06%20at%2013.00.36.png)
+
+### <a name="unit6"></a> Unit 6 - Introduction to linear regression
+
+##### Resources
+
+| Videos: [Videos for Unit 6]({{ site.videos }}) |  Learning objectives: [LO 6]({{ site.learn_obj }}/view?page=Unit_6_Learning_Objectives) | Textbook: [Chp 7]({{ site.openintro}}) |
+
+##### In class / lab
+
+| Mar 31, Thu | [Lab 9: Introduction to linear regression](post/labs/simple_regression.html) |
+| Apr 4, Mon  | **RA 6** in class |
+|             | [Lesson 6.1: Introduction to regression](post/slides/u6_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u6_deck1H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=25e60f00-8da3-46f7-af1b-9e21640bbd0a) |
+|             | [App Ex 6.1: Linear models](post/app/app_Lin_mod.pdf) |
+| Apr 5, Tue  | DS 11: Linear regression &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](https://youtu.be/61V2wBmmbQg) |
+| Apr 6, Wed  | [Lesson 6.2: Outliers and inference for regression](post/slides/u6_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u6_deck2H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>]() |
+|             | [App Ex 6.2: Linear regression](post/app/app_Lin_reg.pdf) |
+
+
+##### Due dates
+
+* Lab 8: Mar 31, Thu 
+* [PS 6]({{ site.sakai_ps }}): Apr 8, Fri
+  * End of chapter exercises from **Chp 7**. Only turn in answers to 
+  graded questions, use the back of the book to check your work on the practice questions.
+  Must show **all** work to get credit. Click [here]({{ site.sakai_ps }}) to submit the 
+  problem set.
+  * **Graded questions:** 7.2, 7.6, 7.8, 7.10, 7.12, 7.14, 7.16, 7.18, 
+  7.20, 7.26, 7.28, 7.30, 7.34, 7.36, 7.42, 7.44
+  * Practice questions:
+    + Part 1 – Relationship between two numerical variables: 7.1, 7.3, 7.7, 7.9, 7.11, 7.13, 7.15
+    + Part 2 – Linear regression with a single predictor: 7.17, 7.19, 7.25, 7.27, 7.29, 7.31, 7.33
+    + Part 3 – Inference for linear regression: 7.25, 7.37, 7.39, 7.41, 7.43
+* [PA 6]({{ site.sakai_pa }}): Apr 10, Sun
+  * Take between Apr 6, Wed and Apr 10, Sun. 
+  * You have 30 minutes to complete. Only one attempt allowed. Click [here]({{ site.sakai_pa }}) to take the performance assessment.
+
+* * *
