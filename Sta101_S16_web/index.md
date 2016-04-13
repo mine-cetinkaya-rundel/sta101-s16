@@ -34,7 +34,7 @@ title: Schedule
 * Lab 9: Apr 7, Thu
 * Lab 10: Apr 14, Thu
 * [Project poster session](post/project/project.html): Apr 21, Thu in lab
-* [PS 7]({{ site.sakai_ps }}): Apr 24, Sun
+* [PS 7]({{ site.sakai_ps }}): Apr 22, Fri
   * End of chapter exercises from **Chp 8**. Only turn in answers to 
   graded questions, use the back of the book to check your work on the practice questions.
   Must show **all** work to get credit. Click [here]({{ site.sakai_ps }}) to submit the 

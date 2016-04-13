@@ -12,7 +12,6 @@ title: Course Information
 |            | Lindsay Berry          | [lrb38@stat.duke.edu](mailto:lrb38@stat.duke.edu) |
 |            | Patrick Cardel         | [patrick.cardel@duke.edu](mailto:patrick.cardel@duke.edu) |
 |            | Anthony Hung           | [anthony.hung@duke.edu](mailto:anthony.hung@duke.edu) |
-|            | Eidan Jacob            | [eidan.jacob@duke.edu](mailto:eidan.jacob@duke.edu) |
 |            | John Pura              | [john.pura@duke.edu](mailto:john.pura@duke.edu) |
 |            | Sarah Zimmerman        | [sarah.zimmermann@duke.edu](mailto:sarah.zimmermann@duke.edu) |
 |------------+------------------------+-----------------------------------------|
@@ -72,7 +71,6 @@ If you would like to purchase a used clicker from a former student, see the list
 |Anthony Hung         | Tue 6pm - 8pm                    | Old Chem 025  |
 |Patrick Cardel       | Wed 6:30pm - 8:30pm              | Old Chem 025  |
 |Lindsay Berry        | Thu 3pm - 5pm                    | Old Chem 211A |
-|Eidan Jacob          | Fri 9:30am - 11:30am             | Old Chem 211A |
 
 * * *
 
