@@ -1,0 +1,504 @@
+% -*- TeX-engine: xetex; eval: (auto-fill-mode 0); eval: (visual-line-mode 1); -*-
+% Compile with XeLaTeX
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% Option 1: Slides: (comment for handouts)   %
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[slidestop,compress,mathserif,12pt,t,professionalfonts,xcolor=table]{beamer}
+
+% solution stuff
+\newcommand{\solnMult}[1]{
+\only<1>{#1}
+\only<2->{\red{\textbf{#1}}}
+}
+\newcommand{\soln}[1]{\textit{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Option 2: Handouts, without solutions (post before class)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
+%
+% % handout layout
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+%
+%% % solution stuff
+% \newcommand{\solnMult}[1]{#1}
+% \newcommand{\soln}[1]{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Option 3: Handouts, with solutions (may post after class if need be)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
+
+% % handout layout
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+
+% % solution stuff
+% \newcommand{\solnMult}[1]{\red{\textbf{#1}}}
+% \newcommand{\soln}[1]{\textit{#1}}
+
+%%%%%%%%%%
+% Load style file, defaults  %
+%%%%%%%%%%
+
+\input{../../lec_style.tex}
+\input{../../definitions_default.tex}
+% ALT ALT
+% \input{../../definitions_custom.tex}
+
+%%%%%%%%%%%
+% Cover slide info    %
+%%%%%%%%%%%
+
+\title{Unit 7: Multiple linear regression}
+\subtitle{3. Transformations \& case study}
+\author{\CourseName}
+\date{}
+\institute{\InstituteName}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin document and set Helvetica Neue font   %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\fontspec[Ligatures=TeX]{Helvetica Neue Light}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Title Page
+
+\begin{frame}[plain]
+
+\titlepage
+
+\vfill
+
+{\scriptsize \webLink{\PersonalSite}{Dr. \LastName{}} \hfill Slides posted at  \webURL{\CourseSite}}
+
+\addtocounter{framenumber}{-1} 
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Housekeeping}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Announcements}
+
+\begin{itemize}
+
+\item Poster session on Thursday -- see email for details, come to The Edge Workshop Room during
+your regular lab time
+
+\item I won't hold OH on Thursday (during the poster sessions)
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Transformations}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]
+\frametitle{Truck prices}
+
+\disc{The scatterplot below shows the relationship between year and price of a random sample of 43 pickup trucks. Describe the relationship between these two variables.}
+
+\begin{center}
+\includegraphics[width=0.7\textwidth]{figures/pickup/pu_price_year_scat_allyrs}
+\end{center}
+
+\ct{From: \webURL{http://faculty.chicagobooth.edu/robert.gramacy/teaching.html}}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]
+\frametitle{Remove unusual observations}
+
+Let's remove trucks older than 20 years, and only focus on trucks made in 1992 or later.
+
+\pause
+
+\disc{Now what can you say about the relationship?}
+
+\begin{center}
+\includegraphics[width=0.7\textwidth]{figures/pickup/pu_price_year_scat_noline}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Truck prices - linear model?}
+
+\hl{Model:}  $\widehat{price} = b_0 + b_1~year$
+
+$\:$ \\
+
+\includegraphics[width=0.5\textwidth]{figures/pickup/pu_price_year_scat} 
+\includegraphics[width=0.5\textwidth]{figures/pickup/pu_price_year_res}
+
+\pause
+
+$\:$ \\
+
+The linear model doesn't appear to be a good fit since the residuals have non-constant variance.
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Truck prices - log transform of the response variable}
+
+\hl{Model:} $\widehat{log(price)} = b_0 + b_1~year$
+
+$\:$ \\
+
+\includegraphics[width=0.5\textwidth]{figures/pickup/pu_price_year_scat_log} 
+\includegraphics[width=0.5\textwidth]{figures/pickup/pu_price_year_res_log}
+
+\pause
+
+$\:$ \\
+
+We applied a log transformation to the response variable. The relationship now seems linear, and the residuals 
+no longer have non-constant variance.
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Interpreting models with log transformation}
+
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & Estimate & Std. Error & t value & Pr($>$$|$t$|$) \\ 
+  \hline
+(Intercept) & -265.073 & 25.042 & -10.585 & 0.000 \\ 
+  year & 0.137 & 0.013 & 10.937 & 0.000 \\ 
+   \hline
+\end{tabular}
+\end{center}
+
+\pause
+\[ \hl{\text{Model: }} \widehat{log(price)} = -265.073 + 0.137~year \]
+
+\pause
+
+\begin{itemize}
+
+\item For each additional year the car is newer (for each year decrease in car's age) we would expect the log 
+price of the car to increase on average by 0.137 log dollars.
+
+\pause
+
+\item which is not very useful...
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Working with logs}
+
+\begin{itemize}
+
+\item Subtraction and logs: $log(a) - log(b) = log(\frac{a}{b})$
+
+\pause
+
+\item Natural logarithm: $e^{log(x)} = x$
+
+\pause
+
+\item We can these identities to ``undo" the log transformation 
+
+\end{itemize}
+
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Interpreting models with log transformation (cont.)}
+
+The slope coefficient for the log transformed model is 0.137, meaning the \underline{log} price difference between cars that are one year apart is predicted to be 0.14 log dollars.
+
+\begin{eqnarray*}
+\text{log(price at year $x + 1$)} - \text{log(price at year $x$)} &=& 0.137 \\
+\pause
+log \pr{ \frac{\text{price at year $x + 1$}}{\text{price at year $x$}} } &=& 0.137 \\
+\pause
+e^{log \pr{ \frac{\text{price at year $x + 1$}}{\text{price at year $x$}} }} &=& e^{0.137} \\
+\pause
+\frac{\text{price at year $x + 1$}}{\text{price at year $x$}} &=& 1.15
+\end{eqnarray*}
+
+\pause
+
+For each additional year the car is newer (for each year decrease in car's age) we would expect the price of the car to increase on average \red{by a factor of 1.15}.
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Recap: dealing with non-constant variance}
+
+\begin{itemize}
+
+\item Non-constant variance is one of the most common model violations, however it is usually fixable by transforming the response ($y$) variable
+
+\pause
+
+\item The most common variance stabilizing transform is the log transformation: $log(y)$, especially useful when the response variable is (extremely) right skewed.
+
+\pause
+
+\item When using a log transformation on the response variable the interpretation of the slope changes: \pause
+\begin{itemize}
+\item For each unit increase in $x$, y is expected on average to decrease/increase by a factor of $e^{b_1}$.
+\end{itemize}
+
+\pause
+
+\item Another useful transformation is the square root: $\sqrt{y}$, especially useful when the response variable is counts.
+
+\pause
+
+\item These transformations may also be useful when the relationship is non-linear, but in those cases a polynomial regression may also be needed.
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Case study}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Data from the ACS}
+
+{\scriptsize
+\begin{enumerate}
+\item \texttt{income}: Yearly income (wages and salaries)
+\item \texttt{employment}: Employment status, not in labor force, unemployed, or employed
+\item \texttt{hrs\_work}: Weekly hours worked
+\item \texttt{race}: Race, White, Black, Asian, or other
+\item \texttt{age}: Age
+\item \texttt{gender}: gender, male or female
+\item \texttt{citizens}: Whether respondent is a US citizen or not
+\item \texttt{time\_to\_work}: Travel time to work
+\item \texttt{lang}: Language spoken at home, English or other
+\item \texttt{married}: Whether respondent is married or not
+\item \texttt{edu}: Education level, hs or lower, college, or grad
+\item \texttt{disability}: Whether respondent is disabled or not
+\item \texttt{birth\_qrtr}: Quarter in which respondent is born, jan thru mar, apr thru jun, jul thru sep, or oct thru dec 
+\end{enumerate}
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]
+\frametitle{Load and subset data}
+
+{\footnotesize
+\begin{Verbatim}[frame=single, formatcom=\color{blue}]
+acs_emp <- acs %>%
+  filter(employment == "employed", income > 0)
+\end{Verbatim}
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]
+\frametitle{Aside: categorical (factor) variables in R}
+
+{\footnotesize
+\begin{Verbatim}[frame=single, formatcom=\color{blue}]
+acs_emp %>%
+  select(employment) %>%
+  table()
+\end{Verbatim}
+
+\pause
+
+\begin{Verbatim}[frame=single, formatcom=\color{gray}]
+not in labor force         unemployed           employed 
+                 0                  0                787
+\end{Verbatim}
+
+\pause
+
+\begin{Verbatim}[frame=single, formatcom=\color{blue}]
+acs_emp <- droplevels(acs_emp) # overwrite acs_emp
+
+acs_emp %>%
+  select(employment) %>%
+  table()
+\end{Verbatim}
+
+\begin{Verbatim}[frame=single, formatcom=\color{gray}]
+employed 
+     787 
+\end{Verbatim}
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]
+\frametitle{Full model}
+
+Suppose we only want to consider the following explanatory variables: \texttt{hrs\_work}, \texttt{race}, \texttt{age}, \texttt{gender}, \texttt{citizen}.
+
+{\footnotesize
+\begin{Verbatim}[frame=single, formatcom=\color{blue}]
+m_full = lm(income ~ hrs_work + race + age + gender 
+    + citizen, data = acs_emp)
+\end{Verbatim}
+}
+
+\pause
+
+\begin{center}
+{\small
+\begin{tabular}{rrrrr}
+  \hline
+ & Estimate & Std. Error & t value & Pr($>$$|$t$|$) \\ 
+  \hline
+(Intercept) & -17215.60 & 11399.81 & -1.51 & 0.13 \\ 
+  hrs\_work & 1251.31 & 153.14 & 8.17 & 0.00 \\ 
+  raceblack & -13202.39 & 6373.05 & -2.07 & 0.04 \\ 
+  raceasian & 32699.34 & 8903.66 & 3.67 & 0.00 \\ 
+  raceother & -12032.88 & 7556.78 & -1.59 & 0.11 \\ 
+  age & 760.99 & 129.71 & 5.87 & 0.00 \\ 
+  genderfemale & -17246.91 & 3887.17 & -4.44 & 0.00 \\ 
+  citizenyes & -9537.20 & 8360.85 & -1.14 & 0.25 \\ 
+   \hline
+\end{tabular}
+}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]
+\frametitle{Diagnostics}
+
+\vspace{-0.5cm}
+
+\disc{What do you think?}
+
+\begin{center}
+\includegraphics[width=0.95\textwidth]{figures/acs/diag}
+\end{center}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]
+\frametitle{Diagnostics -- code}
+
+{\scriptsize
+\begin{Verbatim}[frame=single, formatcom=\color{blue}]
+# residuals vs. fitted
+qplot(data = m_full, y = .resid, x = .fitted, geom = "point") +
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  xlab("Fitted values") +
+  ylab("Residuals") +
+  ggtitle("Residuals vs. Fitted values")
+
+# histogram of residuals
+qplot(data = m_full, x = .resid, geom = "histogram") +
+  xlab("Residuals") +
+  ggtitle("Histogram of residuals")
+
+# normal prob plot of residuals
+qplot(data = m_full, sample = .resid, stat = "qq") +
+  ggtitle("Normal probability plot of residuals")
+
+# order of residuals
+qplot(data = m_full, y = .resid) +
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  ylab("Residuals") +
+  xlab("Order of data collection") +
+  ggtitle("Residuals vs. Order of data collection")
+\end{Verbatim}
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]
+\frametitle{Log transformation}
+
+\vspace{-0.4cm}
+
+{\footnotesize
+\begin{Verbatim}[frame=single, formatcom=\color{blue}]
+m_full_log = lm(log(income) ~ hrs_work + race + age 
+    + gender + citizen, data = acs_emp)
+\end{Verbatim}
+}
+
+\vspace{-0.3cm}
+
+\begin{center}
+\includegraphics[width=0.95\textwidth]{figures/acs/diag_log}
+\end{center}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{}
+
+\vfill
+
+\app{7.4 Interpreting models with a transformed response}{See course website for more details}
+
+\vfill
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
