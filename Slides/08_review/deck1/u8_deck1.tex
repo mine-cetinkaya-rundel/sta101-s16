@@ -1,0 +1,415 @@
+% -*- TeX-engine: xetex; eval: (auto-fill-mode 0); eval: (visual-line-mode 1); -*-
+% Compile with XeLaTeX
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% Option 1: Slides: (comment for handouts)   %
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[slidestop,compress,mathserif,12pt,t,professionalfonts,xcolor=table]{beamer}
+
+% solution stuff
+\newcommand{\solnMult}[1]{
+\only<1>{#1}
+\only<2->{\red{\textbf{#1}}}
+}
+\newcommand{\soln}[1]{\textit{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Option 2: Handouts, without solutions (post before class)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
+%
+% % handout layout
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+%
+%% % solution stuff
+% \newcommand{\solnMult}[1]{#1}
+% \newcommand{\soln}[1]{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Option 3: Handouts, with solutions (may post after class if need be)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \documentclass[11pt,containsverbatim,handout,xcolor=xelatex,dvipsnames,table]{beamer}
+
+% % handout layout
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+
+% % solution stuff
+% \newcommand{\solnMult}[1]{\red{\textbf{#1}}}
+% \newcommand{\soln}[1]{\textit{#1}}
+
+%%%%%%%%%%
+% Load style file, defaults  %
+%%%%%%%%%%
+
+\input{../../lec_style.tex}
+\input{../../definitions_default.tex}
+% ALT ALT
+% \input{../../definitions_custom.tex}
+
+%%%%%%%%%%%
+% Cover slide info    %
+%%%%%%%%%%%
+
+\title{Unit 8: Final Review}
+\subtitle{1. Bayesian vs. frequentist inference}
+\author{\CourseName}
+\date{}
+\institute{\InstituteName}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin document and set Helvetica Neue font   %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\fontspec[Ligatures=TeX]{Helvetica Neue Light}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Title Page
+
+\begin{frame}[plain]
+
+\titlepage
+
+\vfill
+
+{\scriptsize \webLink{\PersonalSite}{Dr. \LastName{}} \hfill Slides posted at  \webURL{\CourseSite}}
+
+\addtocounter{framenumber}{-1} 
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Housekeeping}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Announcements}
+
+\begin{itemize}
+
+\item Project questions?
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Bayesian vs. Frequentist Inference}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{M\&Ms}
+
+\begin{itemize}
+
+\item We have a population of M\&Ms. The percentage of yellow M\&Ms is either 10\% or 20\%.
+
+\item You have been hired as a statistical consultant to decide whether the true percentage of yellow M\&Ms is 10\%. You are being asked to make a decision, and there are associated payoff/losses that you should consider.
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Decision table}
+
+\begin{center}
+\renewcommand\arraystretch{1.5}
+\begin{tabular}{l | p{3cm} | p{3cm}}
+				&   \multicolumn{2}{c}{True state of the population} \\
+\hline
+Decision			& \% yellow = 10\%		& \% yellow = 20\% \\
+\hline
+\% yellow = 10\%	& \green{Your boss gives you a bonus, and I bring you candy on Monday}	& \red{You lose your job, and no candy for you} \\
+\hline
+\%yellow = 20\%	& \red{You lose your job, and no candy for you} 	& \green{Your boss gives you a bonus, and I bring you candy on Monday} \\
+\end{tabular}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Data}
+
+\begin{itemize}
+
+\item I will show you a random sample from the population, but you pay \$200 for each M\&M, and you must buy in \$1000 increments.  
+
+\item That is, you may buy 5, 10, 15, or 20 M\&Ms.
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Frequentist inference}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Frequentist inference}
+
+\begin{itemize}
+
+\item Hypotheses:
+\begin{itemize}
+\item $H_0$: 10\% yellow M\&Ms
+\item $H_A$: more than 10\% yellow M\&Ms 
+\end{itemize}
+
+\item Your test statistic is the number of yellow M\&Ms you observe in the sample. 
+
+\item The p-value will be the probability of observing this many or more yellow M\&Ms given the null hypothesis is true.
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{}
+
+\app{Set up -- data}{How many M\&Ms would you buy? Decide as a team and vote.}
+
+\begin{multicols}{4}
+\begin{enumerate}[(a)]
+\item 5
+\item 10
+\item 15
+\item 20
+\end{enumerate}
+\end{multicols}
+
+\app{Set up -- significance level}{Then, discuss at what significance level you will reject the null hypothesis.}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{}
+
+Now we will take a sequence of M\&Ms, and you record the number of yellows in the first n draws.
+
+\[ \red{R}\green{G}\yellow{Y}\blue{B}\orange{O} \qquad \blue{B}\blue{B}\green{G}\orange{O}\yellow{Y} \qquad  \yellow{Y}\red{R}\blue{B}\red{R}\red{R} \qquad  \green{G}\orange{O}\red{R}\blue{B}\yellow{Y} \]
+
+\app{Frequentist inference}{
+\begin{itemize} 
+
+\item Number of yellows in the first n draws = \rule{1cm}{0.5pt} = k
+
+\item Calculate the p-value using the Binomial distribution: \\
+
+p-value = P(k or more yellows $|$ n, \%yellow is 10\%) = \rule{1cm}{0.5pt}
+
+\item Do you reject the null hypothesis? \rule{1cm}{0.5pt} 
+
+\end{itemize}
+}
+
+\vfill
+
+\begin{center}
+{\footnotesize See next slide for hints...}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]
+\frametitle{}
+
+Remember $Binomial(n, k) = {n \choose k} p^k (1-p)^{(n-k)}$ \\
+
+$\:$ \\
+\pause 
+
+Say you picked $n = 5$, and hence $k = 1$.
+
+\begin{eqnarray*}
+&&P(1~or~more~yellows~|~n = 5,~\%yellow~is~10\%) \\
+&=& P(K = 1) + P(K = 2) + P(K = 3) + P(K = 4) + P(K = 5) \\
+\pause
+&=& \left[ {5 \choose 1} 0.1^1 \times 0.9^4 \right]+ \left[{5 \choose 2} 0.1^2 \times 0.9^3 \right] + \cdots + \left[{5 \choose 5} 0.1^5 \times 0.9^0 \right] \\
+\pause
+&=& 0.32805 + 0.0729 + 0.0081 +  0.00045 + 0.00001 \\
+\pause
+&\approx& 0.41
+\end{eqnarray*}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]
+\frametitle{}
+
+Alternatively: \\
+\pause
+{\footnotesize
+\begin{Verbatim}[frame=single, formatcom=\color{blue}]
+# P(K = 1, n = 5, p = 0.1) 
+dbinom(1, 5, 0.1)
+\end{Verbatim}
+}
+{\footnotesize
+\begin{Verbatim}[frame=single, formatcom=\color{gray}]
+0.32805
+\end{Verbatim}
+}
+
+... and
+
+\pause
+{\footnotesize
+\begin{Verbatim}[frame=single, formatcom=\color{blue}]
+# P(K >= 1, n = 5, p = 0.1) 
+sum(dbinom(1:5, 5, 0.1))
+\end{Verbatim}
+}
+{\footnotesize
+\begin{Verbatim}[frame=single, formatcom=\color{gray}]
+0.40951
+\end{Verbatim}
+}
+
+%> round(sum(dbinom(1:5,5,0.1)), 2)
+%[1] 0.41
+%> round(sum(dbinom(2:10,10,0.1)), 2)
+%[1] 0.26
+%> round(sum(dbinom(3:15,15,0.1)), 2)
+%[1] 0.18
+%> round(sum(dbinom(4:20,20,0.1)), 2)
+%[1] 0.13
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Bayesian inference}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Bayesian inference}
+
+Now we will start over.  Start with 1:1 odds that the percentage of yellows is 10\%:20\%.
+
+\begin{itemize}
+\item $H_1$: 10\% yellow M\&Ms $\rightarrow$ P(10\% yellow) = 0.5
+\item $H_2$: 20\% yellow M\&Ms $\rightarrow$ P(20\% yellow) = 0.5
+\end{itemize}
+
+\pause
+
+$\:$ \\
+
+\app{Bayesian inference}{Using the same data and Bayes' theorem to calculate the probability the percentage of yellow is 10\% and 20\% given the observed data.}
+
+\vfill
+
+\begin{center}
+{\footnotesize See next slide for hints...}
+\end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{}
+
+P(10\% yellow $|$ data):
+{\scriptsize
+\begin{eqnarray*}
+P(10\% yellow | data) &=& \frac{P(data | 10\% yellow) \times P(10\% yellow)}{P(data)} \\
+\pause
+&=& \frac{P(data | 10\% yellow) \times P(10\% yellow)}{P(data | 10\% yellow) \times P(10\% yellow) + P(data | 20\% yellow) \times P(20\% yellow)} \\
+\pause
+&=& \frac{0.33 \times 0.5}{0.33 \times 0.5 + 0.41 \times 0.5} \\
+\pause
+&=& 0.44
+\end{eqnarray*}
+}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Comparison}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Results}
+
+\app{Bayesian vs. Frequentist inference}{
+Regardless of the choices you made earlier about $n$, fill out the table below for all possible choices of $n$ and the resulting $k$.
+}
+
+\begin{adjustwidth}{-1in}{-1in}
+
+\begin{center}
+{\tiny
+\renewcommand\arraystretch{2}
+\begin{tabular}{p{1.8cm} || c | c || c | c }
+		& \multicolumn{2}{c ||}{Frequentist: p-value} & \multicolumn{2}{c}{Bayesian: Posterior} \\
+\hline
+{\tiny Number of yellow M\&Ms in first} & P(K $\ge$ k $|$ 10\% yellow) & Decision & P(10\% yellow $|$ n,k) & P(20\% yellow $|$ n,k) \\
+\hline
+$n = 5: k = 1$ & 0.41 & Fail to reject $H_0$ & 0.44 \\
+\hline
+$n = 10: k = 2$  & & & \\
+\hline
+$n = 15: k = 3$ & & & \\
+\hline
+$n = 20: k = 4$ & & &
+\end{tabular}
+}
+\end{center}
+
+\end{adjustwidth}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Recap}
+
+\begin{itemize}
+
+\item We know that the true \% yellow in these data is 20\%:
+
+\[ \red{R}\green{G}\yellow{Y}\blue{B}\orange{O} \qquad \blue{B}\blue{B}\green{G}\orange{O}\yellow{Y} \qquad  \yellow{Y}\red{R}\blue{B}\red{R}\red{R} \qquad  \green{G}\orange{O}\red{R}\blue{B}\yellow{Y} \]
+
+\item However the Frequentist approach (using p-values) would not allow us to reject the null hypothesis of 10\% yellow.
+
+\item On the other hand, the Bayesian approach yields a higher posterior probability for 20\% yellow.
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
