@@ -7,55 +7,14 @@ title: Schedule
 
 * * *
 
-### <a name="unit7"></a> Unit 7 - Multiple linear regression
-
-##### Resources
-
-| Videos: [Videos for Unit 7]({{ site.videos }}) |  Learning objectives: [LO 7]({{ site.learn_obj }}/view?page=Unit_7_Learning_Objectives) | Textbook: [Chp 8 - Sec 8.1, 8.2, 8.3]({{ site.openintro}}) |
-
-##### In class / lab
-
-
-| Apr 7, Thu  | [Lab 10: Multiple linear regression](post/labs/multiple_regression.html)   |
-| Apr 11, Mon | **RA 7** in class |
-|             | [Lesson 7.1: Introduction to multiple linear regression ](post/slides/u7_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u7_deck1H.pdf) |
-| Apr 12, Tue | DS 12: Multiple regression &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>]() |
-| Apr 13, Wed | [Lesson 7.2: Model selection & diagnostics for MLR](post/slides/u7_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u7_deck2H.pdf)                 |
-|             | [App Ex 7.1: Multiple linear regression](post/app/app_MLR.pdf) |
-| Apr 14, Thu | Work on project |
-| Apr 18, Mon | [Lesson 7.3: Transformations and case study](post/slides/u7_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u7_deck3H.pdf)                 |
-|             | [App Ex 7.2: Interpreting models with a transformed response](post/app/app_Trans_MLR.pdf) |
-| Apr 19, Tue | DS 13: Project help - In Old Chem 213 |
-| Apr 20, Wed | [Lesson 7.4]() |
-| Apr 21, Thu | Lab: Poster session
-
-##### Due dates
-
-* Lab 9: Apr 7, Thu
-* Lab 10: Apr 14, Thu
-* [Project poster session](post/project/project.html): Apr 21, Thu in lab
-* [PS 7]({{ site.sakai_ps }}): Apr 22, Fri
-  * End of chapter exercises from **Chp 8**. Only turn in answers to 
-  graded questions, use the back of the book to check your work on the practice questions.
-  Must show **all** work to get credit. Click [here]({{ site.sakai_ps }}) to submit the 
-  problem set.
-  * **Graded questions:** 8.2, 8.4, 8.6, 8.8, 8.10, 8.12, 8.14
-  * Practice questions:
-    + Part 1 – Regression with multiple predictors: 8.1, 8.3
-    + Part 2 – Inference for MLR: 8.5
-    + Part 3 – Model selection: 8.7, 8.9, 8.11
-    + Part 4 – Model diagnostics: 8.13
-* [PA 7]({{ site.sakai_pa }}): Apr 24, Sun
-  * Take between Apr 20, Mon and Apr 24, Sun. 
-  * You have 30 minutes to complete. Only one attempt allowed. Click [here]({{ site.sakai_pa }}) to take the performance assessment.
-
-* * *
-
 ### <a name="wrapup"></a> Wrap up
 
 ##### In class
 
-| Apr 25, Mon | [Case study]() |
+| Apr 20, Wed | [Lesson 8.1: Bayesian vs. frequentist inference](post/slides/u8_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u8_deck1H.pdf) |
+|             | [App Ex 8.1: Bayesian vs. frequentist inference](post/app/app_BayesFreqInf.pdf) |
+| Apr 21, Thu | Lab: Poster session |
+| Apr 25, Mon | [Lesson 8.2 - Final exam review]() |
 | Apr 26, Tue | No discussion section - Office hours in Old Chem 213 |
 | Apr 27, Wed | [Review / synthesis]() |
 
@@ -322,7 +281,7 @@ title: Schedule
 |             | [Lesson 6.1: Introduction to regression](post/slides/u6_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u6_deck1H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=25e60f00-8da3-46f7-af1b-9e21640bbd0a) |
 |             | [App Ex 6.1: Linear models](post/app/app_Lin_mod.pdf) |
 | Apr 5, Tue  | DS 11: Linear regression &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](https://youtu.be/61V2wBmmbQg) |
-| Apr 6, Wed  | [Lesson 6.2: Outliers and inference for regression](post/slides/u6_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u6_deck2H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>]() |
+| Apr 6, Wed  | [Lesson 6.2: Outliers and inference for regression](post/slides/u6_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u6_deck2H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=b82dff81-2fdb-4ff5-b9b3-a63ce54693e2) |
 |             | [App Ex 6.2: Linear regression](post/app/app_Lin_reg.pdf) |
 
 
@@ -342,6 +301,49 @@ title: Schedule
     + Part 3 – Inference for linear regression: 7.25, 7.37, 7.39, 7.41, 7.43
 * [PA 6]({{ site.sakai_pa }}): Apr 10, Sun
   * Take between Apr 6, Wed and Apr 10, Sun. 
+  * You have 30 minutes to complete. Only one attempt allowed. Click [here]({{ site.sakai_pa }}) to take the performance assessment.
+
+* * *
+
+### <a name="unit7"></a> Unit 7 - Multiple linear regression
+
+##### Resources
+
+| Videos: [Videos for Unit 7]({{ site.videos }}) |  Learning objectives: [LO 7]({{ site.learn_obj }}/view?page=Unit_7_Learning_Objectives) | Textbook: [Chp 8 - Sec 8.1, 8.2, 8.3]({{ site.openintro}}) |
+
+##### In class / lab
+
+
+| Apr 7, Thu  | [Lab 10: Multiple linear regression](post/labs/multiple_regression.html)   |
+| Apr 11, Mon | **RA 7** in class |
+|             | [Lesson 7.1: Introduction to multiple linear regression ](post/slides/u7_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u7_deck1H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=5140837e-926b-404a-b33a-0fa00e65e8a9) |
+| Apr 12, Tue | DS 12: Multiple regression &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>]() |
+| Apr 13, Wed | [Lesson 7.2: Model selection & diagnostics for MLR](post/slides/u7_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u7_deck2H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=34d46b16-3141-4d60-aae5-0dc3e97a199f) |
+|             | [App Ex 7.1: Multiple linear regression](post/app/app_MLR.pdf) |
+| Apr 14, Thu | Work on project |
+| Apr 18, Mon | [Lesson 7.3: Transformations and case study](post/slides/u7_deck3.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u7_deck3H.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-file-video-o"></i>](http://trinity.capture.duke.edu/Panopto/Pages/Viewer.aspx?id=14c07614-6604-4594-9cf4-a07272d49b98) |
+|             | [App Ex 7.2: Interpreting models with a transformed response](post/app/app_Trans_MLR.pdf) |
+| Apr 19, Tue | DS 13: Project help - In Old Chem 213 |
+
+
+##### Due dates
+
+* Lab 9: Apr 7, Thu
+* Lab 10: Apr 14, Thu
+* [Project poster session](post/project/project.html): Apr 21, Thu in lab
+* [PS 7]({{ site.sakai_ps }}): Apr 22, Fri
+  * End of chapter exercises from **Chp 8**. Only turn in answers to 
+  graded questions, use the back of the book to check your work on the practice questions.
+  Must show **all** work to get credit. Click [here]({{ site.sakai_ps }}) to submit the 
+  problem set.
+  * **Graded questions:** 8.2, 8.4, 8.6, 8.8, 8.10, 8.12, 8.14
+  * Practice questions:
+    + Part 1 – Regression with multiple predictors: 8.1, 8.3
+    + Part 2 – Inference for MLR: 8.5
+    + Part 3 – Model selection: 8.7, 8.9, 8.11
+    + Part 4 – Model diagnostics: 8.13
+* [PA 7]({{ site.sakai_pa }}): Apr 24, Sun
+  * Take between Apr 20, Mon and Apr 24, Sun. 
   * You have 30 minutes to complete. Only one attempt allowed. Click [here]({{ site.sakai_pa }}) to take the performance assessment.
 
 * * *
