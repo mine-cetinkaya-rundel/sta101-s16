@@ -14,7 +14,7 @@ title: Schedule
 | Apr 20, Wed | [Lesson 8.1: Bayesian vs. frequentist inference](post/slides/u8_deck1.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u8_deck1H.pdf) |
 |             | [App Ex 8.1: Bayesian vs. frequentist inference](post/app/app_BayesFreqInf.pdf) |
 | Apr 21, Thu | Lab: Poster session |
-| Apr 25, Mon | [Lesson 8.2 - Final exam review]() |
+| Apr 25, Mon | [Lesson 8.2 - Final exam review](post/slides/u8_deck2.pdf) &nbsp;&nbsp;&nbsp;[<i class="fa fa-print"></i>](post/slides/u8_deck2H.pdf) |
 | Apr 26, Tue | No discussion section - Office hours in Old Chem 213 |
 | Apr 27, Wed | [Review / synthesis]() |
 
