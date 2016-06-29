@@ -1,4 +1,6 @@
-# Instructions for in class clicker registration
+# In class clicker registration
+
+This document contains instructions in class clicker registration.
 
 - Go to Sakai -> Gradebook 
 - Click on the All grades tab, and then Export as CSV

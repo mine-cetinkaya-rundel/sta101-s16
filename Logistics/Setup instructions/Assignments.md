@@ -1,7 +1,6 @@
-Sakai Assignments
-===========================
+# Assignments (PS + Lab)
 
-Follow these steps for setting up assignments on Sakai for Problem Sets and Labs.
+This document contains instructions for setting up Problem Sets (PS) and Labs on Sakai.
 
 - Assignments -> Add
 - Title: PS 1 or Lab 2, etc.

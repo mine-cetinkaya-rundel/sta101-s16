@@ -1,5 +1,6 @@
-Getting to know you survey
-===========================
+# Getting to know you survey
+
+This document contains instructions for setting up the Getting to know you survey on Sakai.
 
 This survey asks the questions shown below. This can be created as a Tests&Quizzes item on Sakai, however the easiest way to obtain the survey is to ask Mine to import from her class.
 
