@@ -17,6 +17,7 @@ This document contains instructions for setting up the pretest. Data from this p
     - ARTIST Scale: CAOS Pre-test
     - Test setting: No (not in controlled environment)
     - Test score use: Other - formation of teams
+- You will then receive an email with a URL and access code you can share with your students
 
 ## Getting the data from the pre-test
 
