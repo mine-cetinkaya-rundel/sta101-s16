@@ -19,7 +19,7 @@ Follow these steps for setting up assignments on Sakai for Problem Sets and Labs
 - Grade Scale: Points
 - 100 Maximum Points
 - Assignment Instructions:
-    - For **Problem Sets**:
+    - For **Problem Sets**: (Note that if for a summer class Problem Sets are to be turned in on paper, not on Sakai, the submission instructions can be revised to just say bring your work to class at the beginning of class.)
 
         *See course website for assigned problems.*
 
