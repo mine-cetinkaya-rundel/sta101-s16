@@ -4,7 +4,7 @@
 
 **Subject:** Welcome to Sta 101: Data Analysis and Statistical Inference!
 
-**Email text:**
+**Email text:** Adjust as needed. For example, no clickers for summer courses, or no note about waitlist if there isn't a waitlist for your class. And, obviously, update your name at the end.
 
 Hi class,
 
@@ -34,4 +34,4 @@ Looking forward to meeting all of you soon.
 Best,
 Dr. Çetinkaya-Rundel
 
-PS: A note for students on the waitlist -- lab rooms are physically limited, hence I will not be able to give permission numbers to increase enrollment in lab sections. You are absolutely welcomed to stay on the waitlist as I am sure there will be some students changing their schedules and some room will open up in the class. However, note that staying on the waitlist will not guarantee seats in the class due to this physical limitation.
+PS: A note for students on the waitlist -- classrooms are physically limited, hence I will not be able to give permission numbers to increase enrollment. You are absolutely welcomed to stay on the waitlist as I am sure there will be some students changing their schedules and some room will open up in the class. However, note that staying on the waitlist will not guarantee seats in the class due to this physical limitation.
