@@ -20,7 +20,7 @@ Follow these steps for setting up assignments on Sakai for Problem Sets and Labs
 - 100 Maximum Points
 - Assignment Instructions:
     - For **Problem Sets**:
-
+<quote>
 See course website for assigned problems.
 
 Submission instructions: You will turn in your problem sets on Sakai. We strongly recommend working in a word processor of your choice, saving your work as PDF, and submitting that. You are welcomed to submit as Word files as well, however if we cannot open your file you will receive a 0 on the problem set (so it may not be worth taking that risk!). Alternatively you can type your answers in the text box in Sakai however if you lose internet connection and you haven’t saved you might lose your work (so if you’ll use this approach make sure to save often!).
@@ -33,6 +33,7 @@ Late work policy:
 - later than next day: lose all points
 
 Late work policy for excused absences / STINFs: If you cannot complete an assignment on the due date due to a documented short-term illness, you have until noon the following day to complete it at no penalty. Then the regular late work policy will kick in.
+</quote>
 
     - For **Labs**: 
 
