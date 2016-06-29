@@ -1,7 +1,27 @@
 Getting to know you survey
 ===========================
 
-This survey asks the following questions. This can be created as a Test&Quiz on Sakai, however the easiest way to obtain the survey is to ask Mine to import from her class.
+This survey asks the questions shown below. This can be created as a Tests&Quizzes item on Sakai, however the easiest way to obtain the survey is to ask Mine to import from her class.
+
+## Survey settings:
+
+- Assessment Introduction:
+    - Title: Getting to know you survey
+    - Description: Please fill out the survey completely.
+- Delivery Dates:
+    - Available Date: day of pre-course welcome email
+    - Due Date: First day of class (or adjust accordingly)
+    - Retract Date: Drop/add deadline
+- Submissions:
+    - Number of Submissions Allowed: Unlimited
+    - Late Handling: Late submissions WILL be accepted after the due date. However, this applies only to students who have not submitted their work prior to the due date. They will be given one chance to do so and their submission will be tagged as late.
+- Submission Message: Thank you!
+- Grading (these might aldready be the defaults):
+    - Students' Identities: Students' identities can be seen by graders
+    - Gradebook Options: None
+    - Recorded Score If Multiple Submissions per User: Record the highest score
+
+## Survey questions:
 
 1. Which lab section are you in?
     - List lab sections for the course 
