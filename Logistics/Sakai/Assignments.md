@@ -36,7 +36,7 @@ Follow these steps for setting up assignments on Sakai for Problem Sets and Labs
 
     - For **Labs**: 
 
-See course website
+        *See course website for lab instructions.*
 
 - Check: Add due date t Schedule
 - Do not Check: Add an announcement about the open date to Announcements
