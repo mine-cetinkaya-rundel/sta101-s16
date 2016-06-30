@@ -4,7 +4,7 @@
 
 **Subject:** Welcome to Sta 101: Data Analysis and Statistical Inference!
 
-**Email text:** Adjust as needed. For example, no clickers for summer courses, or no note about waitlist if there isn't a waitlist for your class. And, obviously, update your name at the end.
+**Email text:** Adjust as needed. For example, no clickers for summer courses, or no note about waitlist if there isn't a waitlist for your class. Also insert due dates, links, and access code for pre-test and getting to know you survey. And, obviously, update your name at the end.
 
 Hi class,
 
@@ -27,7 +27,18 @@ Required materials:
 
 If you are planning on ordering your materials online I recommend that you do so right away so that they arrive by the time classes begin. Note that Amazon offers free 2-day Prime shipping to students: http://www.amazon.com/gp/student/signup/info.
 
-Enjoy the last few days of the winter break.
+Additionally, below are to do items to be completed before course begins:
+
+1. Pre-test: Complete the pretest (do your best, but don't worry if you don't know the answers, it's meant to be a *pre*test):
+    - Deadline: [Insert day & time]
+    - Set aside ~40 minutes for this
+    - Link to pretest: https://apps3.cehd.umn.edu/artist/user/scale_select.html
+    - Access code: ACCESS CODE =  [Insert access code]
+
+2. Complete the "Getting to know you survey"
+    - Deadline: [Insert day & time]
+    - Set aside ~15 minutes for this
+    - Link to survey: [Insert link to survey]
 
 Looking forward to meeting all of you soon.
 
